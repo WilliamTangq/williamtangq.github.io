@@ -635,6 +635,7 @@
     }
 
     @media(max-width:1040px){
+      .evidence-grid{grid-template-columns:repeat(3,1fr)}
       .hero-grid{grid-template-columns:1fr}
       .dashboard-stage{min-height:420px;max-width:720px;width:100%;margin:0 auto}
       .snapshot-grid,.cap-grid{grid-template-columns:repeat(2,1fr)}
@@ -708,12 +709,10 @@
     <div class="nav-inner">
       <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan</span></a>
       <ul class="nav-links">
-        <li><a href="#profile" data-nav="profile">Profile</a></li>
-        <li><a href="#projects" data-nav="projects">Projects</a></li>
-        <li><a href="#proof">Proof</a></li>
+        <li><a href="#why-hire" data-nav="why-hire">Why Me</a></li>
+        <li><a href="#projects" data-nav="projects">Work</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
         <li><a href="#skills" data-nav="skills">Skills</a></li>
-        <li><a href="#proof" data-nav="proof">Proof</a></li>
-        <li><a href="#application" data-nav="application">Application Pack</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
@@ -807,7 +806,7 @@
           <article class="snapshot-card reveal"><div class="snapshot-icon">01</div><h3>Primary Direction</h3><p>Business Analyst / Systems Analyst, with Technology and Data Analyst pathways where the role fits.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">02</div><h3>Education</h3><p>Bachelor of IT (Business Information Systems), Monash University.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">03</div><h3>Core Strengths</h3><p>Requirements, Process Mapping, SQL, UAT and Workflow Design.</p></article>
-          <article class="snapshot-card reveal"><div class="snapshot-icon">04</div><h3>Profile</h3><p>Business + Technology + Operations, with hands-on delivery experience.</p></article>
+          <article class="snapshot-card reveal"><div class="snapshot-icon">04</div><h3>Commercial Experience</h3><p>Real CS TAN experience across Excel analysis, B2B operations, IT support, customers, suppliers and business documentation.</p></article>
         </div>
       </div>
     </section>
@@ -1162,7 +1161,7 @@
     window.addEventListener("resize", setProgress);
 
     const navLinks = [...document.querySelectorAll("[data-nav]")];
-    const watchedSections = ["profile","projects","skills","proof","experience","contact"]
+    const watchedSections = ["why-hire","projects","experience","skills","contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
