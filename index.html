@@ -371,6 +371,14 @@
     .tag{padding:6px 9px;border-radius:999px;background:#f2f5f9;color:#556176;font-size:.64rem;font-weight:600}
     .tech-chip{display:inline-flex;align-items:center;gap:6px}
     .tech-chip img{width:13px;height:13px;display:block;object-fit:contain}
+    .project-evidence{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:13px 0 2px
+    }
+    .project-evidence span{
+      min-height:48px;padding:8px;border-radius:10px;background:#fafbfd;border:1px solid #edf1f6;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      color:#647087;font-size:.57rem;font-weight:700;line-height:1.28
+    }
     .project-link{
       margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);
       font-size:.69rem;font-weight:730
@@ -602,6 +610,7 @@
       .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip{grid-template-columns:1fr}
       .projects-grid{grid-template-columns:1fr}
       .project-card{display:block}
+      .project-evidence{grid-template-columns:1fr 1fr 1fr}
       .project-visual{height:210px;margin-bottom:13px}
       .project-body{padding:0 8px 10px}
       .tools-grid{grid-template-columns:repeat(2,1fr)}
@@ -771,6 +780,7 @@
     <span class="tag tech-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
     <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
   </div>
+  <div class="project-evidence"><span>Manager + Staff flows</span><span>Draft ↔ Published</span><span>Availability rules</span></div>
   <a class="project-link" href="case-tanshift.html">View case study →</a>
             </div>
           </article>
@@ -795,6 +805,7 @@
               <div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
               <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
               <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
+              <div class="project-evidence"><span>Requirements → fixes</span><span>Integrity testing</span><span>Private client work</span></div>
               <a class="project-link" href="case-client-project.html">View case study →</a>
             </div>
           </article>
@@ -818,6 +829,7 @@
               <div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
               <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
               <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
+              <div class="project-evidence"><span>Structured AI output</span><span>User / Admin routing</span><span>Playwright tests</span></div>
               <a class="project-link" href="case-innerleaf.html">View case study →</a>
             </div>
           </article>
@@ -842,6 +854,7 @@
     <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
     <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
   </div>
+              <div class="project-evidence"><span>ERD modelling</span><span>Data integrity</span><span>Oracle SQL</span></div>
               <a class="project-link" href="case-database.html">View case study →</a>
             </div>
           </article>
