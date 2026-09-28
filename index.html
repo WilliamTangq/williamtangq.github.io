@@ -13,6 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://williamtangq.github.io/" />
   <link rel="canonical" href="https://williamtangq.github.io/" />
+  <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin />
   <style>
     :root{
       --bg:#f7f9fc;
@@ -53,6 +54,14 @@
     button,a{-webkit-tap-highlight-color:transparent}
     ::selection{background:#cfe3ff;color:#08101f}
     .shell{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+    section[id]{scroll-margin-top:78px}
+    .scroll-progress{
+      position:fixed;top:0;left:0;z-index:150;width:100%;height:2px;
+      transform-origin:0 50%;transform:scaleX(0);
+      background:linear-gradient(90deg,#0a73ff,#67a9ff);
+      box-shadow:0 0 12px rgba(10,115,255,.28);
+      pointer-events:none
+    }
 
     /* navigation */
     .nav{
@@ -83,8 +92,16 @@
       box-shadow:inset 0 0 0 1px rgba(10,115,255,.08);
     }
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-    .nav-links a{font-size:.75rem;color:#4c556b;font-weight:570}
-    .nav-links a:hover{color:var(--ink)}
+    .nav-links a{
+      position:relative;font-size:.75rem;color:#4c556b;font-weight:570;
+      transition:color .2s ease
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:50%;bottom:-9px;width:4px;height:4px;border-radius:50%;
+      background:var(--blue);opacity:0;transform:translateX(-50%) scale(.4);transition:.2s ease
+    }
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-links a.active::after{opacity:1;transform:translateX(-50%) scale(1)}
     .nav-cta{
       min-height:36px;padding:0 15px;border-radius:999px;
       display:inline-flex;align-items:center;justify-content:center;
@@ -159,7 +176,12 @@
     .fact small{display:block;color:var(--muted);font-size:.68rem;margin-top:2px}
 
     /* dashboard hero art */
-    .dashboard-stage{position:relative;min-height:440px}
+    .dashboard-stage{position:relative;min-height:440px;perspective:1200px;transform-style:preserve-3d}
+    .dashboard-stage::after{
+      content:"";position:absolute;inset:auto 8% 2% 8%;height:38px;border-radius:50%;
+      background:radial-gradient(ellipse,rgba(47,80,130,.16),transparent 68%);
+      filter:blur(8px);pointer-events:none
+    }
     .back-card{
       position:absolute;border-radius:24px;border:1px solid rgba(255,255,255,.7);
       background:rgba(218,231,250,.68);box-shadow:0 25px 70px rgba(56,91,142,.12);
@@ -172,6 +194,13 @@
       box-shadow:0 28px 80px rgba(39,71,113,.18);
       overflow:hidden;display:grid;grid-template-columns:118px 1fr;
       transform:rotate(-1.1deg);
+      animation:dashboardFloat 7s ease-in-out infinite;
+      transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;
+      will-change:transform
+    }
+    @keyframes dashboardFloat{
+      0%,100%{transform:translateY(0) rotate(-1.1deg)}
+      50%{transform:translateY(-7px) rotate(-.55deg)}
     }
     .dash-side{padding:18px 12px;background:#f7faff;border-right:1px solid #edf1f7}
     .dash-logo{font-size:.78rem;font-weight:800;margin-bottom:22px;display:flex;align-items:center;gap:7px}
@@ -204,7 +233,22 @@
     .bars span:nth-child(4){height:55%}.bars span:nth-child(5){height:88%}.bars span:nth-child(6){height:67%}.bars span:nth-child(7){height:96%}
 
     /* sections */
-    .section{padding:82px 0}
+    .section{padding:82px 0;position:relative}
+    #profile{background:linear-gradient(180deg,#f7f9fc 0%,#fff 50%,#fff 100%)}
+    #projects{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(88,155,255,.07),transparent 24%),
+        linear-gradient(180deg,#fff 0%,#f8fbff 45%,#fff 100%);
+      border-top:1px solid rgba(219,228,241,.6);
+      border-bottom:1px solid rgba(219,228,241,.6)
+    }
+    #skills{background:#fff}
+    #tools{
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+      border-top:1px solid rgba(219,228,241,.55)
+    }
+    #experience{background:linear-gradient(180deg,#f8fbff 0%,#fff 72%)}
+
     .section-head{
       display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px
     }
@@ -228,14 +272,23 @@
     /* projects */
     .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .project-card{
-      background:#fff;border:1px solid var(--line);border-radius:22px;padding:10px;
-      box-shadow:0 15px 45px rgba(44,62,96,.045);transition:.22s ease
+      position:relative;overflow:hidden;background:rgba(255,255,255,.92);border:1px solid var(--line);
+      border-radius:22px;padding:10px;box-shadow:0 15px 45px rgba(44,62,96,.045);
+      transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease
     }
-    .project-card:hover{transform:translateY(-4px);box-shadow:0 22px 55px rgba(44,62,96,.08)}
+    .project-card::before{
+      content:"";position:absolute;inset:0 0 auto;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(10,115,255,.35),transparent);
+      opacity:0;transition:opacity .3s ease
+    }
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 24px 58px rgba(44,62,96,.09);border-color:#dce7f7}
+    .project-card:hover::before{opacity:1}
     .project-visual{
       height:225px;border-radius:16px;background:#f7faff;border:1px solid #edf1f7;
-      padding:10px;overflow:hidden;margin-bottom:14px
+      padding:10px;overflow:hidden;margin-bottom:14px;
+      transition:transform .3s cubic-bezier(.22,1,.36,1)
     }
+    .project-card:hover .project-visual{transform:translateY(-1px)}
     .project-body{padding:0 7px 9px}
     .project-title-row{display:flex;align-items:center;gap:7px;margin-bottom:7px}
     .project-title-row h3{font-size:1.05rem;letter-spacing:-.025em}
@@ -243,6 +296,12 @@
     .project-body p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:12px;min-height:50px}
     .tags{display:flex;flex-wrap:wrap;gap:6px}
     .tag{padding:6px 9px;border-radius:999px;background:#f2f5f9;color:#556176;font-size:.64rem;font-weight:600}
+    .tech-chip{display:inline-flex;align-items:center;gap:6px}
+    .tech-chip img{width:13px;height:13px;display:block;object-fit:contain}
+    .project-link{
+      margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);
+      font-size:.69rem;font-weight:730
+    }
 
     /* mini TanShift */
     .mini-app{height:100%;display:grid;grid-template-columns:78px 1fr;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #edf1f7}
@@ -302,17 +361,17 @@
     /* tools */
     .tools-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
     .tool{
-      background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px 8px 13px;text-align:center;
-      box-shadow:0 9px 28px rgba(44,62,96,.03)
+      min-width:0;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:17px;
+      padding:17px 8px 14px;text-align:center;box-shadow:0 10px 30px rgba(44,62,96,.035);
+      transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s ease,border-color .25s ease
     }
-    .tool-icon{
-      width:35px;height:35px;border-radius:11px;margin:0 auto 8px;display:grid;place-items:center;
-      font-size:.65rem;font-weight:900;letter-spacing:-.03em
+    .tool:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(44,62,96,.075);border-color:#d7e3f3}
+    .tool-logo-shell{
+      width:43px;height:43px;border-radius:13px;margin:0 auto 9px;display:grid;place-items:center;
+      background:#f7f9fc;border:1px solid #edf1f6
     }
-    .tool span{display:block;font-size:.65rem;font-weight:650;color:#435067}
-    .figma{background:#fff0f5;color:#f24e1e}.miro{background:#fff7c9;color:#111}.trello{background:#eaf2ff;color:#0b66d5}
-    .github{background:#eef0f4;color:#14171c}.vscode{background:#e8f5ff;color:#1686d9}.supabase{background:#e8fbf3;color:#22a06b}
-    .postgres{background:#edf3ff;color:#336791}.oracle{background:#fff0f0;color:#e12727}.excel{background:#e9f8ef;color:#187b4c}.canva{background:#eef8ff;color:#1aa6c7}
+    .tool-logo{width:24px;height:24px;display:block;object-fit:contain}
+    .tool span{display:block;font-size:.65rem;font-weight:680;color:#435067;line-height:1.25}
 
     /* experience */
     .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
@@ -361,8 +420,16 @@
     .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     .footer-links{display:flex;gap:17px}
 
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .58s cubic-bezier(.22,1,.36,1),transform .58s cubic-bezier(.22,1,.36,1)}
+    .reveal{
+      opacity:0;transform:translateY(18px);
+      transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1);
+      transition-delay:var(--reveal-delay,0ms)
+    }
     .reveal.visible{opacity:1;transform:none}
+    @media(hover:hover) and (pointer:fine){
+      .snapshot-card,.cap-card,.timeline,.cta{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+      .snapshot-card:hover,.cap-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    }
 
     @media(max-width:1040px){
       .hero-grid{grid-template-columns:1fr}
@@ -406,6 +473,7 @@
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+      .dashboard{animation:none!important}
     }
   </style>
   <script type="application/ld+json">
@@ -422,15 +490,16 @@
   </script>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a class="brand" href="#top"><span class="brand-mark">WT</span><span>William Tan</span></a>
       <ul class="nav-links">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#profile" data-nav="profile">Profile</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
+        <li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
     </div>
@@ -534,7 +603,13 @@
             <div class="project-body">
               <div class="project-title-row"><h3>TanShift</h3><span class="project-arrow">↗</span></div>
               <p>Staff scheduling system designed to replace fragmented rostering workflows.</p>
-              <div class="tags"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Workflow Design</span><span class="tag">Business Analysis</span></div>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="https://cdn.simpleicons.org/nextdotjs" alt="">Next.js</span>
+    <span class="tag tech-chip"><img src="https://cdn.simpleicons.org/supabase" alt="">Supabase</span>
+    <span class="tag tech-chip"><img src="https://cdn.simpleicons.org/postgresql" alt="">PostgreSQL</span>
+    <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
+  </div>
+  <a class="project-link" href="https://github.com/WilliamTangq/tanshift" target="_blank" rel="noopener">View project on GitHub ↗</a>
             </div>
           </article>
 
@@ -577,7 +652,10 @@
             <div class="project-body">
               <div class="project-title-row"><h3>Oracle Database Project</h3><span class="project-arrow">↗</span></div>
               <p>Database design focused on business rules, ERD structure and SQL integrity.</p>
-              <div class="tags"><span class="tag">Oracle SQL</span><span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span></div>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="https://cdn.simpleicons.org/oracle" alt="">Oracle SQL</span>
+    <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
+  </div>
             </div>
           </article>
         </div>
@@ -614,16 +692,16 @@
           <div class="section-kicker">Tools I work with</div>
         </div>
         <div class="tools-grid">
-          <div class="tool reveal"><div class="tool-icon figma">Fg</div><span>Figma</span></div>
-          <div class="tool reveal"><div class="tool-icon miro">Mi</div><span>Miro</span></div>
-          <div class="tool reveal"><div class="tool-icon trello">Tr</div><span>Trello</span></div>
-          <div class="tool reveal"><div class="tool-icon github">GH</div><span>GitHub</span></div>
-          <div class="tool reveal"><div class="tool-icon vscode">&lt;/&gt;</div><span>VS Code</span></div>
-          <div class="tool reveal"><div class="tool-icon supabase">SB</div><span>Supabase</span></div>
-          <div class="tool reveal"><div class="tool-icon postgres">PG</div><span>PostgreSQL</span></div>
-          <div class="tool reveal"><div class="tool-icon oracle">O</div><span>Oracle SQL</span></div>
-          <div class="tool reveal"><div class="tool-icon excel">XL</div><span>Excel</span></div>
-          <div class="tool reveal"><div class="tool-icon canva">Ca</div><span>Canva</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/figma" alt="Figma logo"></div><span>Figma</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/miro" alt="Miro logo"></div><span>Miro</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/trello" alt="Trello logo"></div><span>Trello</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/github" alt="GitHub logo"></div><span>GitHub</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/visualstudiocode" alt="Visual Studio Code logo"></div><span>VS Code</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/supabase" alt="Supabase logo"></div><span>Supabase</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL logo"></div><span>PostgreSQL</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/oracle" alt="Oracle logo"></div><span>Oracle SQL</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/microsoftexcel" alt="Microsoft Excel logo"></div><span>Excel</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://cdn.simpleicons.org/canva" alt="Canva logo"></div><span>Canva</span></div>
         </div>
       </div>
     </section>
@@ -665,8 +743,8 @@
           <div><small>Let’s work together</small><h2>Open to graduate and entry-level opportunities in business, systems and technology.</h2></div>
           <div class="cta-actions">
             <a class="cta-link" href="mailto:tanstrifelife@gmail.com">Email</a>
-            <a class="cta-link linkedin" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a>
+            <a class="cta-link linkedin" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/linkedin/ffffff" alt="" style="width:14px;height:14px;margin-right:7px">LinkedIn</a>
+            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/github/ffffff" alt="" style="width:14px;height:14px;margin-right:7px">GitHub</a>
           </div>
         </div>
       </div>
@@ -682,8 +760,15 @@
 
   <script>
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealEls = [...document.querySelectorAll(".reveal")];
+
+    revealEls.forEach((el, index) => {
+      const localIndex = index % 5;
+      el.style.setProperty("--reveal-delay", reducedMotion ? "0ms" : (localIndex * 45) + "ms");
+    });
+
     if (reducedMotion) {
-      document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+      revealEls.forEach((el) => el.classList.add("visible"));
     } else {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -692,8 +777,54 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.08 });
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      }, { threshold: 0.08, rootMargin: "0px 0px -4% 0px" });
+      revealEls.forEach((el) => observer.observe(el));
+    }
+
+    const progress = document.getElementById("scrollProgress");
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      progress.style.transform = "scaleX(" + ratio + ")";
+    };
+    setProgress();
+    window.addEventListener("scroll", setProgress, { passive:true });
+    window.addEventListener("resize", setProgress);
+
+    const navLinks = [...document.querySelectorAll("[data-nav]")];
+    const watchedSections = ["profile","projects","skills","contact"]
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.dataset.nav === visible.target.id);
+      });
+    }, { rootMargin:"-28% 0px -58% 0px", threshold:[0,.15,.3,.6] });
+    watchedSections.forEach((section) => navObserver.observe(section));
+
+    if (!reducedMotion && window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
+      const stage = document.querySelector(".dashboard-stage");
+      const dash = document.querySelector(".dashboard");
+      if (stage && dash) {
+        stage.addEventListener("pointermove", (event) => {
+          const r = stage.getBoundingClientRect();
+          const x = (event.clientX - r.left) / r.width - .5;
+          const y = (event.clientY - r.top) / r.height - .5;
+          dash.style.animation = "none";
+          dash.style.transform = "translateY(-3px) rotateX(" + (-y * 2.2) + "deg) rotateY(" + (x * 2.8) + "deg) rotateZ(-.7deg)";
+          dash.style.boxShadow = "0 32px 90px rgba(39,71,113,.20)";
+        });
+        stage.addEventListener("pointerleave", () => {
+          dash.style.transform = "";
+          dash.style.boxShadow = "";
+          dash.style.animation = "";
+        });
+      }
     }
   </script>
 </body>
