@@ -269,7 +269,7 @@
     .snapshot-card p{color:var(--muted);font-size:.81rem;line-height:1.55}
 
     /* projects */
-    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .project-card{
       position:relative;overflow:hidden;background:rgba(255,255,255,.92);border:1px solid var(--line);
       border-radius:22px;padding:10px;box-shadow:0 15px 45px rgba(44,62,96,.045);
@@ -302,6 +302,21 @@
       font-size:.69rem;font-weight:730
     }
 
+    /* mini InnerLeaf */
+    .innerleaf-mini{height:100%;border-radius:12px;border:1px solid #e6ece8;background:linear-gradient(145deg,#fbfff9,#f5fbf8);padding:13px;display:grid;grid-template-rows:auto 1fr;gap:11px}
+    .innerleaf-head{display:flex;justify-content:space-between;align-items:center}
+    .innerleaf-brand{font-size:.58rem;font-weight:800;color:#315a48}
+    .innerleaf-badge{font-size:.38rem;padding:4px 7px;border-radius:999px;background:#e9f7ef;color:#32745a;font-weight:700}
+    .innerleaf-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:9px}
+    .journal{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px}
+    .journal-title{font-size:.43rem;font-weight:800;margin-bottom:8px}
+    .journal-line{height:7px;border-radius:5px;background:#eef2ef;margin-bottom:6px}.journal-line:nth-child(2){width:86%}.journal-line:nth-child(3){width:68%}.journal-line:nth-child(4){width:78%}
+    .reflection-card{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px;display:grid;gap:6px}
+    .reflect-row{border-radius:7px;background:#f5f8f6;padding:6px}
+    .reflect-row strong{display:block;font-size:.35rem;color:#718075;margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
+    .reflect-row span{font-size:.4rem;color:#45584d}
+    .reflect-row.accent{background:#eaf7f0}
+    
     /* mini TanShift */
     .mini-app{height:100%;display:grid;grid-template-columns:78px 1fr;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #edf1f7}
     .mini-side{background:#f8faff;border-right:1px solid #edf1f7;padding:10px 7px}
@@ -661,6 +676,29 @@
             </div>
           </article>
 
+
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="innerleaf-mini">
+                <div class="innerleaf-head"><span class="innerleaf-brand">InnerLeaf</span><span class="innerleaf-badge">AI-assisted reflection</span></div>
+                <div class="innerleaf-grid">
+                  <div class="journal"><div class="journal-title">Free-form reflection</div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div></div>
+                  <div class="reflection-card">
+                    <div class="reflect-row"><strong>Facts</strong><span>What happened without interpretation</span></div>
+                    <div class="reflect-row"><strong>Pattern</strong><span>Structured thought-pattern output</span></div>
+                    <div class="reflect-row accent"><strong>Next step</strong><span>One practical reflection prompt</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
+              <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
+              <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
+              <a class="project-link" href="case-innerleaf.html">View case study →</a>
+            </div>
+          </article>
+
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true">
               <div class="erd">
@@ -699,7 +737,7 @@
           <article class="evidence-card reveal"><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><p>Requirements, acceptance criteria, guided-flow defects and strict end-to-end validation.</p><a href="case-client-project.html">Inspect evidence →</a></article>
           <article class="evidence-card reveal"><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift workflows</h3><p>Draft/published schedules, availability rules, manager/staff flows and request handling.</p><a href="case-tanshift.html">Inspect system →</a></article>
           <article class="evidence-card reveal"><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><p>ERD thinking, normalisation, Oracle SQL and business-rule-driven database structures.</p><a href="case-database.html">Inspect approach →</a></article>
-          <article class="evidence-card reveal"><span class="evidence-no">04 · CODE</span><h3>Public GitHub</h3><p>Source-backed technical work instead of skill claims alone.</p><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">Open GitHub ↗</a></article>
+          <article class="evidence-card reveal"><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><p>AI integration, authentication, admin/user routing, database migrations and Playwright acceptance testing.</p><a href="case-innerleaf.html">Inspect product →</a></article>
         </div>
       </div>
     </section>
