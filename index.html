@@ -415,6 +415,21 @@
     .tool-logo{width:24px;height:24px;display:block;object-fit:contain}
     .tool span{display:block;font-size:.65rem;font-weight:680;color:#435067;line-height:1.25}
 
+
+    .application-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .application-card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+      box-shadow:0 12px 35px rgba(44,62,96,.035);
+      display:flex;flex-direction:column;min-height:220px;
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .application-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    .application-type{font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:#8a95a8;font-weight:800;margin-bottom:16px}
+    .application-card h3{font-size:1.06rem;letter-spacing:-.025em;margin-bottom:8px}
+    .application-card p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:18px}
+    .application-card a{margin-top:auto;color:var(--blue);font-size:.72rem;font-weight:750}
+    .application-note{margin-top:14px;color:#7c8799;font-size:.72rem}
+
     /* experience */
     .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
     .timeline-row{
@@ -544,7 +559,8 @@
         <li><a href="#projects" data-nav="projects">Projects</a></li>
         <li><a href="#proof">Proof</a></li>
         <li><a href="#skills" data-nav="skills">Skills</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="#proof" data-nav="proof">Proof</a></li>
+        <li><a href="#application" data-nav="application">Application Pack</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
@@ -809,6 +825,43 @@
       </div>
     </section>
 
+    
+    <section class="section" id="application">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Application Pack <span class="blue-line"></span></h2>
+          <div class="section-kicker">Same evidence · role-specific emphasis</div>
+        </div>
+        <div class="application-grid">
+          <article class="application-card reveal">
+            <div class="application-type">Resume Variant 01</div>
+            <h3>Business / Systems Analyst</h3>
+            <p>Prioritises requirements, workflows, acceptance criteria, stakeholder communication, UAT and systems thinking.</p>
+            <a href="resume.html">Open resume →</a>
+          </article>
+          <article class="application-card reveal">
+            <div class="application-type">Resume Variant 02</div>
+            <h3>IT / Technology Analyst</h3>
+            <p>Prioritises troubleshooting, systems, user support, technical delivery, databases and validation.</p>
+            <a href="resume-it.html">Open resume →</a>
+          </article>
+          <article class="application-card reveal">
+            <div class="application-type">Resume Variant 03</div>
+            <h3>Data / Operations Analyst</h3>
+            <p>Prioritises SQL, relational design, Excel, inventory/product data and operational decision support.</p>
+            <a href="resume-data.html">Open resume →</a>
+          </article>
+          <article class="application-card reveal">
+            <div class="application-type">Cover Letter System</div>
+            <h3>Role-aware Cover Letter</h3>
+            <p>A modular builder that changes evidence by role while leaving company-specific motivation for each application.</p>
+            <a href="cover-letter.html">Open builder →</a>
+          </article>
+        </div>
+        <p class="application-note reveal">I keep the underlying evidence consistent and change emphasis rather than inventing a different profile for each application.</p>
+      </div>
+    </section>
+
     <section class="section" id="experience">
       <div class="shell">
         <div class="section-head reveal">
@@ -857,7 +910,7 @@
   <footer>
     <div class="shell footer-inner">
       <div>© 2026 Guang Quan Tan (William) · Melbourne, Australia</div>
-      <div class="footer-links"><a href="resume.html">Resume</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="footer-links"><a href="resume.html">BA Resume</a><a href="resume-it.html">IT Resume</a><a href="resume-data.html">Data Resume</a><a href="cover-letter.html">Cover Letter</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </footer>
 
@@ -895,7 +948,7 @@
     window.addEventListener("resize", setProgress);
 
     const navLinks = [...document.querySelectorAll("[data-nav]")];
-    const watchedSections = ["profile","projects","skills","contact"]
+    const watchedSections = ["profile","projects","skills","proof","application","contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
