@@ -6,7 +6,7 @@
   <title>Guang Quan Tan (William) | Business & Technology Graduate Portfolio</title>
   <meta name="description" content="Guang Quan Tan (William) is a final-year Monash University Business Information Systems student in Melbourne, combining business analysis, systems thinking, SQL, digital operations, and hands-on product delivery." />
   <meta name="keywords" content="William Tan, Business Analyst, Systems Analyst, IT Analyst, Data Analyst, Graduate Technology, Business Information Systems, Monash University, SQL, Requirements Gathering, Process Mapping, UAT, Melbourne" />
-  <meta name="author" content="William Guang Quan Tan" />
+  <meta name="author" content="Guang Quan Tan" />
   <meta name="theme-color" content="#f7f9fc" />
   <meta property="og:title" content="Guang Quan Tan (William) | Business & Technology Graduate" />
   <meta property="og:description" content="Business Information Systems graduate candidate bridging business analysis, systems, data, digital operations and delivery." />
@@ -348,6 +348,27 @@
     .erd-line.two{left:68px;top:83px;width:70px;transform:rotate(30deg)}
     .erd-line.three{left:106px;top:78px;width:46px;transform:rotate(-35deg)}
 
+    /* evidence + working style */
+    .evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .evidence-card{
+      background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;
+      box-shadow:0 12px 34px rgba(44,62,96,.035);transition:.25s ease
+    }
+    .evidence-card:hover{transform:translateY(-3px);border-color:#d7e4f5;box-shadow:0 18px 42px rgba(44,62,96,.07)}
+    .evidence-no{display:block;color:var(--blue);font-size:.66rem;font-weight:800;letter-spacing:.08em;margin-bottom:14px}
+    .evidence-card h3{font-size:.94rem;margin-bottom:7px}
+    .evidence-card p{font-size:.75rem;color:var(--muted);line-height:1.55;margin-bottom:13px}
+    .evidence-card a{font-size:.68rem;font-weight:750;color:var(--blue)}
+    .workstyle{
+      display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);
+      border-radius:21px;overflow:hidden;box-shadow:0 13px 36px rgba(44,62,96,.035)
+    }
+    .workstep{padding:22px;border-left:1px solid var(--line)}
+    .workstep:first-child{border-left:0}
+    .workstep strong{display:block;font-size:.9rem;margin-bottom:6px}
+    .workstep span{font-size:.73rem;color:var(--muted);line-height:1.5}
+    .workstep b{display:block;color:var(--blue);font-size:.66rem;margin-bottom:18px}
+
     /* capability cards */
     .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
     .cap-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 35px rgba(44,62,96,.035)}
@@ -457,12 +478,15 @@
       .dash-lower{grid-template-columns:1fr}.coverage{display:none}
       .section{padding:64px 0}
       .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
-      .snapshot-grid,.cap-grid{grid-template-columns:1fr}
+      .snapshot-grid,.cap-grid,.evidence-grid{grid-template-columns:1fr}
       .projects-grid{grid-template-columns:1fr}
       .project-card{display:block}
       .project-visual{height:210px;margin-bottom:13px}
       .project-body{padding:0 8px 10px}
       .tools-grid{grid-template-columns:repeat(2,1fr)}
+      .workstyle{grid-template-columns:1fr}
+      .workstep{border-left:0;border-top:1px solid var(--line)}
+      .workstep:first-child{border-top:0}
       .timeline{padding:4px 18px}
       .timeline-row{grid-template-columns:1fr;gap:5px;padding:18px 0 18px 22px;min-height:auto}
       .timeline-date{padding-left:0}.timeline-date::before{left:-22px}.timeline-date::after{left:-18.5px;top:18px;height:75px}
@@ -496,6 +520,7 @@
       <ul class="nav-links">
         <li><a href="#profile" data-nav="profile">Profile</a></li>
         <li><a href="#projects" data-nav="projects">Projects</a></li>
+        <li><a href="#proof">Proof</a></li>
         <li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
@@ -608,7 +633,7 @@
     <span class="tag tech-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
     <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
   </div>
-  <a class="project-link" href="https://github.com/WilliamTangq/tanshift" target="_blank" rel="noopener">View project on GitHub ↗</a>
+  <a class="project-link" href="case-tanshift.html">View case study →</a>
             </div>
           </article>
 
@@ -632,6 +657,7 @@
               <div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
               <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
               <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
+              <a class="project-link" href="case-client-project.html">View case study →</a>
             </div>
           </article>
 
@@ -655,8 +681,40 @@
     <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
     <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
   </div>
+              <a class="project-link" href="case-database.html">View case study →</a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="proof">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Proof of Work <span class="blue-line"></span></h2>
+          <div class="section-kicker">Claims connected to evidence</div>
+        </div>
+        <div class="evidence-grid">
+          <article class="evidence-card reveal"><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><p>Requirements, acceptance criteria, guided-flow defects and strict end-to-end validation.</p><a href="case-client-project.html">Inspect evidence →</a></article>
+          <article class="evidence-card reveal"><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift workflows</h3><p>Draft/published schedules, availability rules, manager/staff flows and request handling.</p><a href="case-tanshift.html">Inspect system →</a></article>
+          <article class="evidence-card reveal"><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><p>ERD thinking, normalisation, Oracle SQL and business-rule-driven database structures.</p><a href="case-database.html">Inspect approach →</a></article>
+          <article class="evidence-card reveal"><span class="evidence-no">04 · CODE</span><h3>Public GitHub</h3><p>Source-backed technical work instead of skill claims alone.</p><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">Open GitHub ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>How I Work <span class="blue-line"></span></h2>
+          <div class="section-kicker">Analyst-to-delivery loop</div>
+        </div>
+        <div class="workstyle reveal">
+          <div class="workstep"><b>01</b><strong>Understand</strong><span>Clarify the user, objective, pain points, constraints and success criteria.</span></div>
+          <div class="workstep"><b>02</b><strong>Structure</strong><span>Turn ambiguity into workflows, requirements, entities, edge cases and acceptance criteria.</span></div>
+          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Translate the analysis into a prototype, system change, data model or documentation.</span></div>
+          <div class="workstep"><b>04</b><strong>Validate</strong><span>Test the real journey against the requirement and refine until behaviour matches intent.</span></div>
         </div>
       </div>
     </section>
@@ -743,7 +801,7 @@
           <div class="cta-actions">
             <a class="cta-link" href="mailto:tanstrifelife@gmail.com">Email</a>
             <a class="cta-link linkedin" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="" style="width:14px;height:14px;margin-right:7px;filter:brightness(0) invert(1)">LinkedIn</a>
-            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener"><img src="assets/icons/github.svg/ffffff" alt="" style="width:14px;height:14px;margin-right:7px">GitHub</a>
+            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="" style="width:14px;height:14px;margin-right:7px">GitHub</a>
           </div>
         </div>
       </div>
