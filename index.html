@@ -255,6 +255,18 @@
     .section-kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:#93a0b5;font-weight:700}
     .blue-line{width:28px;height:3px;border-radius:3px;background:var(--blue);display:inline-block;margin-left:9px;vertical-align:middle}
 
+    /* visual icon system */
+    .vicon{
+      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+      background:#f3f7fc;border:1px solid #e3eaf3;color:#35638f;flex:none
+    }
+    .vicon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .vicon.dark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#d9e8fb}
+    .vicon.blue{background:var(--blue-soft);border-color:#d9e9ff;color:var(--blue)}
+    .vicon.green{background:#edf8f2;border-color:#d9eee3;color:#31835d}
+    .vicon.purple{background:#f1efff;border-color:#e5e0ff;color:#6d57d8}
+    .vicon.orange{background:#fff4ea;border-color:#f7e3d3;color:#bc6a2b}
+
     /* recruiter decision */
     .hire-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px}
     .hire-main{
@@ -269,15 +281,25 @@
     .hire-main>*{position:relative;z-index:1}
     .hire-main small{display:block;color:#9fb7d8;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:9px}
     .hire-main h3{font-size:1.55rem;line-height:1.12;letter-spacing:-.04em;margin-bottom:10px}
-    .hire-main p{max-width:680px;color:#c9d5e7;font-size:.82rem;line-height:1.62}
-    .hire-chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:20px}
+    .hire-visual{margin:20px 0 14px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .hire-side{display:grid;gap:8px}
+    .hire-side.right{text-align:right}
+    .hire-label{font-size:.67rem;color:#c9d5e7;font-weight:700}
+    .hire-node{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.11)}
+    .hire-side.right .hire-node{justify-content:flex-end}
+    .hire-bridge{position:relative;width:86px;height:52px;display:grid;place-items:center}
+    .hire-bridge::before{content:"";position:absolute;left:4px;right:4px;top:50%;height:1px;background:linear-gradient(90deg,rgba(115,178,255,.2),#73b2ff,rgba(115,178,255,.2))}
+    .hire-bridge::after{content:"↔";position:relative;z-index:2;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a73ff;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+    .hire-caption{color:#9fb7d8;font-size:.66rem;line-height:1.45;margin-top:8px}
+    .hire-chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:16px}
     .hire-chain span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
     .hire-chain b{color:#73b2ff}
     .hire-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .hire-proof article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 32px rgba(44,62,96,.035)}
-    .hire-proof b{display:block;color:var(--blue);font-size:.7rem;letter-spacing:.06em;margin-bottom:6px}
-    .hire-proof strong{display:block;font-size:.92rem;margin-bottom:5px}
-    .hire-proof span{display:block;color:var(--muted);font-size:.68rem;line-height:1.48}
+    .hire-proof article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 12px 32px rgba(44,62,96,.035)}
+    .hire-proof .vicon{margin-bottom:12px}
+    .hire-proof b{display:block;color:#8b96a8;font-size:.57rem;letter-spacing:.08em;margin-bottom:4px}
+    .hire-proof strong{display:block;font-size:.9rem;margin-bottom:3px}
+    .hire-proof span{display:block;color:var(--muted);font-size:.65rem;line-height:1.42}
 
     /* recruiter snapshot */
     .snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -477,8 +499,9 @@
     }
     .evidence-card:hover{transform:translateY(-3px);border-color:#d7e4f5;box-shadow:0 18px 42px rgba(44,62,96,.07)}
     .evidence-no{display:block;color:var(--blue);font-size:.66rem;font-weight:800;letter-spacing:.08em;margin-bottom:14px}
-    .evidence-card h3{font-size:.94rem;margin-bottom:7px}
-    .evidence-card p{font-size:.75rem;color:var(--muted);line-height:1.55;margin-bottom:13px}
+    .evidence-card .vicon{margin-bottom:14px}
+    .evidence-card h3{font-size:.94rem;margin-bottom:4px}
+    .evidence-meta{display:block;font-size:.66rem;color:var(--muted);line-height:1.4;margin-bottom:12px}
     .evidence-card a{font-size:.68rem;font-weight:750;color:var(--blue)}
     .workstyle{
       display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);
@@ -570,11 +593,12 @@
       display:grid;grid-template-columns:repeat(2,1fr);gap:10px
     }
     .commercial-proof div{
-      background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;
       box-shadow:0 12px 32px rgba(44,62,96,.035)
     }
-    .commercial-proof strong{display:block;font-size:1.05rem;color:var(--blue);margin-bottom:4px}
-    .commercial-proof span{display:block;font-size:.68rem;color:var(--muted);line-height:1.45}
+    .commercial-proof .vicon{margin-bottom:10px}
+    .commercial-proof strong{display:block;font-size:.93rem;color:var(--ink);margin-bottom:3px}
+    .commercial-proof span{display:block;font-size:.64rem;color:var(--muted);line-height:1.4}
 
     /* experience */
     .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
@@ -664,6 +688,10 @@
       .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
       .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip,.hire-grid{grid-template-columns:1fr}
       .hire-proof{grid-template-columns:1fr 1fr}
+      .hire-visual{grid-template-columns:1fr}
+      .hire-side.right{text-align:left}
+      .hire-side.right .hire-node{justify-content:flex-start}
+      .hire-bridge{width:100%;height:38px;transform:rotate(90deg)}
       .projects-grid{grid-template-columns:1fr}
       .project-card{display:block}
       .project-evidence{grid-template-columns:1fr 1fr 1fr}
@@ -782,37 +810,30 @@
         <div class="hire-grid reveal">
           <article class="hire-main">
             <small>Candidate thesis</small>
-            <h3>I already work across the gap between business needs and technology delivery.</h3>
-            <p>My profile combines real commercial experience at CS TAN with hands-on systems, data, product and testing work. I can discuss a business problem with users, structure it into requirements or workflows, understand the supporting data, and stay close enough to implementation to validate whether the solution actually works.</p>
-            <div class="hire-chain"><span>Business context</span><b>→</b><span>Requirements</span><b>→</b><span>Systems & Data</span><b>→</b><span>Delivery</span><b>→</b><span>Validation</span></div>
+            <h3>Business thinking on one side. Technology delivery on the other.</h3>
+            <div class="hire-visual">
+              <div class="hire-side">
+                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><span class="hire-label">Business context</span></div>
+                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="hire-label">Requirements</span></div>
+              </div>
+              <div class="hire-bridge" aria-hidden="true"></div>
+              <div class="hire-side right">
+                <div class="hire-node"><span class="hire-label">Systems & data</span><span class="vicon dark"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span></div>
+                <div class="hire-node"><span class="hire-label">Delivery & validation</span><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></span></div>
+              </div>
+            </div>
+            <div class="hire-caption">Real commercial work + source-backed systems projects + end-to-end validation.</div>
           </article>
           <div class="hire-proof">
-            <article><b>COMMERCIAL</b><strong>Real operating context</strong><span>Sales, stock, supplier cost, customers, quotations, invoices, sourcing and B2B workflows.</span></article>
-            <article><b>ANALYSIS</b><strong>Decision support</strong><span>Excel analysis used for pricing, purchasing, stock and product decisions.</span></article>
-            <article><b>TECHNICAL</b><strong>Source-backed work</strong><span>Next.js, Supabase/PostgreSQL, Gemini, role routing and Playwright evidence in public repositories.</span></article>
-            <article><b>OPERATIONS</b><strong>Real B2B coordination</strong><span>Handled customer communication, itineraries, invoices and multi-passenger arrangements, including a 22-passenger booking workflow.</span></article>
+            <article><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><b>COMMERCIAL</b><strong>CS TAN</strong><span>Sales · stock · customers · suppliers</span></article>
+            <article><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><b>ANALYSIS</b><strong>Decision support</strong><span>Excel · pricing · purchasing · inventory</span></article>
+            <article><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><b>TECHNICAL</b><strong>Public proof</strong><span>Next.js · Supabase · SQL · Playwright</span></article>
+            <article><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M18 14l2 2-4 4"/></svg></span><b>OPERATIONS</b><strong>22-passenger workflow</strong><span>Booking · itinerary · invoice · customer</span></article>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section" id="profile">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Recruiter Snapshot <span class="blue-line"></span></h2>
-          <div class="section-kicker">A quick overview of my profile</div>
-        </div>
-        <div class="snapshot-grid">
-          <article class="snapshot-card reveal"><div class="snapshot-icon">01</div><h3>Primary Direction</h3><p>Business Analyst / Systems Analyst, with Technology and Data Analyst pathways where the role fits.</p></article>
-          <article class="snapshot-card reveal"><div class="snapshot-icon">02</div><h3>Education</h3><p>Bachelor of IT (Business Information Systems), Monash University.</p></article>
-          <article class="snapshot-card reveal"><div class="snapshot-icon">03</div><h3>Core Strengths</h3><p>Requirements, Process Mapping, SQL, UAT and Workflow Design.</p></article>
-          <article class="snapshot-card reveal"><div class="snapshot-icon">04</div><h3>Commercial Experience</h3><p>Real CS TAN experience across Excel analysis, B2B operations, IT support, customers, suppliers and business documentation.</p></article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="evidence-stats">
+<section class="section" id="evidence-stats">
       <div class="shell">
         <div class="stats-strip reveal">
           <div class="stat-block"><strong><em>5</em></strong><span>Evidence pages covering systems, data, client work and commercial experience</span></div>
@@ -967,26 +988,25 @@
           <div class="section-kicker">Claims connected to evidence</div>
         </div>
         <div class="evidence-grid">
-          <article class="evidence-card reveal"><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><p>Requirements, acceptance criteria, guided-flow defects and strict end-to-end validation.</p><a href="case-client-project.html">Inspect evidence →</a></article>
-          <article class="evidence-card reveal"><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift workflows</h3><p>Draft/published schedules, availability rules, manager/staff flows and request handling.</p><a href="case-tanshift.html">Inspect system →</a></article>
-          <article class="evidence-card reveal"><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><p>ERD thinking, normalisation, Oracle SQL and business-rule-driven database structures.</p><a href="case-database.html">Inspect approach →</a></article>
-          <article class="evidence-card reveal"><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><p>AI integration, authentication, admin/user routing, database migrations and Playwright acceptance testing.</p><a href="case-innerleaf.html">Inspect product →</a></article>
-                  <article class="evidence-card reveal"><span class="evidence-no">05 · COMMERCIAL</span><h3>CS TAN experience</h3><p>Real sales, stock, suppliers, B2B documents, IT support and process improvement.</p><a href="case-cstan.html">Inspect experience →</a></article>
+          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><span class="evidence-meta">Acceptance criteria · UAT</span><a href="case-client-project.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift</h3><span class="evidence-meta">Workflows · business rules</span><a href="case-tanshift.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon purple"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><span class="evidence-meta">ERD · Oracle SQL</span><a href="case-database.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><span class="evidence-meta">AI · roles · Playwright</span><a href="case-innerleaf.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><span class="evidence-no">05 · COMMERCIAL</span><h3>CS TAN</h3><span class="evidence-meta">B2B · Excel · IT support</span><a href="case-cstan.html">Inspect →</a></article>
         </div>
       </div>
     </section>
-
-    <section class="section" id="approach">
+<section class="section" id="approach">
       <div class="shell">
         <div class="section-head reveal">
           <h2>How I Work <span class="blue-line"></span></h2>
           <div class="section-kicker">Analyst-to-delivery loop</div>
         </div>
         <div class="workstyle reveal">
-          <div class="workstep"><b>01</b><strong>Understand</strong><span>Clarify the user, objective, pain points, constraints and success criteria.</span></div>
-          <div class="workstep"><b>02</b><strong>Structure</strong><span>Turn ambiguity into workflows, requirements, entities, edge cases and acceptance criteria.</span></div>
-          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Translate the analysis into a prototype, system change, data model or documentation.</span></div>
-          <div class="workstep"><b>04</b><strong>Validate</strong><span>Test the real journey against the requirement and refine until behaviour matches intent.</span></div>
+          <div class="workstep"><b>01</b><strong>Understand</strong><span>User · problem · constraints</span></div>
+          <div class="workstep"><b>02</b><strong>Structure</strong><span>Requirements · workflows · edge cases</span></div>
+          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Prototype · data · documentation</span></div>
+          <div class="workstep"><b>04</b><strong>Validate</strong><span>UAT · integrity · refinement</span></div>
         </div>
       </div>
     </section>
@@ -1000,15 +1020,15 @@
         <div class="cap-grid">
           <article class="cap-card reveal">
             <div class="cap-head"><div class="cap-icon">BA</div><h3>Business &amp; Systems Analysis</h3></div>
-            <div class="tags"><span class="tag">Requirements Gathering</span><span class="tag">Process Mapping</span><span class="tag">Workflow Analysis</span><span class="tag">User Stories</span><span class="tag">Acceptance Criteria</span><span class="tag">Stakeholder Communication</span><span class="tag">UAT</span><span class="tag">Business Documentation</span></div>
+            <div class="tags"><span class="tag">Requirements</span><span class="tag">Process Mapping</span><span class="tag">Acceptance Criteria</span><span class="tag">Stakeholders</span><span class="tag">UAT</span></div>
           </article>
           <article class="cap-card reveal">
             <div class="cap-head"><div class="cap-icon">DB</div><h3>Data &amp; Databases</h3></div>
-            <div class="tags"><span class="tag">SQL</span><span class="tag">Oracle SQL</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Schema Design</span><span class="tag">Data Integrity</span><span class="tag">Excel</span></div>
+            <div class="tags"><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle SQL</span><span class="tag">ERD</span><span class="tag">Excel</span></div>
           </article>
           <article class="cap-card reveal">
             <div class="cap-head"><div class="cap-icon">PD</div><h3>Product &amp; Delivery</h3></div>
-            <div class="tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Git/GitHub</span><span class="tag">Agile</span><span class="tag">Problem Solving</span></div>
+            <div class="tags"><span class="tag">Next.js</span><span class="tag">JavaScript</span><span class="tag">Git/GitHub</span><span class="tag">Agile</span><span class="tag">Testing</span></div>
           </article>
         </div>
       </div>
@@ -1069,15 +1089,15 @@
           <article class="commercial-story">
             <small>Commercial experience</small>
             <h3>CS TAN Commercial Experience</h3>
-            <p>Real business work across IT support, retail analysis and business operations — using sales, stock, supplier, customer and document workflows to support everyday commercial decisions.</p>
+            <p>Real commercial work across analysis, IT support and operations.</p>
             <div class="commercial-path"><span>IT Support</span><b>→</b><span>Retail Business Analysis</span><b>→</b><span>Business Development & Operations</span></div>
             <a href="case-cstan.html">View real commercial experience →</a>
           </article>
           <div class="commercial-proof">
-            <div><strong>Excel</strong><span>Sales, inventory, supplier cost, margins, demand, stock movement and product-performance analysis</span></div>
-            <div><strong>22 pax</strong><span>Corporate booking, itinerary, invoice and customer-communication coordination</span></div>
-            <div><strong>B2B</strong><span>Customer communication, quotations, invoices, order coordination and service documentation</span></div>
-            <div><strong>Ops</strong><span>Product sourcing, supplier research, online sales, customer records and stock tracking</span></div>
+            <div><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><strong>Excel analysis</strong><span>Sales · stock · margins · demand</span></div>
+            <div><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM16 10a3 3 0 1 0 0-6M2 21v-2c0-3 2-5 6-5s6 2 6 5v2M15 14c4 0 7 2 7 5v2"/></svg></span><strong>22 passengers</strong><span>Booking · itinerary · invoice</span></div>
+            <div><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 8l8 5 8-5"/></svg></span><strong>B2B workflow</strong><span>Customers · quotes · invoices</span></div>
+            <div><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><strong>Operations</strong><span>Sourcing · suppliers · records</span></div>
           </div>
         </div>
 
