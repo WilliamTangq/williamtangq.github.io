@@ -252,6 +252,69 @@
       line-height: 1.4;
     }
 
+
+    .recruiter { padding: 0 0 66px; }
+    .recruiter-card {
+      background: var(--surface);
+      border: 1px solid rgba(0,0,0,.055);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: 0 14px 50px rgba(0,0,0,.045);
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+    .recruiter-copy {
+      padding: 6px 10px 6px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .recruiter-copy h2 {
+      font-size: clamp(1.9rem, 3.3vw, 3.15rem);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+      margin-bottom: 14px;
+    }
+    .recruiter-copy p { color: var(--muted); font-size: .92rem; line-height: 1.65; }
+    .recruiter-link {
+      margin-top: 24px;
+      color: var(--blue);
+      font-size: .86rem;
+      font-weight: 650;
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      width: fit-content;
+    }
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+    }
+    .snapshot-item { background: #fbfbfd; padding: 22px; min-height: 126px; }
+    .snapshot-label {
+      display: block;
+      color: var(--soft);
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .snapshot-value {
+      font-size: 1rem;
+      line-height: 1.43;
+      letter-spacing: -.015em;
+      font-weight: 630;
+    }
+    .snapshot-value span { color: var(--muted); font-weight: 520; }
+
     .section { padding: 102px 0; }
     .section-head {
       display: grid;
@@ -761,6 +824,7 @@
 
     @media (max-width: 980px) {
       .signal-grid { grid-template-columns: repeat(2, 1fr); }
+      .recruiter-card { grid-template-columns: 1fr; }
       .potential-grid { grid-template-columns: 1fr; }
       .potential-card { min-height: 250px; }
       .work-card { grid-template-columns: 1fr; }
@@ -784,6 +848,10 @@
       .hero-actions { align-items: stretch; }
       .hero-actions .btn { width: 100%; }
       .signal-grid { grid-template-columns: 1fr; }
+      .recruiter { padding-bottom: 44px; }
+      .recruiter-card { padding: 24px; gap: 24px; }
+      .snapshot-grid { grid-template-columns: 1fr; }
+      .snapshot-item { min-height: auto; }
       .section { padding: 78px 0; }
       .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
       .section-title { font-size: clamp(2.2rem, 11vw, 3.5rem); }
@@ -864,6 +932,7 @@
         <li><a href="#work">Selected work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="resume.html">Resume</a></li>
       </ul>
       <a class="nav-cta" href="mailto:tanstrifelife@gmail.com">Contact</a>
     </div>
@@ -881,6 +950,7 @@
         </p>
         <div class="hero-actions reveal">
           <a href="#work" class="btn btn-primary">View selected work <span class="arrow">↓</span></a>
+          <a href="resume.html" class="btn btn-secondary">ATS Resume <span class="arrow">↗</span></a>
           <a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn <span class="arrow">↗</span></a>
           <a href="https://github.com/WilliamTangq" target="_blank" rel="noopener" class="btn btn-secondary">GitHub <span class="arrow">↗</span></a>
         </div>
@@ -893,6 +963,40 @@
         </div>
       </div>
     </header>
+
+
+    <section class="recruiter" aria-label="Recruiter snapshot">
+      <div class="shell">
+        <div class="recruiter-card reveal">
+          <div class="recruiter-copy">
+            <div>
+              <div class="eyebrow">30-second recruiter snapshot</div>
+              <h2>What you can verify quickly.</h2>
+              <p>A concise view of the signals behind my graduate profile — education, role alignment, project evidence and commercial context.</p>
+            </div>
+            <a class="recruiter-link" href="resume.html">Open ATS-friendly resume <span>↗</span></a>
+          </div>
+          <div class="snapshot-grid">
+            <div class="snapshot-item">
+              <span class="snapshot-label">Education</span>
+              <div class="snapshot-value">Monash University<br><span>Bachelor of IT · Business Information Systems · Dec 2026</span></div>
+            </div>
+            <div class="snapshot-item">
+              <span class="snapshot-label">Analyst bridge</span>
+              <div class="snapshot-value">Business requirements → systems → data → delivery</div>
+            </div>
+            <div class="snapshot-item">
+              <span class="snapshot-label">Evidence</span>
+              <div class="snapshot-value">TanShift + client project + SQL/database work<br><span>Requirements, workflows, implementation and validation</span></div>
+            </div>
+            <div class="snapshot-item">
+              <span class="snapshot-label">Commercial context</span>
+              <div class="snapshot-value">Operations · e-commerce · IT support<br><span>Customer, supplier, product and process exposure</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="potential">
       <div class="shell">
@@ -1250,6 +1354,7 @@
           </p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:tanstrifelife@gmail.com">Email William <span class="arrow">↗</span></a>
+            <a class="btn btn-secondary" href="resume.html">ATS Resume</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-secondary" href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a>
           </div>
@@ -1262,6 +1367,7 @@
     <div class="shell footer-inner">
       <div>© 2026 William (Guang Quan) Tan · Melbourne, Australia</div>
       <div class="footer-links">
+        <a href="resume.html">Resume</a>
         <a href="mailto:tanstrifelife@gmail.com">Email</a>
         <a href="tel:0451022488">Phone</a>
         <a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a>
