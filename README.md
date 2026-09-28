@@ -18,6 +18,7 @@ The site is designed around verifiable work rather than skill lists alone.
 
 ### Case studies
 
+- [CS TAN Commercial Experience](https://williamtangq.github.io/case-cstan.html) — Excel analysis, B2B operations, IT support, sourcing, quotations/invoices and process improvement
 - [TanShift](https://williamtangq.github.io/case-tanshift.html) — scheduling workflows, business rules, Next.js, Supabase/PostgreSQL
 - [InnerLeaf](https://williamtangq.github.io/case-innerleaf.html) — AI-assisted product, Supabase auth/data, role routing, Playwright testing
 - [Monash Client Project](https://williamtangq.github.io/case-client-project.html) — requirements, acceptance criteria, onboarding quality and integrity testing
@@ -35,7 +36,7 @@ A reusable role-aware cover letter builder is also included at:
 
 ## Core positioning
 
-> I bridge business needs and technology delivery.
+> I bridge business needs and technology delivery — with real commercial experience across analysis, operations and IT support.
 
 My work spans requirements, workflow analysis, systems, SQL/data modelling, user-facing implementation, testing and commercial operations.
 
