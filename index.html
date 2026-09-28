@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guang Quan Tan (William) | Business & Technology Graduate Portfolio</title>
+  <title>Guang Quan Tan (William) | Business & Technology Graduate Candidate Portfolio</title>
   <meta name="description" content="Guang Quan Tan (William) is a final-year Monash University Business Information Systems student in Melbourne, combining business analysis, systems thinking, SQL, digital operations, and hands-on product delivery." />
   <meta name="keywords" content="Guang Quan Tan, William Tan, Business Analyst, Systems Analyst, IT Analyst, Data Analyst, Graduate Technology, Business Information Systems, Monash University, SQL, Requirements Gathering, Process Mapping, UAT, Melbourne" />
   <meta name="author" content="Guang Quan Tan" />
   <meta name="theme-color" content="#f7f9fc" />
-  <meta property="og:title" content="Guang Quan Tan (William) | Business & Technology Graduate" />
+  <meta property="og:title" content="Guang Quan Tan (William) | Business & Technology Graduate Candidate" />
   <meta property="og:description" content="Business Information Systems graduate candidate bridging business analysis, systems, data, digital operations and delivery." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://williamtangq.github.io/" />
@@ -255,6 +255,30 @@
     .section-kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:#93a0b5;font-weight:700}
     .blue-line{width:28px;height:3px;border-radius:3px;background:var(--blue);display:inline-block;margin-left:9px;vertical-align:middle}
 
+    /* recruiter decision */
+    .hire-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px}
+    .hire-main{
+      position:relative;overflow:hidden;border-radius:24px;padding:28px;
+      background:linear-gradient(145deg,#0c172b,#142c50);color:#fff;
+      box-shadow:0 24px 60px rgba(21,46,85,.16)
+    }
+    .hire-main::after{
+      content:"";position:absolute;width:320px;height:320px;right:-110px;top:-140px;border-radius:50%;
+      background:radial-gradient(circle,rgba(79,156,255,.28),transparent 67%)
+    }
+    .hire-main>*{position:relative;z-index:1}
+    .hire-main small{display:block;color:#9fb7d8;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:9px}
+    .hire-main h3{font-size:1.55rem;line-height:1.12;letter-spacing:-.04em;margin-bottom:10px}
+    .hire-main p{max-width:680px;color:#c9d5e7;font-size:.82rem;line-height:1.62}
+    .hire-chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:20px}
+    .hire-chain span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .hire-chain b{color:#73b2ff}
+    .hire-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .hire-proof article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 32px rgba(44,62,96,.035)}
+    .hire-proof b{display:block;color:var(--blue);font-size:.7rem;letter-spacing:.06em;margin-bottom:6px}
+    .hire-proof strong{display:block;font-size:.92rem;margin-bottom:5px}
+    .hire-proof span{display:block;color:var(--muted);font-size:.68rem;line-height:1.48}
+
     /* recruiter snapshot */
     .snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .snapshot-card{
@@ -446,7 +470,7 @@
     .erd-line.three{left:106px;top:78px;width:46px;transform:rotate(-35deg)}
 
     /* evidence + working style */
-    .evidence-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .evidence-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
     .evidence-card{
       background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;
       box-shadow:0 12px 34px rgba(44,62,96,.035);transition:.25s ease
@@ -637,7 +661,8 @@
       .dash-lower{grid-template-columns:1fr}.coverage{display:none}
       .section{padding:64px 0}
       .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
-      .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip{grid-template-columns:1fr}
+      .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip,.hire-grid{grid-template-columns:1fr}
+      .hire-proof{grid-template-columns:1fr 1fr}
       .projects-grid{grid-template-columns:1fr}
       .project-card{display:block}
       .project-evidence{grid-template-columns:1fr 1fr 1fr}
@@ -700,7 +725,7 @@
       <div class="shell hero-grid">
         <div class="reveal">
           <div class="hello">Hello, I’m Guang Quan Tan <span style="color:var(--blue)">(William)</span></div>
-          <h1>Business &amp; Technology <span>Graduate</span></h1>
+          <h1>Business &amp; Technology <span>Graduate Candidate</span></h1>
           <div class="hero-lead">Turning business problems into clear systems.</div>
           <p class="hero-meta">Monash University · Business Information Systems · Melbourne · Graduating December 2026</p>
           <div class="hero-actions">
@@ -749,6 +774,29 @@
       </div>
     </header>
 
+    <section class="section" id="why-hire">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Why I’m Worth Interviewing <span class="blue-line"></span></h2>
+          <div class="section-kicker">30-second recruiter view</div>
+        </div>
+        <div class="hire-grid reveal">
+          <article class="hire-main">
+            <small>Candidate thesis</small>
+            <h3>I already work across the gap between business needs and technology delivery.</h3>
+            <p>My profile combines real commercial experience at CS TAN with hands-on systems, data, product and testing work. I can discuss a business problem with users, structure it into requirements or workflows, understand the supporting data, and stay close enough to implementation to validate whether the solution actually works.</p>
+            <div class="hire-chain"><span>Business context</span><b>→</b><span>Requirements</span><b>→</b><span>Systems & Data</span><b>→</b><span>Delivery</span><b>→</b><span>Validation</span></div>
+          </article>
+          <div class="hire-proof">
+            <article><b>COMMERCIAL</b><strong>Real operating context</strong><span>Sales, stock, supplier cost, customers, quotations, invoices, sourcing and B2B workflows.</span></article>
+            <article><b>ANALYSIS</b><strong>Decision support</strong><span>Excel analysis used for pricing, purchasing, stock and product decisions.</span></article>
+            <article><b>TECHNICAL</b><strong>Source-backed work</strong><span>Next.js, Supabase/PostgreSQL, Gemini, role routing and Playwright evidence in public repositories.</span></article>
+            <article><b>IMPACT</b><strong>Process improvement</strong><span>Approximately 30% processing-time saving from a documentation workflow redesign.</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="profile">
       <div class="shell">
         <div class="section-head reveal">
@@ -756,7 +804,7 @@
           <div class="section-kicker">A quick overview of my profile</div>
         </div>
         <div class="snapshot-grid">
-          <article class="snapshot-card reveal"><div class="snapshot-icon">01</div><h3>Target Roles</h3><p>Business Analyst, Systems Analyst, IT Analyst and Data Analyst.</p></article>
+          <article class="snapshot-card reveal"><div class="snapshot-icon">01</div><h3>Primary Direction</h3><p>Business Analyst / Systems Analyst, with Technology and Data Analyst pathways where the role fits.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">02</div><h3>Education</h3><p>Bachelor of IT (Business Information Systems), Monash University.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">03</div><h3>Core Strengths</h3><p>Requirements, Process Mapping, SQL, UAT and Workflow Design.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">04</div><h3>Profile</h3><p>Business + Technology + Operations, with hands-on delivery experience.</p></article>
@@ -768,9 +816,9 @@
     <section class="section" id="evidence-stats">
       <div class="shell">
         <div class="stats-strip reveal">
-          <div class="stat-block"><strong><em>5</em></strong><span>Case studies / evidence pages covering projects and real commercial experience</span></div>
-          <div class="stat-block"><strong><em>3</em></strong><span>Role-targeted ATS resume variants for different graduate paths</span></div>
+          <div class="stat-block"><strong><em>5</em></strong><span>Evidence pages covering systems, data, client work and commercial experience</span></div>
           <div class="stat-block"><strong><em>2</em></strong><span>Public product repositories with source-backed technical work</span></div>
+          <div class="stat-block"><strong><em>30%</em></strong><span>Reported processing-time saving from a real documentation workflow redesign</span></div>
           <div class="stat-block"><strong><em>100+</em></strong><span>E-commerce product listings managed across online operations</span></div>
         </div>
       </div>
@@ -924,6 +972,7 @@
           <article class="evidence-card reveal"><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift workflows</h3><p>Draft/published schedules, availability rules, manager/staff flows and request handling.</p><a href="case-tanshift.html">Inspect system →</a></article>
           <article class="evidence-card reveal"><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><p>ERD thinking, normalisation, Oracle SQL and business-rule-driven database structures.</p><a href="case-database.html">Inspect approach →</a></article>
           <article class="evidence-card reveal"><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><p>AI integration, authentication, admin/user routing, database migrations and Playwright acceptance testing.</p><a href="case-innerleaf.html">Inspect product →</a></article>
+                  <article class="evidence-card reveal"><span class="evidence-no">05 · COMMERCIAL</span><h3>CS TAN experience</h3><p>Real sales, stock, suppliers, B2B documents, IT support and process improvement.</p><a href="case-cstan.html">Inspect experience →</a></article>
         </div>
       </div>
     </section>
@@ -1011,46 +1060,7 @@
           <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/canva.svg" alt="Canva logo"></div><span>Canva</span></div>
         </div>
       </div>
-    </section>
-
-    
-    <section class="section" id="application">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Application Pack <span class="blue-line"></span></h2>
-          <div class="section-kicker">Same evidence · role-specific emphasis</div>
-        </div>
-        <div class="application-grid">
-          <article class="application-card reveal">
-            <div class="application-type">Resume Variant 01</div>
-            <h3>Business / Systems Analyst</h3>
-            <p>Prioritises requirements, workflows, acceptance criteria, stakeholder communication, UAT and systems thinking.</p>
-            <a href="resume.html">Open resume →</a>
-          </article>
-          <article class="application-card reveal">
-            <div class="application-type">Resume Variant 02</div>
-            <h3>IT / Technology Analyst</h3>
-            <p>Prioritises troubleshooting, systems, user support, technical delivery, databases and validation.</p>
-            <a href="resume-it.html">Open resume →</a>
-          </article>
-          <article class="application-card reveal">
-            <div class="application-type">Resume Variant 03</div>
-            <h3>Data / Operations Analyst</h3>
-            <p>Prioritises SQL, relational design, Excel, inventory/product data and operational decision support.</p>
-            <a href="resume-data.html">Open resume →</a>
-          </article>
-          <article class="application-card reveal">
-            <div class="application-type">Cover Letter System</div>
-            <h3>Role-aware Cover Letter</h3>
-            <p>A modular builder that changes evidence by role while leaving company-specific motivation for each application.</p>
-            <a href="cover-letter.html">Open builder →</a>
-          </article>
-        </div>
-        <p class="application-note reveal">I keep the underlying evidence consistent and change emphasis rather than inventing a different profile for each application.</p>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
+    </section><section class="section" id="experience">
       <div class="shell">
         <div class="section-head reveal">
           <h2>Experience <span class="blue-line"></span></h2>
@@ -1114,7 +1124,7 @@
   <footer>
     <div class="shell footer-inner">
       <div>© 2026 Guang Quan Tan (William) · Melbourne, Australia</div>
-      <div class="footer-links"><a href="resume.html">BA Resume</a><a href="resume-it.html">IT Resume</a><a href="resume-data.html">Data Resume</a><a href="cover-letter.html">Cover Letter</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="footer-links"><a href="resume.html">Resume</a><a href="case-cstan.html">Commercial Experience</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </footer>
 
@@ -1152,7 +1162,7 @@
     window.addEventListener("resize", setProgress);
 
     const navLinks = [...document.querySelectorAll("[data-nav]")];
-    const watchedSections = ["profile","projects","skills","proof","application","contact"]
+    const watchedSections = ["profile","projects","skills","proof","experience","contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
