@@ -522,6 +522,36 @@
     .application-card a{margin-top:auto;color:var(--blue);font-size:.72rem;font-weight:750}
     .application-note{margin-top:14px;color:#7c8799;font-size:.72rem}
 
+    /* commercial experience */
+    .commercial-exp{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-bottom:18px
+    }
+    .commercial-story{
+      position:relative;overflow:hidden;background:linear-gradient(145deg,#0d1a33,#13284a);
+      color:#fff;border-radius:22px;padding:26px;box-shadow:0 22px 55px rgba(18,39,75,.16)
+    }
+    .commercial-story::after{
+      content:"";position:absolute;width:250px;height:250px;right:-90px;top:-100px;border-radius:50%;
+      background:radial-gradient(circle,rgba(81,154,255,.28),transparent 66%)
+    }
+    .commercial-story > *{position:relative;z-index:1}
+    .commercial-story small{display:block;color:#9fb6d6;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750;margin-bottom:8px}
+    .commercial-story h3{font-size:1.35rem;letter-spacing:-.035em;margin-bottom:8px}
+    .commercial-story p{color:#c7d4e7;font-size:.78rem;line-height:1.6;max-width:620px}
+    .commercial-path{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .commercial-path span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .commercial-path b{color:#6ca9ff}
+    .commercial-story a{display:inline-flex;margin-top:2px;color:#fff;font-size:.7rem;font-weight:750}
+    .commercial-proof{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+    }
+    .commercial-proof div{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+      box-shadow:0 12px 32px rgba(44,62,96,.035)
+    }
+    .commercial-proof strong{display:block;font-size:1.05rem;color:var(--blue);margin-bottom:4px}
+    .commercial-proof span{display:block;font-size:.68rem;color:var(--muted);line-height:1.45}
+
     /* experience */
     .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
     .timeline-row{
@@ -620,6 +650,8 @@
       .workstyle{grid-template-columns:1fr}
       .workstep{border-left:0;border-top:1px solid var(--line)}
       .workstep:first-child{border-top:0}
+      .commercial-exp{grid-template-columns:1fr}
+      .commercial-proof{grid-template-columns:1fr 1fr}
       .timeline{padding:4px 18px}
       .timeline-row{grid-template-columns:1fr;gap:5px;padding:18px 0 18px 22px;min-height:auto}
       .timeline-date{padding-left:0}.timeline-date::before{left:-22px}.timeline-date::after{left:-18.5px;top:18px;height:75px}
@@ -1024,6 +1056,22 @@
           <h2>Experience <span class="blue-line"></span></h2>
           <div class="section-kicker">Professional background</div>
         </div>
+        <div class="commercial-exp reveal">
+          <article class="commercial-story">
+            <small>Commercial experience</small>
+            <h3>CS TAN Commercial Experience</h3>
+            <p>Real business work across IT support, retail analysis and business operations — using sales, stock, supplier, customer and document workflows to support everyday commercial decisions.</p>
+            <div class="commercial-path"><span>IT Support</span><b>→</b><span>Retail Business Analysis</span><b>→</b><span>Business Development & Operations</span></div>
+            <a href="case-cstan.html">View real commercial experience →</a>
+          </article>
+          <div class="commercial-proof">
+            <div><strong>Excel</strong><span>Sales, inventory, supplier cost, margins, demand, stock movement and product-performance analysis</span></div>
+            <div><strong>30%</strong><span>Reported processing-time saving from a documentation workflow redesign</span></div>
+            <div><strong>B2B</strong><span>Customer communication, quotations, invoices, order coordination and service documentation</span></div>
+            <div><strong>Ops</strong><span>Product sourcing, supplier research, online sales, customer records and stock tracking</span></div>
+          </div>
+        </div>
+
         <div class="timeline reveal">
           <div class="timeline-row">
             <div class="timeline-date">Aug 2023 – Present</div>
