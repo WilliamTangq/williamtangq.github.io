@@ -268,6 +268,73 @@
     .snapshot-card h3{font-size:.98rem;margin-bottom:7px;letter-spacing:-.02em}
     .snapshot-card p{color:var(--muted);font-size:.81rem;line-height:1.55}
 
+    /* evidence stats */
+    .stats-strip{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+      border:1px solid var(--line);border-radius:20px;overflow:hidden;
+      box-shadow:0 14px 38px rgba(44,62,96,.035)
+    }
+    .stat-block{background:#fff;padding:20px 22px}
+    .stat-block strong{display:block;font-size:1.45rem;letter-spacing:-.04em;margin-bottom:4px}
+    .stat-block span{font-size:.69rem;color:var(--muted);line-height:1.4}
+    .stat-block em{font-style:normal;color:var(--blue)}
+
+    /* capability map */
+    .capability-map{
+      position:relative;min-height:430px;border:1px solid var(--line);border-radius:26px;
+      background:
+        radial-gradient(circle at 50% 48%,rgba(10,115,255,.10),transparent 24%),
+        linear-gradient(180deg,#ffffff,#f7faff);
+      overflow:hidden;box-shadow:0 18px 48px rgba(44,62,96,.05)
+    }
+    .capability-map::before{
+      content:"";position:absolute;inset:0;
+      background-image:radial-gradient(circle,#dfe7f3 1px,transparent 1px);
+      background-size:22px 22px;opacity:.42;mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent)
+    }
+    .map-center{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:178px;height:178px;border-radius:50%;
+      display:grid;place-items:center;text-align:center;padding:24px;
+      background:rgba(255,255,255,.94);border:1px solid #dce7f7;
+      box-shadow:0 24px 70px rgba(30,84,160,.13);
+      z-index:3
+    }
+    .map-center::before,.map-center::after{
+      content:"";position:absolute;border-radius:50%;border:1px solid rgba(10,115,255,.12)
+    }
+    .map-center::before{inset:-18px}.map-center::after{inset:-40px;border-style:dashed}
+    .map-center small{display:block;color:var(--blue);font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:6px}
+    .map-center strong{font-size:1rem;line-height:1.2;letter-spacing:-.025em}
+    .map-node{
+      position:absolute;width:190px;min-height:104px;padding:15px 16px;border-radius:18px;
+      background:rgba(255,255,255,.94);border:1px solid #e2e9f3;
+      box-shadow:0 14px 36px rgba(44,62,96,.055);z-index:4;
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
+    }
+    .map-node:hover{transform:translateY(-4px);border-color:#d2e2f7;box-shadow:0 22px 48px rgba(44,62,96,.09)}
+    .map-node b{display:block;color:var(--blue);font-size:.58rem;letter-spacing:.08em;margin-bottom:7px}
+    .map-node strong{display:block;font-size:.86rem;margin-bottom:4px}
+    .map-node span{display:block;font-size:.68rem;color:var(--muted);line-height:1.45}
+    .map-node.n1{left:7%;top:11%}.map-node.n2{right:7%;top:11%}.map-node.n3{left:7%;bottom:11%}.map-node.n4{right:7%;bottom:11%}
+    .map-line{
+      position:absolute;height:1px;background:linear-gradient(90deg,rgba(10,115,255,.08),rgba(10,115,255,.34),rgba(10,115,255,.08));
+      transform-origin:left center;z-index:1
+    }
+    .map-line.l1{left:24%;top:31%;width:27%;transform:rotate(24deg)}
+    .map-line.l2{left:50%;top:31%;width:27%;transform:rotate(-24deg)}
+    .map-line.l3{left:24%;top:68%;width:27%;transform:rotate(-24deg)}
+    .map-line.l4{left:50%;top:68%;width:27%;transform:rotate(24deg)}
+    .map-pulse{
+      position:absolute;left:50%;top:50%;width:210px;height:210px;border-radius:50%;
+      transform:translate(-50%,-50%);border:1px solid rgba(10,115,255,.12);
+      animation:mapPulse 4.8s ease-out infinite;pointer-events:none
+    }
+    @keyframes mapPulse{
+      0%{opacity:.5;transform:translate(-50%,-50%) scale(.82)}
+      75%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.45)}
+    }
+
     /* projects */
     .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .project-card{
@@ -400,6 +467,23 @@
     .cap-card .tags{gap:8px}
     .cap-card .tag{font-size:.68rem;padding:7px 10px}
 
+    /* technology flow */
+    .tool-flow{
+      overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;
+      padding:16px 0;box-shadow:0 12px 32px rgba(44,62,96,.035);margin-bottom:18px
+    }
+    .tool-track{
+      width:max-content;display:flex;gap:10px;align-items:center;
+      animation:toolScroll 34s linear infinite;padding-left:10px
+    }
+    .tool-flow:hover .tool-track{animation-play-state:paused}
+    .flow-chip{
+      flex:none;display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:12px;
+      background:#f8fafc;border:1px solid #edf1f6;font-size:.68rem;font-weight:700;color:#46546a
+    }
+    .flow-chip img{width:18px;height:18px;object-fit:contain}
+    @keyframes toolScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
     /* tools */
     .tools-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
     .tool{
@@ -515,12 +599,15 @@
       .dash-lower{grid-template-columns:1fr}.coverage{display:none}
       .section{padding:64px 0}
       .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
-      .snapshot-grid,.cap-grid,.evidence-grid{grid-template-columns:1fr}
+      .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip{grid-template-columns:1fr}
       .projects-grid{grid-template-columns:1fr}
       .project-card{display:block}
       .project-visual{height:210px;margin-bottom:13px}
       .project-body{padding:0 8px 10px}
       .tools-grid{grid-template-columns:repeat(2,1fr)}
+      .capability-map{min-height:auto;padding:18px;display:grid;gap:10px}
+      .map-center,.map-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%;height:auto;min-height:auto;border-radius:18px}
+      .map-center{padding:20px}.map-center::before,.map-center::after,.map-line,.map-pulse{display:none}
       .workstyle{grid-template-columns:1fr}
       .workstep{border-left:0;border-top:1px solid var(--line)}
       .workstep:first-child{border-top:0}
@@ -533,7 +620,7 @@
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
-      .dashboard{animation:none!important}
+      .dashboard,.tool-track,.map-pulse{animation:none!important}
     }
   </style>
   <script type="application/ld+json">
@@ -632,6 +719,18 @@
           <article class="snapshot-card reveal"><div class="snapshot-icon">02</div><h3>Education</h3><p>Bachelor of IT (Business Information Systems), Monash University.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">03</div><h3>Core Strengths</h3><p>Requirements, Process Mapping, SQL, UAT and Workflow Design.</p></article>
           <article class="snapshot-card reveal"><div class="snapshot-icon">04</div><h3>Profile</h3><p>Business + Technology + Operations, with hands-on delivery experience.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="evidence-stats">
+      <div class="shell">
+        <div class="stats-strip reveal">
+          <div class="stat-block"><strong><em>4</em></strong><span>Portfolio case studies with explicit evidence and boundaries</span></div>
+          <div class="stat-block"><strong><em>3</em></strong><span>Role-targeted ATS resume variants for different graduate paths</span></div>
+          <div class="stat-block"><strong><em>2</em></strong><span>Public product repositories with source-backed technical work</span></div>
+          <div class="stat-block"><strong><em>100+</em></strong><span>E-commerce product listings managed across online operations</span></div>
         </div>
       </div>
     </section>
@@ -751,6 +850,24 @@
     </section>
 
 
+
+    <section class="section" id="capability-map">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>From Business Problem to Working System <span class="blue-line"></span></h2>
+          <div class="section-kicker">How my capabilities connect</div>
+        </div>
+        <div class="capability-map reveal">
+          <span class="map-line l1"></span><span class="map-line l2"></span><span class="map-line l3"></span><span class="map-line l4"></span><span class="map-pulse"></span>
+          <div class="map-center"><div><small>Core profile</small><strong>Business + Technology + Delivery</strong></div></div>
+          <div class="map-node n1"><b>01 · DISCOVER</b><strong>Business Analysis</strong><span>Requirements · stakeholder context · process mapping · user stories</span></div>
+          <div class="map-node n2"><b>02 · STRUCTURE</b><strong>Systems Thinking</strong><span>Workflows · acceptance criteria · entities · edge cases · role logic</span></div>
+          <div class="map-node n3"><b>03 · BUILD</b><strong>Data & Product</strong><span>SQL · ERD · PostgreSQL · Supabase · Next.js · interface delivery</span></div>
+          <div class="map-node n4"><b>04 · VALIDATE</b><strong>Quality & Testing</strong><span>UAT thinking · integrity testing · Playwright · end-to-end validation</span></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="proof">
       <div class="shell">
         <div class="section-head reveal">
@@ -810,6 +927,32 @@
           <h2>Software &amp; Tools <span class="blue-line"></span></h2>
           <div class="section-kicker">Tools I work with</div>
         </div>
+
+        <div class="tool-flow reveal" aria-label="Technology ecosystem">
+          <div class="tool-track">
+            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
+            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
+            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
+            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
+            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
+            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
+            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
+            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
+            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
+            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
+            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
+            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
+            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
+            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
+            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
+            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
+            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
+            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
+            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
+            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
+          </div>
+        </div>
+
         <div class="tools-grid">
           <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/figma.svg" alt="Figma logo"></div><span>Figma</span></div>
           <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/miro.svg" alt="Miro logo"></div><span>Miro</span></div>
