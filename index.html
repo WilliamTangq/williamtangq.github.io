@@ -1088,6 +1088,120 @@
     .team-signal-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
     .team-signal b{display:block;font-size:.66rem;margin-bottom:5px}
     .team-signal span{display:block;color:#9fa9b7;font-size:.5rem;line-height:1.42}
+
+    /* anti-template editorial pass */
+    #career-passport{background:#fff}
+    .editorial-profile{
+      display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);
+      gap:70px;align-items:end;padding:28px 0 34px;border-bottom:1px solid #d2d2d7
+    }
+    .editorial-overline{
+      color:#86868b;font-family:"IBM Plex Mono",monospace;font-size:.56rem;
+      letter-spacing:.09em;text-transform:uppercase;margin-bottom:18px
+    }
+    .editorial-copy h2{
+      max-width:650px;font-size:clamp(2.3rem,5vw,4.7rem);line-height:.95;
+      letter-spacing:-.065em;font-weight:710
+    }
+    .editorial-copy h2 span{color:#86868b}
+    .editorial-copy p{max-width:670px;margin-top:20px;color:#6e6e73;font-size:.88rem;line-height:1.7}
+    .market-line{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:.58rem}
+    .market-line strong{color:#1d1d1f}.market-line span{color:#86868b}
+    .market-line span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#c7c7cc;margin:0 8px 1px 0}
+
+    .editorial-role-index{border-top:1px solid #1d1d1f}
+    .role-index-row{
+      display:grid;grid-template-columns:34px 1fr;gap:10px;padding:15px 0;border-bottom:1px solid #e5e5ea
+    }
+    .role-index-row>span{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.5rem;padding-top:2px}
+    .role-index-row strong{font-size:.76rem;font-weight:700}
+    .role-index-row em{grid-column:2;color:#86868b;font-size:.55rem;font-style:normal;line-height:1.4;margin-top:-5px}
+
+    .editorial-proof{
+      display:grid;grid-template-columns:repeat(4,1fr);margin:32px 0 0;border-top:1px solid #e5e5ea;border-bottom:1px solid #e5e5ea
+    }
+    .editorial-proof>div{padding:18px 20px 18px 0}
+    .editorial-proof>div+div{padding-left:20px;border-left:1px solid #e5e5ea}
+    .editorial-proof strong{display:block;font-size:1.35rem;letter-spacing:-.045em}
+    .editorial-proof span{display:block;color:#86868b;font-size:.51rem;margin-top:2px}
+
+    .editorial-timeline{
+      display:grid;grid-template-columns:120px 1fr 110px;align-items:center;gap:16px;margin-top:34px
+    }
+    .timeline-caption{font-size:.52rem;color:#86868b}
+    .timeline-caption b{display:block;color:#1d1d1f;font-size:.57rem;margin-top:3px}
+    .timeline-caption.right{text-align:right}
+    .timeline-line{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+    .timeline-line::before{content:"";position:absolute;left:7%;right:7%;top:9px;height:1px;background:#cfd3d8}
+    .timeline-point{position:relative;padding-top:28px}
+    .timeline-point i{position:absolute;top:5px;left:0;width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid #0071e3;z-index:2}
+    .timeline-point strong{display:block;font-size:.58rem}.timeline-point span{display:block;color:#86868b;font-size:.46rem;margin-top:2px}
+
+    .capability-editorial{border-top:1px solid #1d1d1f}
+    .capability-row{
+      display:grid;grid-template-columns:54px 1.05fr 1.4fr .65fr;gap:24px;align-items:start;
+      padding:24px 0;border-bottom:1px solid #e5e5ea
+    }
+    .capability-no{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.52rem}
+    .capability-name strong{display:block;font-size:.9rem;margin-bottom:5px}
+    .capability-name span{display:block;color:#86868b;font-size:.58rem;line-height:1.45}
+    .capability-detail{color:#55555a;font-size:.63rem;line-height:1.55}
+    .capability-source{color:#86868b;font-size:.52rem;line-height:1.45;text-align:right}
+
+    .toolkit-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .toolkit-skills{border-top:1px solid #1d1d1f}
+    .toolkit-group{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid #e5e5ea}
+    .toolkit-group small{color:#86868b;font-family:"IBM Plex Mono",monospace;font-size:.5rem;text-transform:uppercase;letter-spacing:.06em}
+    .toolkit-group>div{display:flex;flex-wrap:wrap;gap:6px}
+    .toolkit-group span{font-size:.59rem;color:#4f4f54;padding:0 9px 0 0}
+    .toolkit-group span+span::before{content:"·";color:#c7c7cc;margin-right:9px}
+
+    .tool-dock{padding:24px;border-radius:30px;background:#1d1d1f;color:#fff}
+    .dock-copy small{display:block;color:#8f8f94;font-family:"IBM Plex Mono",monospace;font-size:.5rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+    .dock-copy strong{font-size:1rem}.dock-copy p{color:#9d9da2;font-size:.57rem;line-height:1.5;margin-top:5px;max-width:420px}
+    .dock-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:20px}
+    .dock-item{min-height:72px;padding:10px;border-radius:15px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+    .dock-item img{width:23px;height:23px;object-fit:contain}
+    .dock-item span{font-size:.49rem;color:#d1d1d6}
+    .dock-text b{width:23px;height:23px;border-radius:6px;background:#fff;color:#1d1d1f;display:grid;place-items:center;font-size:.43rem}
+
+    .project-evidence{display:none!important}
+    .concept-label{
+      background:rgba(255,255,255,.7)!important;border:0!important;box-shadow:none!important;
+      color:#8b8b90!important;font-family:"IBM Plex Mono",monospace!important;font-size:.43rem!important;
+      text-transform:uppercase;letter-spacing:.07em;padding:4px 6px!important
+    }
+    .project-proof-badge{background:transparent!important;padding:0!important;border-radius:0!important;color:#86868b!important}
+    .project-meta-row{border-bottom:1px solid #ededf0;padding-bottom:8px;margin-bottom:11px}
+    .project-card{box-shadow:none!important}
+    .project-card:hover{box-shadow:0 16px 38px rgba(0,0,0,.05)!important}
+
+    @media(max-width:1040px){
+      .editorial-profile{grid-template-columns:1fr;gap:36px}
+      .capability-row{grid-template-columns:42px 1fr 1.2fr}
+      .capability-source{grid-column:2 / -1;text-align:left}
+      .toolkit-layout{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .editorial-copy h2{font-size:2.45rem}
+      .editorial-proof{grid-template-columns:1fr 1fr}
+      .editorial-proof>div{padding:14px 0}
+      .editorial-proof>div+div{padding-left:14px}
+      .editorial-proof>div:nth-child(3){border-left:0;border-top:1px solid #e5e5ea}
+      .editorial-proof>div:nth-child(4){border-top:1px solid #e5e5ea}
+      .editorial-timeline{grid-template-columns:1fr;gap:10px}
+      .timeline-caption.right{text-align:left}
+      .timeline-line{grid-template-columns:1fr;gap:0}
+      .timeline-line::before{left:4px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
+      .timeline-point{padding:0 0 15px 23px}
+      .timeline-point i{left:0;top:3px}
+      .capability-row{grid-template-columns:34px 1fr;gap:10px}
+      .capability-detail,.capability-source{grid-column:2}
+      .capability-source{text-align:left}
+      .toolkit-group{grid-template-columns:1fr;gap:8px}
+      .dock-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
     @media(max-width:1040px){.team-ready-grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:760px){
       .team-ready-head{align-items:flex-start;flex-direction:column}
@@ -1361,7 +1475,7 @@
         <li><a href="#career-passport">Profile</a></li>
         <li><a href="#projects" data-nav="projects">Work</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
-        <li><a href="#professional-spectrum">Expertise</a></li><li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#professional-spectrum">Capabilities</a></li><li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
@@ -1430,76 +1544,39 @@
 
     <section class="section" id="career-passport">
       <div class="shell">
-        <div class="section-head reveal">
-          <h2>Career Passport</h2>
-          <div class="section-kicker">One profile · three markets · multiple ways to contribute</div>
-        </div>
+        <div class="editorial-profile">
+          <div class="editorial-copy reveal">
+            <div class="editorial-overline">Guang Quan Tan (William) · Melbourne</div>
+            <h2>Business, systems and operations — <span>connected.</span></h2>
+            <p>I bring together commercial context from CS TAN, Business Information Systems study at Monash, and hands-on systems delivery. That means I can understand the user problem, speak with the business, work with data and stay close to implementation.</p>
+            <div class="market-line"><strong>Open to opportunities</strong><span>Australia</span><span>Malaysia</span><span>Singapore</span></div>
+          </div>
 
-        <div class="passport">
-          <article class="passport-main reveal">
-            <div class="passport-top">
-              <span class="passport-id">GQT / 2026 / BIS</span>
-              <span class="passport-open"><i></i>Open to graduate & entry-level opportunities</span>
-            </div>
-            <div class="passport-title">
-              <small>Professional identity</small>
-              <h3>Commercially aware. Technically credible. Comfortable between users, systems and operations.</h3>
-              <p>Built from real CS TAN experience, Monash Business Information Systems study and hands-on product delivery — with a profile suited to business, systems, technology and operational teams.</p>
-            </div>
-            <div class="region-grid">
-              <div class="region-card au"><div class="region-code">AU</div><strong>Australia</strong><span>Melbourne-based · graduate / entry-level opportunities</span></div>
-              <div class="region-card my"><div class="region-code">MY</div><strong>Malaysia</strong><span>Commercial experience · business / IT / operations context</span></div>
-              <div class="region-card sg"><div class="region-code">SG</div><strong>Singapore</strong><span>Open to business systems & technology opportunities</span></div>
-            </div>
-          </article>
-
-          <div class="passport-side">
-            <section class="role-fit-panel reveal" aria-label="Role fit">
-              <div class="panel-label">Where I fit</div>
-              <div class="role-fit-grid">
-                <div class="role-fit"><b>01 · BA</b><strong>Business Analyst</strong><span>Requirements · process · stakeholders · UAT</span></div>
-                <div class="role-fit"><b>02 · SA</b><strong>Systems Analyst</strong><span>Workflows · rules · data · system behaviour</span></div>
-                <div class="role-fit"><b>03 · IT</b><strong>IT Support / Analyst</strong><span>Troubleshooting · users · devices · business software</span></div>
-                <div class="role-fit"><b>04 · TECH</b><strong>Technology / Operations</strong><span>SQL · digital workflows · sourcing · B2B operations</span></div>
-              </div>
-            </section>
-
-            <section class="evidence-panel reveal" aria-label="Evidence metrics">
-              <div class="panel-label">Evidence at a glance</div>
-              <div class="evidence-metrics">
-                <div class="evidence-metric"><strong>3</strong><span>CS TAN role stages</span></div>
-                <div class="evidence-metric"><strong>100+</strong><span>E-commerce product listings</span></div>
-                <div class="evidence-metric"><strong>22 pax</strong><span>Corporate workflow coordinated</span></div>
-                <div class="evidence-metric"><strong>2</strong><span>Public product repositories</span></div>
-              </div>
-            </section>
+          <div class="editorial-role-index reveal">
+            <div class="role-index-row"><span>01</span><strong>Business Analysis</strong><em>Requirements · process · stakeholders · UAT</em></div>
+            <div class="role-index-row"><span>02</span><strong>Systems / BIS</strong><em>Workflows · rules · data · digital processes</em></div>
+            <div class="role-index-row"><span>03</span><strong>IT Support</strong><em>Users · devices · connectivity · business software</em></div>
+            <div class="role-index-row"><span>04</span><strong>Business Development</strong><em>B2B · suppliers · quotations · sourcing · operations</em></div>
           </div>
         </div>
 
-        <div class="career-story reveal">
-          <div class="career-story-head"><h3>How the profile was built</h3><span>2020 → 2026</span></div>
-          <div class="story-track">
-            <div class="story-step"><div class="story-dot">2020</div><div><strong>E-commerce</strong><span>100+ listings · customers · online operations</span></div></div>
-            <div class="story-step"><div class="story-dot">2022</div><div><strong>IT Support</strong><span>Users · devices · connectivity · business software</span></div></div>
-            <div class="story-step"><div class="story-dot">2023</div><div><strong>Business Analysis</strong><span>Excel · inventory · demand · pricing support</span></div></div>
-            <div class="story-step"><div class="story-dot">2023+</div><div><strong>BD & Operations</strong><span>B2B · suppliers · quotations · sourcing</span></div></div>
-            <div class="story-step"><div class="story-dot">2026</div><div><strong>Monash BIS</strong><span>Systems · SQL · client delivery · UAT</span></div></div>
-          </div>
+        <div class="editorial-proof reveal">
+          <div><strong>3 roles</strong><span>Progression at CS TAN</span></div>
+          <div><strong>100+</strong><span>E-commerce listings</span></div>
+          <div><strong>22 pax</strong><span>Corporate booking workflow</span></div>
+          <div><strong>2 repos</strong><span>Public technical work</span></div>
         </div>
 
-        <div class="team-ready reveal">
-          <div class="team-ready-head">
-            <div><small>Team-ready signals</small><h3>Skills already used in real work and delivery contexts.</h3></div>
-            <span>Evidence over self-rating</span>
+        <div class="editorial-timeline reveal">
+          <div class="timeline-caption"><span>2020</span><b>Commercial exposure starts</b></div>
+          <div class="timeline-line">
+            <div class="timeline-point"><i></i><strong>E-commerce</strong><span>Online operations</span></div>
+            <div class="timeline-point"><i></i><strong>IT Support</strong><span>Users & technology</span></div>
+            <div class="timeline-point"><i></i><strong>Business Analysis</strong><span>Excel & decisions</span></div>
+            <div class="timeline-point"><i></i><strong>BD & Operations</strong><span>Customers & suppliers</span></div>
+            <div class="timeline-point"><i></i><strong>Monash BIS</strong><span>Systems · SQL · UAT</span></div>
           </div>
-          <div class="team-ready-grid">
-            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><b>Commercial Context</b><span>Sales · stock · pricing · purchasing · operations</span></div>
-            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 8l8 5 8-5"/></svg></div><b>Communication</b><span>B2B customers · suppliers · quotations · documentation</span></div>
-            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><b>IT Support</b><span>Devices · printers · email · connectivity · software</span></div>
-            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div><b>Systems & Data</b><span>SQL · ERD · PostgreSQL · workflows · business rules</span></div>
-            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></div><b>Validation</b><span>Acceptance criteria · UAT · integrity testing · Playwright</span></div>
-          </div>
-          <div class="readiness-flow" style="margin-top:16px;justify-content:flex-start"><span>Understand</span><b>→</b><span>Analyse</span><b>→</b><span>Structure</span><b>→</b><span>Deliver</span><b>→</b><span>Validate</span></div>
+          <div class="timeline-caption right"><b>Graduate roles</b><span>2027</span></div>
         </div>
       </div>
     </section>
@@ -1507,13 +1584,13 @@
     <section class="section" id="projects">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Selected Projects <span class="blue-line"></span></h2>
+          <h2>Selected Projects </h2>
           <div class="section-kicker">Featured work</div>
         </div>
 
         <div class="projects-grid">
           <article class="project-card project-tanshift reveal">
-            <div class="project-visual visual-tanshift" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+            <div class="project-visual visual-tanshift" aria-hidden="true"><span class="concept-label">UI study</span>
               <div class="mini-app">
                 <div class="mini-side">
                   <div class="mini-brand">TanShift</div>
@@ -1540,13 +1617,13 @@
     <span class="tag tech-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
     <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
   </div>
-  <div class="project-evidence"><span>Manager + Staff flows</span><span>Draft ↔ Published</span><span>Availability rules</span></div>
+  
   <a class="project-link" href="case-tanshift.html">View case study →</a>
             </div>
           </article>
 
           <article class="project-card project-client reveal">
-            <div class="project-visual visual-client" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+            <div class="project-visual visual-client" aria-hidden="true"><span class="concept-label">UI study</span>
               <div class="flow-wrap">
                 <div class="flow-side"><div>Overview</div><div>Requirements</div><div>User Flow</div><div>Testing</div><div>Findings</div></div>
                 <div class="flow-main">
@@ -1565,14 +1642,14 @@
               <div class="project-meta-row"><span class="project-type">Client delivery</span><span class="project-proof-badge">Private client</span></div><div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
               <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
               <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
-              <div class="project-evidence"><span>Requirements → fixes</span><span>Integrity testing</span><span>Private client work</span></div>
+              
               <a class="project-link" href="case-client-project.html">View case study →</a>
             </div>
           </article>
 
 
           <article class="project-card project-innerleaf reveal">
-            <div class="project-visual visual-innerleaf" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+            <div class="project-visual visual-innerleaf" aria-hidden="true"><span class="concept-label">UI study</span>
               <div class="innerleaf-mini">
                 <div class="innerleaf-head"><span class="innerleaf-brand">InnerLeaf</span><span class="innerleaf-badge">AI-assisted reflection</span></div>
                 <div class="innerleaf-grid">
@@ -1589,13 +1666,13 @@
               <div class="project-meta-row"><span class="project-type">Product</span><span class="project-proof-badge">Public repo</span></div><div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
               <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
               <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
-              <div class="project-evidence"><span>Structured AI output</span><span>User / Admin routing</span><span>Playwright tests</span></div>
+              
               <a class="project-link" href="case-innerleaf.html">View case study →</a>
             </div>
           </article>
 
           <article class="project-card project-database reveal">
-            <div class="project-visual visual-database" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+            <div class="project-visual visual-database" aria-hidden="true"><span class="concept-label">UI study</span>
               <div class="erd">
                 <div class="erd-side"><div>Database</div><div>ERD</div><div>Tables</div><div>Relationships</div><div>SQL Scripts</div></div>
                 <div class="erd-canvas">
@@ -1614,7 +1691,7 @@
     <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
     <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
   </div>
-              <div class="project-evidence"><span>ERD modelling</span><span>Data integrity</span><span>Oracle SQL</span></div>
+              
               <a class="project-link" href="case-database.html">View case study →</a>
             </div>
           </article>
@@ -1624,70 +1701,38 @@
 
 
 
-    <section class="section" id="approach">
+    <section class="section" id="professional-spectrum">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>How I Work <span class="blue-line"></span></h2>
-          <div class="section-kicker">Analyst-to-delivery loop</div>
+          <h2>What I can do</h2>
+          <div class="section-kicker">Capabilities grounded in real work</div>
         </div>
-        <div class="workstyle reveal">
-          <div class="workstep"><b>01</b><strong>Understand</strong><span>User · problem · constraints</span></div>
-          <div class="workstep"><b>02</b><strong>Structure</strong><span>Requirements · workflows · edge cases</span></div>
-          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Prototype · data · documentation</span></div>
-          <div class="workstep"><b>04</b><strong>Validate</strong><span>UAT · integrity · refinement</span></div>
-        </div>
-      </div>
-    </section>
 
-        <section class="section" id="professional-spectrum">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Professional Spectrum <span class="blue-line"></span></h2>
-          <div class="section-kicker">Four areas I can contribute from day one</div>
-        </div>
-        <div class="spectrum-axis"><span>Commercial & user context</span><b>Business ↔ Technology</b><span>Systems & delivery</span></div>
-        <div class="spectrum-grid">
-          <article class="spectrum-card spectrum-ba reveal">
-            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div><span class="spectrum-code">BA</span></div>
-            <h3>Business Analysis</h3><span class="spectrum-role">Business Analyst / Junior BA</span>
-            <div class="spectrum-list">
-              <span>Requirements Gathering</span><span>Process Mapping</span><span>Acceptance Criteria</span><span>Stakeholder Communication</span><span>UAT & Integrity Testing</span>
-            </div>
-            <div class="spectrum-evidence"><b>Evidence:</b> Monash client project · CS TAN</div>
+        <div class="capability-editorial">
+          <article class="capability-row reveal">
+            <div class="capability-no">01</div>
+            <div class="capability-name"><strong>Business Analysis</strong><span>Translate ambiguity into requirements and decisions.</span></div>
+            <div class="capability-detail">Requirements Gathering · Process Mapping · Acceptance Criteria · Stakeholder Communication · UAT</div>
+            <div class="capability-source">Monash client · CS TAN</div>
           </article>
-
-          <article class="spectrum-card spectrum-bis reveal">
-            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div><span class="spectrum-code">BIS</span></div>
-            <h3>Business Information Systems</h3><span class="spectrum-role">Business ↔ Technology bridge</span>
-            <div class="spectrum-list">
-              <span>Systems Analysis</span><span>Workflow Design</span><span>Business Rules</span><span>Data Modelling</span><span>Digital Process Improvement</span>
-            </div>
-            <div class="spectrum-evidence"><b>Evidence:</b> Monash BIS · TanShift · Database</div>
+          <article class="capability-row reveal">
+            <div class="capability-no">02</div>
+            <div class="capability-name"><strong>Business Information Systems</strong><span>Connect business rules with systems and data.</span></div>
+            <div class="capability-detail">Systems Analysis · Workflow Design · Business Rules · Data Modelling · Digital Process Improvement</div>
+            <div class="capability-source">Monash BIS · TanShift · Database</div>
           </article>
-
-          <article class="spectrum-card spectrum-it reveal">
-            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><span class="spectrum-code">IT</span></div>
-            <h3>IT Support</h3><span class="spectrum-role">User & technology support</span>
-            <div class="spectrum-list">
-              <span>Device & Printer Support</span><span>Email & Connectivity</span><span>Business Software</span><span>Troubleshooting</span><span>User Support & Digital Records</span>
-            </div>
-            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN IT Support Assistant</div>
+          <article class="capability-row reveal">
+            <div class="capability-no">03</div>
+            <div class="capability-name"><strong>IT Support</strong><span>Understand users and technology at the operational level.</span></div>
+            <div class="capability-detail">Troubleshooting · Devices · Printers · Email · Connectivity · Business Software</div>
+            <div class="capability-source">CS TAN</div>
           </article>
-
-          <article class="spectrum-card spectrum-bd reveal">
-            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-6M3 21h18"/><path d="M17 5h4v4M21 5l-6 6"/></svg></div><span class="spectrum-code">BD</span></div>
-            <h3>Business Development & Operations</h3><span class="spectrum-role">Commercial & operational delivery</span>
-            <div class="spectrum-list">
-              <span>B2B Customer Communication</span><span>Supplier & Product Sourcing</span><span>Quotations & Invoices</span><span>Pricing / Purchasing Support</span><span>E-commerce & Operations</span>
-            </div>
-            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN · Lazada / Shopee</div>
+          <article class="capability-row reveal">
+            <div class="capability-no">04</div>
+            <div class="capability-name"><strong>Business Development & Operations</strong><span>Work comfortably with customers, suppliers and commercial workflows.</span></div>
+            <div class="capability-detail">B2B Communication · Supplier Sourcing · Quotations · Invoices · Pricing Support · Operations</div>
+            <div class="capability-source">CS TAN · E-commerce</div>
           </article>
-        </div>
-        <div class="software-skill-strip reveal">
-          <div class="software-skill-title"><small>HR keyword view</small><strong>Core professional skills</strong></div>
-          <div class="skill-chip-wrap">
-            <span class="hr-skill-chip">Business Analysis</span><span class="hr-skill-chip">Systems Analysis</span><span class="hr-skill-chip">Requirements</span><span class="hr-skill-chip">Process Mapping</span><span class="hr-skill-chip">Stakeholders</span><span class="hr-skill-chip">UAT</span><span class="hr-skill-chip">SQL</span><span class="hr-skill-chip">Excel</span><span class="hr-skill-chip">Data Modelling</span><span class="hr-skill-chip">Troubleshooting</span><span class="hr-skill-chip">IT Support</span><span class="hr-skill-chip">B2B Communication</span><span class="hr-skill-chip">Supplier Sourcing</span><span class="hr-skill-chip">Operations</span><span class="hr-skill-chip">Agile</span><span class="hr-skill-chip">Testing</span>
-          </div>
         </div>
       </div>
     </section>
@@ -1695,88 +1740,55 @@
     <section class="section" id="skills">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Technical & Analyst Skills <span class="blue-line"></span></h2>
-          <div class="section-kicker">Skills backed by projects and commercial work</div>
+          <h2>Working toolkit</h2>
+          <div class="section-kicker">Skills and software I actually use</div>
         </div>
-        <div class="skill-visual-grid">
-          <article class="skill-visual skill-blue reveal">
-            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div>
-            <small>01 · Discover</small><h3>Business Analysis</h3>
-            <div class="skill-nodes"><div class="skill-node">Requirements</div><div class="skill-node">Process Mapping</div><div class="skill-node">Acceptance Criteria</div><div class="skill-node">Stakeholder Context</div></div>
-            <div class="skill-foot">Evidence: Monash client + CS TAN</div>
-          </article>
-          <article class="skill-visual skill-purple reveal">
-            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div>
-            <small>02 · Structure</small><h3>Systems Thinking</h3>
-            <div class="skill-nodes"><div class="skill-node">Workflows</div><div class="skill-node">Role Logic</div><div class="skill-node">Business Rules</div><div class="skill-node">User Journeys</div></div>
-            <div class="skill-foot">Evidence: TanShift + client work</div>
-          </article>
-          <article class="skill-visual skill-green reveal">
-            <div class="skill-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
-            <small>03 · Model</small><h3>Data & SQL</h3>
-            <div class="skill-nodes"><div class="skill-node">PostgreSQL</div><div class="skill-node">Oracle SQL</div><div class="skill-node">ERD & Normalisation</div><div class="skill-node">Excel Analysis</div></div>
-            <div class="skill-foot">Evidence: database project + operations</div>
-          </article>
-          <article class="skill-visual skill-orange reveal">
-            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
-            <small>04 · Deliver</small><h3>Product & Validation</h3>
-            <div class="skill-nodes"><div class="skill-node">Next.js & Supabase</div><div class="skill-node">Git / GitHub</div><div class="skill-node">UAT & Integrity Testing</div><div class="skill-node">Playwright</div></div>
-            <div class="skill-foot">Evidence: TanShift + InnerLeaf</div>
-          </article>
+
+        <div class="toolkit-layout">
+          <div class="toolkit-skills reveal">
+            <div class="toolkit-group">
+              <small>Analyse</small>
+              <div><span>Requirements</span><span>Process Mapping</span><span>Stakeholders</span><span>Excel Analysis</span><span>UAT</span></div>
+            </div>
+            <div class="toolkit-group">
+              <small>Structure</small>
+              <div><span>Systems Analysis</span><span>Workflow Design</span><span>Business Rules</span><span>ERD</span><span>Data Modelling</span></div>
+            </div>
+            <div class="toolkit-group">
+              <small>Build & validate</small>
+              <div><span>SQL</span><span>PostgreSQL</span><span>Oracle SQL</span><span>Next.js</span><span>Supabase</span><span>Git / GitHub</span><span>Playwright</span></div>
+            </div>
+            <div class="toolkit-group">
+              <small>Operate</small>
+              <div><span>Troubleshooting</span><span>Business Software</span><span>B2B Communication</span><span>Supplier Sourcing</span><span>E-commerce Operations</span></div>
+            </div>
+          </div>
+
+          <div class="tool-dock reveal">
+            <div class="dock-copy"><small>Software</small><strong>My working environment</strong><p>Analysis, collaboration, data and delivery tools used across coursework, projects and commercial work.</p></div>
+            <div class="dock-grid">
+              <div class="dock-item"><img src="assets/icons/figma.svg" alt="Figma"><span>Figma</span></div>
+              <div class="dock-item"><img src="assets/icons/miro.svg" alt="Miro"><span>Miro</span></div>
+              <div class="dock-item"><img src="assets/icons/trello.svg" alt="Trello"><span>Trello</span></div>
+              <div class="dock-item"><img src="assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
+              <div class="dock-item"><img src="assets/icons/vscode.svg" alt="VS Code"><span>VS Code</span></div>
+              <div class="dock-item"><img src="assets/icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
+              <div class="dock-item"><img src="assets/icons/supabase.svg" alt="Supabase"><span>Supabase</span></div>
+              <div class="dock-item"><img src="assets/icons/postgresql.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+              <div class="dock-item"><img src="assets/icons/oracle.svg" alt="Oracle SQL"><span>Oracle SQL</span></div>
+              <div class="dock-item dock-text"><b>X</b><span>Excel</span></div>
+              <div class="dock-item"><img src="assets/icons/canva.svg" alt="Canva"><span>Canva</span></div>
+              <div class="dock-item dock-text"><b>JS</b><span>JavaScript</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tools">
+    <section class="section" id="experience">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Software & Tool Ecosystem <span class="blue-line"></span></h2>
-          <div class="section-kicker">Software I use across analysis, data and delivery</div>
-        </div>
-        <div class="ecosystem-grid">
-          <article class="ecosystem-card eco-analysis reveal">
-            <div class="eco-head"><span>01</span><strong>Analyse & Map</strong></div>
-            <div class="eco-logos">
-              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>Figma</b></div>
-              <div class="eco-logo"><img src="assets/icons/miro.svg" alt="Miro"><b>Miro</b></div>
-              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Trello</b></div>
-              <div class="eco-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><b>Excel</b></div>
-            </div>
-          </article>
-          <article class="ecosystem-card eco-build reveal">
-            <div class="eco-head"><span>02</span><strong>Build & Version</strong></div>
-            <div class="eco-logos">
-              <div class="eco-logo"><img src="assets/icons/vscode.svg" alt="VS Code"><b>VS Code</b></div>
-              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>GitHub</b></div>
-              <div class="eco-logo"><img src="assets/icons/nextjs.svg" alt="Next.js"><b>Next.js</b></div>
-              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Canva</b></div>
-            </div>
-          </article>
-          <article class="ecosystem-card eco-data reveal">
-            <div class="eco-head"><span>03</span><strong>Data & Backend</strong></div>
-            <div class="eco-logos">
-              <div class="eco-logo"><img src="assets/icons/supabase.svg" alt="Supabase"><b>Supabase</b></div>
-              <div class="eco-logo"><img src="assets/icons/postgresql.svg" alt="PostgreSQL"><b>PostgreSQL</b></div>
-              <div class="eco-logo"><img src="assets/icons/oracle.svg" alt="Oracle SQL"><b>Oracle SQL</b></div>
-              <div class="eco-logo"><img src="assets/icons/github.svg" alt="Git"><b>Git</b></div>
-            </div>
-          </article>
-          <article class="ecosystem-card eco-deliver reveal">
-            <div class="eco-head"><span>04</span><strong>Collaborate & Deliver</strong></div>
-            <div class="eco-logos">
-              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Agile Boards</b></div>
-              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>UX Handoff</b></div>
-              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Visual Docs</b></div>
-              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>Evidence</b></div>
-            </div>
-          </article>
-        </div>
-        <div class="ecosystem-flow reveal"><span>Figma</span><b>·</b><span>Miro</span><b>·</b><span>Trello</span><b>·</b><span>Excel</span><b>·</b><span>VS Code</span><b>·</b><span>GitHub</span><b>·</b><span>Next.js</span><b>·</b><span>Supabase</span><b>·</b><span>PostgreSQL</span><b>·</b><span>Oracle SQL</span><b>·</b><span>Canva</span></div>
-      </div>
-    </section><section class="section" id="experience">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Experience <span class="blue-line"></span></h2>
+          <h2>Experience </h2>
           <div class="section-kicker">Progression through real business work</div>
         </div>
         <div class="career-visual reveal">
