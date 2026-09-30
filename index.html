@@ -658,7 +658,105 @@
       .snapshot-card:hover,.cap-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
     }
 
+
+    /* visual enhancement v2 */
+    .hero-orbit{
+      position:absolute;z-index:12;display:flex;align-items:center;gap:9px;
+      min-width:146px;padding:9px 11px;border-radius:13px;
+      background:rgba(255,255,255,.91);border:1px solid rgba(214,225,240,.92);
+      box-shadow:0 14px 34px rgba(45,77,118,.12);backdrop-filter:blur(12px);
+      pointer-events:none
+    }
+    .hero-orbit::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(10,115,255,.09)}
+    .hero-orbit strong{display:block;font-size:.62rem;color:#344258;line-height:1.15}
+    .hero-orbit small{display:block;font-size:.48rem;color:#8b96a8;margin-top:2px}
+    .hero-orbit.one{left:-4px;top:78px}
+    .hero-orbit.two{right:-5px;bottom:78px}
+    .hero-orbit.three{right:18px;top:16px}
+
+    .project-card{--project-accent:var(--blue);--project-soft:#edf5ff}
+    .project-card::after{
+      content:"";position:absolute;left:18px;right:18px;top:8px;height:3px;border-radius:999px;
+      background:linear-gradient(90deg,var(--project-accent),transparent);opacity:.6;pointer-events:none
+    }
+    .project-tanshift{--project-accent:#0a73ff;--project-soft:#eaf3ff}
+    .project-client{--project-accent:#6b76e8;--project-soft:#f0f0ff}
+    .project-innerleaf{--project-accent:#32a26f;--project-soft:#eaf8f0}
+    .project-database{--project-accent:#7a63e8;--project-soft:#f1efff}
+    .visual-tanshift{background:radial-gradient(circle at 85% 20%,rgba(10,115,255,.12),transparent 30%),linear-gradient(145deg,#f8fbff,#eef5ff)}
+    .visual-client{background:radial-gradient(circle at 82% 18%,rgba(107,118,232,.11),transparent 28%),linear-gradient(145deg,#fbfbff,#f1f2ff)}
+    .visual-innerleaf{background:radial-gradient(circle at 82% 16%,rgba(50,162,111,.12),transparent 28%),linear-gradient(145deg,#fbfffc,#eef9f2)}
+    .visual-database{background:radial-gradient(circle at 82% 18%,rgba(122,99,232,.11),transparent 28%),linear-gradient(145deg,#fbfaff,#f1efff)}
+    .project-meta-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .project-type{display:inline-flex;align-items:center;gap:6px;font-size:.53rem;letter-spacing:.08em;text-transform:uppercase;font-weight:850;color:var(--project-accent)}
+    .project-type::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--project-accent)}
+    .project-proof-badge{padding:5px 7px;border-radius:999px;background:var(--project-soft);color:var(--project-accent);font-size:.49rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .project-card .project-evidence span{position:relative;overflow:hidden}
+    .project-card .project-evidence span::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--project-accent);opacity:.52}
+    .project-card:hover .project-arrow{transform:translate(2px,-2px)}
+    .project-arrow{transition:transform .2s ease}
+
+    .skill-visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .skill-visual{
+      position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;
+      padding:20px;min-height:235px;box-shadow:0 12px 34px rgba(44,62,96,.035);
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .skill-visual:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.075);border-color:#d8e4f3}
+    .skill-visual::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-72px;bottom:-72px;background:radial-gradient(circle,var(--skill-glow),transparent 67%)}
+    .skill-blue{--skill:#0a73ff;--skill-bg:#edf5ff;--skill-glow:rgba(10,115,255,.16)}
+    .skill-purple{--skill:#7460df;--skill-bg:#f1efff;--skill-glow:rgba(116,96,223,.16)}
+    .skill-green{--skill:#2c9a68;--skill-bg:#edf8f2;--skill-glow:rgba(44,154,104,.16)}
+    .skill-orange{--skill:#c97735;--skill-bg:#fff4eb;--skill-glow:rgba(201,119,53,.16)}
+    .skill-icon{position:relative;z-index:2;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--skill-bg);color:var(--skill);margin-bottom:22px}
+    .skill-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .skill-visual small{position:relative;z-index:2;display:block;color:var(--skill);font-size:.54rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+    .skill-visual h3{position:relative;z-index:2;font-size:.95rem;letter-spacing:-.02em;margin-bottom:13px}
+    .skill-nodes{position:relative;z-index:2;display:grid;gap:7px}
+    .skill-node{display:flex;align-items:center;gap:8px;font-size:.64rem;color:#5e6a7e;font-weight:650}
+    .skill-node::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--skill);box-shadow:0 0 0 4px var(--skill-bg)}
+    .skill-foot{position:relative;z-index:2;margin-top:15px;padding-top:11px;border-top:1px solid #edf1f6;font-size:.56rem;color:#919bad}
+
+    .ecosystem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .ecosystem-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;min-height:185px;box-shadow:0 12px 34px rgba(44,62,96,.035);overflow:hidden}
+    .ecosystem-card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--eco-accent),transparent)}
+    .eco-analysis{--eco-accent:#0a73ff}.eco-build{--eco-accent:#5b68d8}.eco-data{--eco-accent:#26996a}.eco-deliver{--eco-accent:#cf7a35}
+    .eco-head{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+    .eco-head span{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:#f4f7fb;color:var(--eco-accent);font-size:.57rem;font-weight:850}
+    .eco-head strong{font-size:.82rem}
+    .eco-logos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .eco-logo{display:flex;align-items:center;gap:7px;padding:9px;border-radius:11px;background:#f8fafc;border:1px solid #edf1f6;min-width:0}
+    .eco-logo img{width:20px;height:20px;object-fit:contain;flex:none}
+    .eco-logo b{font-size:.6rem;color:#536075;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ecosystem-flow{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;color:#91a0b4}
+    .ecosystem-flow span{padding:6px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.54rem;font-weight:700}
+    .ecosystem-flow b{color:#8ab7ef}
+
+    .career-visual{position:relative;margin-bottom:18px;padding:24px;border-radius:24px;background:linear-gradient(145deg,#0d1a33,#142c50);color:#fff;overflow:hidden;box-shadow:0 22px 55px rgba(18,39,75,.16)}
+    .career-visual::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-120px;top:-170px;background:radial-gradient(circle,rgba(78,157,255,.28),transparent 66%)}
+    .career-intro{position:relative;z-index:2;display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
+    .career-intro small{display:block;color:#93acd0;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
+    .career-intro h3{font-size:1.35rem;letter-spacing:-.035em;max-width:620px}
+    .career-intro a{color:#8dc6ff;font-size:.65rem;font-weight:760;white-space:nowrap}
+    .career-roadmap{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .career-roadmap::before{content:"";position:absolute;left:15%;right:15%;top:29px;height:1px;background:linear-gradient(90deg,rgba(109,176,255,.25),#6db0ff,rgba(109,176,255,.25))}
+    .career-stage{position:relative;padding-top:53px}
+    .career-dot{position:absolute;z-index:3;left:18px;top:11px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a73ff;border:5px solid #16375f;box-shadow:0 0 0 1px rgba(132,190,255,.35);font-size:.59rem;font-weight:850}
+    .career-box{height:100%;padding:15px;border-radius:15px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.10)}
+    .career-date{font-size:.5rem;color:#88a3c5;margin-bottom:5px;font-weight:700}
+    .career-box strong{display:block;font-size:.76rem;margin-bottom:9px}
+    .career-tags{display:flex;gap:5px;flex-wrap:wrap}
+    .career-tags span{padding:5px 7px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:#c0d1e5;font-size:.49rem;font-weight:650}
+    .career-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+    .career-stat{padding:12px;border-radius:13px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09)}
+    .career-stat b{display:block;color:#8dc6ff;font-size:.78rem;margin-bottom:2px}
+    .career-stat span{font-size:.51rem;color:#9fb2ca;line-height:1.35}
+    .ecom-strip{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(44,62,96,.03)}
+    .ecom-strip strong{font-size:.76rem}.ecom-strip span{font-size:.6rem;color:var(--muted)}.ecom-strip b{font-size:.56rem;padding:6px 8px;border-radius:999px;background:#fff4e9;color:#bd6f2f}
+
     @media(max-width:1040px){
+      .skill-visual-grid,.ecosystem-grid{grid-template-columns:repeat(2,1fr)}
+
       .evidence-grid{grid-template-columns:repeat(3,1fr)}
       .hero-grid{grid-template-columns:1fr}
       .dashboard-stage{min-height:420px;max-width:720px;width:100%;margin:0 auto}
@@ -706,6 +804,14 @@
       .workstep:first-child{border-top:0}
       .commercial-exp{grid-template-columns:1fr}
       .commercial-proof{grid-template-columns:1fr 1fr}
+      .skill-visual-grid,.ecosystem-grid{grid-template-columns:1fr}
+      .career-roadmap{grid-template-columns:1fr;gap:10px}
+      .career-roadmap::before{left:35px;right:auto;top:20px;bottom:20px;width:1px;height:auto;background:linear-gradient(180deg,rgba(109,176,255,.25),#6db0ff,rgba(109,176,255,.25))}
+      .career-stage{padding-top:0;padding-left:54px}
+      .career-dot{left:16px;top:15px}
+      .career-stats{grid-template-columns:1fr 1fr}
+      .career-intro{flex-direction:column}
+      .hero-orbit{display:none}
       .timeline{padding:4px 18px}
       .timeline-row{grid-template-columns:1fr;gap:5px;padding:18px 0 18px 22px;min-height:auto}
       .timeline-date{padding-left:0}.timeline-date::before{left:-22px}.timeline-date::after{left:-18.5px;top:18px;height:75px}
@@ -726,7 +832,7 @@
     "alternateName":"William Tan",
     "url":"https://williamtangq.github.io/",
     "sameAs":["https://github.com/WilliamTangq","https://www.linkedin.com/in/williamtangq"],
-    "alumniOf":{"@type":"CollegeOrUniversity","name":"Monash University"},
+    "affiliation":{"@type":"CollegeOrUniversity","name":"Monash University"},
     "knowsAbout":["Business Analysis","Systems Analysis","Requirements Gathering","Process Mapping","SQL","Database Design","User Acceptance Testing","Digital Operations","Web Application Development"]
   }
   </script>
@@ -768,6 +874,9 @@
 
         <div class="dashboard-stage reveal" aria-label="TanShift dashboard concept">
           <span class="concept-label hero-concept">Concept UI Preview</span>
+          <div class="hero-orbit one"><div><strong>Business → System</strong><small>requirements to delivery</small></div></div>
+          <div class="hero-orbit two"><div><strong>SQL & Data</strong><small>structure behind the workflow</small></div></div>
+          <div class="hero-orbit three"><div><strong>UAT & Testing</strong><small>validate the real journey</small></div></div>
           <div class="back-card one"></div><div class="back-card two"></div>
           <div class="dashboard">
             <aside class="dash-side">
@@ -852,8 +961,8 @@
         </div>
 
         <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+          <article class="project-card project-tanshift reveal">
+            <div class="project-visual visual-tanshift" aria-hidden="true"><span class="concept-label">Concept Preview</span>
               <div class="mini-app">
                 <div class="mini-side">
                   <div class="mini-brand">TanShift</div>
@@ -872,7 +981,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-title-row"><h3>TanShift</h3><span class="project-arrow">↗</span></div>
+              <div class="project-meta-row"><span class="project-type">Systems</span><span class="project-proof-badge">Public repo</span></div><div class="project-title-row"><h3>TanShift</h3><span class="project-arrow">↗</span></div>
               <p>Staff scheduling system designed to replace fragmented rostering workflows.</p>
               <div class="tags">
     <span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span>
@@ -885,8 +994,8 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+          <article class="project-card project-client reveal">
+            <div class="project-visual visual-client" aria-hidden="true"><span class="concept-label">Concept Preview</span>
               <div class="flow-wrap">
                 <div class="flow-side"><div>Overview</div><div>Requirements</div><div>User Flow</div><div>Testing</div><div>Findings</div></div>
                 <div class="flow-main">
@@ -902,7 +1011,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
+              <div class="project-meta-row"><span class="project-type">Client delivery</span><span class="project-proof-badge">Private client</span></div><div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
               <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
               <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
               <div class="project-evidence"><span>Requirements → fixes</span><span>Integrity testing</span><span>Private client work</span></div>
@@ -911,8 +1020,8 @@
           </article>
 
 
-          <article class="project-card reveal">
-            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+          <article class="project-card project-innerleaf reveal">
+            <div class="project-visual visual-innerleaf" aria-hidden="true"><span class="concept-label">Concept Preview</span>
               <div class="innerleaf-mini">
                 <div class="innerleaf-head"><span class="innerleaf-brand">InnerLeaf</span><span class="innerleaf-badge">AI-assisted reflection</span></div>
                 <div class="innerleaf-grid">
@@ -926,7 +1035,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
+              <div class="project-meta-row"><span class="project-type">Product</span><span class="project-proof-badge">Public repo</span></div><div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
               <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
               <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
               <div class="project-evidence"><span>Structured AI output</span><span>User / Admin routing</span><span>Playwright tests</span></div>
@@ -934,8 +1043,8 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+          <article class="project-card project-database reveal">
+            <div class="project-visual visual-database" aria-hidden="true"><span class="concept-label">Concept Preview</span>
               <div class="erd">
                 <div class="erd-side"><div>Database</div><div>ERD</div><div>Tables</div><div>Relationships</div><div>SQL Scripts</div></div>
                 <div class="erd-canvas">
@@ -948,7 +1057,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-title-row"><h3>Oracle Database Project</h3><span class="project-arrow">↗</span></div>
+              <div class="project-meta-row"><span class="project-type">Data</span><span class="project-proof-badge">SQL / ERD</span></div><div class="project-title-row"><h3>Oracle Database Project</h3><span class="project-arrow">↗</span></div>
               <p>Database design focused on business rules, ERD structure and SQL integrity.</p>
               <div class="tags">
     <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
@@ -1014,21 +1123,33 @@
     <section class="section" id="skills">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Technical Skills &amp; Capabilities <span class="blue-line"></span></h2>
-          <div class="section-kicker">Key areas of expertise</div>
+          <h2>Capabilities <span class="blue-line"></span></h2>
+          <div class="section-kicker">Four connected strengths</div>
         </div>
-        <div class="cap-grid">
-          <article class="cap-card reveal">
-            <div class="cap-head"><div class="cap-icon">BA</div><h3>Business &amp; Systems Analysis</h3></div>
-            <div class="tags"><span class="tag">Requirements</span><span class="tag">Process Mapping</span><span class="tag">Acceptance Criteria</span><span class="tag">Stakeholders</span><span class="tag">UAT</span></div>
+        <div class="skill-visual-grid">
+          <article class="skill-visual skill-blue reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div>
+            <small>01 · Discover</small><h3>Business Analysis</h3>
+            <div class="skill-nodes"><div class="skill-node">Requirements</div><div class="skill-node">Process Mapping</div><div class="skill-node">Acceptance Criteria</div><div class="skill-node">Stakeholder Context</div></div>
+            <div class="skill-foot">Evidence: Monash client + CS TAN</div>
           </article>
-          <article class="cap-card reveal">
-            <div class="cap-head"><div class="cap-icon">DB</div><h3>Data &amp; Databases</h3></div>
-            <div class="tags"><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle SQL</span><span class="tag">ERD</span><span class="tag">Excel</span></div>
+          <article class="skill-visual skill-purple reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div>
+            <small>02 · Structure</small><h3>Systems Thinking</h3>
+            <div class="skill-nodes"><div class="skill-node">Workflows</div><div class="skill-node">Role Logic</div><div class="skill-node">Business Rules</div><div class="skill-node">User Journeys</div></div>
+            <div class="skill-foot">Evidence: TanShift + client work</div>
           </article>
-          <article class="cap-card reveal">
-            <div class="cap-head"><div class="cap-icon">PD</div><h3>Product &amp; Delivery</h3></div>
-            <div class="tags"><span class="tag">Next.js</span><span class="tag">JavaScript</span><span class="tag">Git/GitHub</span><span class="tag">Agile</span><span class="tag">Testing</span></div>
+          <article class="skill-visual skill-green reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+            <small>03 · Model</small><h3>Data & SQL</h3>
+            <div class="skill-nodes"><div class="skill-node">PostgreSQL</div><div class="skill-node">Oracle SQL</div><div class="skill-node">ERD & Normalisation</div><div class="skill-node">Excel Analysis</div></div>
+            <div class="skill-foot">Evidence: database project + operations</div>
+          </article>
+          <article class="skill-visual skill-orange reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
+            <small>04 · Deliver</small><h3>Product & Validation</h3>
+            <div class="skill-nodes"><div class="skill-node">Next.js & Supabase</div><div class="skill-node">Git / GitHub</div><div class="skill-node">UAT & Integrity Testing</div><div class="skill-node">Playwright</div></div>
+            <div class="skill-foot">Evidence: TanShift + InnerLeaf</div>
           </article>
         </div>
       </div>
@@ -1037,92 +1158,82 @@
     <section class="section" id="tools">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Software &amp; Tools <span class="blue-line"></span></h2>
-          <div class="section-kicker">Tools I work with</div>
+          <h2>Tool Ecosystem <span class="blue-line"></span></h2>
+          <div class="section-kicker">How the toolkit connects</div>
         </div>
-
-        <div class="tool-flow reveal" aria-label="Technology ecosystem">
-          <div class="tool-track">
-            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
-            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
-            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
-            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
-            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
-            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
-            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
-            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
-            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
-            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
-            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
-            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
-            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
-            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
-            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
-            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
-            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
-            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
-            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
-            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
-          </div>
+        <div class="ecosystem-grid">
+          <article class="ecosystem-card eco-analysis reveal">
+            <div class="eco-head"><span>01</span><strong>Analyse & Map</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>Figma</b></div>
+              <div class="eco-logo"><img src="assets/icons/miro.svg" alt="Miro"><b>Miro</b></div>
+              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Trello</b></div>
+              <div class="eco-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><b>Excel</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-build reveal">
+            <div class="eco-head"><span>02</span><strong>Build & Version</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/vscode.svg" alt="VS Code"><b>VS Code</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>GitHub</b></div>
+              <div class="eco-logo"><img src="assets/icons/nextjs.svg" alt="Next.js"><b>Next.js</b></div>
+              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Canva</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-data reveal">
+            <div class="eco-head"><span>03</span><strong>Data & Backend</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/supabase.svg" alt="Supabase"><b>Supabase</b></div>
+              <div class="eco-logo"><img src="assets/icons/postgresql.svg" alt="PostgreSQL"><b>PostgreSQL</b></div>
+              <div class="eco-logo"><img src="assets/icons/oracle.svg" alt="Oracle SQL"><b>Oracle SQL</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="Git"><b>Git</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-deliver reveal">
+            <div class="eco-head"><span>04</span><strong>Collaborate & Deliver</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Agile Boards</b></div>
+              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>UX Handoff</b></div>
+              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Visual Docs</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>Evidence</b></div>
+            </div>
+          </article>
         </div>
-
-        <div class="tools-grid">
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/figma.svg" alt="Figma logo"></div><span>Figma</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/miro.svg" alt="Miro logo"></div><span>Miro</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/trello.svg" alt="Trello logo"></div><span>Trello</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/github.svg" alt="GitHub logo"></div><span>GitHub</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/vscode.svg" alt="Visual Studio Code logo"></div><span>VS Code</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/supabase.svg" alt="Supabase logo"></div><span>Supabase</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/postgresql.svg" alt="PostgreSQL logo"></div><span>PostgreSQL</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/oracle.svg" alt="Oracle logo"></div><span>Oracle SQL</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Microsoft Excel logo"></div><span>Excel</span></div>
-          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/canva.svg" alt="Canva logo"></div><span>Canva</span></div>
-        </div>
+        <div class="ecosystem-flow reveal"><span>Understand</span><b>→</b><span>Structure</span><b>→</b><span>Build</span><b>→</b><span>Validate</span></div>
       </div>
     </section><section class="section" id="experience">
       <div class="shell">
         <div class="section-head reveal">
           <h2>Experience <span class="blue-line"></span></h2>
-          <div class="section-kicker">Professional background</div>
+          <div class="section-kicker">Progression through real business work</div>
         </div>
-        <div class="commercial-exp reveal">
-          <article class="commercial-story">
-            <small>Commercial experience</small>
-            <h3>CS TAN Commercial Experience</h3>
-            <p>Real commercial work across analysis, IT support and operations.</p>
-            <div class="commercial-path"><span>IT Support</span><b>→</b><span>Retail Business Analysis</span><b>→</b><span>Business Development & Operations</span></div>
-            <a href="case-cstan.html">View real commercial experience →</a>
-          </article>
-          <div class="commercial-proof">
-            <div><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><strong>Excel analysis</strong><span>Sales · stock · margins · demand</span></div>
-            <div><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM16 10a3 3 0 1 0 0-6M2 21v-2c0-3 2-5 6-5s6 2 6 5v2M15 14c4 0 7 2 7 5v2"/></svg></span><strong>22 passengers</strong><span>Booking · itinerary · invoice</span></div>
-            <div><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 8l8 5 8-5"/></svg></span><strong>B2B workflow</strong><span>Customers · quotes · invoices</span></div>
-            <div><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><strong>Operations</strong><span>Sourcing · suppliers · records</span></div>
+        <div class="career-visual reveal">
+          <div class="career-intro">
+            <div><small>CS TAN Technology & Enterprise</small><h3>From solving user issues → analysing operations → supporting business growth.</h3></div>
+            <a href="case-cstan.html">View commercial case →</a>
           </div>
-        </div>
-
-        <div class="timeline reveal">
-          <div class="timeline-row">
-            <div class="timeline-date">Aug 2023 – Present</div>
-            <div class="timeline-role"><strong>Business Development &amp; Operations Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia / Remote</small></div>
-            <div class="role-pill blue">Operations</div>
+          <div class="career-roadmap">
+            <div class="career-stage">
+              <div class="career-dot">01</div>
+              <div class="career-box"><div class="career-date">SEP 2022 – MAR 2023</div><strong>IT Support Assistant</strong><div class="career-tags"><span>Devices</span><span>Email</span><span>Business Software</span><span>Digital Records</span></div></div>
+            </div>
+            <div class="career-stage">
+              <div class="career-dot">02</div>
+              <div class="career-box"><div class="career-date">MAR 2023 – AUG 2023</div><strong>Retail Business Analyst Assistant</strong><div class="career-tags"><span>Excel</span><span>Inventory</span><span>Pricing</span><span>Demand</span></div></div>
+            </div>
+            <div class="career-stage">
+              <div class="career-dot">03</div>
+              <div class="career-box"><div class="career-date">AUG 2023 – PRESENT</div><strong>Business Development & Operations Assistant</strong><div class="career-tags"><span>B2B</span><span>Suppliers</span><span>Quotations</span><span>Operations</span></div></div>
+            </div>
           </div>
-          <div class="timeline-row">
-            <div class="timeline-date">Mar 2023 – Aug 2023</div>
-            <div class="timeline-role"><strong>Retail Business Analyst Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia</small></div>
-            <div class="role-pill green">Business Analysis</div>
-          </div>
-          <div class="timeline-row">
-            <div class="timeline-date">Sep 2022 – Mar 2023</div>
-            <div class="timeline-role"><strong>IT Support Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia</small></div>
-            <div class="role-pill purple">IT Support</div>
-          </div>
-          <div class="timeline-row">
-            <div class="timeline-date">Feb 2020 – Present</div>
-            <div class="timeline-role"><strong>E-commerce Coordinator</strong><small>Lazada / Shopee · Remote</small></div>
-            <div class="role-pill orange">E-commerce</div>
+          <div class="career-stats">
+            <div class="career-stat"><b>3 stages</b><span>Growing responsibility inside one business</span></div>
+            <div class="career-stat"><b>Excel</b><span>Sales · stock · margins · demand</span></div>
+            <div class="career-stat"><b>22 pax</b><span>Corporate booking · itinerary · invoice</span></div>
+            <div class="career-stat"><b>B2B</b><span>Customers · suppliers · quotes · records</span></div>
           </div>
         </div>
+        <div class="ecom-strip reveal"><div><strong>E-commerce Coordinator · Lazada / Shopee</strong><span> · Feb 2020 – Present · 100+ product listings</span></div><b>E-commerce</b></div>
       </div>
     </section>
 
