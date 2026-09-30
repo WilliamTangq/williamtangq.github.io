@@ -3,364 +3,1341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guang Quan Tan (William) | Business Analyst · Systems Analyst · Technology</title>
-  <meta name="description" content="Guang Quan Tan (William) is a final-year Monash Business Information Systems candidate with commercial experience across business analysis, IT support, operations, SQL and systems delivery. Open to graduate and entry-level opportunities across Australia, Malaysia and Singapore." />
-  <meta name="keywords" content="Guang Quan Tan, William Tan, Business Analyst, Systems Analyst, Technology Analyst, IT Support, Business Information Systems, Monash University, SQL, UAT, Excel, Australia, Malaysia, Singapore" />
+  <title>Guang Quan Tan (William) | Business Analyst · Systems Analyst · Technology Portfolio</title>
+  <meta name="description" content="Guang Quan Tan (William) is a final-year Monash Business Information Systems candidate with commercial experience in business analysis, IT support, operations, SQL and systems delivery. Open to graduate and entry-level opportunities across Australia, Malaysia and Singapore." />
+  <meta name="keywords" content="Guang Quan Tan, William Tan, Business Analyst, Systems Analyst, Technology Analyst, IT Support, Business Information Systems, Monash University, Requirements Gathering, Process Mapping, SQL, UAT, Excel, Australia, Malaysia, Singapore" />
   <meta name="author" content="Guang Quan Tan" />
   <meta name="theme-color" content="#fbfbfd" />
   <meta property="og:title" content="Guang Quan Tan (William) | Business · Systems · Technology" />
-  <meta property="og:description" content="Commercial experience, business analysis, systems thinking and hands-on technology delivery." />
+  <meta property="og:description" content="Business analysis, systems, IT support and commercial operations — backed by real experience and inspectable project evidence." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://williamtangq.github.io/" />
   <link rel="canonical" href="https://williamtangq.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Instrument+Sans:wdth,wght@75..100,400..750&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#f5f5f7;
-      --surface:#ffffff;
-      --surface-2:#fbfbfd;
+      --surface:#fff;
+      --surface-soft:#fbfcfe;
       --ink:#1d1d1f;
       --muted:#6e6e73;
       --soft:#86868b;
       --line:#e5e5ea;
       --blue:#0071e3;
-      --blue-soft:#eef6ff;
-      --green:#2d8f63;
-      --purple:#6d5bd0;
-      --amber:#b9722b;
+      --blue-2:#2997ff;
+      --blue-soft:#f0f7ff;
+      --green:#20a464;
+      --green-soft:#eaf8f0;
+      --purple:#7c63f2;
+      --purple-soft:#f0edff;
+      --orange:#db7a2d;
+      --orange-soft:#fff1e7;
       --max:1180px;
-      --radius:28px;
-      --shadow:0 22px 60px rgba(22,31,45,.07);
+      --radius:26px;
+      --radius-md:20px;
+      --radius-sm:14px;
+      --shadow:0 20px 55px rgba(44,62,96,.08);
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
       background:var(--bg);
       color:var(--ink);
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
       line-height:1.5;
       overflow-x:hidden;
     }
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    button,a{-webkit-tap-highlight-color:transparent}
+    ::selection{background:#cfe3ff;color:#08101f}
     .shell{width:min(var(--max),calc(100% - 44px));margin:0 auto}
-    section[id]{scroll-margin-top:74px}
-    ::selection{background:#cfe6ff;color:#111}
-
+    section[id]{scroll-margin-top:78px}
     .scroll-progress{
-      position:fixed;top:0;left:0;z-index:200;width:100%;height:2px;
-      background:var(--blue);transform-origin:left;transform:scaleX(0)
+      position:fixed;top:0;left:0;z-index:150;width:100%;height:2px;
+      transform-origin:0 50%;transform:scaleX(0);
+      background:linear-gradient(90deg,#0a73ff,#67a9ff);
+      box-shadow:0 0 12px rgba(10,115,255,.28);
+      pointer-events:none
     }
 
-    /* Navigation */
+    /* navigation */
     .nav{
-      position:fixed;inset:0 0 auto;z-index:120;height:58px;
-      background:rgba(251,251,253,.82);
-      border-bottom:1px solid rgba(29,29,31,.06);
-      backdrop-filter:blur(20px) saturate(180%);
-      -webkit-backdrop-filter:blur(20px) saturate(180%);
+      position:fixed;
+      inset:0 0 auto;
+      z-index:100;
+      height:58px;
+      background:rgba(255,255,255,.82);
+      border-bottom:1px solid rgba(12,20,38,.055);
+      backdrop-filter:saturate(180%) blur(22px);
+      -webkit-backdrop-filter:saturate(180%) blur(22px);
     }
     .nav-inner{
-      width:min(var(--max),calc(100% - 44px));height:100%;margin:auto;
-      display:flex;align-items:center;justify-content:space-between;gap:24px
+      width:min(var(--max),calc(100% - 44px));
+      height:100%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
     }
-    .brand{display:flex;align-items:center;gap:10px;font-size:.83rem;font-weight:720;letter-spacing:-.02em}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:720;font-size:.92rem}
     .brand-mark{
-      width:29px;height:29px;border-radius:9px;display:grid;place-items:center;
-      background:#1d1d1f;color:#fff;font-size:.65rem;font-weight:800
+      width:30px;height:30px;border-radius:10px;
+      display:grid;place-items:center;
+      background:linear-gradient(145deg,#eef5ff,#e2ecff);
+      color:var(--blue);font-size:.76rem;font-weight:800;
+      box-shadow:inset 0 0 0 1px rgba(10,115,255,.08);
     }
-    .brand small{font-size:.72rem;color:var(--soft);font-weight:540}
-    .nav-links{display:flex;align-items:center;gap:26px;list-style:none}
-    .nav-links a{font-size:.72rem;color:#5f5f63;font-weight:560;transition:.18s}
-    .nav-links a:hover,.nav-links a.active{color:#111}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{
+      position:relative;font-size:.75rem;color:#4c556b;font-weight:570;
+      transition:color .2s ease
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:50%;bottom:-9px;width:4px;height:4px;border-radius:50%;
+      background:var(--blue);opacity:0;transform:translateX(-50%) scale(.4);transition:.2s ease
+    }
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-links a.active::after{opacity:1;transform:translateX(-50%) scale(1)}
     .nav-cta{
-      min-height:34px;padding:0 14px;border-radius:999px;background:#1d1d1f;color:#fff;
-      display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700
+      min-height:36px;padding:0 15px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--blue);color:#fff;font-size:.75rem;font-weight:700;
+      box-shadow:0 7px 18px rgba(10,115,255,.2);
+      transition:.2s ease;
     }
+    .nav-cta:hover{transform:translateY(-1px);background:#0068ea}
 
-    /* Hero */
+    /* hero — Apple-like visual-first experience */
     .hero{
-      padding:106px 0 72px;
-      background:linear-gradient(180deg,#fff 0%,#fbfbfd 58%,#f5f5f7 100%);
+      position:relative;
+      padding:106px 0 62px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 50% 36%,rgba(0,113,227,.07),transparent 30%),
+        linear-gradient(180deg,#ffffff 0%,#fbfbfd 58%,#f5f5f7 100%);
+    }
+    .hero::before{
+      content:"";position:absolute;left:50%;top:150px;width:760px;height:760px;border-radius:50%;
+      transform:translateX(-50%);
+      background:radial-gradient(circle,rgba(41,151,255,.085),rgba(41,151,255,.025) 42%,transparent 68%);
+      pointer-events:none
+    }
+    .hero-shell{position:relative;z-index:2;text-align:center}
+    .hero-kicker{
+      display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;
+      color:#86868b;font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase
+    }
+    .hero-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:#34c759;box-shadow:0 0 0 5px rgba(52,199,89,.08)}
+    .hero-title{
+      max-width:720px;margin:0 auto 9px;
+      font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.03;letter-spacing:-.055em;font-weight:720
+    }
+    .hero-title span{color:var(--blue)}
+    .hero-subtitle{
+      max-width:660px;margin:0 auto 20px;color:var(--muted);
+      font-size:clamp(.92rem,1.6vw,1.08rem);line-height:1.55;letter-spacing:-.01em
+    }
+    .hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+    .btn{
+      min-height:44px;padding:0 18px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      font-size:.76rem;font-weight:700;border:1px solid transparent;transition:.2s ease
+    }
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:none}
+    .btn-primary:hover{background:#0066cc;transform:translateY(-1px)}
+    .btn-secondary{background:transparent;border-color:#d2d2d7;color:#1d1d1f}
+    .btn-secondary:hover{background:#fff;border-color:#c7c7cc;transform:translateY(-1px)}
+
+    .hero-visual{
+      position:relative;
+      max-width:920px;height:500px;margin:0 auto;
+      border-radius:34px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(210,210,215,.72);
+      box-shadow:0 34px 90px rgba(36,52,74,.10);
+      backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
       overflow:hidden
     }
-    .hero-grid{
-      display:grid;grid-template-columns:minmax(0,.78fr) minmax(470px,1.22fr);
-      gap:54px;align-items:center
+    .hero-visual::before{
+      content:"";position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 50% 48%,rgba(0,113,227,.085),transparent 26%),
+        radial-gradient(circle,#d8d8dd 1px,transparent 1px);
+      background-size:auto,26px 26px;
+      opacity:.52;
+      mask-image:linear-gradient(to bottom,transparent 2%,#000 20%,#000 82%,transparent 100%)
     }
-    .eyebrow{
-      display:flex;align-items:center;gap:8px;margin-bottom:16px;
-      color:var(--soft);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase
+    .hero-visual::after{
+      content:"";position:absolute;left:50%;top:50%;width:310px;height:310px;border-radius:50%;
+      transform:translate(-50%,-50%);border:1px solid rgba(0,113,227,.11);
+      box-shadow:0 0 0 52px rgba(0,113,227,.025),0 0 0 104px rgba(0,113,227,.014);
+      pointer-events:none
     }
-    .eyebrow i{width:7px;height:7px;border-radius:50%;background:#34c759;box-shadow:0 0 0 5px rgba(52,199,89,.08)}
-    .hero h1{
-      max-width:560px;font-size:clamp(2.5rem,5vw,4.75rem);line-height:.96;
-      letter-spacing:-.065em;font-weight:740;margin-bottom:18px
+    .system-core{
+      position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:210px;height:210px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:25px;
+      background:rgba(255,255,255,.96);border:1px solid #dfe8f2;
+      box-shadow:0 22px 58px rgba(34,75,121,.13)
     }
-    .hero h1 span{color:var(--blue)}
-    .hero-copy{
-      max-width:570px;color:var(--muted);font-size:1rem;line-height:1.68;margin-bottom:20px
+    .system-core .core-icon{
+      width:44px;height:44px;border-radius:14px;margin:0 auto 11px;display:grid;place-items:center;
+      background:#f0f7ff;color:var(--blue)
     }
-    .role-line{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px}
-    .role-chip{
-      padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);
-      color:#515158;font-size:.6rem;font-weight:680
+    .system-core svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .system-core small{display:block;color:#86868b;font-size:.53rem;letter-spacing:.09em;text-transform:uppercase;font-weight:760;margin-bottom:4px}
+    .system-core strong{display:block;font-size:1rem;line-height:1.16;letter-spacing:-.025em}
+    .system-core span{display:block;margin-top:7px;color:#86868b;font-size:.57rem;line-height:1.4}
+    .system-node{
+      position:absolute;z-index:6;width:185px;min-height:112px;padding:14px 15px;border-radius:20px;
+      background:rgba(255,255,255,.94);border:1px solid #e1e5ea;
+      box-shadow:0 16px 38px rgba(44,62,96,.07);
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
     }
-    .hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
-    .btn{
-      min-height:44px;padding:0 17px;border-radius:999px;
-      display:inline-flex;align-items:center;justify-content:center;
-      border:1px solid transparent;font-size:.73rem;font-weight:700;transition:.18s ease
+    .system-node:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(44,62,96,.11);border-color:#ceddec}
+    .system-node .node-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .system-node .node-icon{width:33px;height:33px;border-radius:11px;display:grid;place-items:center;background:#f5f5f7;color:#4a5668}
+    .system-node .node-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .system-node b{color:var(--blue);font-size:.53rem;letter-spacing:.09em}
+    .system-node strong{display:block;font-size:.78rem;margin-bottom:4px}
+    .system-node span{display:block;font-size:.56rem;line-height:1.42;color:#7b8493}
+    .system-node.ba{left:7%;top:12%}
+    .system-node.bis{right:7%;top:12%}
+    .system-node.it{left:7%;bottom:12%}
+    .system-node.bd{right:7%;bottom:12%}
+    .system-line{position:absolute;z-index:2;height:1px;background:linear-gradient(90deg,rgba(0,113,227,.06),rgba(0,113,227,.28),rgba(0,113,227,.06));transform-origin:left center}
+    .system-line.l1{left:23%;top:31%;width:28%;transform:rotate(24deg)}
+    .system-line.l2{left:50%;top:31%;width:28%;transform:rotate(-24deg)}
+    .system-line.l3{left:23%;top:69%;width:28%;transform:rotate(-24deg)}
+    .system-line.l4{left:50%;top:69%;width:28%;transform:rotate(24deg)}
+    .micro-skill{
+      position:absolute;z-index:7;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);
+      border:1px solid #e3e6ea;color:#6f7783;font-size:.5rem;font-weight:700;
+      box-shadow:0 8px 20px rgba(44,62,96,.045)
     }
-    .btn-primary{background:var(--blue);color:#fff}
-    .btn-primary:hover{background:#0066cc;transform:translateY(-1px)}
-    .btn-secondary{background:#fff;border-color:#d2d2d7}
-    .btn-secondary:hover{border-color:#bfbfc4;transform:translateY(-1px)}
-    .availability{
-      display:flex;align-items:center;gap:8px;color:var(--soft);font-size:.62rem
+    .micro-skill.s1{left:42%;top:11%}.micro-skill.s2{right:26%;top:45%}.micro-skill.s3{left:24%;top:46%}.micro-skill.s4{left:43%;bottom:10%}
+    .hero-proof-row{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:17px}
+    .hero-proof{
+      display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #e5e5ea;
+      color:#6e6e73;font-size:.59rem;font-weight:650
     }
-    .availability strong{color:#4d4d52}
-    .availability b{color:#c4c4c8;font-weight:500}
+    .hero-proof b{color:#1d1d1f;font-size:.61rem}
+    .hero-proof i{width:6px;height:6px;border-radius:50%;background:#0071e3}
 
-    .profile-board{
-      position:relative;min-height:495px;padding:24px;border-radius:34px;
-      background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden
+    /* sections */
+    .section{padding:82px 0;position:relative}
+    #profile{background:linear-gradient(180deg,#f7f9fc 0%,#fff 50%,#fff 100%)}
+    #projects{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(88,155,255,.07),transparent 24%),
+        linear-gradient(180deg,#fff 0%,#f8fbff 45%,#fff 100%);
+      border-top:1px solid rgba(219,228,241,.6);
+      border-bottom:1px solid rgba(219,228,241,.6)
     }
-    .profile-board::before{
-      content:"";position:absolute;right:-110px;top:-130px;width:390px;height:390px;border-radius:50%;
-      background:radial-gradient(circle,rgba(0,113,227,.11),rgba(0,113,227,.025) 42%,transparent 68%)
+    #skills{background:#fff}
+    #tools{
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+      border-top:1px solid rgba(219,228,241,.55)
     }
-    .board-head{position:relative;z-index:2;display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:24px}
-    .board-head small{
-      display:block;color:var(--soft);font-size:.55rem;text-transform:uppercase;letter-spacing:.09em;font-weight:780;margin-bottom:5px
-    }
-    .board-head strong{font-size:.95rem;letter-spacing:-.02em}
-    .board-badge{
-      padding:6px 8px;border-radius:999px;background:var(--blue-soft);color:var(--blue);
-      font-size:.52rem;font-weight:800
-    }
-    .career-path{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-    .career-path::before{
-      content:"";position:absolute;left:8%;right:8%;top:26px;height:1px;
-      background:linear-gradient(90deg,#dfe4ea,#a9c9ef,#dfe4ea)
-    }
-    .career-step{position:relative;z-index:2;text-align:center}
-    .career-dot{
-      width:52px;height:52px;border-radius:50%;display:grid;place-items:center;margin:0 auto 11px;
-      background:#fff;border:1px solid #dfe5ec;color:var(--blue);font-size:.53rem;font-weight:800;
-      box-shadow:0 8px 20px rgba(0,0,0,.045)
-    }
-    .career-step strong{display:block;font-size:.66rem;line-height:1.3}
-    .career-step span{display:block;margin-top:3px;color:var(--soft);font-size:.49rem;line-height:1.35}
+    #experience{background:linear-gradient(180deg,#f8fbff 0%,#fff 72%)}
 
-    .board-focus{
-      position:relative;z-index:2;margin-top:24px;padding:18px;border-radius:21px;background:#f5f5f7
-    }
-    .focus-label{color:var(--soft);font-size:.53rem;font-weight:760;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-    .focus-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:8px}
-    .focus-node{
-      min-height:77px;padding:12px;border-radius:15px;background:#fff;border:1px solid #e5e5ea
-    }
-    .focus-node b{display:block;color:var(--blue);font-size:.51rem;margin-bottom:4px}
-    .focus-node strong{display:block;font-size:.65rem;line-height:1.25}
-    .focus-node span{display:block;color:var(--soft);font-size:.48rem;line-height:1.35;margin-top:3px}
-    .focus-arrow{color:#a8a8ad;font-size:.8rem}
-    .board-metrics{
-      position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px
-    }
-    .board-metric{
-      padding:13px;border-radius:15px;background:#fff;border:1px solid var(--line)
-    }
-    .board-metric strong{display:block;font-size:1rem;letter-spacing:-.03em}
-    .board-metric span{display:block;color:var(--soft);font-size:.49rem;line-height:1.35;margin-top:3px}
-
-    /* Sections */
-    .section{padding:78px 0}
-    .section-white{background:#fff}
     .section-head{
-      display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px
+      display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px
     }
-    .section-head h2{
-      font-size:clamp(1.75rem,3.4vw,2.65rem);line-height:1.04;letter-spacing:-.05em;font-weight:710
+    .section-head h2{font-size:clamp(1.8rem,3.4vw,2.65rem);letter-spacing:-.045em;line-height:1.05}
+    .section-kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:#93a0b5;font-weight:700}
+    .blue-line{width:28px;height:3px;border-radius:3px;background:var(--blue);display:inline-block;margin-left:9px;vertical-align:middle}
+
+    /* visual icon system */
+    .vicon{
+      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+      background:#f3f7fc;border:1px solid #e3eaf3;color:#35638f;flex:none
     }
-    .section-kicker{
-      color:var(--soft);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;font-weight:720
+    .vicon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .vicon.dark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#d9e8fb}
+    .vicon.blue{background:var(--blue-soft);border-color:#d9e9ff;color:var(--blue)}
+    .vicon.green{background:#edf8f2;border-color:#d9eee3;color:#31835d}
+    .vicon.purple{background:#f1efff;border-color:#e5e0ff;color:#6d57d8}
+    .vicon.orange{background:#fff4ea;border-color:#f7e3d3;color:#bc6a2b}
+
+    /* recruiter decision */
+    .hire-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px}
+    .hire-main{
+      position:relative;overflow:hidden;border-radius:24px;padding:28px;
+      background:linear-gradient(145deg,#0c172b,#142c50);color:#fff;
+      box-shadow:0 24px 60px rgba(21,46,85,.16)
+    }
+    .hire-main::after{
+      content:"";position:absolute;width:320px;height:320px;right:-110px;top:-140px;border-radius:50%;
+      background:radial-gradient(circle,rgba(79,156,255,.28),transparent 67%)
+    }
+    .hire-main>*{position:relative;z-index:1}
+    .hire-main small{display:block;color:#9fb7d8;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:9px}
+    .hire-main h3{font-size:1.55rem;line-height:1.12;letter-spacing:-.04em;margin-bottom:10px}
+    .hire-visual{margin:20px 0 14px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .hire-side{display:grid;gap:8px}
+    .hire-side.right{text-align:right}
+    .hire-label{font-size:.67rem;color:#c9d5e7;font-weight:700}
+    .hire-node{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.11)}
+    .hire-side.right .hire-node{justify-content:flex-end}
+    .hire-bridge{position:relative;width:86px;height:52px;display:grid;place-items:center}
+    .hire-bridge::before{content:"";position:absolute;left:4px;right:4px;top:50%;height:1px;background:linear-gradient(90deg,rgba(115,178,255,.2),#73b2ff,rgba(115,178,255,.2))}
+    .hire-bridge::after{content:"↔";position:relative;z-index:2;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a73ff;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+    .hire-caption{color:#9fb7d8;font-size:.66rem;line-height:1.45;margin-top:8px}
+    .hire-chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:16px}
+    .hire-chain span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .hire-chain b{color:#73b2ff}
+    .hire-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .hire-proof article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 12px 32px rgba(44,62,96,.035)}
+    .hire-proof .vicon{margin-bottom:12px}
+    .hire-proof b{display:block;color:#8b96a8;font-size:.57rem;letter-spacing:.08em;margin-bottom:4px}
+    .hire-proof strong{display:block;font-size:.9rem;margin-bottom:3px}
+    .hire-proof span{display:block;color:var(--muted);font-size:.65rem;line-height:1.42}
+
+    /* recruiter snapshot */
+    .snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .snapshot-card{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;
+      min-height:170px;box-shadow:0 12px 38px rgba(44,62,96,.04)
+    }
+    .snapshot-icon{
+      width:36px;height:36px;border-radius:12px;display:grid;place-items:center;
+      background:var(--blue-soft);color:var(--blue);font-size:.72rem;font-weight:800;margin-bottom:19px
+    }
+    .snapshot-card h3{font-size:.98rem;margin-bottom:7px;letter-spacing:-.02em}
+    .snapshot-card p{color:var(--muted);font-size:.81rem;line-height:1.55}
+
+    /* evidence stats */
+    .stats-strip{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+      border:1px solid var(--line);border-radius:20px;overflow:hidden;
+      box-shadow:0 14px 38px rgba(44,62,96,.035)
+    }
+    .stat-block{background:#fff;padding:20px 22px}
+    .stat-block strong{display:block;font-size:1.45rem;letter-spacing:-.04em;margin-bottom:4px}
+    .stat-block span{font-size:.69rem;color:var(--muted);line-height:1.4}
+    .stat-block em{font-style:normal;color:var(--blue)}
+
+    /* capability map */
+    .capability-map{
+      position:relative;min-height:430px;border:1px solid var(--line);border-radius:26px;
+      background:
+        radial-gradient(circle at 50% 48%,rgba(10,115,255,.10),transparent 24%),
+        linear-gradient(180deg,#ffffff,#f7faff);
+      overflow:hidden;box-shadow:0 18px 48px rgba(44,62,96,.05)
+    }
+    .capability-map::before{
+      content:"";position:absolute;inset:0;
+      background-image:radial-gradient(circle,#dfe7f3 1px,transparent 1px);
+      background-size:22px 22px;opacity:.42;mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent)
+    }
+    .map-center{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:178px;height:178px;border-radius:50%;
+      display:grid;place-items:center;text-align:center;padding:24px;
+      background:rgba(255,255,255,.94);border:1px solid #dce7f7;
+      box-shadow:0 24px 70px rgba(30,84,160,.13);
+      z-index:3
+    }
+    .map-center::before,.map-center::after{
+      content:"";position:absolute;border-radius:50%;border:1px solid rgba(10,115,255,.12)
+    }
+    .map-center::before{inset:-18px}.map-center::after{inset:-40px;border-style:dashed}
+    .map-center small{display:block;color:var(--blue);font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:6px}
+    .map-center strong{font-size:1rem;line-height:1.2;letter-spacing:-.025em}
+    .map-node{
+      position:absolute;width:190px;min-height:104px;padding:15px 16px;border-radius:18px;
+      background:rgba(255,255,255,.94);border:1px solid #e2e9f3;
+      box-shadow:0 14px 36px rgba(44,62,96,.055);z-index:4;
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
+    }
+    .map-node:hover{transform:translateY(-4px);border-color:#d2e2f7;box-shadow:0 22px 48px rgba(44,62,96,.09)}
+    .map-node b{display:block;color:var(--blue);font-size:.58rem;letter-spacing:.08em;margin-bottom:7px}
+    .map-node strong{display:block;font-size:.86rem;margin-bottom:4px}
+    .map-node span{display:block;font-size:.68rem;color:var(--muted);line-height:1.45}
+    .map-node.n1{left:7%;top:11%}.map-node.n2{right:7%;top:11%}.map-node.n3{left:7%;bottom:11%}.map-node.n4{right:7%;bottom:11%}
+    .map-line{
+      position:absolute;height:1px;background:linear-gradient(90deg,rgba(10,115,255,.08),rgba(10,115,255,.34),rgba(10,115,255,.08));
+      transform-origin:left center;z-index:1
+    }
+    .map-line.l1{left:24%;top:31%;width:27%;transform:rotate(24deg)}
+    .map-line.l2{left:50%;top:31%;width:27%;transform:rotate(-24deg)}
+    .map-line.l3{left:24%;top:68%;width:27%;transform:rotate(-24deg)}
+    .map-line.l4{left:50%;top:68%;width:27%;transform:rotate(24deg)}
+    .map-pulse{
+      position:absolute;left:50%;top:50%;width:210px;height:210px;border-radius:50%;
+      transform:translate(-50%,-50%);border:1px solid rgba(10,115,255,.12);
+      animation:mapPulse 4.8s ease-out infinite;pointer-events:none
+    }
+    @keyframes mapPulse{
+      0%{opacity:.5;transform:translate(-50%,-50%) scale(.82)}
+      75%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.45)}
     }
 
-    /* What I bring */
-    .bring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .bring-card{
-      position:relative;overflow:hidden;min-height:280px;padding:22px;border-radius:28px;
-      background:#fff;border:1px solid var(--line);transition:.22s ease
-    }
-    .bring-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(0,0,0,.055)}
-    .bring-icon{
-      width:43px;height:43px;border-radius:13px;display:grid;place-items:center;
-      background:#f5f5f7;color:#1d1d1f;margin-bottom:34px
-    }
-    .bring-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-    .bring-card small{display:block;color:var(--soft);font-size:.54rem;text-transform:uppercase;letter-spacing:.08em;font-weight:770;margin-bottom:7px}
-    .bring-card h3{font-size:1.05rem;letter-spacing:-.025em;margin-bottom:9px}
-    .bring-card p{color:var(--muted);font-size:.75rem;line-height:1.58}
-    .bring-proof{
-      position:absolute;left:22px;right:22px;bottom:20px;padding-top:12px;border-top:1px solid #ededf0;
-      color:var(--blue);font-size:.56rem;font-weight:720
-    }
-
-    /* Projects */
-    .projects-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    /* projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .project-card{
-      overflow:hidden;background:#fff;border-radius:30px;border:1px solid var(--line);
-      transition:transform .24s ease,box-shadow .24s ease
+      position:relative;overflow:hidden;background:rgba(255,255,255,.92);border:1px solid var(--line);
+      border-radius:22px;padding:10px;box-shadow:0 15px 45px rgba(44,62,96,.045);
+      transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease
     }
-    .project-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(0,0,0,.055)}
-    .project-large{grid-column:span 7}.project-small{grid-column:span 5}
-    .project-visual{height:260px;margin:10px;border-radius:22px;overflow:hidden;position:relative}
-    .project-body{padding:9px 20px 21px}
-    .project-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
-    .project-type{color:var(--soft);font-size:.53rem;font-weight:780;letter-spacing:.08em;text-transform:uppercase}
-    .project-proof{font-size:.49rem;color:var(--blue);font-weight:760}
-    .project-body h3{font-size:1.08rem;letter-spacing:-.025em;margin-bottom:7px}
-    .project-body p{color:var(--muted);font-size:.72rem;line-height:1.55;margin-bottom:12px}
+    .project-card::before{
+      content:"";position:absolute;inset:0 0 auto;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(10,115,255,.35),transparent);
+      opacity:0;transition:opacity .3s ease
+    }
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 24px 58px rgba(44,62,96,.09);border-color:#dce7f7}
+    .project-card:hover::before{opacity:1}
+    .project-visual{
+      position:relative;height:225px;border-radius:16px;background:#f7faff;border:1px solid #edf1f7;
+      padding:10px;overflow:hidden;margin-bottom:14px;
+      transition:transform .3s cubic-bezier(.22,1,.36,1)
+    }
+    .project-card:hover .project-visual{transform:translateY(-1px)}
+    .concept-label{
+      position:absolute;z-index:8;right:8px;top:8px;padding:5px 7px;border-radius:999px;
+      background:rgba(255,255,255,.90);border:1px solid rgba(210,220,233,.9);
+      color:#748197;font-size:.48rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+      backdrop-filter:blur(8px)
+    }
+    .hero-concept{right:28px;top:38px}
+    .project-body{padding:0 7px 9px}
+    .project-title-row{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+    .project-title-row h3{font-size:1.05rem;letter-spacing:-.025em}
+    .project-arrow{color:var(--blue);font-size:.92rem}
+    .project-body p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:12px;min-height:50px}
     .tags{display:flex;flex-wrap:wrap;gap:6px}
-    .tag{padding:6px 8px;border-radius:999px;background:#f5f5f7;color:#5d5d62;font-size:.55rem;font-weight:650}
-    .project-link{display:inline-flex;margin-top:14px;color:var(--blue);font-size:.64rem;font-weight:750}
+    .tag{padding:6px 9px;border-radius:999px;background:#f2f5f9;color:#556176;font-size:.64rem;font-weight:600}
+    .tech-chip{display:inline-flex;align-items:center;gap:6px}
+    .tech-chip img{width:13px;height:13px;display:block;object-fit:contain}
+    .project-evidence{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:13px 0 2px
+    }
+    .project-evidence span{
+      min-height:48px;padding:8px;border-radius:10px;background:#fafbfd;border:1px solid #edf1f6;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      color:#647087;font-size:.57rem;font-weight:700;line-height:1.28
+    }
+    .project-link{
+      margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);
+      font-size:.69rem;font-weight:730
+    }
 
-    /* TanShift visual */
-    .visual-tanshift{background:linear-gradient(145deg,#f7fbff,#edf5ff);padding:16px}
-    .ts-app{height:100%;display:grid;grid-template-columns:86px 1fr;background:#fff;border:1px solid #e7edf5;border-radius:15px;overflow:hidden}
-    .ts-side{background:#f8faff;border-right:1px solid #edf1f6;padding:13px 8px}
-    .ts-brand{font-size:.58rem;font-weight:800;margin-bottom:15px}
-    .ts-nav{display:grid;gap:5px}.ts-nav span{font-size:.43rem;color:#8a94a5;padding:6px;border-radius:6px}.ts-nav span:nth-child(2){background:#eaf3ff;color:var(--blue);font-weight:800}
-    .ts-main{padding:14px}.ts-top{display:flex;justify-content:space-between;font-size:.56rem;font-weight:800;margin-bottom:12px}
+    /* mini InnerLeaf */
+    .innerleaf-mini{height:100%;border-radius:12px;border:1px solid #e6ece8;background:linear-gradient(145deg,#fbfff9,#f5fbf8);padding:13px;display:grid;grid-template-rows:auto 1fr;gap:11px}
+    .innerleaf-head{display:flex;justify-content:space-between;align-items:center}
+    .innerleaf-brand{font-size:.58rem;font-weight:800;color:#315a48}
+    .innerleaf-badge{font-size:.38rem;padding:4px 7px;border-radius:999px;background:#e9f7ef;color:#32745a;font-weight:700}
+    .innerleaf-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:9px}
+    .journal{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px}
+    .journal-title{font-size:.43rem;font-weight:800;margin-bottom:8px}
+    .journal-line{height:7px;border-radius:5px;background:#eef2ef;margin-bottom:6px}.journal-line:nth-child(2){width:86%}.journal-line:nth-child(3){width:68%}.journal-line:nth-child(4){width:78%}
+    .reflection-card{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px;display:grid;gap:6px}
+    .reflect-row{border-radius:7px;background:#f5f8f6;padding:6px}
+    .reflect-row strong{display:block;font-size:.35rem;color:#718075;margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
+    .reflect-row span{font-size:.4rem;color:#45584d}
+    .reflect-row.accent{background:#eaf7f0}
+    
+    /* mini TanShift */
+    .mini-app{height:100%;display:grid;grid-template-columns:78px 1fr;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #edf1f7}
+    .mini-side{background:#f8faff;border-right:1px solid #edf1f7;padding:10px 7px}
+    .mini-brand{font-size:.54rem;font-weight:800;margin-bottom:12px}
+    .mini-nav{display:grid;gap:5px}
+    .mini-nav span{font-size:.45rem;color:#8a94a6;padding:5px;border-radius:5px}
+    .mini-nav span:nth-child(2){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .mini-content{padding:10px}
+    .mini-title{display:flex;justify-content:space-between;font-size:.55rem;font-weight:800;margin-bottom:9px}
     .roster{display:grid;grid-template-columns:70px repeat(5,1fr);gap:4px}
-    .roster div{height:25px;border-radius:5px;background:#f3f5f8;display:grid;place-items:center;font-size:.36rem;color:#8a94a5}
-    .roster .person{justify-content:start;padding-left:5px;color:#4e596b;font-weight:700}.roster .blue{background:#e7f2ff;color:#1775df}.roster .green{background:#eaf7ef;color:#2d8f63}.roster .amber{background:#fff4e6;color:#aa6b24}
+    .roster div{height:24px;border-radius:5px;background:#f2f5fa;font-size:.38rem;display:grid;place-items:center;color:#8490a4}
+    .roster .person{justify-content:start;padding-left:5px;font-weight:700;color:#4f5a6d}
+    .roster .blue{background:#e8f2ff;color:#1e78e8}.roster .green{background:#e8f7ef;color:#1d9b5d}.roster .yellow{background:#fff6df;color:#a36d00}
 
-    /* Client visual */
-    .visual-client{background:linear-gradient(145deg,#fbfbff,#f0f1ff);padding:18px}
-    .client-flow{height:100%;background:#fff;border:1px solid #e9e9f3;border-radius:15px;padding:17px;display:grid;grid-template-rows:auto 1fr auto}
-    .client-flow-head{font-size:.56rem;font-weight:800}
-    .flow-row{display:flex;align-items:center;justify-content:space-between;gap:5px}
-    .flow-step{text-align:center;flex:1}.flow-circle{width:32px;height:32px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:#f0f2ff;color:var(--purple);font-size:.5rem;font-weight:800}.flow-step span{font-size:.39rem;color:#667084}
-    .flow-line{height:1px;background:#cfd5eb;flex:.3}.flow-result{padding-top:10px;border-top:1px solid #ededf3;font-size:.43rem;color:#667084}
+    /* mini onboarding */
+    .flow-wrap{height:100%;background:#fff;border-radius:12px;border:1px solid #edf1f7;padding:12px;display:grid;grid-template-columns:70px 1fr;gap:10px}
+    .flow-side{border-right:1px solid #edf1f7;padding-right:8px}
+    .flow-side div{font-size:.43rem;color:#8791a3;padding:5px;border-radius:5px;margin-bottom:3px}
+    .flow-side div:nth-child(3){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .flow-main{padding-top:2px}
+    .flow-title{font-size:.55rem;font-weight:800;margin-bottom:18px}
+    .flow-line{display:flex;align-items:center;justify-content:space-between;gap:4px}
+    .flow-node{text-align:center;flex:1}
+    .flow-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#edf5ff;color:var(--blue);font-size:.48rem;font-weight:800;margin:0 auto 5px}
+    .flow-node:last-child .flow-icon{background:#e9f8f0;color:#1a9a5b}
+    .flow-node span{font-size:.38rem;color:#556176}
+    .flow-arrow{height:1px;background:#cad5e5;flex:.35}
+    .outcome{margin-top:18px;border-top:1px solid #edf1f7;padding-top:8px}
+    .outcome strong{font-size:.43rem}
+    .outcome p{font-size:.37rem;color:#6a758a;margin-top:3px}
 
-    /* Database visual */
-    .visual-db{background:linear-gradient(145deg,#fbfaff,#f1efff);padding:16px}
-    .erd{position:relative;height:100%;background:#fff;border:1px solid #ebe7f7;border-radius:15px;overflow:hidden}
-    .entity{position:absolute;width:105px;border:1px solid #c9c2ee;border-radius:9px;background:#fff;box-shadow:0 7px 18px rgba(50,45,100,.06)}
-    .entity h4{font-size:.42rem;padding:6px;background:#f3f1ff;color:#5e4fba;border-bottom:1px solid #e6e1fb}.entity p{font-size:.33rem;color:#697086;padding:5px;line-height:1.45}
-    .entity.a{left:7%;top:13%}.entity.b{right:8%;top:11%}.entity.c{left:15%;bottom:11%}.entity.d{right:10%;bottom:13%}
-    .erd-line{position:absolute;height:1px;background:#b5aee2;transform-origin:left center}.erd-line.one{left:35%;top:32%;width:30%;transform:rotate(-2deg)}.erd-line.two{left:32%;top:62%;width:34%;transform:rotate(24deg)}.erd-line.three{left:52%;top:61%;width:23%;transform:rotate(-30deg)}
+    /* mini ERD */
+    .erd{height:100%;background:#fff;border-radius:12px;border:1px solid #edf1f7;padding:10px;display:grid;grid-template-columns:62px 1fr;gap:9px}
+    .erd-side{border-right:1px solid #edf1f7;padding-right:7px}
+    .erd-side div{font-size:.4rem;color:#8791a3;padding:4px;border-radius:5px;margin-bottom:2px}
+    .erd-side div:nth-child(2){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .erd-canvas{position:relative}
+    .entity{position:absolute;width:78px;border:1px solid #bdd3ef;border-radius:7px;background:#fff;box-shadow:0 5px 13px rgba(51,85,125,.06)}
+    .entity h4{font-size:.38rem;padding:4px 5px;background:#eef5ff;border-bottom:1px solid #dbe8f8;color:#37618f}
+    .entity p{font-size:.3rem;color:#69758a;padding:3px 5px;line-height:1.45}
+    .entity.a{left:2px;top:8px}.entity.b{right:2px;top:6px}.entity.c{left:22px;bottom:8px}.entity.d{right:5px;bottom:10px}
+    .erd-line{position:absolute;background:#abc5e7;height:1px;transform-origin:left center}
+    .erd-line.one{left:80px;top:42px;width:55px;transform:rotate(4deg)}
+    .erd-line.two{left:68px;top:83px;width:70px;transform:rotate(30deg)}
+    .erd-line.three{left:106px;top:78px;width:46px;transform:rotate(-35deg)}
 
-    /* InnerLeaf visual */
-    .visual-innerleaf{background:linear-gradient(145deg,#f8fcf9,#eef8f2);padding:16px}
-    .il-app{height:100%;background:#fff;border:1px solid #e4eee8;border-radius:15px;padding:15px;display:grid;grid-template-columns:.85fr 1.15fr;gap:10px}
-    .journal{border-radius:12px;background:#fafcfb;border:1px solid #e9eeeb;padding:11px}.journal h4{font-size:.48rem;margin-bottom:10px}.journal span{display:block;height:8px;border-radius:6px;background:#edf1ee;margin-bottom:7px}.journal span:nth-child(2){width:88%}.journal span:nth-child(3){width:67%}.journal span:nth-child(4){width:78%}
-    .ai-card{display:grid;gap:7px}.ai-row{border-radius:10px;background:#f5f8f6;padding:9px}.ai-row strong{display:block;font-size:.38rem;color:#63756a;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}.ai-row span{font-size:.4rem;color:#46564c}.ai-row.accent{background:#eaf7ef}
-
-    /* Experience */
-    .experience-wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:18px}
-    .experience-story{
-      min-height:420px;padding:26px;border-radius:30px;background:#1d1d1f;color:#fff;
-      display:flex;flex-direction:column;justify-content:space-between
+    /* evidence + working style */
+    .evidence-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .evidence-card{
+      background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;
+      box-shadow:0 12px 34px rgba(44,62,96,.035);transition:.25s ease
     }
-    .experience-story small{display:block;color:#95959a;font-size:.55rem;text-transform:uppercase;letter-spacing:.08em;font-weight:780;margin-bottom:9px}
-    .experience-story h3{font-size:1.55rem;line-height:1.08;letter-spacing:-.04em;max-width:480px}
-    .experience-story p{color:#b8b8bd;font-size:.74rem;line-height:1.6;max-width:470px;margin-top:11px}
-    .experience-story a{color:#8bc5ff;font-size:.65rem;font-weight:740}
-    .timeline{border:1px solid var(--line);border-radius:28px;background:#fff;overflow:hidden}
-    .timeline-row{display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center;padding:20px;border-top:1px solid var(--line)}
-    .timeline-row:first-child{border-top:0}
-    .timeline-date{font-size:.58rem;color:var(--soft);font-weight:680}
-    .timeline-role strong{display:block;font-size:.8rem}.timeline-role span{display:block;margin-top:3px;color:var(--muted);font-size:.58rem;line-height:1.4}
-    .timeline-pill{padding:6px 8px;border-radius:999px;background:#f5f5f7;font-size:.51rem;font-weight:720;color:#5b5b60}
-    .education-card{
-      margin-top:16px;padding:18px 20px;border-radius:21px;background:#fff;border:1px solid var(--line);
-      display:flex;align-items:center;justify-content:space-between;gap:20px
+    .evidence-card:hover{transform:translateY(-3px);border-color:#d7e4f5;box-shadow:0 18px 42px rgba(44,62,96,.07)}
+    .evidence-no{display:block;color:var(--blue);font-size:.66rem;font-weight:800;letter-spacing:.08em;margin-bottom:14px}
+    .evidence-card .vicon{margin-bottom:14px}
+    .evidence-card h3{font-size:.94rem;margin-bottom:4px}
+    .evidence-meta{display:block;font-size:.66rem;color:var(--muted);line-height:1.4;margin-bottom:12px}
+    .evidence-card a{font-size:.68rem;font-weight:750;color:var(--blue)}
+    .workstyle{
+      display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);
+      border-radius:21px;overflow:hidden;box-shadow:0 13px 36px rgba(44,62,96,.035)
     }
-    .education-card small{display:block;color:var(--soft);font-size:.52rem;text-transform:uppercase;letter-spacing:.08em;font-weight:760;margin-bottom:4px}
-    .education-card strong{display:block;font-size:.8rem}.education-card span{display:block;margin-top:2px;color:var(--muted);font-size:.58rem}
-    .edu-mark{width:43px;height:43px;border-radius:13px;background:#f5f5f7;display:grid;place-items:center;font-weight:800;font-size:.62rem}
+    .workstep{padding:22px;border-left:1px solid var(--line)}
+    .workstep:first-child{border-left:0}
+    .workstep strong{display:block;font-size:.9rem;margin-bottom:6px}
+    .workstep span{font-size:.73rem;color:var(--muted);line-height:1.5}
+    .workstep b{display:block;color:var(--blue);font-size:.66rem;margin-bottom:18px}
 
-    /* Skills */
-    .skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .skill-panel{padding:24px;border-radius:28px;background:#fff;border:1px solid var(--line)}
-    .skill-panel h3{font-size:.95rem;letter-spacing:-.02em;margin-bottom:16px}
-    .skill-group{padding:14px 0;border-top:1px solid #ededf0}
-    .skill-group:first-of-type{border-top:0;padding-top:0}
-    .skill-group small{display:block;color:var(--soft);font-size:.52rem;text-transform:uppercase;letter-spacing:.07em;font-weight:770;margin-bottom:8px}
-    .skill-chips{display:flex;flex-wrap:wrap;gap:7px}
-    .skill-chip{padding:7px 9px;border-radius:999px;background:#f5f5f7;color:#55555a;font-size:.57rem;font-weight:650}
-    .tools-panel{padding:24px;border-radius:28px;background:#fff;border:1px solid var(--line)}
-    .tools-panel h3{font-size:.95rem;letter-spacing:-.02em;margin-bottom:16px}
-    .tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+    /* capability cards */
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .cap-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 35px rgba(44,62,96,.035)}
+    .cap-head{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+    .cap-icon{width:36px;height:36px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:.7rem}
+    .cap-head h3{font-size:.93rem;letter-spacing:-.02em}
+    .cap-card .tags{gap:8px}
+    .cap-card .tag{font-size:.68rem;padding:7px 10px}
+
+    /* technology flow */
+    .tool-flow{
+      overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;
+      padding:16px 0;box-shadow:0 12px 32px rgba(44,62,96,.035);margin-bottom:18px
+    }
+    .tool-track{
+      width:max-content;display:flex;gap:10px;align-items:center;
+      animation:toolScroll 34s linear infinite;padding-left:10px
+    }
+    .tool-flow:hover .tool-track{animation-play-state:paused}
+    .flow-chip{
+      flex:none;display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:12px;
+      background:#f8fafc;border:1px solid #edf1f6;font-size:.68rem;font-weight:700;color:#46546a
+    }
+    .flow-chip img{width:18px;height:18px;object-fit:contain}
+    @keyframes toolScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* tools */
+    .tools-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
     .tool{
-      min-height:74px;padding:11px;border-radius:15px;background:#f8f8fa;border:1px solid #ededf0;
-      display:flex;align-items:center;gap:9px
+      min-width:0;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:17px;
+      padding:17px 8px 14px;text-align:center;box-shadow:0 10px 30px rgba(44,62,96,.035);
+      transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s ease,border-color .25s ease
     }
-    .tool img{width:22px;height:22px;object-fit:contain;flex:none}
-    .tool strong{font-size:.61rem;color:#4e4e53}
-    .tool span{display:block;color:var(--soft);font-size:.46rem;margin-top:2px}
+    .tool:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(44,62,96,.075);border-color:#d7e3f3}
+    .tool-logo-shell{
+      width:43px;height:43px;border-radius:13px;margin:0 auto 9px;display:grid;place-items:center;
+      background:#f7f9fc;border:1px solid #edf1f6
+    }
+    .tool-logo{width:24px;height:24px;display:block;object-fit:contain}
+    .tool span{display:block;font-size:.65rem;font-weight:680;color:#435067;line-height:1.25}
+
+
+    .application-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .application-card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+      box-shadow:0 12px 35px rgba(44,62,96,.035);
+      display:flex;flex-direction:column;min-height:220px;
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .application-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    .application-type{font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:#8a95a8;font-weight:800;margin-bottom:16px}
+    .application-card h3{font-size:1.06rem;letter-spacing:-.025em;margin-bottom:8px}
+    .application-card p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:18px}
+    .application-card a{margin-top:auto;color:var(--blue);font-size:.72rem;font-weight:750}
+    .application-note{margin-top:14px;color:#7c8799;font-size:.72rem}
+
+    /* commercial experience */
+    .commercial-exp{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-bottom:18px
+    }
+    .commercial-story{
+      position:relative;overflow:hidden;background:linear-gradient(145deg,#0d1a33,#13284a);
+      color:#fff;border-radius:22px;padding:26px;box-shadow:0 22px 55px rgba(18,39,75,.16)
+    }
+    .commercial-story::after{
+      content:"";position:absolute;width:250px;height:250px;right:-90px;top:-100px;border-radius:50%;
+      background:radial-gradient(circle,rgba(81,154,255,.28),transparent 66%)
+    }
+    .commercial-story > *{position:relative;z-index:1}
+    .commercial-story small{display:block;color:#9fb6d6;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750;margin-bottom:8px}
+    .commercial-story h3{font-size:1.35rem;letter-spacing:-.035em;margin-bottom:8px}
+    .commercial-story p{color:#c7d4e7;font-size:.78rem;line-height:1.6;max-width:620px}
+    .commercial-path{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .commercial-path span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .commercial-path b{color:#6ca9ff}
+    .commercial-story a{display:inline-flex;margin-top:2px;color:#fff;font-size:.7rem;font-weight:750}
+    .commercial-proof{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+    }
+    .commercial-proof div{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;
+      box-shadow:0 12px 32px rgba(44,62,96,.035)
+    }
+    .commercial-proof .vicon{margin-bottom:10px}
+    .commercial-proof strong{display:block;font-size:.93rem;color:var(--ink);margin-bottom:3px}
+    .commercial-proof span{display:block;font-size:.64rem;color:var(--muted);line-height:1.4}
+
+    /* experience */
+    .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
+    .timeline-row{
+      display:grid;grid-template-columns:145px 1fr auto;gap:24px;align-items:center;
+      min-height:82px;border-top:1px solid #edf0f5;position:relative
+    }
+    .timeline-row:first-child{border-top:0}
+    .timeline-date{color:#7b879b;font-size:.75rem;padding-left:18px;position:relative}
+    .timeline-date::before{
+      content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:var(--blue);transform:translateY(-50%);
+      box-shadow:0 0 0 5px #eef5ff
+    }
+    .timeline-date::after{
+      content:"";position:absolute;left:3.5px;top:calc(50% + 9px);width:1px;height:64px;background:#cfe0f5
+    }
+    .timeline-row:last-child .timeline-date::after{display:none}
+    .timeline-role strong{display:block;font-size:.9rem;letter-spacing:-.02em}
+    .timeline-role small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+    .role-pill{padding:7px 11px;border-radius:999px;font-size:.64rem;font-weight:700}
+    .role-pill.blue{background:var(--blue-soft);color:var(--blue)}
+    .role-pill.green{background:var(--green-soft);color:var(--green)}
+    .role-pill.purple{background:var(--purple-soft);color:var(--purple)}
+    .role-pill.orange{background:var(--orange-soft);color:var(--orange)}
 
     /* CTA */
-    .cta-wrap{padding:72px 0;background:#fff}
+    .cta-wrap{padding:24px 0 72px}
     .cta{
-      padding:30px;border-radius:30px;background:#1d1d1f;color:#fff;
-      display:flex;align-items:center;justify-content:space-between;gap:30px
+      position:relative;overflow:hidden;background:linear-gradient(135deg,#f5f9ff,#eaf3ff);
+      border:1px solid #dce9fa;border-radius:25px;padding:34px 38px;
+      display:flex;align-items:end;justify-content:space-between;gap:28px
     }
-    .cta small{display:block;color:#9b9ba0;font-size:.54rem;text-transform:uppercase;letter-spacing:.08em;font-weight:760;margin-bottom:6px}
-    .cta h2{max-width:720px;font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.1;letter-spacing:-.04em}
-    .cta-actions{display:flex;gap:8px;flex-wrap:wrap}
-    .cta-link{padding:10px 13px;border-radius:999px;background:#fff;color:#1d1d1f;font-size:.63rem;font-weight:720}
-    .cta-link.secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#fff}
-    footer{background:#fff;border-top:1px solid var(--line);padding:20px 0 28px;color:var(--soft);font-size:.6rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .footer-links{display:flex;gap:14px;flex-wrap:wrap}
+    .cta::after{
+      content:"";position:absolute;width:380px;height:160px;right:-60px;bottom:-70px;border-radius:50%;
+      background:radial-gradient(circle,#b8d6ff 0%,rgba(184,214,255,.2) 48%,transparent 70%)
+    }
+    .cta > *{position:relative;z-index:1}
+    .cta small{display:block;color:#7e8da6;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;font-weight:700;margin-bottom:8px}
+    .cta h2{max-width:650px;font-size:clamp(1.7rem,3.5vw,2.65rem);line-height:1.06;letter-spacing:-.045em}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:9px}
+    .cta-link{min-height:42px;padding:0 15px;border-radius:11px;background:#fff;border:1px solid #d9e3ef;font-size:.75rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+    .cta-link.linkedin{background:var(--blue);border-color:var(--blue);color:#fff}
+    .cta-link.github{background:#121722;border-color:#121722;color:#fff}
 
-    /* Motion */
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+    footer{padding:20px 0 30px;border-top:1px solid var(--line);color:#8791a4;font-size:.7rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:17px}
+
+    .reveal{
+      opacity:0;transform:translateY(18px);
+      transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1);
+      transition-delay:var(--reveal-delay,0ms)
+    }
     .reveal.visible{opacity:1;transform:none}
+    @media(hover:hover) and (pointer:fine){
+      .snapshot-card,.cap-card,.timeline,.cta{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+      .snapshot-card:hover,.cap-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    }
+
+
+
+
+    .hero-role-strip{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+    .hero-role-strip span{padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #e3e9f1;color:#536177;font-size:.58rem;font-weight:760;box-shadow:0 5px 15px rgba(44,62,96,.025)}
+
+    /* professional spectrum */
+    .spectrum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .spectrum-card{
+      --spec:#0a73ff;--spec-soft:#eef5ff;position:relative;overflow:hidden;
+      min-height:280px;padding:20px;border-radius:21px;background:#fff;border:1px solid var(--line);
+      box-shadow:0 12px 35px rgba(44,62,96,.035);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .spectrum-card:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.08);border-color:#d8e4f3}
+    .spectrum-card::after{content:"";position:absolute;right:-65px;bottom:-70px;width:165px;height:165px;border-radius:50%;background:radial-gradient(circle,var(--spec-soft),transparent 68%)}
+    .spectrum-ba{--spec:#0a73ff;--spec-soft:rgba(10,115,255,.17)}
+    .spectrum-bis{--spec:#6c5bd7;--spec-soft:rgba(108,91,215,.17)}
+    .spectrum-it{--spec:#23996a;--spec-soft:rgba(35,153,106,.17)}
+    .spectrum-bd{--spec:#c97835;--spec-soft:rgba(201,120,53,.17)}
+    .spectrum-top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}
+    .spectrum-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:color-mix(in srgb,var(--spec) 10%,white);color:var(--spec)}
+    .spectrum-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .spectrum-code{font-size:.55rem;letter-spacing:.1em;font-weight:850;color:var(--spec)}
+    .spectrum-card h3{position:relative;z-index:2;font-size:1rem;letter-spacing:-.025em;margin-bottom:5px}
+    .spectrum-role{position:relative;z-index:2;display:block;font-size:.58rem;color:#8995a8;text-transform:uppercase;letter-spacing:.08em;font-weight:800;margin-bottom:15px}
+    .spectrum-list{position:relative;z-index:2;display:grid;gap:8px}
+    .spectrum-list span{display:flex;align-items:center;gap:8px;font-size:.64rem;color:#5c687c;font-weight:650}
+    .spectrum-list span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--spec);box-shadow:0 0 0 4px color-mix(in srgb,var(--spec) 9%,white)}
+    .spectrum-evidence{position:relative;z-index:2;margin-top:17px;padding-top:12px;border-top:1px solid #edf1f6;font-size:.55rem;color:#8d98aa}
+    .spectrum-evidence b{color:var(--spec)}
+
+    .software-skill-strip{
+      margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f8fbff);
+      display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center;box-shadow:0 12px 32px rgba(44,62,96,.03)
+    }
+    .software-skill-title small{display:block;font-size:.55rem;text-transform:uppercase;letter-spacing:.1em;color:#95a1b3;font-weight:800;margin-bottom:5px}
+    .software-skill-title strong{font-size:.9rem;letter-spacing:-.02em}
+    .skill-chip-wrap{display:flex;flex-wrap:wrap;gap:7px}
+    .hr-skill-chip{padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #e6ebf2;color:#526074;font-size:.58rem;font-weight:700}
+
+
+    /* visual polish v3 — recruiter-first, low-copy, high-visual */
+    #professional-spectrum{
+      position:relative;overflow:hidden;color:#fff;
+      background:
+        radial-gradient(circle at 12% 18%,rgba(52,129,255,.22),transparent 28%),
+        radial-gradient(circle at 88% 72%,rgba(114,90,230,.18),transparent 30%),
+        linear-gradient(145deg,#09172b 0%,#102846 56%,#0b1c34 100%);
+      border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    #professional-spectrum::before{
+      content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+      background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1px);
+      background-size:26px 26px;
+      mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)
+    }
+    #professional-spectrum .shell{position:relative;z-index:2}
+    #professional-spectrum .section-head h2{color:#fff}
+    #professional-spectrum .section-kicker{color:#95abc8}
+    #professional-spectrum .blue-line{background:#76b7ff}
+    .spectrum-axis{
+      display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin:-3px 0 18px;
+      color:#a8bcd6;font-size:.58rem;text-transform:uppercase;letter-spacing:.09em;font-weight:760
+    }
+    .spectrum-axis::before,.spectrum-axis::after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(118,183,255,.45))}
+    .spectrum-axis::after{background:linear-gradient(90deg,rgba(118,183,255,.45),transparent)}
+    .spectrum-axis b{color:#fff;font-size:.62rem;letter-spacing:.08em}
+    #professional-spectrum .spectrum-card{
+      background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.11);box-shadow:none;color:#fff;
+      backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)
+    }
+    #professional-spectrum .spectrum-card:hover{background:rgba(255,255,255,.09);border-color:rgba(135,190,255,.30);box-shadow:0 20px 50px rgba(0,0,0,.16)}
+    #professional-spectrum .spectrum-card::before{
+      position:absolute;right:10px;top:-15px;font-size:5.2rem;line-height:1;font-weight:850;letter-spacing:-.08em;
+      color:rgba(255,255,255,.035);pointer-events:none
+    }
+    #professional-spectrum .spectrum-ba::before{content:"BA"}
+    #professional-spectrum .spectrum-bis::before{content:"BIS"}
+    #professional-spectrum .spectrum-it::before{content:"IT"}
+    #professional-spectrum .spectrum-bd::before{content:"BD"}
+    #professional-spectrum .spectrum-icon{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.10);color:#a8d1ff}
+    #professional-spectrum .spectrum-code{color:#8dc6ff}
+    #professional-spectrum .spectrum-card h3{color:#fff}
+    #professional-spectrum .spectrum-role{color:#8fa7c7}
+    #professional-spectrum .spectrum-list span{color:#c3d0e2}
+    #professional-spectrum .spectrum-list span::before{background:#76b7ff;box-shadow:0 0 0 4px rgba(118,183,255,.09)}
+    #professional-spectrum .spectrum-evidence{border-top-color:rgba(255,255,255,.09);color:#8fa4c0}
+    #professional-spectrum .spectrum-evidence b{color:#a8d1ff}
+    #professional-spectrum .software-skill-strip{
+      background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.10);box-shadow:none
+    }
+    #professional-spectrum .software-skill-title strong{color:#fff}
+    #professional-spectrum .software-skill-title small{color:#8fa6c4}
+    #professional-spectrum .hr-skill-chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.09);color:#c5d2e3}
+
+    .projects-grid{
+      grid-template-columns:repeat(12,1fr);gap:18px;align-items:stretch
+    }
+    .project-tanshift{grid-column:span 7}
+    .project-client{grid-column:span 5}
+    .project-innerleaf{grid-column:span 5}
+    .project-database{grid-column:span 7}
+    .project-card{display:flex;flex-direction:column}
+    .project-card .project-visual{height:245px}
+    .project-tanshift .project-visual,.project-database .project-visual{height:265px}
+    .project-card .project-body{display:flex;flex-direction:column;flex:1}
+    .project-card .project-link{margin-top:auto;padding-top:14px}
+    .project-tanshift .mini-app{transform:scale(1.02);transform-origin:center}
+    .project-database .erd{transform:scale(1.02);transform-origin:center}
+    .project-client .flow-wrap,.project-innerleaf .innerleaf-mini{height:100%}
+    .project-card .concept-label{box-shadow:0 7px 18px rgba(57,75,103,.08)}
+    .project-card:hover .project-visual{transform:translateY(-2px) scale(1.006)}
+
+    #proof{background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);border-top:1px solid rgba(221,229,239,.7)}
+    #proof .evidence-grid{
+      position:relative;grid-template-columns:repeat(5,1fr);gap:0;padding:24px 10px 2px
+    }
+    #proof .evidence-grid::before{
+      content:"";position:absolute;left:9%;right:9%;top:58px;height:1px;
+      background:linear-gradient(90deg,transparent,#b9d5f7 10%,#b9d5f7 90%,transparent)
+    }
+    #proof .evidence-card{
+      position:relative;z-index:2;background:transparent;border:0;border-radius:0;padding:0 12px;text-align:center;
+      box-shadow:none;min-width:0
+    }
+    #proof .evidence-card:hover{transform:translateY(-3px);box-shadow:none;border-color:transparent}
+    #proof .evidence-card .vicon{
+      width:48px;height:48px;border-radius:50%;margin:0 auto 14px;background:#fff;box-shadow:0 8px 24px rgba(44,62,96,.08)
+    }
+    #proof .evidence-no{margin-bottom:6px;font-size:.56rem}
+    #proof .evidence-card h3{font-size:.84rem}
+    #proof .evidence-meta{font-size:.59rem;margin-bottom:9px}
+    #proof .evidence-card a{font-size:.61rem}
+
+    #approach .workstyle{
+      position:relative;overflow:visible;background:transparent;border:0;box-shadow:none;gap:12px
+    }
+    #approach .workstyle::before{
+      content:"";position:absolute;left:11%;right:11%;top:34px;height:1px;
+      background:linear-gradient(90deg,transparent,#b8d4f7 10%,#b8d4f7 90%,transparent);z-index:0
+    }
+    #approach .workstep{
+      position:relative;z-index:2;border:1px solid var(--line)!important;border-radius:18px;background:#fff;padding:18px;
+      box-shadow:0 11px 30px rgba(44,62,96,.035);min-height:155px;text-align:left
+    }
+    #approach .workstep b{
+      width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;
+      margin:0 0 18px;font-size:.57rem;box-shadow:0 0 0 6px #eef5ff
+    }
+    #approach .workstep strong{font-size:.88rem}
+    #approach .workstep span{font-size:.68rem}
+
+    #evidence-stats{padding-top:42px;padding-bottom:42px}
+    #evidence-stats .stat-block{position:relative;overflow:hidden}
+    #evidence-stats .stat-block::after{
+      position:absolute;right:12px;bottom:-12px;font-size:4.8rem;font-weight:850;letter-spacing:-.08em;color:#eff4fa;line-height:1
+    }
+    #evidence-stats .stat-block:nth-child(1)::after{content:"01"}
+    #evidence-stats .stat-block:nth-child(2)::after{content:"02"}
+    #evidence-stats .stat-block:nth-child(3)::after{content:"03"}
+    #evidence-stats .stat-block:nth-child(4)::after{content:"04"}
+    #evidence-stats .stat-block strong,#evidence-stats .stat-block span{position:relative;z-index:2}
+
+    #tools{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(10,115,255,.07),transparent 24%),
+        linear-gradient(180deg,#fff,#f7faff);
+    }
+    .ecosystem-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .ecosystem-card:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.075);border-color:#d8e5f4}
+    .eco-logo{transition:transform .2s ease,background .2s ease}
+    .ecosystem-card:hover .eco-logo{background:#fff}
+    .eco-logo:hover{transform:translateY(-2px)}
+
+    .career-visual{padding:28px}
+    .career-box{transition:transform .22s ease,background .22s ease,border-color .22s ease}
+    .career-stage:hover .career-box{transform:translateY(-3px);background:rgba(255,255,255,.09);border-color:rgba(137,191,255,.25)}
+    .career-stage:hover .career-dot{box-shadow:0 0 0 1px rgba(132,190,255,.45),0 0 0 8px rgba(80,156,255,.08)}
+
+
+    /* Apple-like simplification */
+    #profile,#projects,#skills,#tools,#experience,#proof,#approach,#evidence-stats{background:#f5f5f7}
+    #why-hire,#capability-map,#skills,#experience{background:#fff}
+    .section{padding:76px 0}
+    .section-head h2{font-size:clamp(1.65rem,3vw,2.35rem);font-weight:700;color:#1d1d1f}
+    .section-kicker{color:#86868b}
+    .project-card,.hire-proof article,.snapshot-card,.cap-card,.ecosystem-card,.evidence-card{
+      border-color:#e5e5ea;box-shadow:none
+    }
+    .project-card{background:#fff;border-radius:28px;padding:12px}
+    .project-card:hover{box-shadow:0 18px 44px rgba(0,0,0,.06);border-color:#d7d7dc}
+    .project-visual{border-radius:22px;border-color:#ededf0}
+    .capability-map{border-radius:30px;box-shadow:none;border-color:#e5e5ea;background:linear-gradient(180deg,#fff,#fbfbfd)}
+    .skill-visual,.ecosystem-card{border-radius:24px;box-shadow:none}
+    .skill-visual:hover,.ecosystem-card:hover{box-shadow:0 16px 38px rgba(0,0,0,.055)}
+    .stats-strip{box-shadow:none;border-color:#e5e5ea}
+    .stat-block{background:#fff}
+    .tool-flow{box-shadow:none}
+    .career-visual{background:#1d1d1f;border-radius:28px;box-shadow:none}
+    .cta{background:#1d1d1f;border-radius:28px;box-shadow:none}
+    #professional-spectrum{
+      color:#1d1d1f;background:#f5f5f7;border-top:1px solid #e5e5ea;border-bottom:1px solid #e5e5ea
+    }
+    #professional-spectrum::before{display:none}
+    #professional-spectrum .section-head h2{color:#1d1d1f}
+    #professional-spectrum .section-kicker{color:#86868b}
+    #professional-spectrum .blue-line{background:#0071e3}
+    #professional-spectrum .spectrum-axis{color:#86868b}
+    #professional-spectrum .spectrum-axis b{color:#1d1d1f}
+    #professional-spectrum .spectrum-card{
+      color:#1d1d1f;background:#fff;border-color:#e5e5ea;box-shadow:none;backdrop-filter:none
+    }
+    #professional-spectrum .spectrum-card:hover{background:#fff;border-color:#d7d7dc;box-shadow:0 16px 38px rgba(0,0,0,.055)}
+    #professional-spectrum .spectrum-card::before{color:#f5f5f7}
+    #professional-spectrum .spectrum-icon{background:#f5f5f7;border-color:#e5e5ea;color:#0071e3}
+    #professional-spectrum .spectrum-code{color:#0071e3}
+    #professional-spectrum .spectrum-card h3{color:#1d1d1f}
+    #professional-spectrum .spectrum-role{color:#86868b}
+    #professional-spectrum .spectrum-list span{color:#6e6e73}
+    #professional-spectrum .spectrum-list span::before{background:#0071e3;box-shadow:0 0 0 4px #f0f7ff}
+    #professional-spectrum .spectrum-evidence{border-top-color:#ededf0;color:#86868b}
+    #professional-spectrum .spectrum-evidence b{color:#0071e3}
+    #professional-spectrum .software-skill-strip{background:#fff;border-color:#e5e5ea;box-shadow:none}
+    #professional-spectrum .software-skill-title strong{color:#1d1d1f}
+    #professional-spectrum .software-skill-title small{color:#86868b}
+    #professional-spectrum .hr-skill-chip{background:#f5f5f7;border-color:#e5e5ea;color:#6e6e73}
+
+    @media(max-width:760px){
+      .hero{padding:88px 0 46px}
+      .hero-title{font-size:2rem}
+      .hero-subtitle{font-size:.91rem;padding:0 4px}
+      .hero-visual{height:auto;min-height:620px;border-radius:28px}
+      .system-core{width:160px;height:160px;top:50%}
+      .system-node{width:calc(50% - 24px);min-height:126px;padding:12px}
+      .system-node.ba{left:12px;top:22px}.system-node.bis{right:12px;top:22px}
+      .system-node.it{left:12px;bottom:22px}.system-node.bd{right:12px;bottom:22px}
+      .system-line,.micro-skill{display:none}
+      .hero-proof-row{gap:7px}
+      .hero-proof{font-size:.54rem}
+      .hero-proof span{display:none}
+    }
+
+
+    /* frontend-design skill pass — deliberate asymmetry, typography, motion */
+    .nav{background:rgba(251,251,253,.78);border-bottom:1px solid rgba(29,29,31,.055)}
+    .brand{letter-spacing:-.015em}
+    .brand-mark{background:#1d1d1f;color:#fff;border-radius:9px;box-shadow:none}
+    .nav-cta{background:#1d1d1f;box-shadow:none}
+    .nav-cta:hover{background:#000}
+
+    .hero{padding:104px 0 70px}
+    .hero-shell{text-align:left}
+    .hero-layout{
+      display:grid;grid-template-columns:minmax(250px,.35fr) minmax(0,.65fr);
+      gap:42px;align-items:center
+    }
+    .hero-intro{position:relative;z-index:8;padding:18px 0 18px 4px}
+    .hero-kicker{
+      font-family:"IBM Plex Mono",monospace;font-size:.58rem;letter-spacing:.11em;
+      margin-bottom:18px;text-transform:uppercase
+    }
+    .hero-title{
+      max-width:390px;margin:0 0 13px;
+      font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.02;
+      letter-spacing:-.055em;font-weight:720
+    }
+    .hero-title .quiet{color:#86868b}
+    .hero-subtitle{
+      max-width:390px;margin:0 0 22px;padding:0;color:#6e6e73;
+      font-size:.91rem;line-height:1.62
+    }
+    .hero-actions{justify-content:flex-start;margin:0 0 28px}
+    .hero-mini-proof{display:grid;gap:10px;max-width:365px}
+    .hero-proof-line{display:flex;align-items:center;gap:10px;color:#86868b;font-size:.61rem}
+    .hero-proof-line i{width:27px;height:27px;border-radius:9px;display:grid;place-items:center;background:#f5f5f7;color:#1d1d1f;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:.48rem;font-weight:600;border:1px solid #e5e5ea}
+    .hero-proof-line b{color:#1d1d1f;font-weight:680}
+    .hero-proof-line span{color:#86868b}
+
+    .hero-visual{
+      max-width:none;width:100%;height:560px;margin:0;
+      border-radius:38px;
+      background:linear-gradient(155deg,rgba(255,255,255,.95),rgba(247,249,252,.80));
+      border:1px solid rgba(210,210,215,.82);
+      box-shadow:0 42px 100px rgba(31,45,64,.11);
+      transform:perspective(1200px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--lift,0px));
+      transition:transform .24s cubic-bezier(.2,.8,.2,1),box-shadow .24s ease;
+      will-change:transform
+    }
+    .hero-visual:hover{box-shadow:0 48px 112px rgba(31,45,64,.14)}
+    .hero-visual::before{
+      background:
+        radial-gradient(circle at 52% 48%,rgba(0,113,227,.10),transparent 25%),
+        radial-gradient(circle,#d7dce3 1px,transparent 1px);
+      background-size:auto,28px 28px;opacity:.46
+    }
+    .hero-visual::after{
+      width:330px;height:330px;
+      box-shadow:0 0 0 58px rgba(0,113,227,.022),0 0 0 116px rgba(0,113,227,.012)
+    }
+    .system-core{
+      width:222px;height:222px;padding:27px;
+      box-shadow:0 26px 62px rgba(34,75,121,.14);
+      transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease
+    }
+    .hero-visual:hover .system-core{transform:translate(-50%,-50%) scale(1.025);box-shadow:0 32px 72px rgba(34,75,121,.17)}
+    .system-core small,.system-node b,.project-type,.project-proof-badge,.section-kicker,.career-date,.spectrum-code{
+      font-family:"IBM Plex Mono",monospace
+    }
+    .system-node{
+      width:192px;min-height:118px;border-radius:22px;padding:15px 16px;
+      box-shadow:0 18px 42px rgba(44,62,96,.075)
+    }
+    .system-node.ba{left:6%;top:11%}.system-node.bis{right:6%;top:11%}
+    .system-node.it{left:6%;bottom:11%}.system-node.bd{right:6%;bottom:11%}
+    .system-node.ba,.system-node.bd{transform:translateX(-4px)}
+    .system-node.bis,.system-node.it{transform:translateX(4px)}
+    .system-node:hover{transform:translateY(-6px) scale(1.015)!important}
+    .micro-skill{
+      font-family:"IBM Plex Mono",monospace;font-size:.46rem;letter-spacing:.02em;
+      background:rgba(255,255,255,.88);backdrop-filter:blur(12px)
+    }
+    .hero-proof-row{display:none}
+
+    .section-head{margin-bottom:30px}
+    .section-head h2{letter-spacing:-.05em}
+    .section-kicker{letter-spacing:.08em;font-size:.56rem}
+    .blue-line{display:none}
+
+    .project-card{border:0;background:#fff;box-shadow:none}
+    .project-card::after{display:none}
+    .project-card:hover{border-color:transparent;box-shadow:0 22px 52px rgba(0,0,0,.065)}
+    .project-body{padding:4px 12px 12px}
+    .project-title-row h3{font-size:1.08rem}
+    .project-body p{font-size:.74rem}
+    .project-evidence span{background:#f7f7f9;border-color:#ededf0}
+    .tag{background:#f5f5f7;color:#5f5f63}
+
+    .skill-visual,.ecosystem-card,.spectrum-card{border:0!important}
+    .skill-visual,.ecosystem-card{background:#fff}
+    .capability-map{border:0;background:#fff}
+    #proof .evidence-card{background:transparent}
+    .stats-strip{border:0;background:#e8e8ed}
+    .career-visual{background:linear-gradient(145deg,#18181a,#242427)}
+
+
+    /* career passport — personal intro + regional job positioning */
+    #career-passport{background:#fff}
+    .passport{
+      display:grid;grid-template-columns:1.08fr .92fr;gap:18px
+    }
+    .passport-main{
+      position:relative;overflow:hidden;min-height:390px;border-radius:32px;padding:28px;
+      background:linear-gradient(145deg,#1d1d1f,#2a2a2d);color:#fff
+    }
+    .passport-main::after{
+      content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;
+      background:radial-gradient(circle,rgba(41,151,255,.26),rgba(41,151,255,.05) 42%,transparent 68%)
+    }
+    .passport-top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .passport-id{font-family:"IBM Plex Mono",monospace;color:#a9b3c0;font-size:.55rem;letter-spacing:.09em;text-transform:uppercase}
+    .passport-open{display:inline-flex;align-items:center;gap:7px;color:#bfe5cb;font-size:.56rem;font-weight:700}
+    .passport-open i{width:7px;height:7px;border-radius:50%;background:#34c759}
+    .passport-title{position:relative;z-index:2;max-width:620px;margin:58px 0 22px}
+    .passport-title small{display:block;color:#8fa5c0;font-family:"IBM Plex Mono",monospace;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .passport-title h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.06;letter-spacing:-.045em;max-width:560px}
+    .passport-title p{margin-top:10px;color:#c7cbd1;font-size:.76rem;line-height:1.58;max-width:590px}
+    .region-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:26px}
+    .region-card{position:relative;overflow:hidden;min-height:110px;padding:13px;border-radius:16px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.09)}
+    .region-code{font-family:"IBM Plex Mono",monospace;font-size:1.5rem;font-weight:650;color:#fff;letter-spacing:-.05em}
+    .region-card strong{display:block;font-size:.67rem;margin-top:8px}
+    .region-card span{display:block;color:#99abc1;font-size:.52rem;line-height:1.4;margin-top:3px}
+    .region-card::after{content:"";position:absolute;right:-15px;bottom:-28px;font-family:"IBM Plex Mono",monospace;font-size:4.8rem;font-weight:700;color:rgba(255,255,255,.025);line-height:1}
+    .region-card.au::after{content:"AU"}.region-card.my::after{content:"MY"}.region-card.sg::after{content:"SG"}
+
+    .passport-side{display:grid;grid-template-rows:auto 1fr;gap:18px}
+    .role-fit-panel,.evidence-panel{border-radius:28px;background:#f5f5f7;padding:22px}
+    .panel-label{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.54rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
+    .role-fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .role-fit{
+      min-height:112px;padding:14px;border-radius:16px;background:#fff;border:1px solid #e8e8ed;
+      transition:transform .22s ease,box-shadow .22s ease
+    }
+    .role-fit:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.055)}
+    .role-fit b{display:block;color:#0071e3;font-family:"IBM Plex Mono",monospace;font-size:.51rem;letter-spacing:.07em;margin-bottom:7px}
+    .role-fit strong{display:block;font-size:.72rem;line-height:1.25}
+    .role-fit span{display:block;color:#86868b;font-size:.52rem;line-height:1.4;margin-top:5px}
+    .evidence-panel{background:#fff;border:1px solid #e5e5ea}
+    .evidence-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .evidence-metric{padding:12px 0;border-top:1px solid #ededf0}
+    .evidence-metric:nth-child(-n+2){border-top:0}
+    .evidence-metric strong{display:block;font-size:1.45rem;letter-spacing:-.045em}
+    .evidence-metric span{display:block;margin-top:2px;color:#86868b;font-size:.52rem;line-height:1.35}
+
+    /* full career story */
+    .career-story{
+      margin-top:22px;border-radius:30px;background:#fff;border:1px solid #e5e5ea;padding:24px;overflow:hidden
+    }
+    .career-story-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
+    .career-story-head h3{font-size:1.1rem;letter-spacing:-.025em}
+    .career-story-head span{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.52rem;text-transform:uppercase;letter-spacing:.08em}
+    .story-track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .story-track::before{content:"";position:absolute;left:5%;right:5%;top:26px;height:1px;background:linear-gradient(90deg,#e5e5ea,#9fc7f2,#e5e5ea)}
+    .story-step{position:relative;z-index:2;text-align:center}
+    .story-dot{width:52px;height:52px;border-radius:50%;margin:0 auto 11px;display:grid;place-items:center;background:#fff;border:1px solid #dfe5ec;box-shadow:0 6px 18px rgba(0,0,0,.04);font-family:"IBM Plex Mono",monospace;font-size:.52rem;color:#0071e3;font-weight:600}
+    .story-step strong{display:block;font-size:.65rem;line-height:1.3}
+    .story-step span{display:block;margin-top:4px;color:#86868b;font-size:.49rem;line-height:1.35}
+
+    /* role readiness strip */
+    .readiness{
+      margin-top:18px;display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:center;
+      padding:19px 20px;border-radius:22px;background:#f5f5f7
+    }
+    .readiness-copy small{display:block;font-family:"IBM Plex Mono",monospace;font-size:.51rem;color:#86868b;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+    .readiness-copy strong{font-size:.86rem}
+    .readiness-flow{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+    .readiness-flow span{padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #e5e5ea;color:#5e5e63;font-size:.54rem;font-weight:680}
+    .readiness-flow b{color:#8fbce9}
+
+
+    .team-ready{
+      margin-top:18px;padding:22px;border-radius:28px;background:#1d1d1f;color:#fff;overflow:hidden
+    }
+    .team-ready-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .team-ready-head small{display:block;font-family:"IBM Plex Mono",monospace;font-size:.52rem;color:#8fa2b9;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+    .team-ready-head h3{font-size:1.05rem;letter-spacing:-.025em}
+    .team-ready-head span{color:#9da5b0;font-size:.57rem}
+    .team-ready-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+    .team-signal{min-height:142px;padding:14px;border-radius:17px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.085)}
+    .team-signal-icon{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#8fc6ff;margin-bottom:18px}
+    .team-signal-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .team-signal b{display:block;font-size:.66rem;margin-bottom:5px}
+    .team-signal span{display:block;color:#9fa9b7;font-size:.5rem;line-height:1.42}
+    @media(max-width:1040px){.team-ready-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:760px){
+      .team-ready-head{align-items:flex-start;flex-direction:column}
+      .team-ready-grid{grid-template-columns:1fr 1fr}
+    }
 
     @media(max-width:1040px){
-      .hero-grid{grid-template-columns:1fr}
-      .profile-board{max-width:820px;width:100%;margin:0 auto}
-      .bring-grid{grid-template-columns:1fr 1fr}
+      .passport{grid-template-columns:1fr}
+      .passport-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    }
+    @media(max-width:760px){
+      .passport-main{min-height:auto;padding:22px}
+      .passport-title{margin:38px 0 18px}
+      .region-grid{grid-template-columns:1fr}
+      .region-card{min-height:88px}
+      .passport-side{grid-template-columns:1fr}
+      .role-fit-grid{grid-template-columns:1fr 1fr}
+      .story-track{grid-template-columns:1fr;gap:10px}
+      .story-track::before{left:25px;right:auto;top:20px;bottom:20px;width:1px;height:auto;background:linear-gradient(180deg,#e5e5ea,#9fc7f2,#e5e5ea)}
+      .story-step{text-align:left;display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center}
+      .story-dot{margin:0}
+      .readiness{grid-template-columns:1fr}
+      .readiness-flow{justify-content:flex-start}
+    }
+
+    @media(max-width:1040px){
+      .hero-layout{grid-template-columns:1fr;gap:30px}
+      .hero-intro{text-align:center;padding:4px 0}
+      .hero-title,.hero-subtitle,.hero-mini-proof{margin-left:auto;margin-right:auto;max-width:620px}
+      .hero-actions{justify-content:center}
+      .hero-mini-proof{grid-template-columns:repeat(3,1fr);gap:8px}
+      .hero-proof-line{justify-content:center}
+      .hero-visual{max-width:820px;margin:0 auto}
+    }
+    @media(max-width:760px){
+      .hero{padding:82px 0 46px}
+      .hero-layout{gap:22px}
+      .hero-title{font-size:1.95rem}
+      .hero-subtitle{font-size:.88rem}
+      .hero-mini-proof{grid-template-columns:1fr;max-width:310px}
+      .hero-proof-line{justify-content:flex-start}
+      .hero-visual{height:610px;border-radius:30px;transform:none!important}
+      .system-node{width:calc(50% - 24px)}
+    }
+
+    @media(max-width:1040px){
       .projects-grid{grid-template-columns:1fr}
-      .project-large,.project-small{grid-column:auto}
-      .experience-wrap{grid-template-columns:1fr}
-      .skills-layout{grid-template-columns:1fr}
+      .project-tanshift,.project-client,.project-innerleaf,.project-database{grid-column:auto}
+.spectrum-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .spectrum-grid{grid-template-columns:1fr}
+      .software-skill-strip{grid-template-columns:1fr}
+    }
+
+    /* visual enhancement v2 */
+    .hero-orbit{
+      position:absolute;z-index:12;display:flex;align-items:center;gap:9px;
+      min-width:146px;padding:9px 11px;border-radius:13px;
+      background:rgba(255,255,255,.91);border:1px solid rgba(214,225,240,.92);
+      box-shadow:0 14px 34px rgba(45,77,118,.12);backdrop-filter:blur(12px);
+      pointer-events:none
+    }
+    .hero-orbit::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(10,115,255,.09)}
+    .hero-orbit strong{display:block;font-size:.62rem;color:#344258;line-height:1.15}
+    .hero-orbit small{display:block;font-size:.48rem;color:#8b96a8;margin-top:2px}
+    .hero-orbit.one{left:-4px;top:78px}
+    .hero-orbit.two{right:-5px;bottom:78px}
+    .hero-orbit.three{right:18px;top:16px}
+
+    .project-card{--project-accent:var(--blue);--project-soft:#edf5ff}
+    .project-card::after{
+      content:"";position:absolute;left:18px;right:18px;top:8px;height:3px;border-radius:999px;
+      background:linear-gradient(90deg,var(--project-accent),transparent);opacity:.6;pointer-events:none
+    }
+    .project-tanshift{--project-accent:#0a73ff;--project-soft:#eaf3ff}
+    .project-client{--project-accent:#6b76e8;--project-soft:#f0f0ff}
+    .project-innerleaf{--project-accent:#32a26f;--project-soft:#eaf8f0}
+    .project-database{--project-accent:#7a63e8;--project-soft:#f1efff}
+    .visual-tanshift{background:radial-gradient(circle at 85% 20%,rgba(10,115,255,.12),transparent 30%),linear-gradient(145deg,#f8fbff,#eef5ff)}
+    .visual-client{background:radial-gradient(circle at 82% 18%,rgba(107,118,232,.11),transparent 28%),linear-gradient(145deg,#fbfbff,#f1f2ff)}
+    .visual-innerleaf{background:radial-gradient(circle at 82% 16%,rgba(50,162,111,.12),transparent 28%),linear-gradient(145deg,#fbfffc,#eef9f2)}
+    .visual-database{background:radial-gradient(circle at 82% 18%,rgba(122,99,232,.11),transparent 28%),linear-gradient(145deg,#fbfaff,#f1efff)}
+    .project-meta-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .project-type{display:inline-flex;align-items:center;gap:6px;font-size:.53rem;letter-spacing:.08em;text-transform:uppercase;font-weight:850;color:var(--project-accent)}
+    .project-type::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--project-accent)}
+    .project-proof-badge{padding:5px 7px;border-radius:999px;background:var(--project-soft);color:var(--project-accent);font-size:.49rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .project-card .project-evidence span{position:relative;overflow:hidden}
+    .project-card .project-evidence span::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--project-accent);opacity:.52}
+    .project-card:hover .project-arrow{transform:translate(2px,-2px)}
+    .project-arrow{transition:transform .2s ease}
+
+    .skill-visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .skill-visual{
+      position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;
+      padding:20px;min-height:235px;box-shadow:0 12px 34px rgba(44,62,96,.035);
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .skill-visual:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.075);border-color:#d8e4f3}
+    .skill-visual::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-72px;bottom:-72px;background:radial-gradient(circle,var(--skill-glow),transparent 67%)}
+    .skill-blue{--skill:#0a73ff;--skill-bg:#edf5ff;--skill-glow:rgba(10,115,255,.16)}
+    .skill-purple{--skill:#7460df;--skill-bg:#f1efff;--skill-glow:rgba(116,96,223,.16)}
+    .skill-green{--skill:#2c9a68;--skill-bg:#edf8f2;--skill-glow:rgba(44,154,104,.16)}
+    .skill-orange{--skill:#c97735;--skill-bg:#fff4eb;--skill-glow:rgba(201,119,53,.16)}
+    .skill-icon{position:relative;z-index:2;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--skill-bg);color:var(--skill);margin-bottom:22px}
+    .skill-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .skill-visual small{position:relative;z-index:2;display:block;color:var(--skill);font-size:.54rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+    .skill-visual h3{position:relative;z-index:2;font-size:.95rem;letter-spacing:-.02em;margin-bottom:13px}
+    .skill-nodes{position:relative;z-index:2;display:grid;gap:7px}
+    .skill-node{display:flex;align-items:center;gap:8px;font-size:.64rem;color:#5e6a7e;font-weight:650}
+    .skill-node::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--skill);box-shadow:0 0 0 4px var(--skill-bg)}
+    .skill-foot{position:relative;z-index:2;margin-top:15px;padding-top:11px;border-top:1px solid #edf1f6;font-size:.56rem;color:#919bad}
+
+    .ecosystem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .ecosystem-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;min-height:185px;box-shadow:0 12px 34px rgba(44,62,96,.035);overflow:hidden}
+    .ecosystem-card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--eco-accent),transparent)}
+    .eco-analysis{--eco-accent:#0a73ff}.eco-build{--eco-accent:#5b68d8}.eco-data{--eco-accent:#26996a}.eco-deliver{--eco-accent:#cf7a35}
+    .eco-head{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+    .eco-head span{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:#f4f7fb;color:var(--eco-accent);font-size:.57rem;font-weight:850}
+    .eco-head strong{font-size:.82rem}
+    .eco-logos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .eco-logo{display:flex;align-items:center;gap:7px;padding:9px;border-radius:11px;background:#f8fafc;border:1px solid #edf1f6;min-width:0}
+    .eco-logo img{width:20px;height:20px;object-fit:contain;flex:none}
+    .eco-logo b{font-size:.6rem;color:#536075;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .ecosystem-flow{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;color:#91a0b4}
+    .ecosystem-flow span{padding:6px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.54rem;font-weight:700}
+    .ecosystem-flow b{color:#8ab7ef}
+
+    .career-visual{position:relative;margin-bottom:18px;padding:24px;border-radius:24px;background:linear-gradient(145deg,#0d1a33,#142c50);color:#fff;overflow:hidden;box-shadow:0 22px 55px rgba(18,39,75,.16)}
+    .career-visual::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-120px;top:-170px;background:radial-gradient(circle,rgba(78,157,255,.28),transparent 66%)}
+    .career-intro{position:relative;z-index:2;display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
+    .career-intro small{display:block;color:#93acd0;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
+    .career-intro h3{font-size:1.35rem;letter-spacing:-.035em;max-width:620px}
+    .career-intro a{color:#8dc6ff;font-size:.65rem;font-weight:760;white-space:nowrap}
+    .career-roadmap{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .career-roadmap::before{content:"";position:absolute;left:15%;right:15%;top:29px;height:1px;background:linear-gradient(90deg,rgba(109,176,255,.25),#6db0ff,rgba(109,176,255,.25))}
+    .career-stage{position:relative;padding-top:53px}
+    .career-dot{position:absolute;z-index:3;left:18px;top:11px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a73ff;border:5px solid #16375f;box-shadow:0 0 0 1px rgba(132,190,255,.35);font-size:.59rem;font-weight:850}
+    .career-box{height:100%;padding:15px;border-radius:15px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.10)}
+    .career-date{font-size:.5rem;color:#88a3c5;margin-bottom:5px;font-weight:700}
+    .career-box strong{display:block;font-size:.76rem;margin-bottom:9px}
+    .career-tags{display:flex;gap:5px;flex-wrap:wrap}
+    .career-tags span{padding:5px 7px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:#c0d1e5;font-size:.49rem;font-weight:650}
+    .career-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+    .career-stat{padding:12px;border-radius:13px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09)}
+    .career-stat b{display:block;color:#8dc6ff;font-size:.78rem;margin-bottom:2px}
+    .career-stat span{font-size:.51rem;color:#9fb2ca;line-height:1.35}
+    .ecom-strip{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(44,62,96,.03)}
+    .ecom-strip strong{font-size:.76rem}.ecom-strip span{font-size:.6rem;color:var(--muted)}.ecom-strip b{font-size:.56rem;padding:6px 8px;border-radius:999px;background:#fff4e9;color:#bd6f2f}
+
+    @media(max-width:1040px){
+      .skill-visual-grid,.ecosystem-grid{grid-template-columns:repeat(2,1fr)}
+
+      .evidence-grid{grid-template-columns:repeat(3,1fr)}
+      .hero-grid{grid-template-columns:1fr}
+      .dashboard-stage{min-height:420px;max-width:720px;width:100%;margin:0 auto}
+      .snapshot-grid,.cap-grid{grid-template-columns:repeat(2,1fr)}
+      .projects-grid{grid-template-columns:1fr}
+      .project-card{display:block;padding:10px}
+      .project-visual{margin-bottom:14px}
+      .project-body{padding:0 7px 9px}
+      .tools-grid{grid-template-columns:repeat(5,1fr)}
     }
     @media(max-width:760px){
       .shell,.nav-inner{width:min(var(--max),calc(100% - 28px))}
       .nav{height:52px}.nav-links{display:none}
-      .brand small{display:none}
-      .hero{padding:88px 0 54px}
-      .hero h1{font-size:clamp(2.5rem,13vw,3.7rem)}
-      .hero-copy{font-size:.91rem}
-      .hero-actions .btn{flex:1 1 150px}
-      .profile-board{min-height:auto;padding:18px;border-radius:26px}
-      .career-path{grid-template-columns:1fr 1fr;gap:16px 8px}.career-path::before{display:none}
-      .focus-flow{grid-template-columns:1fr}.focus-arrow{transform:rotate(90deg);justify-self:center}
-      .board-metrics{grid-template-columns:1fr}
-      .section{padding:62px 0}
-      .section-head{flex-direction:column;align-items:flex-start;gap:7px}
-      .bring-grid{grid-template-columns:1fr}
-      .bring-card{min-height:245px}
-      .project-visual{height:220px}
-      .roster{grid-template-columns:60px repeat(5,1fr)}
-      .timeline-row{grid-template-columns:1fr;gap:6px}.timeline-pill{justify-self:start}
-      .education-card{align-items:flex-start}
-      .tool-grid{grid-template-columns:1fr 1fr}
-      .cta{align-items:flex-start;flex-direction:column}
-      .cta-actions{width:100%}.cta-link{flex:1;text-align:center}
-      .footer-inner{align-items:flex-start;flex-direction:column}
+      .hero{padding:94px 0 50px}
+      .hero-grid{gap:28px}
+      .hero h1{font-size:clamp(2.8rem,14vw,4.4rem)}
+      .hero-actions{align-items:stretch}
+      .hero-actions .btn{flex:1 1 160px}
+      .hero-facts{gap:16px}
+      .dashboard-stage{min-height:330px}
+      .dashboard{inset:20px 0 24px 0;grid-template-columns:84px 1fr}
+      .dash-side{padding:13px 8px}.dash-main{padding:14px}
+      .dash-nav div{font-size:.52rem;padding:6px}
+      .metric-grid{grid-template-columns:1fr 1fr}.metric-grid .metric:last-child{display:none}
+      .dash-lower{grid-template-columns:1fr}.coverage{display:none}
+      .section{padding:64px 0}
+      .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
+      .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip,.hire-grid{grid-template-columns:1fr}
+      .hire-proof{grid-template-columns:1fr 1fr}
+      .hire-visual{grid-template-columns:1fr}
+      .hire-side.right{text-align:left}
+      .hire-side.right .hire-node{justify-content:flex-start}
+      .hire-bridge{width:100%;height:38px;transform:rotate(90deg)}
+      .projects-grid{grid-template-columns:1fr}
+      .project-card{display:block}
+      .project-evidence{grid-template-columns:1fr 1fr 1fr}
+      .project-visual{height:210px;margin-bottom:13px}
+      .project-body{padding:0 8px 10px}
+      .tools-grid{grid-template-columns:repeat(2,1fr)}
+      .capability-map{min-height:auto;padding:18px;display:grid;gap:10px}
+      .map-center,.map-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%;height:auto;min-height:auto;border-radius:18px}
+      .map-center{padding:20px}.map-center::before,.map-center::after,.map-line,.map-pulse{display:none}
+      .workstyle{grid-template-columns:1fr}
+      #approach .workstyle::before{left:31px;right:auto;top:28px;bottom:28px;width:1px;height:auto;background:linear-gradient(180deg,transparent,#b8d4f7 10%,#b8d4f7 90%,transparent)}
+      #approach .workstep{padding-left:18px}
+      #proof .evidence-grid{grid-template-columns:1fr 1fr;gap:18px;padding:10px 0}
+      #proof .evidence-grid::before{display:none}
+      #proof .evidence-card{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
+      .commercial-exp{grid-template-columns:1fr}
+      .commercial-proof{grid-template-columns:1fr 1fr}
+      .skill-visual-grid,.ecosystem-grid{grid-template-columns:1fr}
+      .career-roadmap{grid-template-columns:1fr;gap:10px}
+      .career-roadmap::before{left:35px;right:auto;top:20px;bottom:20px;width:1px;height:auto;background:linear-gradient(180deg,rgba(109,176,255,.25),#6db0ff,rgba(109,176,255,.25))}
+      .career-stage{padding-top:0;padding-left:54px}
+      .career-dot{left:16px;top:15px}
+      .career-stats{grid-template-columns:1fr 1fr}
+      .career-intro{flex-direction:column}
+      .hero-orbit{display:none}
+      .timeline{padding:4px 18px}
+      .timeline-row{grid-template-columns:1fr;gap:5px;padding:18px 0 18px 22px;min-height:auto}
+      .timeline-date{padding-left:0}.timeline-date::before{left:-22px}.timeline-date::after{left:-18.5px;top:18px;height:75px}
+      .role-pill{width:fit-content}
+      .cta{padding:28px;align-items:flex-start;flex-direction:column}
+      .cta-actions{width:100%}.cta-link{flex:1}
     }
     @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none!important}
-      .bring-card,.project-card,.btn{transition:none!important}
+      html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+      .dashboard,.tool-track,.map-pulse{animation:none!important}
     }
+  
+    /* final responsive guard for the visual-first hero */
+    @media(max-width:1040px){
+      .hero .hero-layout{grid-template-columns:1fr;gap:30px}
+      .hero .hero-intro{text-align:center;padding:4px 0}
+      .hero .hero-title{font-size:clamp(2rem,5vw,2.75rem);max-width:620px}
+      .hero .hero-subtitle{max-width:620px}
+    }
+    @media(max-width:760px){
+      .hero{padding:82px 0 46px}
+      .hero .hero-title{font-size:1.95rem;line-height:1.04}
+      .hero .hero-subtitle{font-size:.88rem;line-height:1.55}
+      .hero .hero-actions{align-items:center}
+      .hero .hero-actions .btn{flex:0 0 auto;width:auto}
+      .hero .hero-visual{min-height:610px;height:610px;border-radius:30px;transform:none!important}
+      .hero .system-core{width:158px;height:158px;padding:17px}
+      .hero .system-core .core-icon{width:36px;height:36px;margin-bottom:8px}
+      .hero .system-core strong{font-size:.82rem}
+      .hero .system-core span{font-size:.49rem}
+      .hero .system-node{width:calc(50% - 22px);min-height:124px;padding:11px}
+      .hero .system-node strong{font-size:.68rem}
+      .hero .system-node span{font-size:.5rem}
+      .hero .system-node.ba{left:10px;top:20px}
+      .hero .system-node.bis{right:10px;top:20px}
+      .hero .system-node.it{left:10px;bottom:20px}
+      .hero .system-node.bd{right:10px;bottom:20px}
+      .hero .system-line,.hero .micro-skill{display:none}
+    }
+
   </style>
   <script type="application/ld+json">
   {
@@ -371,202 +1348,273 @@
     "url":"https://williamtangq.github.io/",
     "sameAs":["https://github.com/WilliamTangq","https://www.linkedin.com/in/williamtangq"],
     "affiliation":{"@type":"CollegeOrUniversity","name":"Monash University"},
-    "knowsAbout":["Business Analysis","Systems Analysis","IT Support","Business Information Systems","Requirements Gathering","Process Mapping","SQL","Database Design","User Acceptance Testing","Operations"]
+    "knowsAbout":["Business Analysis","Systems Analysis","Requirements Gathering","Process Mapping","SQL","Database Design","User Acceptance Testing","Digital Operations","Web Application Development"]
   }
   </script>
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <nav class="nav">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan <small>(William)</small></span></a>
+      <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan <span style="font-weight:560;color:#86868b">(William)</span></span></a>
       <ul class="nav-links">
-        <li><a href="#profile" data-nav="profile">Profile</a></li>
-        <li><a href="#work" data-nav="work">Work</a></li>
+        <li><a href="#career-passport">Profile</a></li>
+        <li><a href="#projects" data-nav="projects">Work</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
-        <li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#professional-spectrum">Expertise</a></li><li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
-      <a class="nav-cta" href="resume.html">Resume</a>
+      <a class="nav-cta" href="resume.html">View Resume</a>
     </div>
   </nav>
 
   <main id="top">
     <header class="hero">
-      <div class="shell hero-grid">
-        <div class="reveal">
-          <div class="eyebrow"><i></i>Guang Quan Tan (William) · Melbourne</div>
-          <h1>Business analysis with <span>technical depth.</span></h1>
-          <p class="hero-copy">Final-year Monash Business Information Systems candidate with real commercial experience across business analysis, IT support and operations — plus hands-on systems, SQL and testing work.</p>
-          <div class="role-line">
-            <span class="role-chip">Business Analyst</span>
-            <span class="role-chip">Systems Analyst</span>
-            <span class="role-chip">Technology Analyst</span>
-            <span class="role-chip">IT / Operations</span>
-          </div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">View selected work</a>
-            <a class="btn btn-secondary" href="resume.html">ATS resume</a>
-          </div>
-          <div class="availability"><strong>Open to opportunities</strong><b>·</b><span>Australia</span><b>·</b><span>Malaysia</span><b>·</b><span>Singapore</span></div>
-        </div>
-
-        <div class="profile-board reveal" aria-label="Profile snapshot">
-          <div class="board-head">
-            <div><small>Profile snapshot</small><strong>From users → analysis → operations → systems</strong></div>
-            <div class="board-badge">2027 Graduate Candidate</div>
-          </div>
-
-          <div class="career-path">
-            <div class="career-step"><div class="career-dot">2022</div><strong>IT Support</strong><span>Users · devices · business software</span></div>
-            <div class="career-step"><div class="career-dot">2023</div><strong>Business Analysis</strong><span>Excel · stock · demand · pricing</span></div>
-            <div class="career-step"><div class="career-dot">Now</div><strong>BD & Operations</strong><span>B2B · suppliers · quotes · sourcing</span></div>
-            <div class="career-step"><div class="career-dot">2026</div><strong>Monash BIS</strong><span>Systems · SQL · UAT · delivery</span></div>
-          </div>
-
-          <div class="board-focus">
-            <div class="focus-label">How I work across the gap</div>
-            <div class="focus-flow">
-              <div class="focus-node"><b>01</b><strong>Understand the business</strong><span>Users · process · commercial context</span></div>
-              <div class="focus-arrow">→</div>
-              <div class="focus-node"><b>02</b><strong>Structure the system</strong><span>Requirements · workflows · data</span></div>
-              <div class="focus-arrow">→</div>
-              <div class="focus-node"><b>03</b><strong>Validate delivery</strong><span>UAT · integrity · implementation</span></div>
+      <div class="shell hero-shell">
+        <div class="hero-layout">
+          <div class="hero-intro reveal">
+            <div class="hero-kicker">Guang Quan Tan (William) · Melbourne</div>
+            <h1 class="hero-title">I bridge <span>business</span> <span class="quiet">and</span> <span>technology.</span></h1>
+            <p class="hero-subtitle">Final-year Monash Business Information Systems candidate with real experience across analysis, IT support, operations and hands-on systems delivery.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">Explore work</a>
+              <a class="btn btn-secondary" href="resume.html">Resume</a>
+            </div>
+            <div class="hero-mini-proof">
+              <div class="hero-proof-line"><i>MU</i><div><b>Monash University</b> <span>· BIS</span></div></div>
+              <div class="hero-proof-line"><i>CS</i><div><b>CS TAN</b> <span>· 3-role progression</span></div></div>
+              <div class="hero-proof-line"><i>26</i><div><b>Dec 2026</b> <span>· expected graduation</span></div></div>
             </div>
           </div>
 
-          <div class="board-metrics">
-            <div class="board-metric"><strong>3 roles</strong><span>Progression at CS TAN</span></div>
-            <div class="board-metric"><strong>22 pax</strong><span>Corporate booking workflow</span></div>
-            <div class="board-metric"><strong>100+</strong><span>E-commerce product listings</span></div>
+          <div class="hero-visual reveal" id="careerSystem" aria-label="Career system connecting business analysis, business information systems, IT support and business development">
+            <span class="system-line l1"></span><span class="system-line l2"></span><span class="system-line l3"></span><span class="system-line l4"></span>
+
+            <div class="system-core">
+              <div>
+                <div class="core-icon"><svg viewBox="0 0 24 24"><path d="M5 5h5v5H5zM14 14h5v5h-5zM10 7h4v10M7 10v4h7"/></svg></div>
+                <small>Core profile</small>
+                <strong>Business ↔ Technology</strong>
+                <span>Understand · structure · deliver · validate</span>
+              </div>
+            </div>
+
+            <article class="system-node ba">
+              <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><b>BA</b></div>
+              <strong>Business Analysis</strong><span>Requirements · process mapping · stakeholders · UAT</span>
+            </article>
+
+            <article class="system-node bis">
+              <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><b>BIS</b></div>
+              <strong>Business Information Systems</strong><span>Systems thinking · workflows · business rules · data</span>
+            </article>
+
+            <article class="system-node it">
+              <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><b>IT</b></div>
+              <strong>IT Support</strong><span>Troubleshooting · devices · connectivity · business software</span>
+            </article>
+
+            <article class="system-node bd">
+              <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-6M3 21h18"/><path d="M17 5h4v4M21 5l-6 6"/></svg></span><b>BD</b></div>
+              <strong>Business Development & Operations</strong><span>B2B · suppliers · quotations · sourcing · operations</span>
+            </article>
+
+            <span class="micro-skill s1">SQL / DATA</span>
+            <span class="micro-skill s2">UAT</span>
+            <span class="micro-skill s3">EXCEL</span>
+            <span class="micro-skill s4">SYSTEMS</span>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="section section-white" id="profile">
+    <section class="section" id="career-passport">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>What I can bring to a team</h2>
-          <div class="section-kicker">Broad enough to connect the dots · focused enough to deliver</div>
+          <h2>Career Passport</h2>
+          <div class="section-kicker">One profile · three markets · multiple ways to contribute</div>
         </div>
-        <div class="bring-grid">
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
-            <small>Commercial context</small>
-            <h3>I understand the business behind the system.</h3>
-            <p>Sales, inventory, supplier costs, customers, quotations, purchasing and day-to-day operations give me context beyond classroom projects.</p>
-            <div class="bring-proof">CS TAN · Excel analysis · B2B workflows</div>
+
+        <div class="passport">
+          <article class="passport-main reveal">
+            <div class="passport-top">
+              <span class="passport-id">GQT / 2026 / BIS</span>
+              <span class="passport-open"><i></i>Open to graduate & entry-level opportunities</span>
+            </div>
+            <div class="passport-title">
+              <small>Professional identity</small>
+              <h3>Commercially aware. Technically credible. Comfortable between users, systems and operations.</h3>
+              <p>Built from real CS TAN experience, Monash Business Information Systems study and hands-on product delivery — with a profile suited to business, systems, technology and operational teams.</p>
+            </div>
+            <div class="region-grid">
+              <div class="region-card au"><div class="region-code">AU</div><strong>Australia</strong><span>Melbourne-based · graduate / entry-level opportunities</span></div>
+              <div class="region-card my"><div class="region-code">MY</div><strong>Malaysia</strong><span>Commercial experience · business / IT / operations context</span></div>
+              <div class="region-card sg"><div class="region-code">SG</div><strong>Singapore</strong><span>Open to business systems & technology opportunities</span></div>
+            </div>
           </article>
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/><path d="M17 15l3 3"/></svg></div>
-            <small>Analysis & systems</small>
-            <h3>I turn messy requirements into something teams can work from.</h3>
-            <p>Requirements, process flows, acceptance criteria, business rules, user journeys and data models help me structure ambiguity.</p>
-            <div class="bring-proof">Monash client · TanShift · database work</div>
-          </article>
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
-            <small>Technical delivery</small>
-            <h3>I can stay close to implementation and validation.</h3>
-            <p>SQL, Next.js, Supabase, Git/GitHub and testing experience help me communicate with technical teams and verify what was delivered.</p>
-            <div class="bring-proof">Public repos · UAT · Playwright · SQL</div>
-          </article>
+
+          <div class="passport-side">
+            <section class="role-fit-panel reveal" aria-label="Role fit">
+              <div class="panel-label">Where I fit</div>
+              <div class="role-fit-grid">
+                <div class="role-fit"><b>01 · BA</b><strong>Business Analyst</strong><span>Requirements · process · stakeholders · UAT</span></div>
+                <div class="role-fit"><b>02 · SA</b><strong>Systems Analyst</strong><span>Workflows · rules · data · system behaviour</span></div>
+                <div class="role-fit"><b>03 · IT</b><strong>IT Support / Analyst</strong><span>Troubleshooting · users · devices · business software</span></div>
+                <div class="role-fit"><b>04 · TECH</b><strong>Technology / Operations</strong><span>SQL · digital workflows · sourcing · B2B operations</span></div>
+              </div>
+            </section>
+
+            <section class="evidence-panel reveal" aria-label="Evidence metrics">
+              <div class="panel-label">Evidence at a glance</div>
+              <div class="evidence-metrics">
+                <div class="evidence-metric"><strong>3</strong><span>CS TAN role stages</span></div>
+                <div class="evidence-metric"><strong>100+</strong><span>E-commerce product listings</span></div>
+                <div class="evidence-metric"><strong>22 pax</strong><span>Corporate workflow coordinated</span></div>
+                <div class="evidence-metric"><strong>2</strong><span>Public product repositories</span></div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="career-story reveal">
+          <div class="career-story-head"><h3>How the profile was built</h3><span>2020 → 2026</span></div>
+          <div class="story-track">
+            <div class="story-step"><div class="story-dot">2020</div><div><strong>E-commerce</strong><span>100+ listings · customers · online operations</span></div></div>
+            <div class="story-step"><div class="story-dot">2022</div><div><strong>IT Support</strong><span>Users · devices · connectivity · business software</span></div></div>
+            <div class="story-step"><div class="story-dot">2023</div><div><strong>Business Analysis</strong><span>Excel · inventory · demand · pricing support</span></div></div>
+            <div class="story-step"><div class="story-dot">2023+</div><div><strong>BD & Operations</strong><span>B2B · suppliers · quotations · sourcing</span></div></div>
+            <div class="story-step"><div class="story-dot">2026</div><div><strong>Monash BIS</strong><span>Systems · SQL · client delivery · UAT</span></div></div>
+          </div>
+        </div>
+
+        <div class="team-ready reveal">
+          <div class="team-ready-head">
+            <div><small>Team-ready signals</small><h3>Skills already used in real work and delivery contexts.</h3></div>
+            <span>Evidence over self-rating</span>
+          </div>
+          <div class="team-ready-grid">
+            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><b>Commercial Context</b><span>Sales · stock · pricing · purchasing · operations</span></div>
+            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 8l8 5 8-5"/></svg></div><b>Communication</b><span>B2B customers · suppliers · quotations · documentation</span></div>
+            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><b>IT Support</b><span>Devices · printers · email · connectivity · software</span></div>
+            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div><b>Systems & Data</b><span>SQL · ERD · PostgreSQL · workflows · business rules</span></div>
+            <div class="team-signal"><div class="team-signal-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></div><b>Validation</b><span>Acceptance criteria · UAT · integrity testing · Playwright</span></div>
+          </div>
+          <div class="readiness-flow" style="margin-top:16px;justify-content:flex-start"><span>Understand</span><b>→</b><span>Analyse</span><b>→</b><span>Structure</span><b>→</b><span>Deliver</span><b>→</b><span>Validate</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section class="section" id="projects">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Selected work</h2>
-          <div class="section-kicker">Four examples that show how I think and deliver</div>
+          <h2>Selected Projects <span class="blue-line"></span></h2>
+          <div class="section-kicker">Featured work</div>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card project-large reveal">
-            <div class="project-visual visual-tanshift">
-              <div class="ts-app">
-                <div class="ts-side"><div class="ts-brand">TanShift</div><div class="ts-nav"><span>Dashboard</span><span>Schedule</span><span>Staff</span><span>Requests</span><span>Settings</span></div></div>
-                <div class="ts-main">
-                  <div class="ts-top"><span>Shift Schedule</span><span>Week view</span></div>
+          <article class="project-card project-tanshift reveal">
+            <div class="project-visual visual-tanshift" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="mini-app">
+                <div class="mini-side">
+                  <div class="mini-brand">TanShift</div>
+                  <div class="mini-nav"><span>Dashboard</span><span>Schedule</span><span>Employees</span><span>Reports</span><span>Settings</span></div>
+                </div>
+                <div class="mini-content">
+                  <div class="mini-title"><span>Shift Schedule</span><span>Nov 11–17</span></div>
                   <div class="roster">
                     <div></div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div>
-                    <div class="person">Alex</div><div class="blue">AM</div><div class="blue">AM</div><div></div><div class="green">PM</div><div class="green">PM</div>
-                    <div class="person">Priya</div><div class="amber">MID</div><div></div><div class="blue">AM</div><div class="blue">AM</div><div></div>
-                    <div class="person">Daniel</div><div></div><div class="green">PM</div><div class="green">PM</div><div></div><div class="amber">MID</div>
-                    <div class="person">Emma</div><div class="blue">AM</div><div></div><div class="amber">MID</div><div class="amber">MID</div><div class="green">PM</div>
+                    <div class="person">Alex Chen</div><div class="blue">AM</div><div class="blue">AM</div><div></div><div class="green">PM</div><div class="green">PM</div>
+                    <div class="person">Priya Shah</div><div class="yellow">Mid</div><div></div><div class="blue">AM</div><div class="blue">AM</div><div></div>
+                    <div class="person">Daniel Kim</div><div></div><div class="green">PM</div><div class="green">PM</div><div></div><div class="yellow">Mid</div>
+                    <div class="person">Emma Wong</div><div class="blue">AM</div><div></div><div class="yellow">Mid</div><div class="yellow">Mid</div><div class="green">PM</div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-type">Systems · Public repo</span><span class="project-proof">Inspectable work</span></div>
-              <h3>TanShift</h3>
-              <p>Staff scheduling system built around real workflow rules: availability, manager assignment, draft/published schedules, leave and shift-swap requests.</p>
-              <div class="tags"><span class="tag">Business Rules</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span></div>
-              <a class="project-link" href="case-tanshift.html">View case study →</a>
+              <div class="project-meta-row"><span class="project-type">Systems</span><span class="project-proof-badge">Public repo</span></div><div class="project-title-row"><h3>TanShift</h3><span class="project-arrow">↗</span></div>
+              <p>Staff scheduling system designed to replace fragmented rostering workflows.</p>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span>
+    <span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span>
+    <span class="tag tech-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
+    <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
+  </div>
+  <div class="project-evidence"><span>Manager + Staff flows</span><span>Draft ↔ Published</span><span>Availability rules</span></div>
+  <a class="project-link" href="case-tanshift.html">View case study →</a>
             </div>
           </article>
 
-          <article class="project-card project-small reveal">
-            <div class="project-visual visual-client">
-              <div class="client-flow">
-                <div class="client-flow-head">User onboarding</div>
-                <div class="flow-row">
-                  <div class="flow-step"><div class="flow-circle">1</div><span>Requirement</span></div><div class="flow-line"></div>
-                  <div class="flow-step"><div class="flow-circle">2</div><span>Guided step</span></div><div class="flow-line"></div>
-                  <div class="flow-step"><div class="flow-circle">3</div><span>Fix</span></div><div class="flow-line"></div>
-                  <div class="flow-step"><div class="flow-circle">✓</div><span>Validate</span></div>
+          <article class="project-card project-client reveal">
+            <div class="project-visual visual-client" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="flow-wrap">
+                <div class="flow-side"><div>Overview</div><div>Requirements</div><div>User Flow</div><div>Testing</div><div>Findings</div></div>
+                <div class="flow-main">
+                  <div class="flow-title">User Onboarding Flow</div>
+                  <div class="flow-line">
+                    <div class="flow-node"><div class="flow-icon">1</div><span>Sign Up</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">2</div><span>Verify Email</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">3</div><span>Complete Profile</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">✓</div><span>Get Started</span></div>
+                  </div>
+                  <div class="outcome"><strong>Project Outcome</strong><p>✓ Met client requirements · ✓ Passed integrity testing · ✓ Improved onboarding clarity</p></div>
                 </div>
-                <div class="flow-result">Requirements → acceptance criteria → implementation fixes → integrity testing</div>
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-type">Client delivery</span><span class="project-proof">Private client work</span></div>
-              <h3>Monash Client Project</h3>
-              <p>Converted client requirements into onboarding flows and acceptance criteria, then contributed front-end fixes and strict end-to-end validation.</p>
-              <div class="tags"><span class="tag">Requirements</span><span class="tag">UAT</span><span class="tag">UX Flow</span></div>
+              <div class="project-meta-row"><span class="project-type">Client delivery</span><span class="project-proof-badge">Private client</span></div><div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
+              <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
+              <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
+              <div class="project-evidence"><span>Requirements → fixes</span><span>Integrity testing</span><span>Private client work</span></div>
               <a class="project-link" href="case-client-project.html">View case study →</a>
             </div>
           </article>
 
-          <article class="project-card project-small reveal">
-            <div class="project-visual visual-innerleaf">
-              <div class="il-app">
-                <div class="journal"><h4>Free-form reflection</h4><span></span><span></span><span></span><span></span></div>
-                <div class="ai-card">
-                  <div class="ai-row"><strong>Facts</strong><span>What happened without interpretation</span></div>
-                  <div class="ai-row"><strong>Pattern</strong><span>Structured thought-pattern output</span></div>
-                  <div class="ai-row accent"><strong>Next step</strong><span>One practical reflection prompt</span></div>
+
+          <article class="project-card project-innerleaf reveal">
+            <div class="project-visual visual-innerleaf" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="innerleaf-mini">
+                <div class="innerleaf-head"><span class="innerleaf-brand">InnerLeaf</span><span class="innerleaf-badge">AI-assisted reflection</span></div>
+                <div class="innerleaf-grid">
+                  <div class="journal"><div class="journal-title">Free-form reflection</div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div></div>
+                  <div class="reflection-card">
+                    <div class="reflect-row"><strong>Facts</strong><span>What happened without interpretation</span></div>
+                    <div class="reflect-row"><strong>Pattern</strong><span>Structured thought-pattern output</span></div>
+                    <div class="reflect-row accent"><strong>Next step</strong><span>One practical reflection prompt</span></div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-type">Product · Public repo</span><span class="project-proof">Technical proof</span></div>
-              <h3>InnerLeaf</h3>
-              <p>AI-assisted reflection product with structured Gemini output, Supabase-backed user/admin flows and Playwright acceptance tests.</p>
-              <div class="tags"><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">Gemini</span><span class="tag">Playwright</span></div>
+              <div class="project-meta-row"><span class="project-type">Product</span><span class="project-proof-badge">Public repo</span></div><div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
+              <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
+              <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
+              <div class="project-evidence"><span>Structured AI output</span><span>User / Admin routing</span><span>Playwright tests</span></div>
               <a class="project-link" href="case-innerleaf.html">View case study →</a>
             </div>
           </article>
 
-          <article class="project-card project-large reveal">
-            <div class="project-visual visual-db">
+          <article class="project-card project-database reveal">
+            <div class="project-visual visual-database" aria-hidden="true"><span class="concept-label">Concept Preview</span>
               <div class="erd">
-                <div class="entity a"><h4>CUSTOMER</h4><p>customer_id PK<br>name<br>email<br>phone</p></div>
-                <div class="entity b"><h4>ORDER</h4><p>order_id PK<br>customer_id FK<br>date<br>status</p></div>
-                <div class="entity c"><h4>ORDER_ITEM</h4><p>item_id PK<br>order_id FK<br>product_id FK<br>quantity</p></div>
-                <div class="entity d"><h4>PRODUCT</h4><p>product_id PK<br>name<br>category<br>price</p></div>
-                <span class="erd-line one"></span><span class="erd-line two"></span><span class="erd-line three"></span>
+                <div class="erd-side"><div>Database</div><div>ERD</div><div>Tables</div><div>Relationships</div><div>SQL Scripts</div></div>
+                <div class="erd-canvas">
+                  <div class="entity a"><h4>CUSTOMER</h4><p>customer_id PK<br>name<br>email<br>phone</p></div>
+                  <div class="entity b"><h4>ORDER</h4><p>order_id PK<br>customer_id FK<br>order_date<br>status</p></div>
+                  <div class="entity c"><h4>ORDER_ITEM</h4><p>order_item_id PK<br>order_id FK<br>product_id FK<br>quantity</p></div>
+                  <div class="entity d"><h4>PRODUCT</h4><p>product_id PK<br>name<br>category<br>price</p></div>
+                  <span class="erd-line one"></span><span class="erd-line two"></span><span class="erd-line three"></span>
+                </div>
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-type">Data & SQL</span><span class="project-proof">Relational design</span></div>
-              <h3>Oracle Database Project</h3>
-              <p>Relational database work focused on business rules, ERD structure, normalisation, integrity and SQL query design.</p>
-              <div class="tags"><span class="tag">Oracle SQL</span><span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Data Integrity</span></div>
+              <div class="project-meta-row"><span class="project-type">Data</span><span class="project-proof-badge">SQL / ERD</span></div><div class="project-title-row"><h3>Oracle Database Project</h3><span class="project-arrow">↗</span></div>
+              <p>Database design focused on business rules, ERD structure and SQL integrity.</p>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
+    <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
+  </div>
+              <div class="project-evidence"><span>ERD modelling</span><span>Data integrity</span><span>Oracle SQL</span></div>
               <a class="project-link" href="case-database.html">View case study →</a>
             </div>
           </article>
@@ -574,49 +1622,72 @@
       </div>
     </section>
 
-    <section class="section section-white" id="experience">
+
+
+    <section class="section" id="approach">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Experience</h2>
-          <div class="section-kicker">A progression from support → analysis → operations</div>
+          <h2>How I Work <span class="blue-line"></span></h2>
+          <div class="section-kicker">Analyst-to-delivery loop</div>
         </div>
-        <div class="experience-wrap">
-          <article class="experience-story reveal">
-            <div>
-              <small>CS TAN Technology & Enterprise</small>
-              <h3>Commercial experience that keeps my systems thinking grounded.</h3>
-              <p>I started close to users and technology, moved into retail business analysis, then into broader business development and operations — while continuing e-commerce work remotely.</p>
+        <div class="workstyle reveal">
+          <div class="workstep"><b>01</b><strong>Understand</strong><span>User · problem · constraints</span></div>
+          <div class="workstep"><b>02</b><strong>Structure</strong><span>Requirements · workflows · edge cases</span></div>
+          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Prototype · data · documentation</span></div>
+          <div class="workstep"><b>04</b><strong>Validate</strong><span>UAT · integrity · refinement</span></div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section" id="professional-spectrum">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Professional Spectrum <span class="blue-line"></span></h2>
+          <div class="section-kicker">Four areas I can contribute from day one</div>
+        </div>
+        <div class="spectrum-axis"><span>Commercial & user context</span><b>Business ↔ Technology</b><span>Systems & delivery</span></div>
+        <div class="spectrum-grid">
+          <article class="spectrum-card spectrum-ba reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div><span class="spectrum-code">BA</span></div>
+            <h3>Business Analysis</h3><span class="spectrum-role">Business Analyst / Junior BA</span>
+            <div class="spectrum-list">
+              <span>Requirements Gathering</span><span>Process Mapping</span><span>Acceptance Criteria</span><span>Stakeholder Communication</span><span>UAT & Integrity Testing</span>
             </div>
-            <a href="case-cstan.html">View commercial experience →</a>
+            <div class="spectrum-evidence"><b>Evidence:</b> Monash client project · CS TAN</div>
           </article>
 
-          <div class="timeline reveal">
-            <div class="timeline-row">
-              <div class="timeline-date">Aug 2023 – Present</div>
-              <div class="timeline-role"><strong>Business Development & Operations Assistant</strong><span>CS TAN · B2B customers · suppliers · quotations · sourcing · operations</span></div>
-              <div class="timeline-pill">Operations</div>
+          <article class="spectrum-card spectrum-bis reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div><span class="spectrum-code">BIS</span></div>
+            <h3>Business Information Systems</h3><span class="spectrum-role">Business ↔ Technology bridge</span>
+            <div class="spectrum-list">
+              <span>Systems Analysis</span><span>Workflow Design</span><span>Business Rules</span><span>Data Modelling</span><span>Digital Process Improvement</span>
             </div>
-            <div class="timeline-row">
-              <div class="timeline-date">Mar 2023 – Aug 2023</div>
-              <div class="timeline-role"><strong>Retail Business Analyst Assistant</strong><span>CS TAN · Excel analysis · inventory · demand · supplier costs · pricing support</span></div>
-              <div class="timeline-pill">Analysis</div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-date">Sep 2022 – Mar 2023</div>
-              <div class="timeline-role"><strong>IT Support Assistant</strong><span>CS TAN · devices · printers · connectivity · email · business software</span></div>
-              <div class="timeline-pill">IT Support</div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-date">Feb 2020 – Present</div>
-              <div class="timeline-role"><strong>E-commerce Coordinator</strong><span>Lazada / Shopee · 100+ listings · pricing updates · customer communication · store operations</span></div>
-              <div class="timeline-pill">E-commerce</div>
-            </div>
-          </div>
-        </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> Monash BIS · TanShift · Database</div>
+          </article>
 
-        <div class="education-card reveal">
-          <div><small>Education</small><strong>Bachelor of Information Technology — Business Information Systems</strong><span>Monash University · Melbourne · Expected December 2026</span></div>
-          <div class="edu-mark">MU</div>
+          <article class="spectrum-card spectrum-it reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><span class="spectrum-code">IT</span></div>
+            <h3>IT Support</h3><span class="spectrum-role">User & technology support</span>
+            <div class="spectrum-list">
+              <span>Device & Printer Support</span><span>Email & Connectivity</span><span>Business Software</span><span>Troubleshooting</span><span>User Support & Digital Records</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN IT Support Assistant</div>
+          </article>
+
+          <article class="spectrum-card spectrum-bd reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-6M3 21h18"/><path d="M17 5h4v4M21 5l-6 6"/></svg></div><span class="spectrum-code">BD</span></div>
+            <h3>Business Development & Operations</h3><span class="spectrum-role">Commercial & operational delivery</span>
+            <div class="spectrum-list">
+              <span>B2B Customer Communication</span><span>Supplier & Product Sourcing</span><span>Quotations & Invoices</span><span>Pricing / Purchasing Support</span><span>E-commerce & Operations</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN · Lazada / Shopee</div>
+          </article>
+        </div>
+        <div class="software-skill-strip reveal">
+          <div class="software-skill-title"><small>HR keyword view</small><strong>Core professional skills</strong></div>
+          <div class="skill-chip-wrap">
+            <span class="hr-skill-chip">Business Analysis</span><span class="hr-skill-chip">Systems Analysis</span><span class="hr-skill-chip">Requirements</span><span class="hr-skill-chip">Process Mapping</span><span class="hr-skill-chip">Stakeholders</span><span class="hr-skill-chip">UAT</span><span class="hr-skill-chip">SQL</span><span class="hr-skill-chip">Excel</span><span class="hr-skill-chip">Data Modelling</span><span class="hr-skill-chip">Troubleshooting</span><span class="hr-skill-chip">IT Support</span><span class="hr-skill-chip">B2B Communication</span><span class="hr-skill-chip">Supplier Sourcing</span><span class="hr-skill-chip">Operations</span><span class="hr-skill-chip">Agile</span><span class="hr-skill-chip">Testing</span>
+          </div>
         </div>
       </div>
     </section>
@@ -624,59 +1695,128 @@
     <section class="section" id="skills">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Skills & tools</h2>
-          <div class="section-kicker">Enough detail for a recruiter · enough structure to stay readable</div>
+          <h2>Technical & Analyst Skills <span class="blue-line"></span></h2>
+          <div class="section-kicker">Skills backed by projects and commercial work</div>
         </div>
-
-        <div class="skills-layout">
-          <article class="skill-panel reveal">
-            <h3>Professional capabilities</h3>
-            <div class="skill-group">
-              <small>Business & systems analysis</small>
-              <div class="skill-chips"><span class="skill-chip">Requirements Gathering</span><span class="skill-chip">Process Mapping</span><span class="skill-chip">Workflow Analysis</span><span class="skill-chip">Acceptance Criteria</span><span class="skill-chip">Stakeholder Communication</span><span class="skill-chip">UAT</span></div>
-            </div>
-            <div class="skill-group">
-              <small>Data & technical</small>
-              <div class="skill-chips"><span class="skill-chip">SQL</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">Oracle SQL</span><span class="skill-chip">ERD</span><span class="skill-chip">Normalisation</span><span class="skill-chip">Supabase</span><span class="skill-chip">Next.js</span><span class="skill-chip">Git / GitHub</span><span class="skill-chip">Playwright</span></div>
-            </div>
-            <div class="skill-group">
-              <small>IT support & operations</small>
-              <div class="skill-chips"><span class="skill-chip">Troubleshooting</span><span class="skill-chip">Devices & Printers</span><span class="skill-chip">Email & Connectivity</span><span class="skill-chip">Business Software</span><span class="skill-chip">Excel Analysis</span><span class="skill-chip">B2B Communication</span><span class="skill-chip">Supplier Sourcing</span><span class="skill-chip">E-commerce Operations</span></div>
-            </div>
+        <div class="skill-visual-grid">
+          <article class="skill-visual skill-blue reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div>
+            <small>01 · Discover</small><h3>Business Analysis</h3>
+            <div class="skill-nodes"><div class="skill-node">Requirements</div><div class="skill-node">Process Mapping</div><div class="skill-node">Acceptance Criteria</div><div class="skill-node">Stakeholder Context</div></div>
+            <div class="skill-foot">Evidence: Monash client + CS TAN</div>
           </article>
-
-          <article class="tools-panel reveal">
-            <h3>Software I work with</h3>
-            <div class="tool-grid">
-              <div class="tool"><img src="assets/icons/figma.svg" alt="Figma"><div><strong>Figma</strong><span>UX / interface</span></div></div>
-              <div class="tool"><img src="assets/icons/miro.svg" alt="Miro"><div><strong>Miro</strong><span>Flows / mapping</span></div></div>
-              <div class="tool"><img src="assets/icons/trello.svg" alt="Trello"><div><strong>Trello</strong><span>Agile boards</span></div></div>
-              <div class="tool"><img src="assets/icons/github.svg" alt="GitHub"><div><strong>GitHub</strong><span>Version control</span></div></div>
-              <div class="tool"><img src="assets/icons/vscode.svg" alt="VS Code"><div><strong>VS Code</strong><span>Development</span></div></div>
-              <div class="tool"><img src="assets/icons/nextjs.svg" alt="Next.js"><div><strong>Next.js</strong><span>Web delivery</span></div></div>
-              <div class="tool"><img src="assets/icons/supabase.svg" alt="Supabase"><div><strong>Supabase</strong><span>Data / backend</span></div></div>
-              <div class="tool"><img src="assets/icons/postgresql.svg" alt="PostgreSQL"><div><strong>PostgreSQL</strong><span>Relational data</span></div></div>
-              <div class="tool"><img src="assets/icons/oracle.svg" alt="Oracle SQL"><div><strong>Oracle SQL</strong><span>Database work</span></div></div>
-              <div class="tool"><div style="width:22px;height:22px;border-radius:6px;background:#217346;color:#fff;display:grid;place-items:center;font-size:.47rem;font-weight:800">X</div><div><strong>Excel</strong><span>Commercial analysis</span></div></div>
-              <div class="tool"><img src="assets/icons/canva.svg" alt="Canva"><div><strong>Canva</strong><span>Visual documents</span></div></div>
-              <div class="tool"><div style="width:22px;height:22px;border-radius:6px;background:#1d1d1f;color:#fff;display:grid;place-items:center;font-size:.43rem;font-weight:800">JS</div><div><strong>JavaScript</strong><span>Implementation</span></div></div>
-            </div>
+          <article class="skill-visual skill-purple reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div>
+            <small>02 · Structure</small><h3>Systems Thinking</h3>
+            <div class="skill-nodes"><div class="skill-node">Workflows</div><div class="skill-node">Role Logic</div><div class="skill-node">Business Rules</div><div class="skill-node">User Journeys</div></div>
+            <div class="skill-foot">Evidence: TanShift + client work</div>
+          </article>
+          <article class="skill-visual skill-green reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+            <small>03 · Model</small><h3>Data & SQL</h3>
+            <div class="skill-nodes"><div class="skill-node">PostgreSQL</div><div class="skill-node">Oracle SQL</div><div class="skill-node">ERD & Normalisation</div><div class="skill-node">Excel Analysis</div></div>
+            <div class="skill-foot">Evidence: database project + operations</div>
+          </article>
+          <article class="skill-visual skill-orange reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
+            <small>04 · Deliver</small><h3>Product & Validation</h3>
+            <div class="skill-nodes"><div class="skill-node">Next.js & Supabase</div><div class="skill-node">Git / GitHub</div><div class="skill-node">UAT & Integrity Testing</div><div class="skill-node">Playwright</div></div>
+            <div class="skill-foot">Evidence: TanShift + InnerLeaf</div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Software & Tool Ecosystem <span class="blue-line"></span></h2>
+          <div class="section-kicker">Software I use across analysis, data and delivery</div>
+        </div>
+        <div class="ecosystem-grid">
+          <article class="ecosystem-card eco-analysis reveal">
+            <div class="eco-head"><span>01</span><strong>Analyse & Map</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>Figma</b></div>
+              <div class="eco-logo"><img src="assets/icons/miro.svg" alt="Miro"><b>Miro</b></div>
+              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Trello</b></div>
+              <div class="eco-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"><b>Excel</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-build reveal">
+            <div class="eco-head"><span>02</span><strong>Build & Version</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/vscode.svg" alt="VS Code"><b>VS Code</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>GitHub</b></div>
+              <div class="eco-logo"><img src="assets/icons/nextjs.svg" alt="Next.js"><b>Next.js</b></div>
+              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Canva</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-data reveal">
+            <div class="eco-head"><span>03</span><strong>Data & Backend</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/supabase.svg" alt="Supabase"><b>Supabase</b></div>
+              <div class="eco-logo"><img src="assets/icons/postgresql.svg" alt="PostgreSQL"><b>PostgreSQL</b></div>
+              <div class="eco-logo"><img src="assets/icons/oracle.svg" alt="Oracle SQL"><b>Oracle SQL</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="Git"><b>Git</b></div>
+            </div>
+          </article>
+          <article class="ecosystem-card eco-deliver reveal">
+            <div class="eco-head"><span>04</span><strong>Collaborate & Deliver</strong></div>
+            <div class="eco-logos">
+              <div class="eco-logo"><img src="assets/icons/trello.svg" alt="Trello"><b>Agile Boards</b></div>
+              <div class="eco-logo"><img src="assets/icons/figma.svg" alt="Figma"><b>UX Handoff</b></div>
+              <div class="eco-logo"><img src="assets/icons/canva.svg" alt="Canva"><b>Visual Docs</b></div>
+              <div class="eco-logo"><img src="assets/icons/github.svg" alt="GitHub"><b>Evidence</b></div>
+            </div>
+          </article>
+        </div>
+        <div class="ecosystem-flow reveal"><span>Figma</span><b>·</b><span>Miro</span><b>·</b><span>Trello</span><b>·</b><span>Excel</span><b>·</b><span>VS Code</span><b>·</b><span>GitHub</span><b>·</b><span>Next.js</span><b>·</b><span>Supabase</span><b>·</b><span>PostgreSQL</span><b>·</b><span>Oracle SQL</span><b>·</b><span>Canva</span></div>
+      </div>
+    </section><section class="section" id="experience">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Experience <span class="blue-line"></span></h2>
+          <div class="section-kicker">Progression through real business work</div>
+        </div>
+        <div class="career-visual reveal">
+          <div class="career-intro">
+            <div><small>CS TAN Technology & Enterprise</small><h3>From solving user issues → analysing operations → supporting business growth.</h3></div>
+            <a href="case-cstan.html">View commercial case →</a>
+          </div>
+          <div class="career-roadmap">
+            <div class="career-stage">
+              <div class="career-dot">01</div>
+              <div class="career-box"><div class="career-date">SEP 2022 – MAR 2023</div><strong>IT Support Assistant</strong><div class="career-tags"><span>Devices</span><span>Email</span><span>Business Software</span><span>Digital Records</span></div></div>
+            </div>
+            <div class="career-stage">
+              <div class="career-dot">02</div>
+              <div class="career-box"><div class="career-date">MAR 2023 – AUG 2023</div><strong>Retail Business Analyst Assistant</strong><div class="career-tags"><span>Excel</span><span>Inventory</span><span>Pricing</span><span>Demand</span></div></div>
+            </div>
+            <div class="career-stage">
+              <div class="career-dot">03</div>
+              <div class="career-box"><div class="career-date">AUG 2023 – PRESENT</div><strong>Business Development & Operations Assistant</strong><div class="career-tags"><span>B2B</span><span>Suppliers</span><span>Quotations</span><span>Operations</span></div></div>
+            </div>
+          </div>
+          <div class="career-stats">
+            <div class="career-stat"><b>3 stages</b><span>Growing responsibility inside one business</span></div>
+            <div class="career-stat"><b>Excel</b><span>Sales · stock · margins · demand</span></div>
+            <div class="career-stat"><b>22 pax</b><span>Corporate booking · itinerary · invoice</span></div>
+            <div class="career-stat"><b>B2B</b><span>Customers · suppliers · quotes · records</span></div>
+          </div>
+        </div>
+        <div class="ecom-strip reveal"><div><strong>E-commerce Coordinator · Lazada / Shopee</strong><span> · Feb 2020 – Present · 100+ product listings</span></div><b>E-commerce</b></div>
       </div>
     </section>
 
     <section class="cta-wrap" id="contact">
       <div class="shell">
         <div class="cta reveal">
-          <div>
-            <small>Australia · Malaysia · Singapore</small>
-            <h2>Open to graduate and entry-level opportunities across business analysis, systems, IT and technology.</h2>
-          </div>
+          <div><small>Australia · Malaysia · Singapore</small><h2>Open to graduate and entry-level roles across business analysis, systems, IT and technology.</h2></div>
           <div class="cta-actions">
-            <a class="cta-link" href="resume.html">Resume</a>
-            <a class="cta-link secondary" href="mailto:tanstrifelife@gmail.com">Email</a>
-            <a class="cta-link secondary" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="cta-link" href="mailto:tanstrifelife@gmail.com">Email</a>
+            <a class="cta-link linkedin" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="" style="width:14px;height:14px;margin-right:7px;filter:brightness(0) invert(1)">LinkedIn</a>
+            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="" style="width:14px;height:14px;margin-right:7px">GitHub</a>
           </div>
         </div>
       </div>
@@ -685,8 +1825,8 @@
 
   <footer>
     <div class="shell footer-inner">
-      <div>© 2026 Guang Quan Tan (William) · Melbourne</div>
-      <div class="footer-links"><a href="resume.html">ATS Resume</a><a href="case-cstan.html">Commercial Experience</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a><a href="mailto:tanstrifelife@gmail.com">Email</a></div>
+      <div>© 2026 Guang Quan Tan (William) · Melbourne · Open to Australia, Malaysia & Singapore</div>
+      <div class="footer-links"><a href="resume.html">ATS Resume</a><a href="case-cstan.html">Commercial Experience</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </footer>
 
@@ -694,39 +1834,73 @@
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const revealEls = [...document.querySelectorAll(".reveal")];
 
+    revealEls.forEach((el, index) => {
+      const localIndex = index % 5;
+      el.style.setProperty("--reveal-delay", reducedMotion ? "0ms" : (localIndex * 45) + "ms");
+    });
+
     if (reducedMotion) {
-      revealEls.forEach(el => el.classList.add("visible"));
+      revealEls.forEach((el) => el.classList.add("visible"));
     } else {
-      revealEls.forEach((el,index)=>el.style.transitionDelay=((index%4)*45)+"ms");
-      const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
           }
         });
-      },{threshold:.08,rootMargin:"0px 0px -4% 0px"});
-      revealEls.forEach(el=>observer.observe(el));
+      }, { threshold: 0.08, rootMargin: "0px 0px -4% 0px" });
+      revealEls.forEach((el) => observer.observe(el));
     }
 
-    const progress=document.getElementById("scrollProgress");
-    const updateProgress=()=>{
-      const max=document.documentElement.scrollHeight-window.innerHeight;
-      const ratio=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
-      progress.style.transform="scaleX("+ratio+")";
+    const progress = document.getElementById("scrollProgress");
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      progress.style.transform = "scaleX(" + ratio + ")";
     };
-    updateProgress();
-    window.addEventListener("scroll",updateProgress,{passive:true});
-    window.addEventListener("resize",updateProgress);
+    setProgress();
+    window.addEventListener("scroll", setProgress, { passive:true });
+    window.addEventListener("resize", setProgress);
 
-    const navLinks=[...document.querySelectorAll("[data-nav]")];
-    const sections=["profile","work","experience","skills","contact"].map(id=>document.getElementById(id)).filter(Boolean);
-    const navObserver=new IntersectionObserver(entries=>{
-      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-      if(!visible)return;
-      navLinks.forEach(link=>link.classList.toggle("active",link.dataset.nav===visible.target.id));
-    },{rootMargin:"-28% 0px -58% 0px",threshold:[0,.15,.3,.6]});
-    sections.forEach(section=>navObserver.observe(section));
+    const navLinks = [...document.querySelectorAll("[data-nav]")];
+    const watchedSections = ["career-passport","projects","experience","skills","contact"]
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.dataset.nav === visible.target.id);
+      });
+    }, { rootMargin:"-28% 0px -58% 0px", threshold:[0,.15,.3,.6] });
+    watchedSections.forEach((section) => navObserver.observe(section));
+
+    if (!reducedMotion && window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
+      const system = document.getElementById("careerSystem");
+      if (system) {
+        let frame = 0;
+        system.addEventListener("pointermove", (event) => {
+          const rect = system.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(() => {
+            system.style.setProperty("--ry", (x * 2.6) + "deg");
+            system.style.setProperty("--rx", (-y * 2.1) + "deg");
+            system.style.setProperty("--lift", "-2px");
+          });
+        });
+        system.addEventListener("pointerleave", () => {
+          system.style.setProperty("--ry", "0deg");
+          system.style.setProperty("--rx", "0deg");
+          system.style.setProperty("--lift", "0px");
+        });
+      }
+    }
   </script>
 </body>
 </html>
