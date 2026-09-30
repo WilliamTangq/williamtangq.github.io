@@ -1000,6 +1000,99 @@
     .stats-strip{border:0;background:#e8e8ed}
     .career-visual{background:linear-gradient(145deg,#18181a,#242427)}
 
+
+    /* career passport — personal intro + regional job positioning */
+    #career-passport{background:#fff}
+    .passport{
+      display:grid;grid-template-columns:1.08fr .92fr;gap:18px
+    }
+    .passport-main{
+      position:relative;overflow:hidden;min-height:390px;border-radius:32px;padding:28px;
+      background:linear-gradient(145deg,#1d1d1f,#2a2a2d);color:#fff
+    }
+    .passport-main::after{
+      content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;
+      background:radial-gradient(circle,rgba(41,151,255,.26),rgba(41,151,255,.05) 42%,transparent 68%)
+    }
+    .passport-top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .passport-id{font-family:"IBM Plex Mono",monospace;color:#a9b3c0;font-size:.55rem;letter-spacing:.09em;text-transform:uppercase}
+    .passport-open{display:inline-flex;align-items:center;gap:7px;color:#bfe5cb;font-size:.56rem;font-weight:700}
+    .passport-open i{width:7px;height:7px;border-radius:50%;background:#34c759}
+    .passport-title{position:relative;z-index:2;max-width:620px;margin:58px 0 22px}
+    .passport-title small{display:block;color:#8fa5c0;font-family:"IBM Plex Mono",monospace;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .passport-title h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.06;letter-spacing:-.045em;max-width:560px}
+    .passport-title p{margin-top:10px;color:#c7cbd1;font-size:.76rem;line-height:1.58;max-width:590px}
+    .region-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:26px}
+    .region-card{position:relative;overflow:hidden;min-height:110px;padding:13px;border-radius:16px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.09)}
+    .region-code{font-family:"IBM Plex Mono",monospace;font-size:1.5rem;font-weight:650;color:#fff;letter-spacing:-.05em}
+    .region-card strong{display:block;font-size:.67rem;margin-top:8px}
+    .region-card span{display:block;color:#99abc1;font-size:.52rem;line-height:1.4;margin-top:3px}
+    .region-card::after{content:"";position:absolute;right:-15px;bottom:-28px;font-family:"IBM Plex Mono",monospace;font-size:4.8rem;font-weight:700;color:rgba(255,255,255,.025);line-height:1}
+    .region-card.au::after{content:"AU"}.region-card.my::after{content:"MY"}.region-card.sg::after{content:"SG"}
+
+    .passport-side{display:grid;grid-template-rows:auto 1fr;gap:18px}
+    .role-fit-panel,.evidence-panel{border-radius:28px;background:#f5f5f7;padding:22px}
+    .panel-label{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.54rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px}
+    .role-fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .role-fit{
+      min-height:112px;padding:14px;border-radius:16px;background:#fff;border:1px solid #e8e8ed;
+      transition:transform .22s ease,box-shadow .22s ease
+    }
+    .role-fit:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.055)}
+    .role-fit b{display:block;color:#0071e3;font-family:"IBM Plex Mono",monospace;font-size:.51rem;letter-spacing:.07em;margin-bottom:7px}
+    .role-fit strong{display:block;font-size:.72rem;line-height:1.25}
+    .role-fit span{display:block;color:#86868b;font-size:.52rem;line-height:1.4;margin-top:5px}
+    .evidence-panel{background:#fff;border:1px solid #e5e5ea}
+    .evidence-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .evidence-metric{padding:12px 0;border-top:1px solid #ededf0}
+    .evidence-metric:nth-child(-n+2){border-top:0}
+    .evidence-metric strong{display:block;font-size:1.45rem;letter-spacing:-.045em}
+    .evidence-metric span{display:block;margin-top:2px;color:#86868b;font-size:.52rem;line-height:1.35}
+
+    /* full career story */
+    .career-story{
+      margin-top:22px;border-radius:30px;background:#fff;border:1px solid #e5e5ea;padding:24px;overflow:hidden
+    }
+    .career-story-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
+    .career-story-head h3{font-size:1.1rem;letter-spacing:-.025em}
+    .career-story-head span{font-family:"IBM Plex Mono",monospace;color:#86868b;font-size:.52rem;text-transform:uppercase;letter-spacing:.08em}
+    .story-track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .story-track::before{content:"";position:absolute;left:5%;right:5%;top:26px;height:1px;background:linear-gradient(90deg,#e5e5ea,#9fc7f2,#e5e5ea)}
+    .story-step{position:relative;z-index:2;text-align:center}
+    .story-dot{width:52px;height:52px;border-radius:50%;margin:0 auto 11px;display:grid;place-items:center;background:#fff;border:1px solid #dfe5ec;box-shadow:0 6px 18px rgba(0,0,0,.04);font-family:"IBM Plex Mono",monospace;font-size:.52rem;color:#0071e3;font-weight:600}
+    .story-step strong{display:block;font-size:.65rem;line-height:1.3}
+    .story-step span{display:block;margin-top:4px;color:#86868b;font-size:.49rem;line-height:1.35}
+
+    /* role readiness strip */
+    .readiness{
+      margin-top:18px;display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:center;
+      padding:19px 20px;border-radius:22px;background:#f5f5f7
+    }
+    .readiness-copy small{display:block;font-family:"IBM Plex Mono",monospace;font-size:.51rem;color:#86868b;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+    .readiness-copy strong{font-size:.86rem}
+    .readiness-flow{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+    .readiness-flow span{padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #e5e5ea;color:#5e5e63;font-size:.54rem;font-weight:680}
+    .readiness-flow b{color:#8fbce9}
+
+    @media(max-width:1040px){
+      .passport{grid-template-columns:1fr}
+      .passport-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    }
+    @media(max-width:760px){
+      .passport-main{min-height:auto;padding:22px}
+      .passport-title{margin:38px 0 18px}
+      .region-grid{grid-template-columns:1fr}
+      .region-card{min-height:88px}
+      .passport-side{grid-template-columns:1fr}
+      .role-fit-grid{grid-template-columns:1fr 1fr}
+      .story-track{grid-template-columns:1fr;gap:10px}
+      .story-track::before{left:25px;right:auto;top:20px;bottom:20px;width:1px;height:auto;background:linear-gradient(180deg,#e5e5ea,#9fc7f2,#e5e5ea)}
+      .story-step{text-align:left;display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center}
+      .story-dot{margin:0}
+      .readiness{grid-template-columns:1fr}
+      .readiness-flow{justify-content:flex-start}
+    }
+
     @media(max-width:1040px){
       .hero-layout{grid-template-columns:1fr;gap:30px}
       .hero-intro{text-align:center;padding:4px 0}
@@ -1245,7 +1338,7 @@
     <div class="nav-inner">
       <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan <span style="font-weight:560;color:#86868b">(William)</span></span></a>
       <ul class="nav-links">
-        <li><a href="#why-hire" data-nav="why-hire">Why Me</a></li>
+        <li><a href="#career-passport">Profile</a></li>
         <li><a href="#projects" data-nav="projects">Work</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
         <li><a href="#professional-spectrum">Expertise</a></li><li><a href="#skills" data-nav="skills">Skills</a></li>
@@ -1315,45 +1408,68 @@
       </div>
     </header>
 
-    <section class="section" id="why-hire">
+    <section class="section" id="career-passport">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Why I’m Worth Interviewing <span class="blue-line"></span></h2>
-          <div class="section-kicker">30-second recruiter view</div>
+          <h2>Career Passport</h2>
+          <div class="section-kicker">One profile · three markets · multiple ways to contribute</div>
         </div>
-        <div class="hire-grid reveal">
-          <article class="hire-main">
-            <small>Candidate thesis</small>
-            <h3>Business thinking on one side. Technology delivery on the other.</h3>
-            <div class="hire-visual">
-              <div class="hire-side">
-                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><span class="hire-label">Business context</span></div>
-                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="hire-label">Requirements</span></div>
-              </div>
-              <div class="hire-bridge" aria-hidden="true"></div>
-              <div class="hire-side right">
-                <div class="hire-node"><span class="hire-label">Systems & data</span><span class="vicon dark"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span></div>
-                <div class="hire-node"><span class="hire-label">Delivery & validation</span><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></span></div>
-              </div>
+
+        <div class="passport">
+          <article class="passport-main reveal">
+            <div class="passport-top">
+              <span class="passport-id">GQT / 2026 / BIS</span>
+              <span class="passport-open"><i></i>Open to graduate & entry-level opportunities</span>
             </div>
-            <div class="hire-caption">Real commercial work + source-backed systems projects + end-to-end validation.</div>
+            <div class="passport-title">
+              <small>Professional identity</small>
+              <h3>Commercially aware. Technically credible. Comfortable between users, systems and operations.</h3>
+              <p>Built from real CS TAN experience, Monash Business Information Systems study and hands-on product delivery — with a profile suited to business, systems, technology and operational teams.</p>
+            </div>
+            <div class="region-grid">
+              <div class="region-card au"><div class="region-code">AU</div><strong>Australia</strong><span>Melbourne-based · graduate / entry-level opportunities</span></div>
+              <div class="region-card my"><div class="region-code">MY</div><strong>Malaysia</strong><span>Commercial experience · business / IT / operations context</span></div>
+              <div class="region-card sg"><div class="region-code">SG</div><strong>Singapore</strong><span>Open to business systems & technology opportunities</span></div>
+            </div>
           </article>
-          <div class="hire-proof">
-            <article><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><b>COMMERCIAL</b><strong>CS TAN</strong><span>Sales · stock · customers · suppliers</span></article>
-            <article><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><b>ANALYSIS</b><strong>Decision support</strong><span>Excel · pricing · purchasing · inventory</span></article>
-            <article><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><b>TECHNICAL</b><strong>Public proof</strong><span>Next.js · Supabase · SQL · Playwright</span></article>
-            <article><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M18 14l2 2-4 4"/></svg></span><b>OPERATIONS</b><strong>22-passenger workflow</strong><span>Booking · itinerary · invoice · customer</span></article>
+
+          <div class="passport-side">
+            <section class="role-fit-panel reveal" aria-label="Role fit">
+              <div class="panel-label">Where I fit</div>
+              <div class="role-fit-grid">
+                <div class="role-fit"><b>01 · BA</b><strong>Business Analyst</strong><span>Requirements · process · stakeholders · UAT</span></div>
+                <div class="role-fit"><b>02 · SA</b><strong>Systems Analyst</strong><span>Workflows · rules · data · system behaviour</span></div>
+                <div class="role-fit"><b>03 · IT</b><strong>IT Support / Analyst</strong><span>Troubleshooting · users · devices · business software</span></div>
+                <div class="role-fit"><b>04 · TECH</b><strong>Technology / Operations</strong><span>SQL · digital workflows · sourcing · B2B operations</span></div>
+              </div>
+            </section>
+
+            <section class="evidence-panel reveal" aria-label="Evidence metrics">
+              <div class="panel-label">Evidence at a glance</div>
+              <div class="evidence-metrics">
+                <div class="evidence-metric"><strong>3</strong><span>CS TAN role stages</span></div>
+                <div class="evidence-metric"><strong>100+</strong><span>E-commerce product listings</span></div>
+                <div class="evidence-metric"><strong>22 pax</strong><span>Corporate workflow coordinated</span></div>
+                <div class="evidence-metric"><strong>2</strong><span>Public product repositories</span></div>
+              </div>
+            </section>
           </div>
         </div>
-      </div>
-    </section>
-<section class="section" id="evidence-stats">
-      <div class="shell">
-        <div class="stats-strip reveal">
-          <div class="stat-block"><strong><em>5</em></strong><span>Evidence pages covering systems, data, client work and commercial experience</span></div>
-          <div class="stat-block"><strong><em>2</em></strong><span>Public product repositories with source-backed technical work</span></div>
-          <div class="stat-block"><strong><em>22 pax</em></strong><span>Corporate travel booking, itinerary and invoice coordination in a real B2B customer workflow</span></div>
-          <div class="stat-block"><strong><em>100+</em></strong><span>E-commerce product listings managed across online operations</span></div>
+
+        <div class="career-story reveal">
+          <div class="career-story-head"><h3>How the profile was built</h3><span>2020 → 2026</span></div>
+          <div class="story-track">
+            <div class="story-step"><div class="story-dot">2020</div><div><strong>E-commerce</strong><span>100+ listings · customers · online operations</span></div></div>
+            <div class="story-step"><div class="story-dot">2022</div><div><strong>IT Support</strong><span>Users · devices · connectivity · business software</span></div></div>
+            <div class="story-step"><div class="story-dot">2023</div><div><strong>Business Analysis</strong><span>Excel · inventory · demand · pricing support</span></div></div>
+            <div class="story-step"><div class="story-dot">2023+</div><div><strong>BD & Operations</strong><span>B2B · suppliers · quotations · sourcing</span></div></div>
+            <div class="story-step"><div class="story-dot">2026</div><div><strong>Monash BIS</strong><span>Systems · SQL · client delivery · UAT</span></div></div>
+          </div>
+        </div>
+
+        <div class="readiness reveal">
+          <div class="readiness-copy"><small>Ready to contribute across the delivery chain</small><strong>Business context + analysis + systems + technical delivery</strong></div>
+          <div class="readiness-flow"><span>Understand</span><b>→</b><span>Analyse</span><b>→</b><span>Structure</span><b>→</b><span>Deliver</span><b>→</b><span>Validate</span></div>
         </div>
       </div>
     </section>
@@ -1478,39 +1594,7 @@
 
 
 
-    <section class="section" id="capability-map">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>From Business Problem to Working System <span class="blue-line"></span></h2>
-          <div class="section-kicker">How my capabilities connect</div>
-        </div>
-        <div class="capability-map reveal">
-          <span class="map-line l1"></span><span class="map-line l2"></span><span class="map-line l3"></span><span class="map-line l4"></span><span class="map-pulse"></span>
-          <div class="map-center"><div><small>Core profile</small><strong>Business + Technology + Delivery</strong></div></div>
-          <div class="map-node n1"><b>01 · DISCOVER</b><strong>Business Analysis</strong><span>Requirements · stakeholder context · process mapping · user stories</span></div>
-          <div class="map-node n2"><b>02 · STRUCTURE</b><strong>Systems Thinking</strong><span>Workflows · acceptance criteria · entities · edge cases · role logic</span></div>
-          <div class="map-node n3"><b>03 · BUILD</b><strong>Data & Product</strong><span>SQL · ERD · PostgreSQL · Supabase · Next.js · interface delivery</span></div>
-          <div class="map-node n4"><b>04 · VALIDATE</b><strong>Quality & Testing</strong><span>UAT thinking · integrity testing · Playwright · end-to-end validation</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="proof">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Proof of Work <span class="blue-line"></span></h2>
-          <div class="section-kicker">Claims connected to evidence</div>
-        </div>
-        <div class="evidence-grid">
-          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><span class="evidence-meta">Acceptance criteria · UAT</span><a href="case-client-project.html">Inspect →</a></article>
-          <article class="evidence-card reveal"><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift</h3><span class="evidence-meta">Workflows · business rules</span><a href="case-tanshift.html">Inspect →</a></article>
-          <article class="evidence-card reveal"><span class="vicon purple"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><span class="evidence-meta">ERD · Oracle SQL</span><a href="case-database.html">Inspect →</a></article>
-          <article class="evidence-card reveal"><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><span class="evidence-meta">AI · roles · Playwright</span><a href="case-innerleaf.html">Inspect →</a></article>
-          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><span class="evidence-no">05 · COMMERCIAL</span><h3>CS TAN</h3><span class="evidence-meta">B2B · Excel · IT support</span><a href="case-cstan.html">Inspect →</a></article>
-        </div>
-      </div>
-    </section>
-<section class="section" id="approach">
+    <section class="section" id="approach">
       <div class="shell">
         <div class="section-head reveal">
           <h2>How I Work <span class="blue-line"></span></h2>
@@ -1750,7 +1834,7 @@
     window.addEventListener("resize", setProgress);
 
     const navLinks = [...document.querySelectorAll("[data-nav]")];
-    const watchedSections = ["why-hire","projects","experience","skills","contact"]
+    const watchedSections = ["career-passport","projects","experience","skills","contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
