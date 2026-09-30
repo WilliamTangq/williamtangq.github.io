@@ -3,36 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guang Quan Tan (William) | Business & Systems Analyst Candidate</title>
-  <meta name="description" content="Guang Quan Tan (William) is a final-year Monash University Business Information Systems candidate in Melbourne with real commercial experience across business analysis, IT support, operations, systems, SQL and technology delivery." />
-  <meta name="keywords" content="Guang Quan Tan, William Tan, Business Analyst, Systems Analyst, Technology Analyst, Business Information Systems, Monash University, Requirements, Process Mapping, SQL, UAT, Melbourne" />
+  <title>Guang Quan Tan (William) | Business & Technology Graduate Candidate Portfolio</title>
+  <meta name="description" content="Guang Quan Tan (William) is a final-year Monash University Business Information Systems student in Melbourne, combining business analysis, systems thinking, SQL, digital operations, and hands-on product delivery." />
+  <meta name="keywords" content="Guang Quan Tan, William Tan, Business Analyst, Systems Analyst, IT Analyst, Data Analyst, Graduate Technology, Business Information Systems, Monash University, SQL, Requirements Gathering, Process Mapping, UAT, Melbourne" />
   <meta name="author" content="Guang Quan Tan" />
-  <meta name="theme-color" content="#071426" />
-  <meta property="og:title" content="Guang Quan Tan (William) | Business & Systems Analyst Candidate" />
-  <meta property="og:description" content="Commercial context, systems thinking and hands-on technology delivery — backed by real evidence." />
+  <meta name="theme-color" content="#f7f9fc" />
+  <meta property="og:title" content="Guang Quan Tan (William) | Business & Technology Graduate Candidate" />
+  <meta property="og:description" content="Business Information Systems graduate candidate bridging business analysis, systems, data, digital operations and delivery." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://williamtangq.github.io/" />
   <link rel="canonical" href="https://williamtangq.github.io/" />
   <style>
     :root{
-      --navy:#071426;
-      --navy-2:#0b1d35;
-      --navy-3:#10294a;
-      --blue:#1479ff;
-      --blue-2:#59a6ff;
-      --cyan:#54d7ff;
-      --ink:#101426;
-      --muted:#697386;
-      --soft:#8e98aa;
-      --bg:#f6f8fb;
+      --bg:#f7f9fc;
       --surface:#fff;
-      --line:#e5eaf1;
-      --green:#23a66a;
-      --purple:#7658e7;
-      --orange:#d87932;
+      --surface-soft:#fbfcfe;
+      --ink:#101426;
+      --muted:#687083;
+      --soft:#8b93a7;
+      --line:#e6eaf1;
+      --blue:#0a73ff;
+      --blue-2:#4f9cff;
+      --blue-soft:#eef5ff;
+      --green:#20a464;
+      --green-soft:#eaf8f0;
+      --purple:#7c63f2;
+      --purple-soft:#f0edff;
+      --orange:#db7a2d;
+      --orange-soft:#fff1e7;
       --max:1180px;
-      --shadow:0 22px 60px rgba(30,54,88,.10);
+      --radius:26px;
+      --radius-md:20px;
+      --radius-sm:14px;
+      --shadow:0 20px 55px rgba(44,62,96,.08);
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
@@ -46,220 +51,696 @@
     }
     a{color:inherit;text-decoration:none}
     button,a{-webkit-tap-highlight-color:transparent}
-    ::selection{background:#cde4ff;color:#08101f}
+    ::selection{background:#cfe3ff;color:#08101f}
     .shell{width:min(var(--max),calc(100% - 44px));margin:0 auto}
-    section[id]{scroll-margin-top:80px}
-    .scroll-progress{position:fixed;left:0;top:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));transform-origin:left;transform:scaleX(0);z-index:200}
+    section[id]{scroll-margin-top:78px}
+    .scroll-progress{
+      position:fixed;top:0;left:0;z-index:150;width:100%;height:2px;
+      transform-origin:0 50%;transform:scaleX(0);
+      background:linear-gradient(90deg,#0a73ff,#67a9ff);
+      box-shadow:0 0 12px rgba(10,115,255,.28);
+      pointer-events:none
+    }
+
+    /* navigation */
     .nav{
-      position:fixed;inset:0 0 auto;z-index:120;height:62px;
-      background:rgba(7,20,38,.78);border-bottom:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(18px) saturate(150%);
-      -webkit-backdrop-filter:blur(18px) saturate(150%);
-      color:#fff
+      position:fixed;
+      inset:0 0 auto;
+      z-index:100;
+      height:58px;
+      background:rgba(255,255,255,.82);
+      border-bottom:1px solid rgba(12,20,38,.055);
+      backdrop-filter:saturate(180%) blur(22px);
+      -webkit-backdrop-filter:saturate(180%) blur(22px);
     }
-    .nav-inner{width:min(var(--max),calc(100% - 44px));height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:760}
-    .brand-mark{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#90c5ff;font-size:.68rem;font-weight:850}
-    .nav-links{display:flex;gap:25px;align-items:center;list-style:none}
-    .nav-links a{font-size:.72rem;color:#aebbd0;transition:.18s ease}
-    .nav-links a:hover,.nav-links a.active{color:#fff}
-    .nav-cta{padding:9px 14px;border-radius:999px;background:#fff;color:#0b1d35;font-size:.72rem;font-weight:760}
+    .nav-inner{
+      width:min(var(--max),calc(100% - 44px));
+      height:100%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:720;font-size:.92rem}
+    .brand-mark{
+      width:30px;height:30px;border-radius:10px;
+      display:grid;place-items:center;
+      background:linear-gradient(145deg,#eef5ff,#e2ecff);
+      color:var(--blue);font-size:.76rem;font-weight:800;
+      box-shadow:inset 0 0 0 1px rgba(10,115,255,.08);
+    }
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+    .nav-links a{
+      position:relative;font-size:.75rem;color:#4c556b;font-weight:570;
+      transition:color .2s ease
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:50%;bottom:-9px;width:4px;height:4px;border-radius:50%;
+      background:var(--blue);opacity:0;transform:translateX(-50%) scale(.4);transition:.2s ease
+    }
+    .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+    .nav-links a.active::after{opacity:1;transform:translateX(-50%) scale(1)}
+    .nav-cta{
+      min-height:36px;padding:0 15px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--blue);color:#fff;font-size:.75rem;font-weight:700;
+      box-shadow:0 7px 18px rgba(10,115,255,.2);
+      transition:.2s ease;
+    }
+    .nav-cta:hover{transform:translateY(-1px);background:#0068ea}
+
+    /* hero */
     .hero{
-      position:relative;overflow:hidden;color:#fff;
+      padding:118px 0 64px;
       background:
-        radial-gradient(circle at 82% 16%,rgba(20,121,255,.34),transparent 26%),
-        radial-gradient(circle at 66% 66%,rgba(84,215,255,.12),transparent 26%),
-        linear-gradient(135deg,#06111f 0%,#081a31 45%,#0c2748 100%);
-      padding:122px 0 104px;
+        radial-gradient(circle at 70% 22%,rgba(70,143,255,.16),transparent 30%),
+        linear-gradient(180deg,#f4f8ff 0%,#f8fbff 64%,#f7f9fc 100%);
+      overflow:hidden;
     }
-    .hero::before{
-      content:"";position:absolute;inset:0;opacity:.13;
-      background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
-      background-size:48px 48px;
-      mask-image:linear-gradient(90deg,transparent 10%,#000 45%,#000 100%);
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,.93fr) minmax(460px,1.07fr);
+      gap:42px;
+      align-items:center;
     }
-    .hero::after{
-      content:"";position:absolute;width:680px;height:680px;border:1px solid rgba(100,176,255,.15);border-radius:50%;
-      right:-260px;top:-270px;box-shadow:0 0 0 90px rgba(68,146,255,.035),0 0 0 180px rgba(68,146,255,.02)
+    .hello{
+      color:#7c89a4;
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:700;
+      margin-bottom:16px;
     }
-    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(430px,.98fr);gap:56px;align-items:center}
-    .status-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.66rem;font-weight:750;color:#d6e6fb;margin-bottom:19px}
-    .status-pill i{width:7px;height:7px;border-radius:50%;background:#4ddd94;box-shadow:0 0 0 5px rgba(77,221,148,.09)}
-    .eyebrow{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:#90a8c6;font-weight:800;margin-bottom:11px}
-    .hero h1{font-size:clamp(3rem,6vw,5.35rem);line-height:.98;letter-spacing:-.06em;max-width:720px;margin-bottom:18px}
-    .hero h1 span{color:#7fc1ff}
-    .hero-summary{font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.6;color:#c6d4e8;max-width:660px;margin-bottom:24px}
-    .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-    .hero-meta span{padding:7px 10px;border-radius:9px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);font-size:.68rem;color:#bfcde0;font-weight:650}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{min-height:46px;padding:0 18px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:.79rem;font-weight:760;transition:.2s ease}
-    .btn-primary{background:#fff;color:#0a1a30}
-    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(0,0,0,.16)}
-    .btn-secondary{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff}
-    .btn-secondary:hover{background:rgba(255,255,255,.10)}
-    .evidence-board{
-      position:relative;padding:20px;border-radius:26px;background:rgba(7,20,38,.58);
-      border:1px solid rgba(255,255,255,.13);box-shadow:0 30px 80px rgba(0,0,0,.28);
-      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)
+    .hero h1{
+      font-size:clamp(3.1rem,6vw,5.8rem);
+      line-height:.96;
+      letter-spacing:-.06em;
+      font-weight:760;
+      margin-bottom:17px;
+      max-width:700px;
     }
-    .board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-    .board-top strong{font-size:.79rem}.board-top span{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:#7895b8;font-weight:800}
-    .board-live{display:flex;align-items:center;gap:6px;color:#8ddbb1;font-size:.6rem;font-weight:700}
-    .board-live i{width:6px;height:6px;border-radius:50%;background:#43d688}
-    .signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-    .signal{
-      min-height:126px;padding:15px;border-radius:16px;background:rgba(255,255,255,.055);
-      border:1px solid rgba(255,255,255,.09);transition:.2s ease
+    .hero h1 span{color:var(--blue)}
+    .hero-lead{
+      font-size:clamp(1.1rem,2vw,1.42rem);
+      font-weight:560;
+      letter-spacing:-.025em;
+      margin-bottom:11px;
     }
-    .signal:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
-    .signal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
-    .signal-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(83,159,255,.12);color:#8bc4ff}
-    .signal-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-    .signal-no{font-size:.55rem;letter-spacing:.09em;color:#6f89a9;font-weight:800}
-    .signal b{display:block;font-size:.83rem;margin-bottom:4px}
-    .signal p{font-size:.64rem;line-height:1.45;color:#9fb0c7}
-    .board-flow{margin-top:11px;padding:12px 13px;border-radius:14px;background:linear-gradient(90deg,rgba(20,121,255,.10),rgba(84,215,255,.045));border:1px solid rgba(114,180,255,.10);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-    .board-flow span{font-size:.59rem;color:#b9c9de;font-weight:700}.board-flow b{color:#55b8ff}
-    .proof-strip{position:relative;z-index:10;margin-top:-34px}
-    .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
-    .proof-stat{padding:20px 22px;border-left:1px solid var(--line)}
-    .proof-stat:first-child{border-left:0}
-    .proof-stat strong{display:block;font-size:1.32rem;letter-spacing:-.035em;margin-bottom:3px}
-    .proof-stat strong em{font-style:normal;color:var(--blue)}
-    .proof-stat span{font-size:.66rem;color:var(--muted);line-height:1.4}
-    .section{padding:82px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:27px}
-    .section-head h2{font-size:clamp(1.85rem,3.4vw,2.65rem);letter-spacing:-.045em;line-height:1.05}
-    .section-kicker{font-size:.64rem;text-transform:uppercase;letter-spacing:.14em;color:#909caf;font-weight:800}
+    .hero-meta{
+      color:var(--muted);
+      font-size:.88rem;
+      line-height:1.65;
+      margin-bottom:27px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:34px}
+    .btn{
+      min-height:46px;padding:0 19px;border-radius:11px;
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      font-size:.82rem;font-weight:700;border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(10,115,255,.18)}
+    .btn-primary:hover{background:#0069eb;transform:translateY(-1px)}
+    .btn-secondary{background:#fff;border-color:#dce3ef;color:#253047}
+    .btn-secondary:hover{border-color:#cbd6e8;transform:translateY(-1px)}
+    .hero-facts{display:flex;flex-wrap:wrap;gap:28px}
+    .fact{display:flex;align-items:center;gap:10px}
+    .fact-icon{
+      width:34px;height:34px;border-radius:10px;
+      display:grid;place-items:center;background:#fff;border:1px solid var(--line);
+      color:#536582;font-weight:800;font-size:.72rem
+    }
+    .fact strong{display:block;font-size:.76rem;line-height:1.2}
+    .fact small{display:block;color:var(--muted);font-size:.68rem;margin-top:2px}
+
+    /* dashboard hero art */
+    .dashboard-stage{position:relative;min-height:440px;perspective:1200px;transform-style:preserve-3d}
+    .dashboard-stage::after{
+      content:"";position:absolute;inset:auto 8% 2% 8%;height:38px;border-radius:50%;
+      background:radial-gradient(ellipse,rgba(47,80,130,.16),transparent 68%);
+      filter:blur(8px);pointer-events:none
+    }
+    .back-card{
+      position:absolute;border-radius:24px;border:1px solid rgba(255,255,255,.7);
+      background:rgba(218,231,250,.68);box-shadow:0 25px 70px rgba(56,91,142,.12);
+    }
+    .back-card.one{inset:45px 34px 48px 64px;transform:rotate(-5deg)}
+    .back-card.two{inset:60px 12px 30px 88px;transform:rotate(4deg);background:rgba(226,234,247,.78)}
+    .dashboard{
+      position:absolute;inset:32px 20px 36px 24px;
+      background:#fff;border:1px solid #e8edf4;border-radius:23px;
+      box-shadow:0 28px 80px rgba(39,71,113,.18);
+      overflow:hidden;display:grid;grid-template-columns:118px 1fr;
+      transform:rotate(-1.1deg);
+      animation:dashboardFloat 7s ease-in-out infinite;
+      transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;
+      will-change:transform
+    }
+    @keyframes dashboardFloat{
+      0%,100%{transform:translateY(0) rotate(-1.1deg)}
+      50%{transform:translateY(-7px) rotate(-.55deg)}
+    }
+    .dash-side{padding:18px 12px;background:#f7faff;border-right:1px solid #edf1f7}
+    .dash-logo{font-size:.78rem;font-weight:800;margin-bottom:22px;display:flex;align-items:center;gap:7px}
+    .dash-logo span{width:19px;height:19px;border-radius:6px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.58rem}
+    .dash-nav{display:grid;gap:8px}
+    .dash-nav div{font-size:.63rem;color:#7d8799;padding:8px 8px;border-radius:8px}
+    .dash-nav .active{background:#eaf3ff;color:var(--blue);font-weight:700}
+    .dash-main{padding:22px}
+    .dash-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .dash-top h3{font-size:1rem;letter-spacing:-.025em}
+    .dash-top p{font-size:.63rem;color:#8a93a5;margin-top:3px}
+    .dash-chip{padding:5px 8px;border-radius:999px;background:#f3f6fb;color:#63718c;font-size:.58rem;font-weight:700}
+    .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
+    .metric{border:1px solid #edf0f5;border-radius:12px;padding:11px;background:#fff}
+    .metric small{display:block;color:#8c95a7;font-size:.55rem;margin-bottom:5px}
+    .metric strong{font-size:1rem}
+    .metric em{display:block;color:var(--green);font-size:.52rem;font-style:normal;margin-top:2px}
+    .dash-lower{display:grid;grid-template-columns:1.35fr .65fr;gap:10px}
+    .schedule,.coverage{border:1px solid #edf0f5;border-radius:13px;padding:12px}
+    .panel-title{font-size:.64rem;font-weight:800;margin-bottom:8px}
+    .shift{display:grid;grid-template-columns:8px 1fr auto;gap:7px;align-items:center;padding:7px 0;border-top:1px solid #f0f3f7}
+    .shift:first-of-type{border-top:0}
+    .shift-dot{width:7px;height:7px;border-radius:50%;background:#74aef8}
+    .shift strong{display:block;font-size:.56rem}
+    .shift small{display:block;font-size:.48rem;color:#929bad}
+    .staff{font-size:.5rem;color:#667289}
+    .bars{height:94px;display:flex;align-items:end;gap:5px;padding-top:10px}
+    .bars span{width:10px;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,#72b1ff,#0a73ff)}
+    .bars span:nth-child(1){height:44%}.bars span:nth-child(2){height:62%}.bars span:nth-child(3){height:79%}
+    .bars span:nth-child(4){height:55%}.bars span:nth-child(5){height:88%}.bars span:nth-child(6){height:67%}.bars span:nth-child(7){height:96%}
+
+    /* sections */
+    .section{padding:82px 0;position:relative}
+    #profile{background:linear-gradient(180deg,#f7f9fc 0%,#fff 50%,#fff 100%)}
+    #projects{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(88,155,255,.07),transparent 24%),
+        linear-gradient(180deg,#fff 0%,#f8fbff 45%,#fff 100%);
+      border-top:1px solid rgba(219,228,241,.6);
+      border-bottom:1px solid rgba(219,228,241,.6)
+    }
+    #skills{background:#fff}
+    #tools{
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+      border-top:1px solid rgba(219,228,241,.55)
+    }
+    #experience{background:linear-gradient(180deg,#f8fbff 0%,#fff 72%)}
+
+    .section-head{
+      display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px
+    }
+    .section-head h2{font-size:clamp(1.8rem,3.4vw,2.65rem);letter-spacing:-.045em;line-height:1.05}
+    .section-kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:#93a0b5;font-weight:700}
     .blue-line{width:28px;height:3px;border-radius:3px;background:var(--blue);display:inline-block;margin-left:9px;vertical-align:middle}
-    .bring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .bring-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;min-height:220px;box-shadow:0 12px 38px rgba(44,62,96,.04)}
-    .bring-card::after{content:"";position:absolute;right:-54px;bottom:-58px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(20,121,255,.08),transparent 68%)}
-    .bring-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#eef5ff;color:var(--blue);margin-bottom:34px}
-    .bring-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-    .bring-card small{display:block;font-size:.57rem;letter-spacing:.1em;color:#95a0b2;font-weight:800;margin-bottom:6px}
-    .bring-card h3{font-size:1.05rem;letter-spacing:-.02em;margin-bottom:8px}
-    .bring-card p{font-size:.76rem;color:var(--muted);line-height:1.55}
-    .bring-card a{display:inline-flex;margin-top:15px;font-size:.67rem;color:var(--blue);font-weight:760}
-    #evidence{background:#fff;border-top:1px solid #edf1f6;border-bottom:1px solid #edf1f6}
-    .evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .case-card{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 16px 44px rgba(44,62,96,.055);transition:.25s ease}
-    .case-card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(44,62,96,.09)}
-    .case-visual{height:220px;position:relative;overflow:hidden;padding:20px;background:linear-gradient(145deg,#f7faff,#eef5ff)}
-    .case-visual.dark{background:linear-gradient(145deg,#0b172a,#102747);color:#fff}
-    .case-visual.warm{background:linear-gradient(145deg,#fffaf5,#f7f3ed)}
-    .case-label{position:absolute;left:18px;top:16px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.86);border:1px solid rgba(20,40,70,.08);font-size:.55rem;font-weight:800;letter-spacing:.08em;color:#5f6b7e;text-transform:uppercase}
-    .case-visual.dark .case-label{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:#b9cae0}
-    .workflow{position:absolute;inset:62px 28px 26px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:7px}
-    .flow-node{padding:13px 9px;border-radius:13px;background:#fff;border:1px solid #dfe8f4;text-align:center;box-shadow:0 10px 26px rgba(46,80,125,.06)}
-    .flow-node b{display:block;font-size:.69rem;margin-bottom:3px}.flow-node span{font-size:.54rem;color:#7b8799}
-    .flow-arrow{color:#7ca8dd;font-size:.9rem;font-weight:800}
-    .commercial-map{position:absolute;inset:62px 24px 24px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .commercial-tile{padding:14px;border-radius:13px;background:#fff;border:1px solid #eadfce}
-    .commercial-tile b{display:block;font-size:.7rem;margin-bottom:3px}.commercial-tile span{font-size:.55rem;color:#8a7b68}
-    .client-flow{position:absolute;inset:58px 24px 24px;display:flex;align-items:center;justify-content:space-between;gap:7px}
-    .client-step{flex:1;text-align:center}.step-circle{width:34px;height:34px;margin:0 auto 7px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #dae5f3;color:var(--blue);font-size:.62rem;font-weight:850}
-    .client-step span{font-size:.55rem;color:#65748a}.client-line{width:24px;height:1px;background:#afc9eb}
-    .ai-panel{position:absolute;inset:58px 24px 24px;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px}
-    .ai-input,.ai-output{border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.055);padding:13px}
-    .ai-input small,.ai-output small{display:block;color:#8fa6c2;font-size:.52rem;margin-bottom:7px}
-    .ai-input p,.ai-output p{font-size:.62rem;line-height:1.45;color:#d6e1ef}
-    .ai-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}.ai-tags span{padding:4px 6px;border-radius:999px;background:rgba(82,162,255,.12);font-size:.48rem;color:#92c5ff}
-    .case-body{padding:20px}
-    .case-top{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:7px}
-    .case-type{font-size:.56rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:#8b97aa;margin-bottom:5px}
-    .case-card h3{font-size:1.08rem;letter-spacing:-.025em}
-    .case-proof{font-size:.58rem;font-weight:800;padding:6px 8px;border-radius:999px;background:#edf8f2;color:#30835d;white-space:nowrap}
-    .case-body p{font-size:.75rem;line-height:1.55;color:var(--muted);margin-bottom:13px}
-    .case-contrib{display:flex;gap:6px;flex-wrap:wrap}.case-contrib span{padding:6px 8px;border-radius:8px;background:#f5f7fa;color:#5b6678;font-size:.57rem;font-weight:700}
-    .case-link{display:inline-flex;margin-top:14px;color:var(--blue);font-size:.68rem;font-weight:780}
-    .database-strip{margin-top:16px;border:1px solid var(--line);border-radius:18px;background:#fbfcfe;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .database-strip strong{display:block;font-size:.86rem;margin-bottom:2px}.database-strip span{font-size:.66rem;color:var(--muted)}
-    .database-strip a{font-size:.68rem;color:var(--blue);font-weight:760;white-space:nowrap}
-    .process{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
-    .process::before{content:"";position:absolute;top:23px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,#dfe7f3,#a9c9ef,#dfe7f3)}
-    .process-step{position:relative;text-align:center;padding:0 12px}
-    .process-no{position:relative;z-index:2;width:46px;height:46px;border-radius:50%;margin:0 auto 13px;display:grid;place-items:center;background:#fff;border:1px solid #dce7f5;box-shadow:0 9px 24px rgba(43,72,111,.07);color:var(--blue);font-size:.64rem;font-weight:850}
-    .process-step strong{display:block;font-size:.84rem;margin-bottom:3px}.process-step span{font-size:.64rem;color:var(--muted);line-height:1.4}
-    #experience{background:linear-gradient(180deg,#f7faff,#fff)}
-    .experience-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:20px}
-    .exp-summary{border-radius:24px;padding:26px;background:linear-gradient(145deg,#0b172b,#132c4f);color:#fff;min-height:360px}
-    .exp-summary small{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:#8da8c9;font-weight:800;margin-bottom:9px}
-    .exp-summary h3{font-size:1.45rem;letter-spacing:-.035em;margin-bottom:10px}
-    .exp-summary p{font-size:.75rem;color:#bdcbe0;line-height:1.6}
-    .exp-path{display:grid;gap:8px;margin-top:22px}
-    .exp-path div{padding:10px 11px;border-radius:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .exp-path b{font-size:.67rem}.exp-path span{font-size:.54rem;color:#8fa7c6}
-    .exp-summary a{display:inline-flex;margin-top:20px;color:#83c2ff;font-size:.68rem;font-weight:760}
-    .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
-    .timeline-row{display:grid;grid-template-columns:135px 1fr auto;gap:18px;padding:20px;border-top:1px solid var(--line);align-items:center}
+
+    /* visual icon system */
+    .vicon{
+      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+      background:#f3f7fc;border:1px solid #e3eaf3;color:#35638f;flex:none
+    }
+    .vicon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .vicon.dark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#d9e8fb}
+    .vicon.blue{background:var(--blue-soft);border-color:#d9e9ff;color:var(--blue)}
+    .vicon.green{background:#edf8f2;border-color:#d9eee3;color:#31835d}
+    .vicon.purple{background:#f1efff;border-color:#e5e0ff;color:#6d57d8}
+    .vicon.orange{background:#fff4ea;border-color:#f7e3d3;color:#bc6a2b}
+
+    /* recruiter decision */
+    .hire-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px}
+    .hire-main{
+      position:relative;overflow:hidden;border-radius:24px;padding:28px;
+      background:linear-gradient(145deg,#0c172b,#142c50);color:#fff;
+      box-shadow:0 24px 60px rgba(21,46,85,.16)
+    }
+    .hire-main::after{
+      content:"";position:absolute;width:320px;height:320px;right:-110px;top:-140px;border-radius:50%;
+      background:radial-gradient(circle,rgba(79,156,255,.28),transparent 67%)
+    }
+    .hire-main>*{position:relative;z-index:1}
+    .hire-main small{display:block;color:#9fb7d8;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:9px}
+    .hire-main h3{font-size:1.55rem;line-height:1.12;letter-spacing:-.04em;margin-bottom:10px}
+    .hire-visual{margin:20px 0 14px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+    .hire-side{display:grid;gap:8px}
+    .hire-side.right{text-align:right}
+    .hire-label{font-size:.67rem;color:#c9d5e7;font-weight:700}
+    .hire-node{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:12px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.11)}
+    .hire-side.right .hire-node{justify-content:flex-end}
+    .hire-bridge{position:relative;width:86px;height:52px;display:grid;place-items:center}
+    .hire-bridge::before{content:"";position:absolute;left:4px;right:4px;top:50%;height:1px;background:linear-gradient(90deg,rgba(115,178,255,.2),#73b2ff,rgba(115,178,255,.2))}
+    .hire-bridge::after{content:"↔";position:relative;z-index:2;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a73ff;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+    .hire-caption{color:#9fb7d8;font-size:.66rem;line-height:1.45;margin-top:8px}
+    .hire-chain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:16px}
+    .hire-chain span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .hire-chain b{color:#73b2ff}
+    .hire-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .hire-proof article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 12px 32px rgba(44,62,96,.035)}
+    .hire-proof .vicon{margin-bottom:12px}
+    .hire-proof b{display:block;color:#8b96a8;font-size:.57rem;letter-spacing:.08em;margin-bottom:4px}
+    .hire-proof strong{display:block;font-size:.9rem;margin-bottom:3px}
+    .hire-proof span{display:block;color:var(--muted);font-size:.65rem;line-height:1.42}
+
+    /* recruiter snapshot */
+    .snapshot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .snapshot-card{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;
+      min-height:170px;box-shadow:0 12px 38px rgba(44,62,96,.04)
+    }
+    .snapshot-icon{
+      width:36px;height:36px;border-radius:12px;display:grid;place-items:center;
+      background:var(--blue-soft);color:var(--blue);font-size:.72rem;font-weight:800;margin-bottom:19px
+    }
+    .snapshot-card h3{font-size:.98rem;margin-bottom:7px;letter-spacing:-.02em}
+    .snapshot-card p{color:var(--muted);font-size:.81rem;line-height:1.55}
+
+    /* evidence stats */
+    .stats-strip{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+      border:1px solid var(--line);border-radius:20px;overflow:hidden;
+      box-shadow:0 14px 38px rgba(44,62,96,.035)
+    }
+    .stat-block{background:#fff;padding:20px 22px}
+    .stat-block strong{display:block;font-size:1.45rem;letter-spacing:-.04em;margin-bottom:4px}
+    .stat-block span{font-size:.69rem;color:var(--muted);line-height:1.4}
+    .stat-block em{font-style:normal;color:var(--blue)}
+
+    /* capability map */
+    .capability-map{
+      position:relative;min-height:430px;border:1px solid var(--line);border-radius:26px;
+      background:
+        radial-gradient(circle at 50% 48%,rgba(10,115,255,.10),transparent 24%),
+        linear-gradient(180deg,#ffffff,#f7faff);
+      overflow:hidden;box-shadow:0 18px 48px rgba(44,62,96,.05)
+    }
+    .capability-map::before{
+      content:"";position:absolute;inset:0;
+      background-image:radial-gradient(circle,#dfe7f3 1px,transparent 1px);
+      background-size:22px 22px;opacity:.42;mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent)
+    }
+    .map-center{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:178px;height:178px;border-radius:50%;
+      display:grid;place-items:center;text-align:center;padding:24px;
+      background:rgba(255,255,255,.94);border:1px solid #dce7f7;
+      box-shadow:0 24px 70px rgba(30,84,160,.13);
+      z-index:3
+    }
+    .map-center::before,.map-center::after{
+      content:"";position:absolute;border-radius:50%;border:1px solid rgba(10,115,255,.12)
+    }
+    .map-center::before{inset:-18px}.map-center::after{inset:-40px;border-style:dashed}
+    .map-center small{display:block;color:var(--blue);font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin-bottom:6px}
+    .map-center strong{font-size:1rem;line-height:1.2;letter-spacing:-.025em}
+    .map-node{
+      position:absolute;width:190px;min-height:104px;padding:15px 16px;border-radius:18px;
+      background:rgba(255,255,255,.94);border:1px solid #e2e9f3;
+      box-shadow:0 14px 36px rgba(44,62,96,.055);z-index:4;
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
+    }
+    .map-node:hover{transform:translateY(-4px);border-color:#d2e2f7;box-shadow:0 22px 48px rgba(44,62,96,.09)}
+    .map-node b{display:block;color:var(--blue);font-size:.58rem;letter-spacing:.08em;margin-bottom:7px}
+    .map-node strong{display:block;font-size:.86rem;margin-bottom:4px}
+    .map-node span{display:block;font-size:.68rem;color:var(--muted);line-height:1.45}
+    .map-node.n1{left:7%;top:11%}.map-node.n2{right:7%;top:11%}.map-node.n3{left:7%;bottom:11%}.map-node.n4{right:7%;bottom:11%}
+    .map-line{
+      position:absolute;height:1px;background:linear-gradient(90deg,rgba(10,115,255,.08),rgba(10,115,255,.34),rgba(10,115,255,.08));
+      transform-origin:left center;z-index:1
+    }
+    .map-line.l1{left:24%;top:31%;width:27%;transform:rotate(24deg)}
+    .map-line.l2{left:50%;top:31%;width:27%;transform:rotate(-24deg)}
+    .map-line.l3{left:24%;top:68%;width:27%;transform:rotate(-24deg)}
+    .map-line.l4{left:50%;top:68%;width:27%;transform:rotate(24deg)}
+    .map-pulse{
+      position:absolute;left:50%;top:50%;width:210px;height:210px;border-radius:50%;
+      transform:translate(-50%,-50%);border:1px solid rgba(10,115,255,.12);
+      animation:mapPulse 4.8s ease-out infinite;pointer-events:none
+    }
+    @keyframes mapPulse{
+      0%{opacity:.5;transform:translate(-50%,-50%) scale(.82)}
+      75%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.45)}
+    }
+
+    /* projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project-card{
+      position:relative;overflow:hidden;background:rgba(255,255,255,.92);border:1px solid var(--line);
+      border-radius:22px;padding:10px;box-shadow:0 15px 45px rgba(44,62,96,.045);
+      transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease
+    }
+    .project-card::before{
+      content:"";position:absolute;inset:0 0 auto;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(10,115,255,.35),transparent);
+      opacity:0;transition:opacity .3s ease
+    }
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 24px 58px rgba(44,62,96,.09);border-color:#dce7f7}
+    .project-card:hover::before{opacity:1}
+    .project-visual{
+      position:relative;height:225px;border-radius:16px;background:#f7faff;border:1px solid #edf1f7;
+      padding:10px;overflow:hidden;margin-bottom:14px;
+      transition:transform .3s cubic-bezier(.22,1,.36,1)
+    }
+    .project-card:hover .project-visual{transform:translateY(-1px)}
+    .concept-label{
+      position:absolute;z-index:8;right:8px;top:8px;padding:5px 7px;border-radius:999px;
+      background:rgba(255,255,255,.90);border:1px solid rgba(210,220,233,.9);
+      color:#748197;font-size:.48rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+      backdrop-filter:blur(8px)
+    }
+    .hero-concept{right:28px;top:38px}
+    .project-body{padding:0 7px 9px}
+    .project-title-row{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+    .project-title-row h3{font-size:1.05rem;letter-spacing:-.025em}
+    .project-arrow{color:var(--blue);font-size:.92rem}
+    .project-body p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:12px;min-height:50px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{padding:6px 9px;border-radius:999px;background:#f2f5f9;color:#556176;font-size:.64rem;font-weight:600}
+    .tech-chip{display:inline-flex;align-items:center;gap:6px}
+    .tech-chip img{width:13px;height:13px;display:block;object-fit:contain}
+    .project-evidence{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:13px 0 2px
+    }
+    .project-evidence span{
+      min-height:48px;padding:8px;border-radius:10px;background:#fafbfd;border:1px solid #edf1f6;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      color:#647087;font-size:.57rem;font-weight:700;line-height:1.28
+    }
+    .project-link{
+      margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);
+      font-size:.69rem;font-weight:730
+    }
+
+    /* mini InnerLeaf */
+    .innerleaf-mini{height:100%;border-radius:12px;border:1px solid #e6ece8;background:linear-gradient(145deg,#fbfff9,#f5fbf8);padding:13px;display:grid;grid-template-rows:auto 1fr;gap:11px}
+    .innerleaf-head{display:flex;justify-content:space-between;align-items:center}
+    .innerleaf-brand{font-size:.58rem;font-weight:800;color:#315a48}
+    .innerleaf-badge{font-size:.38rem;padding:4px 7px;border-radius:999px;background:#e9f7ef;color:#32745a;font-weight:700}
+    .innerleaf-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:9px}
+    .journal{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px}
+    .journal-title{font-size:.43rem;font-weight:800;margin-bottom:8px}
+    .journal-line{height:7px;border-radius:5px;background:#eef2ef;margin-bottom:6px}.journal-line:nth-child(2){width:86%}.journal-line:nth-child(3){width:68%}.journal-line:nth-child(4){width:78%}
+    .reflection-card{border-radius:10px;background:#fff;border:1px solid #e7ece9;padding:9px;display:grid;gap:6px}
+    .reflect-row{border-radius:7px;background:#f5f8f6;padding:6px}
+    .reflect-row strong{display:block;font-size:.35rem;color:#718075;margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
+    .reflect-row span{font-size:.4rem;color:#45584d}
+    .reflect-row.accent{background:#eaf7f0}
+    
+    /* mini TanShift */
+    .mini-app{height:100%;display:grid;grid-template-columns:78px 1fr;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #edf1f7}
+    .mini-side{background:#f8faff;border-right:1px solid #edf1f7;padding:10px 7px}
+    .mini-brand{font-size:.54rem;font-weight:800;margin-bottom:12px}
+    .mini-nav{display:grid;gap:5px}
+    .mini-nav span{font-size:.45rem;color:#8a94a6;padding:5px;border-radius:5px}
+    .mini-nav span:nth-child(2){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .mini-content{padding:10px}
+    .mini-title{display:flex;justify-content:space-between;font-size:.55rem;font-weight:800;margin-bottom:9px}
+    .roster{display:grid;grid-template-columns:70px repeat(5,1fr);gap:4px}
+    .roster div{height:24px;border-radius:5px;background:#f2f5fa;font-size:.38rem;display:grid;place-items:center;color:#8490a4}
+    .roster .person{justify-content:start;padding-left:5px;font-weight:700;color:#4f5a6d}
+    .roster .blue{background:#e8f2ff;color:#1e78e8}.roster .green{background:#e8f7ef;color:#1d9b5d}.roster .yellow{background:#fff6df;color:#a36d00}
+
+    /* mini onboarding */
+    .flow-wrap{height:100%;background:#fff;border-radius:12px;border:1px solid #edf1f7;padding:12px;display:grid;grid-template-columns:70px 1fr;gap:10px}
+    .flow-side{border-right:1px solid #edf1f7;padding-right:8px}
+    .flow-side div{font-size:.43rem;color:#8791a3;padding:5px;border-radius:5px;margin-bottom:3px}
+    .flow-side div:nth-child(3){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .flow-main{padding-top:2px}
+    .flow-title{font-size:.55rem;font-weight:800;margin-bottom:18px}
+    .flow-line{display:flex;align-items:center;justify-content:space-between;gap:4px}
+    .flow-node{text-align:center;flex:1}
+    .flow-icon{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#edf5ff;color:var(--blue);font-size:.48rem;font-weight:800;margin:0 auto 5px}
+    .flow-node:last-child .flow-icon{background:#e9f8f0;color:#1a9a5b}
+    .flow-node span{font-size:.38rem;color:#556176}
+    .flow-arrow{height:1px;background:#cad5e5;flex:.35}
+    .outcome{margin-top:18px;border-top:1px solid #edf1f7;padding-top:8px}
+    .outcome strong{font-size:.43rem}
+    .outcome p{font-size:.37rem;color:#6a758a;margin-top:3px}
+
+    /* mini ERD */
+    .erd{height:100%;background:#fff;border-radius:12px;border:1px solid #edf1f7;padding:10px;display:grid;grid-template-columns:62px 1fr;gap:9px}
+    .erd-side{border-right:1px solid #edf1f7;padding-right:7px}
+    .erd-side div{font-size:.4rem;color:#8791a3;padding:4px;border-radius:5px;margin-bottom:2px}
+    .erd-side div:nth-child(2){background:#eaf3ff;color:var(--blue);font-weight:800}
+    .erd-canvas{position:relative}
+    .entity{position:absolute;width:78px;border:1px solid #bdd3ef;border-radius:7px;background:#fff;box-shadow:0 5px 13px rgba(51,85,125,.06)}
+    .entity h4{font-size:.38rem;padding:4px 5px;background:#eef5ff;border-bottom:1px solid #dbe8f8;color:#37618f}
+    .entity p{font-size:.3rem;color:#69758a;padding:3px 5px;line-height:1.45}
+    .entity.a{left:2px;top:8px}.entity.b{right:2px;top:6px}.entity.c{left:22px;bottom:8px}.entity.d{right:5px;bottom:10px}
+    .erd-line{position:absolute;background:#abc5e7;height:1px;transform-origin:left center}
+    .erd-line.one{left:80px;top:42px;width:55px;transform:rotate(4deg)}
+    .erd-line.two{left:68px;top:83px;width:70px;transform:rotate(30deg)}
+    .erd-line.three{left:106px;top:78px;width:46px;transform:rotate(-35deg)}
+
+    /* evidence + working style */
+    .evidence-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .evidence-card{
+      background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;
+      box-shadow:0 12px 34px rgba(44,62,96,.035);transition:.25s ease
+    }
+    .evidence-card:hover{transform:translateY(-3px);border-color:#d7e4f5;box-shadow:0 18px 42px rgba(44,62,96,.07)}
+    .evidence-no{display:block;color:var(--blue);font-size:.66rem;font-weight:800;letter-spacing:.08em;margin-bottom:14px}
+    .evidence-card .vicon{margin-bottom:14px}
+    .evidence-card h3{font-size:.94rem;margin-bottom:4px}
+    .evidence-meta{display:block;font-size:.66rem;color:var(--muted);line-height:1.4;margin-bottom:12px}
+    .evidence-card a{font-size:.68rem;font-weight:750;color:var(--blue)}
+    .workstyle{
+      display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);
+      border-radius:21px;overflow:hidden;box-shadow:0 13px 36px rgba(44,62,96,.035)
+    }
+    .workstep{padding:22px;border-left:1px solid var(--line)}
+    .workstep:first-child{border-left:0}
+    .workstep strong{display:block;font-size:.9rem;margin-bottom:6px}
+    .workstep span{font-size:.73rem;color:var(--muted);line-height:1.5}
+    .workstep b{display:block;color:var(--blue);font-size:.66rem;margin-bottom:18px}
+
+    /* capability cards */
+    .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .cap-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 35px rgba(44,62,96,.035)}
+    .cap-head{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+    .cap-icon{width:36px;height:36px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-weight:800;font-size:.7rem}
+    .cap-head h3{font-size:.93rem;letter-spacing:-.02em}
+    .cap-card .tags{gap:8px}
+    .cap-card .tag{font-size:.68rem;padding:7px 10px}
+
+    /* technology flow */
+    .tool-flow{
+      overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff;
+      padding:16px 0;box-shadow:0 12px 32px rgba(44,62,96,.035);margin-bottom:18px
+    }
+    .tool-track{
+      width:max-content;display:flex;gap:10px;align-items:center;
+      animation:toolScroll 34s linear infinite;padding-left:10px
+    }
+    .tool-flow:hover .tool-track{animation-play-state:paused}
+    .flow-chip{
+      flex:none;display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:12px;
+      background:#f8fafc;border:1px solid #edf1f6;font-size:.68rem;font-weight:700;color:#46546a
+    }
+    .flow-chip img{width:18px;height:18px;object-fit:contain}
+    @keyframes toolScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* tools */
+    .tools-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:10px}
+    .tool{
+      min-width:0;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:17px;
+      padding:17px 8px 14px;text-align:center;box-shadow:0 10px 30px rgba(44,62,96,.035);
+      transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s ease,border-color .25s ease
+    }
+    .tool:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(44,62,96,.075);border-color:#d7e3f3}
+    .tool-logo-shell{
+      width:43px;height:43px;border-radius:13px;margin:0 auto 9px;display:grid;place-items:center;
+      background:#f7f9fc;border:1px solid #edf1f6
+    }
+    .tool-logo{width:24px;height:24px;display:block;object-fit:contain}
+    .tool span{display:block;font-size:.65rem;font-weight:680;color:#435067;line-height:1.25}
+
+
+    .application-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .application-card{
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+      box-shadow:0 12px 35px rgba(44,62,96,.035);
+      display:flex;flex-direction:column;min-height:220px;
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .application-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    .application-type{font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:#8a95a8;font-weight:800;margin-bottom:16px}
+    .application-card h3{font-size:1.06rem;letter-spacing:-.025em;margin-bottom:8px}
+    .application-card p{color:var(--muted);font-size:.78rem;line-height:1.55;margin-bottom:18px}
+    .application-card a{margin-top:auto;color:var(--blue);font-size:.72rem;font-weight:750}
+    .application-note{margin-top:14px;color:#7c8799;font-size:.72rem}
+
+    /* commercial experience */
+    .commercial-exp{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-bottom:18px
+    }
+    .commercial-story{
+      position:relative;overflow:hidden;background:linear-gradient(145deg,#0d1a33,#13284a);
+      color:#fff;border-radius:22px;padding:26px;box-shadow:0 22px 55px rgba(18,39,75,.16)
+    }
+    .commercial-story::after{
+      content:"";position:absolute;width:250px;height:250px;right:-90px;top:-100px;border-radius:50%;
+      background:radial-gradient(circle,rgba(81,154,255,.28),transparent 66%)
+    }
+    .commercial-story > *{position:relative;z-index:1}
+    .commercial-story small{display:block;color:#9fb6d6;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;font-weight:750;margin-bottom:8px}
+    .commercial-story h3{font-size:1.35rem;letter-spacing:-.035em;margin-bottom:8px}
+    .commercial-story p{color:#c7d4e7;font-size:.78rem;line-height:1.6;max-width:620px}
+    .commercial-path{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .commercial-path span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);font-size:.62rem;font-weight:700}
+    .commercial-path b{color:#6ca9ff}
+    .commercial-story a{display:inline-flex;margin-top:2px;color:#fff;font-size:.7rem;font-weight:750}
+    .commercial-proof{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+    }
+    .commercial-proof div{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;
+      box-shadow:0 12px 32px rgba(44,62,96,.035)
+    }
+    .commercial-proof .vicon{margin-bottom:10px}
+    .commercial-proof strong{display:block;font-size:.93rem;color:var(--ink);margin-bottom:3px}
+    .commercial-proof span{display:block;font-size:.64rem;color:var(--muted);line-height:1.4}
+
+    /* experience */
+    .timeline{background:#fff;border:1px solid var(--line);border-radius:22px;padding:9px 25px;box-shadow:0 14px 40px rgba(44,62,96,.035)}
+    .timeline-row{
+      display:grid;grid-template-columns:145px 1fr auto;gap:24px;align-items:center;
+      min-height:82px;border-top:1px solid #edf0f5;position:relative
+    }
     .timeline-row:first-child{border-top:0}
-    .timeline-date{font-size:.62rem;color:#8793a6;font-weight:700}
-    .timeline-role strong{display:block;font-size:.82rem}.timeline-role small{display:block;margin-top:3px;font-size:.61rem;color:var(--muted)}
-    .role-pill{padding:6px 8px;border-radius:999px;font-size:.54rem;font-weight:800;background:#eef5ff;color:var(--blue);white-space:nowrap}
-    #capabilities{background:#fff;border-top:1px solid #edf1f6}
-    .cap-matrix{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
-    .cap-row{display:grid;grid-template-columns:1fr 1.35fr 180px;gap:18px;align-items:center;padding:17px 19px;border-top:1px solid var(--line)}
-    .cap-row:first-child{border-top:0}
-    .cap-row strong{font-size:.79rem}.cap-row span{font-size:.65rem;color:var(--muted);line-height:1.45}.cap-row a{justify-self:end;color:var(--blue);font-size:.64rem;font-weight:760}
-    .tools-wrap{margin-top:18px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-    .tool{height:42px;padding:0 11px;border-radius:11px;border:1px solid var(--line);background:#fff;display:inline-flex;align-items:center;gap:8px;color:#566174;font-size:.62rem;font-weight:700}
-    .tool img{width:18px;height:18px;object-fit:contain}
-    .cta-wrap{padding:72px 0}
-    .cta{border-radius:26px;padding:30px;background:linear-gradient(135deg,#0a1a30,#14355f);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:28px;box-shadow:0 26px 70px rgba(16,48,84,.18)}
-    .cta small{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:#8da8c9;font-weight:800;margin-bottom:7px}
-    .cta h2{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.12;letter-spacing:-.035em;max-width:720px}
-    .cta-actions{display:flex;gap:8px;flex-wrap:wrap}
-    .cta-link{padding:10px 13px;border-radius:10px;background:#fff;color:#0b1c32;font-size:.68rem;font-weight:760}
-    .cta-link.secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff}
-    footer{border-top:1px solid var(--line);padding:20px 0 28px;color:#8692a4;font-size:.64rem;background:#fff}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-links{display:flex;gap:14px;flex-wrap:wrap}
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:1020px){
-      .hero-grid,.experience-layout{grid-template-columns:1fr}
-      .evidence-board{max-width:720px}
-      .hero{padding-bottom:92px}
-      .bring-grid{grid-template-columns:1fr 1fr}
-      .proof-grid{grid-template-columns:1fr 1fr}.proof-stat:nth-child(3){border-left:0;border-top:1px solid var(--line)}.proof-stat:nth-child(4){border-top:1px solid var(--line)}
+    .timeline-date{color:#7b879b;font-size:.75rem;padding-left:18px;position:relative}
+    .timeline-date::before{
+      content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:var(--blue);transform:translateY(-50%);
+      box-shadow:0 0 0 5px #eef5ff
+    }
+    .timeline-date::after{
+      content:"";position:absolute;left:3.5px;top:calc(50% + 9px);width:1px;height:64px;background:#cfe0f5
+    }
+    .timeline-row:last-child .timeline-date::after{display:none}
+    .timeline-role strong{display:block;font-size:.9rem;letter-spacing:-.02em}
+    .timeline-role small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+    .role-pill{padding:7px 11px;border-radius:999px;font-size:.64rem;font-weight:700}
+    .role-pill.blue{background:var(--blue-soft);color:var(--blue)}
+    .role-pill.green{background:var(--green-soft);color:var(--green)}
+    .role-pill.purple{background:var(--purple-soft);color:var(--purple)}
+    .role-pill.orange{background:var(--orange-soft);color:var(--orange)}
+
+    /* CTA */
+    .cta-wrap{padding:24px 0 72px}
+    .cta{
+      position:relative;overflow:hidden;background:linear-gradient(135deg,#f5f9ff,#eaf3ff);
+      border:1px solid #dce9fa;border-radius:25px;padding:34px 38px;
+      display:flex;align-items:end;justify-content:space-between;gap:28px
+    }
+    .cta::after{
+      content:"";position:absolute;width:380px;height:160px;right:-60px;bottom:-70px;border-radius:50%;
+      background:radial-gradient(circle,#b8d6ff 0%,rgba(184,214,255,.2) 48%,transparent 70%)
+    }
+    .cta > *{position:relative;z-index:1}
+    .cta small{display:block;color:#7e8da6;text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;font-weight:700;margin-bottom:8px}
+    .cta h2{max-width:650px;font-size:clamp(1.7rem,3.5vw,2.65rem);line-height:1.06;letter-spacing:-.045em}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:9px}
+    .cta-link{min-height:42px;padding:0 15px;border-radius:11px;background:#fff;border:1px solid #d9e3ef;font-size:.75rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+    .cta-link.linkedin{background:var(--blue);border-color:var(--blue);color:#fff}
+    .cta-link.github{background:#121722;border-color:#121722;color:#fff}
+
+    footer{padding:20px 0 30px;border-top:1px solid var(--line);color:#8791a4;font-size:.7rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:17px}
+
+    .reveal{
+      opacity:0;transform:translateY(18px);
+      transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1);
+      transition-delay:var(--reveal-delay,0ms)
+    }
+    .reveal.visible{opacity:1;transform:none}
+    @media(hover:hover) and (pointer:fine){
+      .snapshot-card,.cap-card,.timeline,.cta{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+      .snapshot-card:hover,.cap-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(44,62,96,.07);border-color:#dbe6f5}
+    }
+
+    @media(max-width:1040px){
+      .evidence-grid{grid-template-columns:repeat(3,1fr)}
+      .hero-grid{grid-template-columns:1fr}
+      .dashboard-stage{min-height:420px;max-width:720px;width:100%;margin:0 auto}
+      .snapshot-grid,.cap-grid{grid-template-columns:repeat(2,1fr)}
+      .projects-grid{grid-template-columns:1fr}
+      .project-card{display:grid;grid-template-columns:minmax(300px,.9fr) 1.1fr;gap:12px;padding:12px}
+      .project-visual{margin-bottom:0}
+      .project-body{padding:18px 14px}
+      .tools-grid{grid-template-columns:repeat(5,1fr)}
     }
     @media(max-width:760px){
-      .shell,.nav-inner{width:min(100% - 28px,var(--max))}
-      .nav-links{display:none}
-      .hero{padding:100px 0 78px}
-      .hero-grid{gap:36px}.hero h1{font-size:clamp(2.7rem,13vw,4rem)}
-      .signal-grid,.bring-grid,.evidence-grid{grid-template-columns:1fr}
-      .proof-grid{grid-template-columns:1fr 1fr}
-      .proof-stat{padding:15px 16px}.proof-stat strong{font-size:1.15rem}
-      .section{padding:64px 0}.section-head{align-items:start;flex-direction:column;gap:8px}
-      .case-visual{height:210px}
-      .workflow{inset:60px 14px 22px;gap:4px}.flow-node{padding:10px 5px}.flow-node b{font-size:.61rem}.flow-node span{font-size:.47rem}
-      .process{grid-template-columns:1fr 1fr;gap:28px 10px}.process::before{display:none}
-      .timeline-row{grid-template-columns:1fr;gap:7px}.role-pill{justify-self:start}
-      .cap-row{grid-template-columns:1fr;gap:5px}.cap-row a{justify-self:start}
-      .database-strip,.cta{align-items:flex-start;flex-direction:column}
-      .footer-inner{align-items:flex-start;flex-direction:column}
-    }
-    @media(max-width:460px){
-      .proof-grid{grid-template-columns:1fr}.proof-stat{border-left:0!important;border-top:1px solid var(--line)}.proof-stat:first-child{border-top:0}
-      .hero-meta{gap:6px}.hero-actions{display:grid}.btn{width:100%}
-      .commercial-map{grid-template-columns:1fr 1fr;inset:54px 14px 14px}
-      .ai-panel{inset:52px 14px 14px}
+      .shell,.nav-inner{width:min(var(--max),calc(100% - 28px))}
+      .nav{height:52px}.nav-links{display:none}
+      .hero{padding:94px 0 50px}
+      .hero-grid{gap:28px}
+      .hero h1{font-size:clamp(2.8rem,14vw,4.4rem)}
+      .hero-actions{align-items:stretch}
+      .hero-actions .btn{flex:1 1 160px}
+      .hero-facts{gap:16px}
+      .dashboard-stage{min-height:330px}
+      .dashboard{inset:20px 0 24px 0;grid-template-columns:84px 1fr}
+      .dash-side{padding:13px 8px}.dash-main{padding:14px}
+      .dash-nav div{font-size:.52rem;padding:6px}
+      .metric-grid{grid-template-columns:1fr 1fr}.metric-grid .metric:last-child{display:none}
+      .dash-lower{grid-template-columns:1fr}.coverage{display:none}
+      .section{padding:64px 0}
+      .section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:20px}
+      .snapshot-grid,.cap-grid,.evidence-grid,.stats-strip,.hire-grid{grid-template-columns:1fr}
+      .hire-proof{grid-template-columns:1fr 1fr}
+      .hire-visual{grid-template-columns:1fr}
+      .hire-side.right{text-align:left}
+      .hire-side.right .hire-node{justify-content:flex-start}
+      .hire-bridge{width:100%;height:38px;transform:rotate(90deg)}
+      .projects-grid{grid-template-columns:1fr}
+      .project-card{display:block}
+      .project-evidence{grid-template-columns:1fr 1fr 1fr}
+      .project-visual{height:210px;margin-bottom:13px}
+      .project-body{padding:0 8px 10px}
+      .tools-grid{grid-template-columns:repeat(2,1fr)}
+      .capability-map{min-height:auto;padding:18px;display:grid;gap:10px}
+      .map-center,.map-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%;height:auto;min-height:auto;border-radius:18px}
+      .map-center{padding:20px}.map-center::before,.map-center::after,.map-line,.map-pulse{display:none}
+      .workstyle{grid-template-columns:1fr}
+      .workstep{border-left:0;border-top:1px solid var(--line)}
+      .workstep:first-child{border-top:0}
+      .commercial-exp{grid-template-columns:1fr}
+      .commercial-proof{grid-template-columns:1fr 1fr}
+      .timeline{padding:4px 18px}
+      .timeline-row{grid-template-columns:1fr;gap:5px;padding:18px 0 18px 22px;min-height:auto}
+      .timeline-date{padding-left:0}.timeline-date::before{left:-22px}.timeline-date::after{left:-18.5px;top:18px;height:75px}
+      .role-pill{width:fit-content}
+      .cta{padding:28px;align-items:flex-start;flex-direction:column}
+      .cta-actions{width:100%}.cta-link{flex:1}
     }
     @media(prefers-reduced-motion:reduce){
-      *{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none!important}.case-card,.signal,.btn{transition:none!important}
+      html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+      .dashboard,.tool-track,.map-pulse{animation:none!important}
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Guang Quan Tan",
+    "alternateName":"William Tan",
+    "url":"https://williamtangq.github.io/",
+    "sameAs":["https://github.com/WilliamTangq","https://www.linkedin.com/in/williamtangq"],
+    "alumniOf":{"@type":"CollegeOrUniversity","name":"Monash University"},
+    "knowsAbout":["Business Analysis","Systems Analysis","Requirements Gathering","Process Mapping","SQL","Database Design","User Acceptance Testing","Digital Operations","Web Application Development"]
+  }
+  </script>
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <nav class="nav">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="brand-mark">GQ</span>Guang Quan Tan (William)</a>
+      <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan</span></a>
       <ul class="nav-links">
-        <li><a href="#evidence" data-nav="evidence">Evidence</a></li>
+        <li><a href="#why-hire" data-nav="why-hire">Why Me</a></li>
+        <li><a href="#projects" data-nav="projects">Work</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
-        <li><a href="#capabilities" data-nav="capabilities">Capabilities</a></li>
+        <li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
@@ -270,242 +751,377 @@
     <header class="hero">
       <div class="shell hero-grid">
         <div class="reveal">
-          <div class="status-pill"><i></i>Open to 2027 graduate & entry-level opportunities</div>
-          <div class="eyebrow">Guang Quan Tan (William) · Melbourne, Australia</div>
-          <h1>I turn business problems into <span>systems people can actually use.</span></h1>
-          <p class="hero-summary">Final-year Monash Business Information Systems candidate with real commercial experience across analysis, IT support and operations — plus source-backed systems, data and testing work.</p>
-          <div class="hero-meta">
-            <span>Business Analyst</span><span>Systems Analyst</span><span>Technology Analyst</span><span>Graduating Dec 2026</span>
-          </div>
+          <div class="hello">Hello, I’m Guang Quan Tan <span style="color:var(--blue)">(William)</span></div>
+          <h1>Business &amp; Technology <span>Graduate Candidate</span></h1>
+          <div class="hero-lead">Turning business problems into clear systems.</div>
+          <p class="hero-meta">Monash University · Business Information Systems · Melbourne · Graduating December 2026</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#evidence">See proof of work →</a>
-            <a class="btn btn-secondary" href="resume.html">View ATS resume</a>
+            <a class="btn btn-primary" href="#projects">View Projects →</a>
+            <a class="btn btn-secondary" href="resume.html">ATS Resume</a>
+          </div>
+          <div class="hero-facts">
+            <div class="fact"><div class="fact-icon">MU</div><div><strong>Monash University</strong><small>Business Information Systems</small></div></div>
+            <div class="fact"><div class="fact-icon">AU</div><div><strong>Melbourne</strong><small>Based in Australia</small></div></div>
+            <div class="fact"><div class="fact-icon">26</div><div><strong>Graduating</strong><small>December 2026</small></div></div>
           </div>
         </div>
 
-        <div class="evidence-board reveal" aria-label="Recruiter evidence board">
-          <div class="board-top">
-            <div><span>Recruiter view</span><strong>Evidence in 30 seconds</strong></div>
-            <div class="board-live"><i></i>Verified work</div>
+        <div class="dashboard-stage reveal" aria-label="TanShift dashboard concept">
+          <span class="concept-label hero-concept">Concept UI Preview</span>
+          <div class="back-card one"></div><div class="back-card two"></div>
+          <div class="dashboard">
+            <aside class="dash-side">
+              <div class="dash-logo"><span>T</span>TanShift</div>
+              <div class="dash-nav">
+                <div class="active">Dashboard</div><div>Schedule</div><div>Employees</div><div>Shifts</div><div>Reports</div><div>Settings</div>
+              </div>
+            </aside>
+            <section class="dash-main">
+              <div class="dash-top">
+                <div><h3>Good morning, William 👋</h3><p>Here’s what’s happening with your team today.</p></div>
+                <div class="dash-chip">This week</div>
+              </div>
+              <div class="metric-grid">
+                <div class="metric"><small>Total Staff</small><strong>24</strong><em>+12%</em></div>
+                <div class="metric"><small>Shifts Today</small><strong>18</strong><em>Scheduled</em></div>
+                <div class="metric"><small>Coverage</small><strong>96%</strong><em>Healthy</em></div>
+              </div>
+              <div class="dash-lower">
+                <div class="schedule">
+                  <div class="panel-title">Today’s Schedule</div>
+                  <div class="shift"><span class="shift-dot"></span><div><strong>Morning Shift</strong><small>6:00 AM – 2:00 PM</small></div><span class="staff">8 staff</span></div>
+                  <div class="shift"><span class="shift-dot"></span><div><strong>Afternoon Shift</strong><small>2:00 PM – 10:00 PM</small></div><span class="staff">6 staff</span></div>
+                  <div class="shift"><span class="shift-dot"></span><div><strong>Night Shift</strong><small>10:00 PM – 6:00 AM</small></div><span class="staff">4 staff</span></div>
+                </div>
+                <div class="coverage"><div class="panel-title">Staff Coverage</div><div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+              </div>
+            </section>
           </div>
-          <div class="signal-grid">
-            <article class="signal">
-              <div class="signal-head"><span class="signal-icon"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><span class="signal-no">01 · COMMERCIAL</span></div>
-              <b>CS TAN</b><p>Excel analysis · B2B workflows · IT support · operations</p>
-            </article>
-            <article class="signal">
-              <div class="signal-head"><span class="signal-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><span class="signal-no">02 · SYSTEMS</span></div>
-              <b>TanShift</b><p>Scheduling rules · manager/staff flows · PostgreSQL</p>
-            </article>
-            <article class="signal">
-              <div class="signal-head"><span class="signal-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="signal-no">03 · CLIENT</span></div>
-              <b>Monash Client Project</b><p>Requirements · onboarding · front-end fixes · integrity testing</p>
-            </article>
-            <article class="signal">
-              <div class="signal-head"><span class="signal-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="signal-no">04 · DATA</span></div>
-              <b>SQL & Data Modelling</b><p>ERD · Oracle SQL · data integrity · relational design</p>
-            </article>
-          </div>
-          <div class="board-flow"><span>Business context</span><b>→</b><span>Requirements</span><b>→</b><span>Systems & data</span><b>→</b><span>Validation</span></div>
         </div>
       </div>
     </header>
 
-    <div class="proof-strip">
-      <div class="shell">
-        <div class="proof-grid reveal">
-          <div class="proof-stat"><strong><em>3</em> role stages</strong><span>Progression at CS TAN across IT support, analysis and operations</span></div>
-          <div class="proof-stat"><strong><em>100+</em></strong><span>E-commerce product listings managed and optimised</span></div>
-          <div class="proof-stat"><strong><em>22-person</em></strong><span>Corporate booking, itinerary and invoice workflow coordinated</span></div>
-          <div class="proof-stat"><strong><em>2</em> public repos</strong><span>Source-backed product work recruiters can inspect</span></div>
-        </div>
-      </div>
-    </div>
-
-    <section class="section" id="bring">
+    <section class="section" id="why-hire">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>What I Bring <span class="blue-line"></span></h2>
-          <div class="section-kicker">Commercial context · systems thinking · delivery</div>
+          <h2>Why I’m Worth Interviewing <span class="blue-line"></span></h2>
+          <div class="section-kicker">30-second recruiter view</div>
         </div>
-        <div class="bring-grid">
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
-            <small>REAL BUSINESS CONTEXT</small>
-            <h3>I understand what the system is supporting.</h3>
-            <p>Sales, stock, supplier costs, quotations, invoices, customers and operational workflows — not only coursework scenarios.</p>
-            <a href="case-cstan.html">See commercial evidence →</a>
-          </article>
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M6 10h12M8 14h8M10 18h4"/></svg></div>
-            <small>ANALYST THINKING</small>
-            <h3>I turn ambiguity into structure.</h3>
-            <p>Requirements, process flows, acceptance criteria, business rules, ERDs and user journeys that teams can actually work from.</p>
-            <a href="case-client-project.html">See client evidence →</a>
-          </article>
-          <article class="bring-card reveal">
-            <div class="bring-icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
-            <small>DELIVERY CREDIBILITY</small>
-            <h3>I stay close enough to implementation to validate it.</h3>
-            <p>SQL, Next.js, Supabase, role logic, testing and front-end fixes let me bridge business analysis with technical delivery.</p>
-            <a href="case-tanshift.html">See systems evidence →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="evidence">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Selected Evidence <span class="blue-line"></span></h2>
-          <div class="section-kicker">Proof, not just skill claims</div>
-        </div>
-
-        <div class="evidence-grid">
-          <article class="case-card reveal">
-            <div class="case-visual warm">
-              <span class="case-label">Real commercial experience</span>
-              <div class="commercial-map">
-                <div class="commercial-tile"><b>Excel Analysis</b><span>Sales · stock · margins · demand</span></div>
-                <div class="commercial-tile"><b>B2B</b><span>Customers · quotes · invoices</span></div>
-                <div class="commercial-tile"><b>Suppliers</b><span>Sourcing · cost · coordination</span></div>
-                <div class="commercial-tile"><b>IT Support</b><span>Devices · email · business software</span></div>
+        <div class="hire-grid reveal">
+          <article class="hire-main">
+            <small>Candidate thesis</small>
+            <h3>Business thinking on one side. Technology delivery on the other.</h3>
+            <div class="hire-visual">
+              <div class="hire-side">
+                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><span class="hire-label">Business context</span></div>
+                <div class="hire-node"><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="hire-label">Requirements</span></div>
+              </div>
+              <div class="hire-bridge" aria-hidden="true"></div>
+              <div class="hire-side right">
+                <div class="hire-node"><span class="hire-label">Systems & data</span><span class="vicon dark"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span></div>
+                <div class="hire-node"><span class="hire-label">Delivery & validation</span><span class="vicon dark"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-5"/><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/></svg></span></div>
               </div>
             </div>
-            <div class="case-body">
-              <div class="case-top"><div><div class="case-type">Commercial · CS TAN</div><h3>Real business experience across analysis, IT and operations</h3></div><span class="case-proof">REAL WORK</span></div>
-              <p>Worked with real customers, suppliers, stock, pricing, documents and systems — giving my technical work a commercial foundation.</p>
-              <div class="case-contrib"><span>Decision support</span><span>B2B workflows</span><span>Operations</span></div>
-              <a class="case-link" href="case-cstan.html">View commercial case →</a>
-            </div>
+            <div class="hire-caption">Real commercial work + source-backed systems projects + end-to-end validation.</div>
           </article>
-
-          <article class="case-card reveal">
-            <div class="case-visual">
-              <span class="case-label">Public product repo</span>
-              <div class="workflow">
-                <div class="flow-node"><b>Availability</b><span>staff input</span></div><div class="flow-arrow">→</div>
-                <div class="flow-node"><b>Draft</b><span>manager schedule</span></div><div class="flow-arrow">→</div>
-                <div class="flow-node"><b>Published</b><span>staff view</span></div>
-              </div>
-            </div>
-            <div class="case-body">
-              <div class="case-top"><div><div class="case-type">Systems · TanShift</div><h3>Staff scheduling built around real workflow rules</h3></div><span class="case-proof">PUBLIC GITHUB</span></div>
-              <p>Connected operational rostering problems to role-based workflows, relational data and a working Next.js/Supabase prototype.</p>
-              <div class="case-contrib"><span>Business rules</span><span>PostgreSQL</span><span>Role flows</span></div>
-              <a class="case-link" href="case-tanshift.html">View TanShift case →</a>
-            </div>
-          </article>
-
-          <article class="case-card reveal">
-            <div class="case-visual">
-              <span class="case-label">Private client project</span>
-              <div class="client-flow">
-                <div class="client-step"><div class="step-circle">1</div><span>Requirement</span></div><div class="client-line"></div>
-                <div class="client-step"><div class="step-circle">2</div><span>Guided flow</span></div><div class="client-line"></div>
-                <div class="client-step"><div class="step-circle">3</div><span>Fix</span></div><div class="client-line"></div>
-                <div class="client-step"><div class="step-circle">✓</div><span>Validate</span></div>
-              </div>
-            </div>
-            <div class="case-body">
-              <div class="case-top"><div><div class="case-type">Business Analysis · Monash Client</div><h3>Requirements carried through to implementation and testing</h3></div><span class="case-proof">CLIENT WORK</span></div>
-              <p>Worked from expected user behaviour into acceptance criteria, onboarding fixes and strict end-to-end integrity testing.</p>
-              <div class="case-contrib"><span>Requirements</span><span>UAT thinking</span><span>Front-end fixes</span></div>
-              <a class="case-link" href="case-client-project.html">View client case →</a>
-            </div>
-          </article>
-
-          <article class="case-card reveal">
-            <div class="case-visual dark">
-              <span class="case-label">Public product repo</span>
-              <div class="ai-panel">
-                <div class="ai-input"><small>USER REFLECTION</small><p>Unstructured situation and thoughts...</p></div>
-                <div class="ai-output"><small>STRUCTURED OUTPUT</small><p>Facts → interpretation → pattern → need → next step</p><div class="ai-tags"><span>roles</span><span>Supabase</span><span>Playwright</span></div></div>
-              </div>
-            </div>
-            <div class="case-body">
-              <div class="case-top"><div><div class="case-type">Product · InnerLeaf</div><h3>Structured AI output with role-aware product flows</h3></div><span class="case-proof">PUBLIC GITHUB</span></div>
-              <p>Hands-on work across product flows, Supabase-backed data, user/admin routing, structured AI output and acceptance testing.</p>
-              <div class="case-contrib"><span>AI workflow</span><span>Role logic</span><span>Playwright</span></div>
-              <a class="case-link" href="case-innerleaf.html">View InnerLeaf case →</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="database-strip reveal">
-          <div><strong>Data foundation — Oracle Database & SQL</strong><span>ERD · normalisation · relational modelling · data integrity · business-rule-driven schema design</span></div>
-          <a href="case-database.html">View database case →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="approach">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>How I Work <span class="blue-line"></span></h2>
-          <div class="section-kicker">From problem to validated solution</div>
-        </div>
-        <div class="process reveal">
-          <div class="process-step"><div class="process-no">01</div><strong>Understand</strong><span>User · problem · constraints</span></div>
-          <div class="process-step"><div class="process-no">02</div><strong>Structure</strong><span>Requirements · workflows · rules</span></div>
-          <div class="process-step"><div class="process-no">03</div><strong>Deliver</strong><span>System · data · documentation</span></div>
-          <div class="process-step"><div class="process-no">04</div><strong>Validate</strong><span>UAT · integrity · refinement</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="shell">
-        <div class="section-head reveal">
-          <h2>Commercial Progression <span class="blue-line"></span></h2>
-          <div class="section-kicker">Experience that grew with responsibility</div>
-        </div>
-        <div class="experience-layout">
-          <article class="exp-summary reveal">
-            <small>CS TAN Technology & Enterprise</small>
-            <h3>From troubleshooting systems to analysing operations and supporting growth.</h3>
-            <p>The progression matters: I started close to users and technology, moved into retail business analysis, then into broader business development and operations.</p>
-            <div class="exp-path">
-              <div><b>IT Support Assistant</b><span>Sep 2022 – Mar 2023</span></div>
-              <div><b>Retail Business Analyst Assistant</b><span>Mar 2023 – Aug 2023</span></div>
-              <div><b>Business Development & Operations Assistant</b><span>Aug 2023 – Present</span></div>
-            </div>
-            <a href="case-cstan.html">Inspect commercial experience →</a>
-          </article>
-          <div class="timeline reveal">
-            <div class="timeline-row"><div class="timeline-date">Aug 2023 – Present</div><div class="timeline-role"><strong>Business Development & Operations Assistant</strong><small>CS TAN · Malaysia / Remote</small></div><div class="role-pill">Operations</div></div>
-            <div class="timeline-row"><div class="timeline-date">Mar 2023 – Aug 2023</div><div class="timeline-role"><strong>Retail Business Analyst Assistant</strong><small>CS TAN · Malaysia</small></div><div class="role-pill">Business Analysis</div></div>
-            <div class="timeline-row"><div class="timeline-date">Sep 2022 – Mar 2023</div><div class="timeline-role"><strong>IT Support Assistant</strong><small>CS TAN · Malaysia</small></div><div class="role-pill">IT Support</div></div>
-            <div class="timeline-row"><div class="timeline-date">Feb 2020 – Present</div><div class="timeline-role"><strong>E-commerce Coordinator</strong><small>Lazada / Shopee · Remote</small></div><div class="role-pill">E-commerce</div></div>
+          <div class="hire-proof">
+            <article><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><b>COMMERCIAL</b><strong>CS TAN</strong><span>Sales · stock · customers · suppliers</span></article>
+            <article><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><b>ANALYSIS</b><strong>Decision support</strong><span>Excel · pricing · purchasing · inventory</span></article>
+            <article><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><b>TECHNICAL</b><strong>Public proof</strong><span>Next.js · Supabase · SQL · Playwright</span></article>
+            <article><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M18 14l2 2-4 4"/></svg></span><b>OPERATIONS</b><strong>22-passenger workflow</strong><span>Booking · itinerary · invoice · customer</span></article>
           </div>
         </div>
       </div>
     </section>
+<section class="section" id="evidence-stats">
+      <div class="shell">
+        <div class="stats-strip reveal">
+          <div class="stat-block"><strong><em>5</em></strong><span>Evidence pages covering systems, data, client work and commercial experience</span></div>
+          <div class="stat-block"><strong><em>2</em></strong><span>Public product repositories with source-backed technical work</span></div>
+          <div class="stat-block"><strong><em>22 pax</em></strong><span>Corporate travel booking, itinerary and invoice coordination in a real B2B customer workflow</span></div>
+          <div class="stat-block"><strong><em>100+</em></strong><span>E-commerce product listings managed across online operations</span></div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section" id="capabilities">
+    <section class="section" id="projects">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Capabilities Backed by Evidence <span class="blue-line"></span></h2>
-          <div class="section-kicker">Every claim has somewhere to inspect</div>
+          <h2>Selected Projects <span class="blue-line"></span></h2>
+          <div class="section-kicker">Featured work</div>
         </div>
-        <div class="cap-matrix reveal">
-          <div class="cap-row"><strong>Requirements & Process Analysis</strong><span>Requirements · process flows · acceptance criteria · stakeholder context · UAT thinking</span><a href="case-client-project.html">Monash client →</a></div>
-          <div class="cap-row"><strong>Systems & Business Rules</strong><span>Role-based workflows · scheduling states · availability constraints · request handling</span><a href="case-tanshift.html">TanShift →</a></div>
-          <div class="cap-row"><strong>Data & SQL</strong><span>ERD · relational design · PostgreSQL · Oracle SQL · normalisation · data integrity</span><a href="case-database.html">Database case →</a></div>
-          <div class="cap-row"><strong>Commercial Analysis</strong><span>Excel · sales · inventory · supplier cost · product performance · pricing/purchasing support</span><a href="case-cstan.html">CS TAN →</a></div>
-          <div class="cap-row"><strong>Delivery & Validation</strong><span>Next.js · Supabase · front-end fixes · Playwright · end-to-end validation</span><a href="case-innerleaf.html">Product evidence →</a></div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="mini-app">
+                <div class="mini-side">
+                  <div class="mini-brand">TanShift</div>
+                  <div class="mini-nav"><span>Dashboard</span><span>Schedule</span><span>Employees</span><span>Reports</span><span>Settings</span></div>
+                </div>
+                <div class="mini-content">
+                  <div class="mini-title"><span>Shift Schedule</span><span>Nov 11–17</span></div>
+                  <div class="roster">
+                    <div></div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div>
+                    <div class="person">Alex Chen</div><div class="blue">AM</div><div class="blue">AM</div><div></div><div class="green">PM</div><div class="green">PM</div>
+                    <div class="person">Priya Shah</div><div class="yellow">Mid</div><div></div><div class="blue">AM</div><div class="blue">AM</div><div></div>
+                    <div class="person">Daniel Kim</div><div></div><div class="green">PM</div><div class="green">PM</div><div></div><div class="yellow">Mid</div>
+                    <div class="person">Emma Wong</div><div class="blue">AM</div><div></div><div class="yellow">Mid</div><div class="yellow">Mid</div><div class="green">PM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row"><h3>TanShift</h3><span class="project-arrow">↗</span></div>
+              <p>Staff scheduling system designed to replace fragmented rostering workflows.</p>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span>
+    <span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span>
+    <span class="tag tech-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
+    <span class="tag">Workflow Design</span><span class="tag">Business Analysis</span>
+  </div>
+  <div class="project-evidence"><span>Manager + Staff flows</span><span>Draft ↔ Published</span><span>Availability rules</span></div>
+  <a class="project-link" href="case-tanshift.html">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="flow-wrap">
+                <div class="flow-side"><div>Overview</div><div>Requirements</div><div>User Flow</div><div>Testing</div><div>Findings</div></div>
+                <div class="flow-main">
+                  <div class="flow-title">User Onboarding Flow</div>
+                  <div class="flow-line">
+                    <div class="flow-node"><div class="flow-icon">1</div><span>Sign Up</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">2</div><span>Verify Email</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">3</div><span>Complete Profile</span></div><div class="flow-arrow"></div>
+                    <div class="flow-node"><div class="flow-icon">✓</div><span>Get Started</span></div>
+                  </div>
+                  <div class="outcome"><strong>Project Outcome</strong><p>✓ Met client requirements · ✓ Passed integrity testing · ✓ Improved onboarding clarity</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row"><h3>Monash Client Project</h3><span class="project-arrow">↗</span></div>
+              <p>Improved onboarding flow using client requirements, acceptance criteria and integrity testing.</p>
+              <div class="tags"><span class="tag">Requirements</span><span class="tag">Acceptance Criteria</span><span class="tag">UAT</span><span class="tag">UX Flow</span><span class="tag">Agile</span></div>
+              <div class="project-evidence"><span>Requirements → fixes</span><span>Integrity testing</span><span>Private client work</span></div>
+              <a class="project-link" href="case-client-project.html">View case study →</a>
+            </div>
+          </article>
+
+
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="innerleaf-mini">
+                <div class="innerleaf-head"><span class="innerleaf-brand">InnerLeaf</span><span class="innerleaf-badge">AI-assisted reflection</span></div>
+                <div class="innerleaf-grid">
+                  <div class="journal"><div class="journal-title">Free-form reflection</div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div><div class="journal-line"></div></div>
+                  <div class="reflection-card">
+                    <div class="reflect-row"><strong>Facts</strong><span>What happened without interpretation</span></div>
+                    <div class="reflect-row"><strong>Pattern</strong><span>Structured thought-pattern output</span></div>
+                    <div class="reflect-row accent"><strong>Next step</strong><span>One practical reflection prompt</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row"><h3>InnerLeaf</h3><span class="project-arrow">↗</span></div>
+              <p>AI-assisted reflection product with structured Gemini output, Supabase auth/data, user/admin routing and Playwright acceptance tests.</p>
+              <div class="tags"><span class="tag tech-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</span><span class="tag tech-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</span><span class="tag">Google Gemini</span><span class="tag">Playwright</span><span class="tag">Role-based UX</span></div>
+              <div class="project-evidence"><span>Structured AI output</span><span>User / Admin routing</span><span>Playwright tests</span></div>
+              <a class="project-link" href="case-innerleaf.html">View case study →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true"><span class="concept-label">Concept Preview</span>
+              <div class="erd">
+                <div class="erd-side"><div>Database</div><div>ERD</div><div>Tables</div><div>Relationships</div><div>SQL Scripts</div></div>
+                <div class="erd-canvas">
+                  <div class="entity a"><h4>CUSTOMER</h4><p>customer_id PK<br>name<br>email<br>phone</p></div>
+                  <div class="entity b"><h4>ORDER</h4><p>order_id PK<br>customer_id FK<br>order_date<br>status</p></div>
+                  <div class="entity c"><h4>ORDER_ITEM</h4><p>order_item_id PK<br>order_id FK<br>product_id FK<br>quantity</p></div>
+                  <div class="entity d"><h4>PRODUCT</h4><p>product_id PK<br>name<br>category<br>price</p></div>
+                  <span class="erd-line one"></span><span class="erd-line two"></span><span class="erd-line three"></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title-row"><h3>Oracle Database Project</h3><span class="project-arrow">↗</span></div>
+              <p>Database design focused on business rules, ERD structure and SQL integrity.</p>
+              <div class="tags">
+    <span class="tag tech-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
+    <span class="tag">ERD</span><span class="tag">Normalisation</span><span class="tag">Relational Design</span>
+  </div>
+              <div class="project-evidence"><span>ERD modelling</span><span>Data integrity</span><span>Oracle SQL</span></div>
+              <a class="project-link" href="case-database.html">View case study →</a>
+            </div>
+          </article>
         </div>
-        <div class="tools-wrap reveal" aria-label="Tools">
-          <span class="tool"><img src="assets/icons/figma.svg" alt="">Figma</span>
-          <span class="tool"><img src="assets/icons/miro.svg" alt="">Miro</span>
-          <span class="tool"><img src="assets/icons/trello.svg" alt="">Trello</span>
-          <span class="tool"><img src="assets/icons/github.svg" alt="">GitHub</span>
-          <span class="tool"><img src="assets/icons/vscode.svg" alt="">VS Code</span>
-          <span class="tool"><img src="assets/icons/nextjs.svg" alt="">Next.js</span>
-          <span class="tool"><img src="assets/icons/supabase.svg" alt="">Supabase</span>
-          <span class="tool"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</span>
-          <span class="tool"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</span>
-          <span class="tool"><img src="assets/icons/canva.svg" alt="">Canva</span>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="capability-map">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>From Business Problem to Working System <span class="blue-line"></span></h2>
+          <div class="section-kicker">How my capabilities connect</div>
+        </div>
+        <div class="capability-map reveal">
+          <span class="map-line l1"></span><span class="map-line l2"></span><span class="map-line l3"></span><span class="map-line l4"></span><span class="map-pulse"></span>
+          <div class="map-center"><div><small>Core profile</small><strong>Business + Technology + Delivery</strong></div></div>
+          <div class="map-node n1"><b>01 · DISCOVER</b><strong>Business Analysis</strong><span>Requirements · stakeholder context · process mapping · user stories</span></div>
+          <div class="map-node n2"><b>02 · STRUCTURE</b><strong>Systems Thinking</strong><span>Workflows · acceptance criteria · entities · edge cases · role logic</span></div>
+          <div class="map-node n3"><b>03 · BUILD</b><strong>Data & Product</strong><span>SQL · ERD · PostgreSQL · Supabase · Next.js · interface delivery</span></div>
+          <div class="map-node n4"><b>04 · VALIDATE</b><strong>Quality & Testing</strong><span>UAT thinking · integrity testing · Playwright · end-to-end validation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proof">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Proof of Work <span class="blue-line"></span></h2>
+          <div class="section-kicker">Claims connected to evidence</div>
+        </div>
+        <div class="evidence-grid">
+          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><span class="evidence-no">01 · REQUIREMENTS</span><h3>Client onboarding</h3><span class="evidence-meta">Acceptance criteria · UAT</span><a href="case-client-project.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><span class="evidence-no">02 · SYSTEMS</span><h3>TanShift</h3><span class="evidence-meta">Workflows · business rules</span><a href="case-tanshift.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon purple"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span class="evidence-no">03 · DATA</span><h3>Relational design</h3><span class="evidence-meta">ERD · Oracle SQL</span><a href="case-database.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><span class="evidence-no">04 · FULL STACK</span><h3>InnerLeaf</h3><span class="evidence-meta">AI · roles · Playwright</span><a href="case-innerleaf.html">Inspect →</a></article>
+          <article class="evidence-card reveal"><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6"/></svg></span><span class="evidence-no">05 · COMMERCIAL</span><h3>CS TAN</h3><span class="evidence-meta">B2B · Excel · IT support</span><a href="case-cstan.html">Inspect →</a></article>
+        </div>
+      </div>
+    </section>
+<section class="section" id="approach">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>How I Work <span class="blue-line"></span></h2>
+          <div class="section-kicker">Analyst-to-delivery loop</div>
+        </div>
+        <div class="workstyle reveal">
+          <div class="workstep"><b>01</b><strong>Understand</strong><span>User · problem · constraints</span></div>
+          <div class="workstep"><b>02</b><strong>Structure</strong><span>Requirements · workflows · edge cases</span></div>
+          <div class="workstep"><b>03</b><strong>Deliver</strong><span>Prototype · data · documentation</span></div>
+          <div class="workstep"><b>04</b><strong>Validate</strong><span>UAT · integrity · refinement</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Technical Skills &amp; Capabilities <span class="blue-line"></span></h2>
+          <div class="section-kicker">Key areas of expertise</div>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-card reveal">
+            <div class="cap-head"><div class="cap-icon">BA</div><h3>Business &amp; Systems Analysis</h3></div>
+            <div class="tags"><span class="tag">Requirements</span><span class="tag">Process Mapping</span><span class="tag">Acceptance Criteria</span><span class="tag">Stakeholders</span><span class="tag">UAT</span></div>
+          </article>
+          <article class="cap-card reveal">
+            <div class="cap-head"><div class="cap-icon">DB</div><h3>Data &amp; Databases</h3></div>
+            <div class="tags"><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle SQL</span><span class="tag">ERD</span><span class="tag">Excel</span></div>
+          </article>
+          <article class="cap-card reveal">
+            <div class="cap-head"><div class="cap-icon">PD</div><h3>Product &amp; Delivery</h3></div>
+            <div class="tags"><span class="tag">Next.js</span><span class="tag">JavaScript</span><span class="tag">Git/GitHub</span><span class="tag">Agile</span><span class="tag">Testing</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Software &amp; Tools <span class="blue-line"></span></h2>
+          <div class="section-kicker">Tools I work with</div>
+        </div>
+
+        <div class="tool-flow reveal" aria-label="Technology ecosystem">
+          <div class="tool-track">
+            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
+            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
+            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
+            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
+            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
+            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
+            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
+            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
+            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
+            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
+            <div class="flow-chip"><img src="assets/icons/figma.svg" alt="">Figma</div>
+            <div class="flow-chip"><img src="assets/icons/miro.svg" alt="">Miro</div>
+            <div class="flow-chip"><img src="assets/icons/trello.svg" alt="">Trello</div>
+            <div class="flow-chip"><img src="assets/icons/github.svg" alt="">GitHub</div>
+            <div class="flow-chip"><img src="assets/icons/vscode.svg" alt="">VS Code</div>
+            <div class="flow-chip"><img src="assets/icons/nextjs.svg" alt="">Next.js</div>
+            <div class="flow-chip"><img src="assets/icons/supabase.svg" alt="">Supabase</div>
+            <div class="flow-chip"><img src="assets/icons/postgresql.svg" alt="">PostgreSQL</div>
+            <div class="flow-chip"><img src="assets/icons/oracle.svg" alt="">Oracle SQL</div>
+            <div class="flow-chip"><img src="assets/icons/canva.svg" alt="">Canva</div>
+          </div>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/figma.svg" alt="Figma logo"></div><span>Figma</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/miro.svg" alt="Miro logo"></div><span>Miro</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/trello.svg" alt="Trello logo"></div><span>Trello</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/github.svg" alt="GitHub logo"></div><span>GitHub</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/vscode.svg" alt="Visual Studio Code logo"></div><span>VS Code</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/supabase.svg" alt="Supabase logo"></div><span>Supabase</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/postgresql.svg" alt="PostgreSQL logo"></div><span>PostgreSQL</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/oracle.svg" alt="Oracle logo"></div><span>Oracle SQL</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Microsoft Excel logo"></div><span>Excel</span></div>
+          <div class="tool reveal"><div class="tool-logo-shell"><img class="tool-logo" src="assets/icons/canva.svg" alt="Canva logo"></div><span>Canva</span></div>
+        </div>
+      </div>
+    </section><section class="section" id="experience">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Experience <span class="blue-line"></span></h2>
+          <div class="section-kicker">Professional background</div>
+        </div>
+        <div class="commercial-exp reveal">
+          <article class="commercial-story">
+            <small>Commercial experience</small>
+            <h3>CS TAN Commercial Experience</h3>
+            <p>Real commercial work across analysis, IT support and operations.</p>
+            <div class="commercial-path"><span>IT Support</span><b>→</b><span>Retail Business Analysis</span><b>→</b><span>Business Development & Operations</span></div>
+            <a href="case-cstan.html">View real commercial experience →</a>
+          </article>
+          <div class="commercial-proof">
+            <div><span class="vicon green"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><strong>Excel analysis</strong><span>Sales · stock · margins · demand</span></div>
+            <div><span class="vicon blue"><svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM16 10a3 3 0 1 0 0-6M2 21v-2c0-3 2-5 6-5s6 2 6 5v2M15 14c4 0 7 2 7 5v2"/></svg></span><strong>22 passengers</strong><span>Booking · itinerary · invoice</span></div>
+            <div><span class="vicon purple"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 8l8 5 8-5"/></svg></span><strong>B2B workflow</strong><span>Customers · quotes · invoices</span></div>
+            <div><span class="vicon orange"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4v6M17 4v6M6 14h5M6 18h8"/></svg></span><strong>Operations</strong><span>Sourcing · suppliers · records</span></div>
+          </div>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-row">
+            <div class="timeline-date">Aug 2023 – Present</div>
+            <div class="timeline-role"><strong>Business Development &amp; Operations Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia / Remote</small></div>
+            <div class="role-pill blue">Operations</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-date">Mar 2023 – Aug 2023</div>
+            <div class="timeline-role"><strong>Retail Business Analyst Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia</small></div>
+            <div class="role-pill green">Business Analysis</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-date">Sep 2022 – Mar 2023</div>
+            <div class="timeline-role"><strong>IT Support Assistant</strong><small>CS TAN Technology &amp; Enterprise Sdn Bhd · Malaysia</small></div>
+            <div class="role-pill purple">IT Support</div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-date">Feb 2020 – Present</div>
+            <div class="timeline-role"><strong>E-commerce Coordinator</strong><small>Lazada / Shopee · Remote</small></div>
+            <div class="role-pill orange">E-commerce</div>
+          </div>
         </div>
       </div>
     </section>
@@ -513,11 +1129,11 @@
     <section class="cta-wrap" id="contact">
       <div class="shell">
         <div class="cta reveal">
-          <div><small>2027 Graduate & Entry-Level Opportunities</small><h2>Looking for an analyst who can understand the business and stay close to delivery?</h2></div>
+          <div><small>Let’s work together</small><h2>Open to graduate and entry-level opportunities in business, systems and technology.</h2></div>
           <div class="cta-actions">
-            <a class="cta-link" href="resume.html">View resume</a>
-            <a class="cta-link secondary" href="mailto:tanstrifelife@gmail.com">Email me</a>
-            <a class="cta-link secondary" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="cta-link" href="mailto:tanstrifelife@gmail.com">Email</a>
+            <a class="cta-link linkedin" href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="" style="width:14px;height:14px;margin-right:7px;filter:brightness(0) invert(1)">LinkedIn</a>
+            <a class="cta-link github" href="https://github.com/WilliamTangq" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="" style="width:14px;height:14px;margin-right:7px">GitHub</a>
           </div>
         </div>
       </div>
@@ -527,43 +1143,78 @@
   <footer>
     <div class="shell footer-inner">
       <div>© 2026 Guang Quan Tan (William) · Melbourne, Australia</div>
-      <div class="footer-links"><a href="resume.html">Resume</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a><a href="mailto:tanstrifelife@gmail.com">Email</a></div>
+      <div class="footer-links"><a href="resume.html">Resume</a><a href="case-cstan.html">Commercial Experience</a><a href="mailto:tanstrifelife@gmail.com">Email</a><a href="https://www.linkedin.com/in/williamtangq" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WilliamTangq" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </footer>
 
   <script>
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const revealEls = [...document.querySelectorAll(".reveal")];
+
+    revealEls.forEach((el, index) => {
+      const localIndex = index % 5;
+      el.style.setProperty("--reveal-delay", reducedMotion ? "0ms" : (localIndex * 45) + "ms");
+    });
+
     if (reducedMotion) {
-      revealEls.forEach(el => el.classList.add("visible"));
+      revealEls.forEach((el) => el.classList.add("visible"));
     } else {
-      revealEls.forEach((el,i)=>el.style.transitionDelay=((i%4)*45)+"ms");
-      const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
         });
-      },{threshold:.08,rootMargin:"0px 0px -4% 0px"});
-      revealEls.forEach(el=>observer.observe(el));
+      }, { threshold: 0.08, rootMargin: "0px 0px -4% 0px" });
+      revealEls.forEach((el) => observer.observe(el));
     }
 
-    const progress=document.getElementById("scrollProgress");
-    const setProgress=()=>{
-      const max=document.documentElement.scrollHeight-window.innerHeight;
-      const ratio=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
-      progress.style.transform="scaleX("+ratio+")";
+    const progress = document.getElementById("scrollProgress");
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      progress.style.transform = "scaleX(" + ratio + ")";
     };
     setProgress();
-    window.addEventListener("scroll",setProgress,{passive:true});
-    window.addEventListener("resize",setProgress);
+    window.addEventListener("scroll", setProgress, { passive:true });
+    window.addEventListener("resize", setProgress);
 
-    const navLinks=[...document.querySelectorAll("[data-nav]")];
-    const sections=["evidence","experience","capabilities","contact"].map(id=>document.getElementById(id)).filter(Boolean);
-    const navObserver=new IntersectionObserver(entries=>{
-      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-      if(!visible)return;
-      navLinks.forEach(link=>link.classList.toggle("active",link.dataset.nav===visible.target.id));
-    },{rootMargin:"-30% 0px -58% 0px",threshold:[0,.15,.3,.6]});
-    sections.forEach(s=>navObserver.observe(s));
+    const navLinks = [...document.querySelectorAll("[data-nav]")];
+    const watchedSections = ["why-hire","projects","experience","skills","contact"]
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.dataset.nav === visible.target.id);
+      });
+    }, { rootMargin:"-28% 0px -58% 0px", threshold:[0,.15,.3,.6] });
+    watchedSections.forEach((section) => navObserver.observe(section));
+
+    if (!reducedMotion && window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
+      const stage = document.querySelector(".dashboard-stage");
+      const dash = document.querySelector(".dashboard");
+      if (stage && dash) {
+        stage.addEventListener("pointermove", (event) => {
+          const r = stage.getBoundingClientRect();
+          const x = (event.clientX - r.left) / r.width - .5;
+          const y = (event.clientY - r.top) / r.height - .5;
+          dash.style.animation = "none";
+          dash.style.transform = "translateY(-3px) rotateX(" + (-y * 2.2) + "deg) rotateY(" + (x * 2.8) + "deg) rotateZ(-.7deg)";
+          dash.style.boxShadow = "0 32px 90px rgba(39,71,113,.20)";
+        });
+        stage.addEventListener("pointerleave", () => {
+          dash.style.transform = "";
+          dash.style.boxShadow = "";
+          dash.style.animation = "";
+        });
+      }
+    }
   </script>
 </body>
 </html>
