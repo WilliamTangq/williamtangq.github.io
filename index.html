@@ -698,7 +698,149 @@
     .skill-chip-wrap{display:flex;flex-wrap:wrap;gap:7px}
     .hr-skill-chip{padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #e6ebf2;color:#526074;font-size:.58rem;font-weight:700}
 
-    @media(max-width:1040px){.spectrum-grid{grid-template-columns:repeat(2,1fr)}}
+
+    /* visual polish v3 — recruiter-first, low-copy, high-visual */
+    #professional-spectrum{
+      position:relative;overflow:hidden;color:#fff;
+      background:
+        radial-gradient(circle at 12% 18%,rgba(52,129,255,.22),transparent 28%),
+        radial-gradient(circle at 88% 72%,rgba(114,90,230,.18),transparent 30%),
+        linear-gradient(145deg,#09172b 0%,#102846 56%,#0b1c34 100%);
+      border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    #professional-spectrum::before{
+      content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+      background-image:radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1px);
+      background-size:26px 26px;
+      mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)
+    }
+    #professional-spectrum .shell{position:relative;z-index:2}
+    #professional-spectrum .section-head h2{color:#fff}
+    #professional-spectrum .section-kicker{color:#95abc8}
+    #professional-spectrum .blue-line{background:#76b7ff}
+    .spectrum-axis{
+      display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin:-3px 0 18px;
+      color:#a8bcd6;font-size:.58rem;text-transform:uppercase;letter-spacing:.09em;font-weight:760
+    }
+    .spectrum-axis::before,.spectrum-axis::after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(118,183,255,.45))}
+    .spectrum-axis::after{background:linear-gradient(90deg,rgba(118,183,255,.45),transparent)}
+    .spectrum-axis b{color:#fff;font-size:.62rem;letter-spacing:.08em}
+    #professional-spectrum .spectrum-card{
+      background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.11);box-shadow:none;color:#fff;
+      backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)
+    }
+    #professional-spectrum .spectrum-card:hover{background:rgba(255,255,255,.09);border-color:rgba(135,190,255,.30);box-shadow:0 20px 50px rgba(0,0,0,.16)}
+    #professional-spectrum .spectrum-card::before{
+      position:absolute;right:10px;top:-15px;font-size:5.2rem;line-height:1;font-weight:850;letter-spacing:-.08em;
+      color:rgba(255,255,255,.035);pointer-events:none
+    }
+    #professional-spectrum .spectrum-ba::before{content:"BA"}
+    #professional-spectrum .spectrum-bis::before{content:"BIS"}
+    #professional-spectrum .spectrum-it::before{content:"IT"}
+    #professional-spectrum .spectrum-bd::before{content:"BD"}
+    #professional-spectrum .spectrum-icon{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.10);color:#a8d1ff}
+    #professional-spectrum .spectrum-code{color:#8dc6ff}
+    #professional-spectrum .spectrum-card h3{color:#fff}
+    #professional-spectrum .spectrum-role{color:#8fa7c7}
+    #professional-spectrum .spectrum-list span{color:#c3d0e2}
+    #professional-spectrum .spectrum-list span::before{background:#76b7ff;box-shadow:0 0 0 4px rgba(118,183,255,.09)}
+    #professional-spectrum .spectrum-evidence{border-top-color:rgba(255,255,255,.09);color:#8fa4c0}
+    #professional-spectrum .spectrum-evidence b{color:#a8d1ff}
+    #professional-spectrum .software-skill-strip{
+      background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.10);box-shadow:none
+    }
+    #professional-spectrum .software-skill-title strong{color:#fff}
+    #professional-spectrum .software-skill-title small{color:#8fa6c4}
+    #professional-spectrum .hr-skill-chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.09);color:#c5d2e3}
+
+    .projects-grid{
+      grid-template-columns:repeat(12,1fr);gap:18px;align-items:stretch
+    }
+    .project-tanshift{grid-column:span 7}
+    .project-client{grid-column:span 5}
+    .project-innerleaf{grid-column:span 5}
+    .project-database{grid-column:span 7}
+    .project-card{display:flex;flex-direction:column}
+    .project-card .project-visual{height:245px}
+    .project-tanshift .project-visual,.project-database .project-visual{height:265px}
+    .project-card .project-body{display:flex;flex-direction:column;flex:1}
+    .project-card .project-link{margin-top:auto;padding-top:14px}
+    .project-tanshift .mini-app{transform:scale(1.02);transform-origin:center}
+    .project-database .erd{transform:scale(1.02);transform-origin:center}
+    .project-client .flow-wrap,.project-innerleaf .innerleaf-mini{height:100%}
+    .project-card .concept-label{box-shadow:0 7px 18px rgba(57,75,103,.08)}
+    .project-card:hover .project-visual{transform:translateY(-2px) scale(1.006)}
+
+    #proof{background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);border-top:1px solid rgba(221,229,239,.7)}
+    #proof .evidence-grid{
+      position:relative;grid-template-columns:repeat(5,1fr);gap:0;padding:24px 10px 2px
+    }
+    #proof .evidence-grid::before{
+      content:"";position:absolute;left:9%;right:9%;top:58px;height:1px;
+      background:linear-gradient(90deg,transparent,#b9d5f7 10%,#b9d5f7 90%,transparent)
+    }
+    #proof .evidence-card{
+      position:relative;z-index:2;background:transparent;border:0;border-radius:0;padding:0 12px;text-align:center;
+      box-shadow:none;min-width:0
+    }
+    #proof .evidence-card:hover{transform:translateY(-3px);box-shadow:none;border-color:transparent}
+    #proof .evidence-card .vicon{
+      width:48px;height:48px;border-radius:50%;margin:0 auto 14px;background:#fff;box-shadow:0 8px 24px rgba(44,62,96,.08)
+    }
+    #proof .evidence-no{margin-bottom:6px;font-size:.56rem}
+    #proof .evidence-card h3{font-size:.84rem}
+    #proof .evidence-meta{font-size:.59rem;margin-bottom:9px}
+    #proof .evidence-card a{font-size:.61rem}
+
+    #approach .workstyle{
+      position:relative;overflow:visible;background:transparent;border:0;box-shadow:none;gap:12px
+    }
+    #approach .workstyle::before{
+      content:"";position:absolute;left:11%;right:11%;top:34px;height:1px;
+      background:linear-gradient(90deg,transparent,#b8d4f7 10%,#b8d4f7 90%,transparent);z-index:0
+    }
+    #approach .workstep{
+      position:relative;z-index:2;border:1px solid var(--line)!important;border-radius:18px;background:#fff;padding:18px;
+      box-shadow:0 11px 30px rgba(44,62,96,.035);min-height:155px;text-align:left
+    }
+    #approach .workstep b{
+      width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;
+      margin:0 0 18px;font-size:.57rem;box-shadow:0 0 0 6px #eef5ff
+    }
+    #approach .workstep strong{font-size:.88rem}
+    #approach .workstep span{font-size:.68rem}
+
+    #evidence-stats{padding-top:42px;padding-bottom:42px}
+    #evidence-stats .stat-block{position:relative;overflow:hidden}
+    #evidence-stats .stat-block::after{
+      position:absolute;right:12px;bottom:-12px;font-size:4.8rem;font-weight:850;letter-spacing:-.08em;color:#eff4fa;line-height:1
+    }
+    #evidence-stats .stat-block:nth-child(1)::after{content:"01"}
+    #evidence-stats .stat-block:nth-child(2)::after{content:"02"}
+    #evidence-stats .stat-block:nth-child(3)::after{content:"03"}
+    #evidence-stats .stat-block:nth-child(4)::after{content:"04"}
+    #evidence-stats .stat-block strong,#evidence-stats .stat-block span{position:relative;z-index:2}
+
+    #tools{
+      background:
+        radial-gradient(circle at 12% 18%,rgba(10,115,255,.07),transparent 24%),
+        linear-gradient(180deg,#fff,#f7faff);
+    }
+    .ecosystem-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .ecosystem-card:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.075);border-color:#d8e5f4}
+    .eco-logo{transition:transform .2s ease,background .2s ease}
+    .ecosystem-card:hover .eco-logo{background:#fff}
+    .eco-logo:hover{transform:translateY(-2px)}
+
+    .career-visual{padding:28px}
+    .career-box{transition:transform .22s ease,background .22s ease,border-color .22s ease}
+    .career-stage:hover .career-box{transform:translateY(-3px);background:rgba(255,255,255,.09);border-color:rgba(137,191,255,.25)}
+    .career-stage:hover .career-dot{box-shadow:0 0 0 1px rgba(132,190,255,.45),0 0 0 8px rgba(80,156,255,.08)}
+
+    @media(max-width:1040px){
+      .projects-grid{grid-template-columns:1fr}
+      .project-tanshift,.project-client,.project-innerleaf,.project-database{grid-column:auto}
+.spectrum-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:760px){
       .spectrum-grid{grid-template-columns:1fr}
       .software-skill-strip{grid-template-columns:1fr}
@@ -807,9 +949,9 @@
       .dashboard-stage{min-height:420px;max-width:720px;width:100%;margin:0 auto}
       .snapshot-grid,.cap-grid{grid-template-columns:repeat(2,1fr)}
       .projects-grid{grid-template-columns:1fr}
-      .project-card{display:grid;grid-template-columns:minmax(300px,.9fr) 1.1fr;gap:12px;padding:12px}
-      .project-visual{margin-bottom:0}
-      .project-body{padding:18px 14px}
+      .project-card{display:block;padding:10px}
+      .project-visual{margin-bottom:14px}
+      .project-body{padding:0 7px 9px}
       .tools-grid{grid-template-columns:repeat(5,1fr)}
     }
     @media(max-width:760px){
@@ -845,8 +987,11 @@
       .map-center,.map-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%;height:auto;min-height:auto;border-radius:18px}
       .map-center{padding:20px}.map-center::before,.map-center::after,.map-line,.map-pulse{display:none}
       .workstyle{grid-template-columns:1fr}
-      .workstep{border-left:0;border-top:1px solid var(--line)}
-      .workstep:first-child{border-top:0}
+      #approach .workstyle::before{left:31px;right:auto;top:28px;bottom:28px;width:1px;height:auto;background:linear-gradient(180deg,transparent,#b8d4f7 10%,#b8d4f7 90%,transparent)}
+      #approach .workstep{padding-left:18px}
+      #proof .evidence-grid{grid-template-columns:1fr 1fr;gap:18px;padding:10px 0}
+      #proof .evidence-grid::before{display:none}
+      #proof .evidence-card{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}
       .commercial-exp{grid-template-columns:1fr}
       .commercial-proof{grid-template-columns:1fr 1fr}
       .skill-visual-grid,.ecosystem-grid{grid-template-columns:1fr}
@@ -1171,6 +1316,7 @@
           <h2>Professional Spectrum <span class="blue-line"></span></h2>
           <div class="section-kicker">Four areas I can contribute from day one</div>
         </div>
+        <div class="spectrum-axis"><span>Commercial & user context</span><b>Business ↔ Technology</b><span>Systems & delivery</span></div>
         <div class="spectrum-grid">
           <article class="spectrum-card spectrum-ba reveal">
             <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div><span class="spectrum-code">BA</span></div>
