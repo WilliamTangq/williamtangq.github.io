@@ -1196,6 +1196,35 @@
       html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
       .dashboard,.tool-track,.map-pulse{animation:none!important}
     }
+  
+    /* final responsive guard for the visual-first hero */
+    @media(max-width:1040px){
+      .hero .hero-layout{grid-template-columns:1fr;gap:30px}
+      .hero .hero-intro{text-align:center;padding:4px 0}
+      .hero .hero-title{font-size:clamp(2rem,5vw,2.75rem);max-width:620px}
+      .hero .hero-subtitle{max-width:620px}
+    }
+    @media(max-width:760px){
+      .hero{padding:82px 0 46px}
+      .hero .hero-title{font-size:1.95rem;line-height:1.04}
+      .hero .hero-subtitle{font-size:.88rem;line-height:1.55}
+      .hero .hero-actions{align-items:center}
+      .hero .hero-actions .btn{flex:0 0 auto;width:auto}
+      .hero .hero-visual{min-height:610px;height:610px;border-radius:30px;transform:none!important}
+      .hero .system-core{width:158px;height:158px;padding:17px}
+      .hero .system-core .core-icon{width:36px;height:36px;margin-bottom:8px}
+      .hero .system-core strong{font-size:.82rem}
+      .hero .system-core span{font-size:.49rem}
+      .hero .system-node{width:calc(50% - 22px);min-height:124px;padding:11px}
+      .hero .system-node strong{font-size:.68rem}
+      .hero .system-node span{font-size:.5rem}
+      .hero .system-node.ba{left:10px;top:20px}
+      .hero .system-node.bis{right:10px;top:20px}
+      .hero .system-node.it{left:10px;bottom:20px}
+      .hero .system-node.bd{right:10px;bottom:20px}
+      .hero .system-line,.hero .micro-skill{display:none}
+    }
+
   </style>
   <script type="application/ld+json">
   {
