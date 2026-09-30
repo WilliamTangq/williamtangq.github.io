@@ -15,16 +15,16 @@
   <link rel="canonical" href="https://williamtangq.github.io/" />
   <style>
     :root{
-      --bg:#f7f9fc;
+      --bg:#f5f5f7;
       --surface:#fff;
       --surface-soft:#fbfcfe;
-      --ink:#101426;
-      --muted:#687083;
-      --soft:#8b93a7;
-      --line:#e6eaf1;
-      --blue:#0a73ff;
-      --blue-2:#4f9cff;
-      --blue-soft:#eef5ff;
+      --ink:#1d1d1f;
+      --muted:#6e6e73;
+      --soft:#86868b;
+      --line:#e5e5ea;
+      --blue:#0071e3;
+      --blue-2:#2997ff;
+      --blue-soft:#f0f7ff;
       --green:#20a464;
       --green-soft:#eaf8f0;
       --purple:#7c63f2;
@@ -110,126 +110,121 @@
     }
     .nav-cta:hover{transform:translateY(-1px);background:#0068ea}
 
-    /* hero */
+    /* hero — Apple-like visual-first experience */
     .hero{
-      padding:118px 0 64px;
-      background:
-        radial-gradient(circle at 70% 22%,rgba(70,143,255,.16),transparent 30%),
-        linear-gradient(180deg,#f4f8ff 0%,#f8fbff 64%,#f7f9fc 100%);
+      position:relative;
+      padding:106px 0 62px;
       overflow:hidden;
+      background:
+        radial-gradient(circle at 50% 36%,rgba(0,113,227,.07),transparent 30%),
+        linear-gradient(180deg,#ffffff 0%,#fbfbfd 58%,#f5f5f7 100%);
     }
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,.93fr) minmax(460px,1.07fr);
-      gap:42px;
-      align-items:center;
+    .hero::before{
+      content:"";position:absolute;left:50%;top:150px;width:760px;height:760px;border-radius:50%;
+      transform:translateX(-50%);
+      background:radial-gradient(circle,rgba(41,151,255,.085),rgba(41,151,255,.025) 42%,transparent 68%);
+      pointer-events:none
     }
-    .hello{
-      color:#7c89a4;
-      font-size:.72rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-weight:700;
-      margin-bottom:16px;
+    .hero-shell{position:relative;z-index:2;text-align:center}
+    .hero-kicker{
+      display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;
+      color:#86868b;font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase
     }
-    .hero h1{
-      font-size:clamp(3.1rem,6vw,5.8rem);
-      line-height:.96;
-      letter-spacing:-.06em;
-      font-weight:760;
-      margin-bottom:17px;
-      max-width:700px;
+    .hero-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:#34c759;box-shadow:0 0 0 5px rgba(52,199,89,.08)}
+    .hero-title{
+      max-width:720px;margin:0 auto 9px;
+      font-size:clamp(2rem,4.2vw,3.25rem);line-height:1.03;letter-spacing:-.055em;font-weight:720
     }
-    .hero h1 span{color:var(--blue)}
-    .hero-lead{
-      font-size:clamp(1.1rem,2vw,1.42rem);
-      font-weight:560;
-      letter-spacing:-.025em;
-      margin-bottom:11px;
+    .hero-title span{color:var(--blue)}
+    .hero-subtitle{
+      max-width:660px;margin:0 auto 20px;color:var(--muted);
+      font-size:clamp(.92rem,1.6vw,1.08rem);line-height:1.55;letter-spacing:-.01em
     }
-    .hero-meta{
-      color:var(--muted);
-      font-size:.88rem;
-      line-height:1.65;
-      margin-bottom:27px;
-    }
-    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:34px}
+    .hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
     .btn{
-      min-height:46px;padding:0 19px;border-radius:11px;
+      min-height:44px;padding:0 18px;border-radius:999px;
       display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      font-size:.82rem;font-weight:700;border:1px solid transparent;
-      transition:.2s ease;
+      font-size:.76rem;font-weight:700;border:1px solid transparent;transition:.2s ease
     }
-    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(10,115,255,.18)}
-    .btn-primary:hover{background:#0069eb;transform:translateY(-1px)}
-    .btn-secondary{background:#fff;border-color:#dce3ef;color:#253047}
-    .btn-secondary:hover{border-color:#cbd6e8;transform:translateY(-1px)}
-    .hero-facts{display:flex;flex-wrap:wrap;gap:28px}
-    .fact{display:flex;align-items:center;gap:10px}
-    .fact-icon{
-      width:34px;height:34px;border-radius:10px;
-      display:grid;place-items:center;background:#fff;border:1px solid var(--line);
-      color:#536582;font-weight:800;font-size:.72rem
-    }
-    .fact strong{display:block;font-size:.76rem;line-height:1.2}
-    .fact small{display:block;color:var(--muted);font-size:.68rem;margin-top:2px}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:none}
+    .btn-primary:hover{background:#0066cc;transform:translateY(-1px)}
+    .btn-secondary{background:transparent;border-color:#d2d2d7;color:#1d1d1f}
+    .btn-secondary:hover{background:#fff;border-color:#c7c7cc;transform:translateY(-1px)}
 
-    /* dashboard hero art */
-    .dashboard-stage{position:relative;min-height:440px;perspective:1200px;transform-style:preserve-3d}
-    .dashboard-stage::after{
-      content:"";position:absolute;inset:auto 8% 2% 8%;height:38px;border-radius:50%;
-      background:radial-gradient(ellipse,rgba(47,80,130,.16),transparent 68%);
-      filter:blur(8px);pointer-events:none
+    .hero-visual{
+      position:relative;
+      max-width:920px;height:500px;margin:0 auto;
+      border-radius:34px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(210,210,215,.72);
+      box-shadow:0 34px 90px rgba(36,52,74,.10);
+      backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      overflow:hidden
     }
-    .back-card{
-      position:absolute;border-radius:24px;border:1px solid rgba(255,255,255,.7);
-      background:rgba(218,231,250,.68);box-shadow:0 25px 70px rgba(56,91,142,.12);
+    .hero-visual::before{
+      content:"";position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 50% 48%,rgba(0,113,227,.085),transparent 26%),
+        radial-gradient(circle,#d8d8dd 1px,transparent 1px);
+      background-size:auto,26px 26px;
+      opacity:.52;
+      mask-image:linear-gradient(to bottom,transparent 2%,#000 20%,#000 82%,transparent 100%)
     }
-    .back-card.one{inset:45px 34px 48px 64px;transform:rotate(-5deg)}
-    .back-card.two{inset:60px 12px 30px 88px;transform:rotate(4deg);background:rgba(226,234,247,.78)}
-    .dashboard{
-      position:absolute;inset:32px 20px 36px 24px;
-      background:#fff;border:1px solid #e8edf4;border-radius:23px;
-      box-shadow:0 28px 80px rgba(39,71,113,.18);
-      overflow:hidden;display:grid;grid-template-columns:118px 1fr;
-      transform:rotate(-1.1deg);
-      animation:dashboardFloat 7s ease-in-out infinite;
-      transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;
-      will-change:transform
+    .hero-visual::after{
+      content:"";position:absolute;left:50%;top:50%;width:310px;height:310px;border-radius:50%;
+      transform:translate(-50%,-50%);border:1px solid rgba(0,113,227,.11);
+      box-shadow:0 0 0 52px rgba(0,113,227,.025),0 0 0 104px rgba(0,113,227,.014);
+      pointer-events:none
     }
-    @keyframes dashboardFloat{
-      0%,100%{transform:translateY(0) rotate(-1.1deg)}
-      50%{transform:translateY(-7px) rotate(-.55deg)}
+    .system-core{
+      position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:210px;height:210px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:25px;
+      background:rgba(255,255,255,.96);border:1px solid #dfe8f2;
+      box-shadow:0 22px 58px rgba(34,75,121,.13)
     }
-    .dash-side{padding:18px 12px;background:#f7faff;border-right:1px solid #edf1f7}
-    .dash-logo{font-size:.78rem;font-weight:800;margin-bottom:22px;display:flex;align-items:center;gap:7px}
-    .dash-logo span{width:19px;height:19px;border-radius:6px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:.58rem}
-    .dash-nav{display:grid;gap:8px}
-    .dash-nav div{font-size:.63rem;color:#7d8799;padding:8px 8px;border-radius:8px}
-    .dash-nav .active{background:#eaf3ff;color:var(--blue);font-weight:700}
-    .dash-main{padding:22px}
-    .dash-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
-    .dash-top h3{font-size:1rem;letter-spacing:-.025em}
-    .dash-top p{font-size:.63rem;color:#8a93a5;margin-top:3px}
-    .dash-chip{padding:5px 8px;border-radius:999px;background:#f3f6fb;color:#63718c;font-size:.58rem;font-weight:700}
-    .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
-    .metric{border:1px solid #edf0f5;border-radius:12px;padding:11px;background:#fff}
-    .metric small{display:block;color:#8c95a7;font-size:.55rem;margin-bottom:5px}
-    .metric strong{font-size:1rem}
-    .metric em{display:block;color:var(--green);font-size:.52rem;font-style:normal;margin-top:2px}
-    .dash-lower{display:grid;grid-template-columns:1.35fr .65fr;gap:10px}
-    .schedule,.coverage{border:1px solid #edf0f5;border-radius:13px;padding:12px}
-    .panel-title{font-size:.64rem;font-weight:800;margin-bottom:8px}
-    .shift{display:grid;grid-template-columns:8px 1fr auto;gap:7px;align-items:center;padding:7px 0;border-top:1px solid #f0f3f7}
-    .shift:first-of-type{border-top:0}
-    .shift-dot{width:7px;height:7px;border-radius:50%;background:#74aef8}
-    .shift strong{display:block;font-size:.56rem}
-    .shift small{display:block;font-size:.48rem;color:#929bad}
-    .staff{font-size:.5rem;color:#667289}
-    .bars{height:94px;display:flex;align-items:end;gap:5px;padding-top:10px}
-    .bars span{width:10px;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,#72b1ff,#0a73ff)}
-    .bars span:nth-child(1){height:44%}.bars span:nth-child(2){height:62%}.bars span:nth-child(3){height:79%}
-    .bars span:nth-child(4){height:55%}.bars span:nth-child(5){height:88%}.bars span:nth-child(6){height:67%}.bars span:nth-child(7){height:96%}
+    .system-core .core-icon{
+      width:44px;height:44px;border-radius:14px;margin:0 auto 11px;display:grid;place-items:center;
+      background:#f0f7ff;color:var(--blue)
+    }
+    .system-core svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .system-core small{display:block;color:#86868b;font-size:.53rem;letter-spacing:.09em;text-transform:uppercase;font-weight:760;margin-bottom:4px}
+    .system-core strong{display:block;font-size:1rem;line-height:1.16;letter-spacing:-.025em}
+    .system-core span{display:block;margin-top:7px;color:#86868b;font-size:.57rem;line-height:1.4}
+    .system-node{
+      position:absolute;z-index:6;width:185px;min-height:112px;padding:14px 15px;border-radius:20px;
+      background:rgba(255,255,255,.94);border:1px solid #e1e5ea;
+      box-shadow:0 16px 38px rgba(44,62,96,.07);
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .system-node:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(44,62,96,.11);border-color:#ceddec}
+    .system-node .node-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .system-node .node-icon{width:33px;height:33px;border-radius:11px;display:grid;place-items:center;background:#f5f5f7;color:#4a5668}
+    .system-node .node-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .system-node b{color:var(--blue);font-size:.53rem;letter-spacing:.09em}
+    .system-node strong{display:block;font-size:.78rem;margin-bottom:4px}
+    .system-node span{display:block;font-size:.56rem;line-height:1.42;color:#7b8493}
+    .system-node.ba{left:7%;top:12%}
+    .system-node.bis{right:7%;top:12%}
+    .system-node.it{left:7%;bottom:12%}
+    .system-node.bd{right:7%;bottom:12%}
+    .system-line{position:absolute;z-index:2;height:1px;background:linear-gradient(90deg,rgba(0,113,227,.06),rgba(0,113,227,.28),rgba(0,113,227,.06));transform-origin:left center}
+    .system-line.l1{left:23%;top:31%;width:28%;transform:rotate(24deg)}
+    .system-line.l2{left:50%;top:31%;width:28%;transform:rotate(-24deg)}
+    .system-line.l3{left:23%;top:69%;width:28%;transform:rotate(-24deg)}
+    .system-line.l4{left:50%;top:69%;width:28%;transform:rotate(24deg)}
+    .micro-skill{
+      position:absolute;z-index:7;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);
+      border:1px solid #e3e6ea;color:#6f7783;font-size:.5rem;font-weight:700;
+      box-shadow:0 8px 20px rgba(44,62,96,.045)
+    }
+    .micro-skill.s1{left:42%;top:11%}.micro-skill.s2{right:26%;top:45%}.micro-skill.s3{left:24%;top:46%}.micro-skill.s4{left:43%;bottom:10%}
+    .hero-proof-row{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:17px}
+    .hero-proof{
+      display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #e5e5ea;
+      color:#6e6e73;font-size:.59rem;font-weight:650
+    }
+    .hero-proof b{color:#1d1d1f;font-size:.61rem}
+    .hero-proof i{width:6px;height:6px;border-radius:50%;background:#0071e3}
 
     /* sections */
     .section{padding:82px 0;position:relative}
@@ -837,6 +832,69 @@
     .career-stage:hover .career-box{transform:translateY(-3px);background:rgba(255,255,255,.09);border-color:rgba(137,191,255,.25)}
     .career-stage:hover .career-dot{box-shadow:0 0 0 1px rgba(132,190,255,.45),0 0 0 8px rgba(80,156,255,.08)}
 
+
+    /* Apple-like simplification */
+    #profile,#projects,#skills,#tools,#experience,#proof,#approach,#evidence-stats{background:#f5f5f7}
+    #why-hire,#capability-map,#skills,#experience{background:#fff}
+    .section{padding:76px 0}
+    .section-head h2{font-size:clamp(1.65rem,3vw,2.35rem);font-weight:700;color:#1d1d1f}
+    .section-kicker{color:#86868b}
+    .project-card,.hire-proof article,.snapshot-card,.cap-card,.ecosystem-card,.evidence-card{
+      border-color:#e5e5ea;box-shadow:none
+    }
+    .project-card{background:#fff;border-radius:28px;padding:12px}
+    .project-card:hover{box-shadow:0 18px 44px rgba(0,0,0,.06);border-color:#d7d7dc}
+    .project-visual{border-radius:22px;border-color:#ededf0}
+    .capability-map{border-radius:30px;box-shadow:none;border-color:#e5e5ea;background:linear-gradient(180deg,#fff,#fbfbfd)}
+    .skill-visual,.ecosystem-card{border-radius:24px;box-shadow:none}
+    .skill-visual:hover,.ecosystem-card:hover{box-shadow:0 16px 38px rgba(0,0,0,.055)}
+    .stats-strip{box-shadow:none;border-color:#e5e5ea}
+    .stat-block{background:#fff}
+    .tool-flow{box-shadow:none}
+    .career-visual{background:#1d1d1f;border-radius:28px;box-shadow:none}
+    .cta{background:#1d1d1f;border-radius:28px;box-shadow:none}
+    #professional-spectrum{
+      color:#1d1d1f;background:#f5f5f7;border-top:1px solid #e5e5ea;border-bottom:1px solid #e5e5ea
+    }
+    #professional-spectrum::before{display:none}
+    #professional-spectrum .section-head h2{color:#1d1d1f}
+    #professional-spectrum .section-kicker{color:#86868b}
+    #professional-spectrum .blue-line{background:#0071e3}
+    #professional-spectrum .spectrum-axis{color:#86868b}
+    #professional-spectrum .spectrum-axis b{color:#1d1d1f}
+    #professional-spectrum .spectrum-card{
+      color:#1d1d1f;background:#fff;border-color:#e5e5ea;box-shadow:none;backdrop-filter:none
+    }
+    #professional-spectrum .spectrum-card:hover{background:#fff;border-color:#d7d7dc;box-shadow:0 16px 38px rgba(0,0,0,.055)}
+    #professional-spectrum .spectrum-card::before{color:#f5f5f7}
+    #professional-spectrum .spectrum-icon{background:#f5f5f7;border-color:#e5e5ea;color:#0071e3}
+    #professional-spectrum .spectrum-code{color:#0071e3}
+    #professional-spectrum .spectrum-card h3{color:#1d1d1f}
+    #professional-spectrum .spectrum-role{color:#86868b}
+    #professional-spectrum .spectrum-list span{color:#6e6e73}
+    #professional-spectrum .spectrum-list span::before{background:#0071e3;box-shadow:0 0 0 4px #f0f7ff}
+    #professional-spectrum .spectrum-evidence{border-top-color:#ededf0;color:#86868b}
+    #professional-spectrum .spectrum-evidence b{color:#0071e3}
+    #professional-spectrum .software-skill-strip{background:#fff;border-color:#e5e5ea;box-shadow:none}
+    #professional-spectrum .software-skill-title strong{color:#1d1d1f}
+    #professional-spectrum .software-skill-title small{color:#86868b}
+    #professional-spectrum .hr-skill-chip{background:#f5f5f7;border-color:#e5e5ea;color:#6e6e73}
+
+    @media(max-width:760px){
+      .hero{padding:88px 0 46px}
+      .hero-title{font-size:2rem}
+      .hero-subtitle{font-size:.91rem;padding:0 4px}
+      .hero-visual{height:auto;min-height:620px;border-radius:28px}
+      .system-core{width:160px;height:160px;top:50%}
+      .system-node{width:calc(50% - 24px);min-height:126px;padding:12px}
+      .system-node.ba{left:12px;top:22px}.system-node.bis{right:12px;top:22px}
+      .system-node.it{left:12px;bottom:22px}.system-node.bd{right:12px;bottom:22px}
+      .system-line,.micro-skill{display:none}
+      .hero-proof-row{gap:7px}
+      .hero-proof{font-size:.54rem}
+      .hero-proof span{display:none}
+    }
+
     @media(max-width:1040px){
       .projects-grid{grid-template-columns:1fr}
       .project-tanshift,.project-client,.project-innerleaf,.project-database{grid-column:auto}
@@ -1031,7 +1089,7 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <nav class="nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan</span></a>
+      <a class="brand" href="#top"><span class="brand-mark">GQ</span><span>Guang Quan Tan <span style="font-weight:560;color:#86868b">(William)</span></span></a>
       <ul class="nav-links">
         <li><a href="#why-hire" data-nav="why-hire">Why Me</a></li>
         <li><a href="#projects" data-nav="projects">Work</a></li>
@@ -1045,57 +1103,60 @@
 
   <main id="top">
     <header class="hero">
-      <div class="shell hero-grid">
+      <div class="shell hero-shell">
         <div class="reveal">
-          <div class="hello">Hello, I’m Guang Quan Tan <span style="color:var(--blue)">(William)</span></div>
-          <h1>Business &amp; Technology <span>Graduate Candidate</span></h1>
-          <div class="hero-lead">Turning business problems into clear systems.</div><div class="hero-role-strip"><span>Business Analysis</span><span>Business Information Systems</span><span>IT Support</span><span>Business Development & Operations</span></div>
-          <p class="hero-meta">Monash University · Business Information Systems · Melbourne · Graduating December 2026</p>
+          <div class="hero-kicker">Guang Quan Tan (William) · Melbourne</div>
+          <h1 class="hero-title">Business meets <span>technology.</span></h1>
+          <p class="hero-subtitle">Final-year Monash Business Information Systems candidate with experience across business analysis, IT support, commercial operations and hands-on systems delivery.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects →</a>
-            <a class="btn btn-secondary" href="resume.html">ATS Resume</a>
-          </div>
-          <div class="hero-facts">
-            <div class="fact"><div class="fact-icon">MU</div><div><strong>Monash University</strong><small>Business Information Systems</small></div></div>
-            <div class="fact"><div class="fact-icon">AU</div><div><strong>Melbourne</strong><small>Based in Australia</small></div></div>
-            <div class="fact"><div class="fact-icon">26</div><div><strong>Graduating</strong><small>December 2026</small></div></div>
+            <a class="btn btn-primary" href="#projects">Explore my work</a>
+            <a class="btn btn-secondary" href="resume.html">View resume</a>
           </div>
         </div>
 
-        <div class="dashboard-stage reveal" aria-label="TanShift dashboard concept">
-          <span class="concept-label hero-concept">Concept UI Preview</span>
-          <div class="hero-orbit one"><div><strong>Business → System</strong><small>requirements to delivery</small></div></div>
-          <div class="hero-orbit two"><div><strong>SQL & Data</strong><small>structure behind the workflow</small></div></div>
-          <div class="hero-orbit three"><div><strong>UAT & Testing</strong><small>validate the real journey</small></div></div>
-          <div class="back-card one"></div><div class="back-card two"></div>
-          <div class="dashboard">
-            <aside class="dash-side">
-              <div class="dash-logo"><span>T</span>TanShift</div>
-              <div class="dash-nav">
-                <div class="active">Dashboard</div><div>Schedule</div><div>Employees</div><div>Shifts</div><div>Reports</div><div>Settings</div>
-              </div>
-            </aside>
-            <section class="dash-main">
-              <div class="dash-top">
-                <div><h3>Good morning, William 👋</h3><p>Here’s what’s happening with your team today.</p></div>
-                <div class="dash-chip">This week</div>
-              </div>
-              <div class="metric-grid">
-                <div class="metric"><small>Total Staff</small><strong>24</strong><em>+12%</em></div>
-                <div class="metric"><small>Shifts Today</small><strong>18</strong><em>Scheduled</em></div>
-                <div class="metric"><small>Coverage</small><strong>96%</strong><em>Healthy</em></div>
-              </div>
-              <div class="dash-lower">
-                <div class="schedule">
-                  <div class="panel-title">Today’s Schedule</div>
-                  <div class="shift"><span class="shift-dot"></span><div><strong>Morning Shift</strong><small>6:00 AM – 2:00 PM</small></div><span class="staff">8 staff</span></div>
-                  <div class="shift"><span class="shift-dot"></span><div><strong>Afternoon Shift</strong><small>2:00 PM – 10:00 PM</small></div><span class="staff">6 staff</span></div>
-                  <div class="shift"><span class="shift-dot"></span><div><strong>Night Shift</strong><small>10:00 PM – 6:00 AM</small></div><span class="staff">4 staff</span></div>
-                </div>
-                <div class="coverage"><div class="panel-title">Staff Coverage</div><div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-              </div>
-            </section>
+        <div class="hero-visual reveal" aria-label="Career system connecting business analysis, business information systems, IT support and business development">
+          <span class="system-line l1"></span><span class="system-line l2"></span><span class="system-line l3"></span><span class="system-line l4"></span>
+
+          <div class="system-core">
+            <div>
+              <div class="core-icon"><svg viewBox="0 0 24 24"><path d="M5 5h5v5H5zM14 14h5v5h-5zM10 7h4v10M7 10v4h7"/></svg></div>
+              <small>Core profile</small>
+              <strong>Business ↔ Technology</strong>
+              <span>Understand the problem. Structure the system. Validate the outcome.</span>
+            </div>
           </div>
+
+          <article class="system-node ba">
+            <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></span><b>BA</b></div>
+            <strong>Business Analysis</strong><span>Requirements · process mapping · stakeholders · UAT</span>
+          </article>
+
+          <article class="system-node bis">
+            <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></span><b>BIS</b></div>
+            <strong>Business Information Systems</strong><span>Systems thinking · workflows · business rules · data</span>
+          </article>
+
+          <article class="system-node it">
+            <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><b>IT</b></div>
+            <strong>IT Support</strong><span>Troubleshooting · devices · connectivity · business software</span>
+          </article>
+
+          <article class="system-node bd">
+            <div class="node-top"><span class="node-icon"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-6M3 21h18"/><path d="M17 5h4v4M21 5l-6 6"/></svg></span><b>BD</b></div>
+            <strong>Business Development & Operations</strong><span>B2B · suppliers · quotations · sourcing · operations</span>
+          </article>
+
+          <span class="micro-skill s1">SQL / Data</span>
+          <span class="micro-skill s2">UAT</span>
+          <span class="micro-skill s3">Excel</span>
+          <span class="micro-skill s4">Systems</span>
+        </div>
+
+        <div class="hero-proof-row reveal">
+          <div class="hero-proof"><i></i><b>Monash University</b><span>Business Information Systems</span></div>
+          <div class="hero-proof"><i></i><b>CS TAN</b><span>3-role progression</span></div>
+          <div class="hero-proof"><i></i><b>2 public repos</b><span>inspectable technical work</span></div>
+          <div class="hero-proof"><i></i><b>Dec 2026</b><span>expected graduation</span></div>
         </div>
       </div>
     </header>
