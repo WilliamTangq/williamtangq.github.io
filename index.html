@@ -659,6 +659,51 @@
     }
 
 
+
+
+    .hero-role-strip{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 20px}
+    .hero-role-strip span{padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #e3e9f1;color:#536177;font-size:.58rem;font-weight:760;box-shadow:0 5px 15px rgba(44,62,96,.025)}
+
+    /* professional spectrum */
+    .spectrum-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .spectrum-card{
+      --spec:#0a73ff;--spec-soft:#eef5ff;position:relative;overflow:hidden;
+      min-height:280px;padding:20px;border-radius:21px;background:#fff;border:1px solid var(--line);
+      box-shadow:0 12px 35px rgba(44,62,96,.035);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+    }
+    .spectrum-card:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(44,62,96,.08);border-color:#d8e4f3}
+    .spectrum-card::after{content:"";position:absolute;right:-65px;bottom:-70px;width:165px;height:165px;border-radius:50%;background:radial-gradient(circle,var(--spec-soft),transparent 68%)}
+    .spectrum-ba{--spec:#0a73ff;--spec-soft:rgba(10,115,255,.17)}
+    .spectrum-bis{--spec:#6c5bd7;--spec-soft:rgba(108,91,215,.17)}
+    .spectrum-it{--spec:#23996a;--spec-soft:rgba(35,153,106,.17)}
+    .spectrum-bd{--spec:#c97835;--spec-soft:rgba(201,120,53,.17)}
+    .spectrum-top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}
+    .spectrum-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:color-mix(in srgb,var(--spec) 10%,white);color:var(--spec)}
+    .spectrum-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .spectrum-code{font-size:.55rem;letter-spacing:.1em;font-weight:850;color:var(--spec)}
+    .spectrum-card h3{position:relative;z-index:2;font-size:1rem;letter-spacing:-.025em;margin-bottom:5px}
+    .spectrum-role{position:relative;z-index:2;display:block;font-size:.58rem;color:#8995a8;text-transform:uppercase;letter-spacing:.08em;font-weight:800;margin-bottom:15px}
+    .spectrum-list{position:relative;z-index:2;display:grid;gap:8px}
+    .spectrum-list span{display:flex;align-items:center;gap:8px;font-size:.64rem;color:#5c687c;font-weight:650}
+    .spectrum-list span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--spec);box-shadow:0 0 0 4px color-mix(in srgb,var(--spec) 9%,white)}
+    .spectrum-evidence{position:relative;z-index:2;margin-top:17px;padding-top:12px;border-top:1px solid #edf1f6;font-size:.55rem;color:#8d98aa}
+    .spectrum-evidence b{color:var(--spec)}
+
+    .software-skill-strip{
+      margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f8fbff);
+      display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center;box-shadow:0 12px 32px rgba(44,62,96,.03)
+    }
+    .software-skill-title small{display:block;font-size:.55rem;text-transform:uppercase;letter-spacing:.1em;color:#95a1b3;font-weight:800;margin-bottom:5px}
+    .software-skill-title strong{font-size:.9rem;letter-spacing:-.02em}
+    .skill-chip-wrap{display:flex;flex-wrap:wrap;gap:7px}
+    .hr-skill-chip{padding:7px 9px;border-radius:999px;background:#fff;border:1px solid #e6ebf2;color:#526074;font-size:.58rem;font-weight:700}
+
+    @media(max-width:1040px){.spectrum-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .spectrum-grid{grid-template-columns:1fr}
+      .software-skill-strip{grid-template-columns:1fr}
+    }
+
     /* visual enhancement v2 */
     .hero-orbit{
       position:absolute;z-index:12;display:flex;align-items:center;gap:9px;
@@ -846,7 +891,7 @@
         <li><a href="#why-hire" data-nav="why-hire">Why Me</a></li>
         <li><a href="#projects" data-nav="projects">Work</a></li>
         <li><a href="#experience" data-nav="experience">Experience</a></li>
-        <li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#professional-spectrum">Expertise</a></li><li><a href="#skills" data-nav="skills">Skills</a></li>
         <li><a href="#contact" data-nav="contact">Contact</a></li>
       </ul>
       <a class="nav-cta" href="resume.html">View Resume</a>
@@ -859,7 +904,7 @@
         <div class="reveal">
           <div class="hello">Hello, I’m Guang Quan Tan <span style="color:var(--blue)">(William)</span></div>
           <h1>Business &amp; Technology <span>Graduate Candidate</span></h1>
-          <div class="hero-lead">Turning business problems into clear systems.</div>
+          <div class="hero-lead">Turning business problems into clear systems.</div><div class="hero-role-strip"><span>Business Analysis</span><span>Business Information Systems</span><span>IT Support</span><span>Business Development & Operations</span></div>
           <p class="hero-meta">Monash University · Business Information Systems · Melbourne · Graduating December 2026</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View Projects →</a>
@@ -1120,11 +1165,63 @@
       </div>
     </section>
 
+        <section class="section" id="professional-spectrum">
+      <div class="shell">
+        <div class="section-head reveal">
+          <h2>Professional Spectrum <span class="blue-line"></span></h2>
+          <div class="section-kicker">Four areas I can contribute from day one</div>
+        </div>
+        <div class="spectrum-grid">
+          <article class="spectrum-card spectrum-ba reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg></div><span class="spectrum-code">BA</span></div>
+            <h3>Business Analysis</h3><span class="spectrum-role">Business Analyst / Junior BA</span>
+            <div class="spectrum-list">
+              <span>Requirements Gathering</span><span>Process Mapping</span><span>Acceptance Criteria</span><span>Stakeholder Communication</span><span>UAT & Integrity Testing</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> Monash client project · CS TAN</div>
+          </article>
+
+          <article class="spectrum-card spectrum-bis reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M5 5h6v6H5zM13 13h6v6h-6zM11 8h4v8"/></svg></div><span class="spectrum-code">BIS</span></div>
+            <h3>Business Information Systems</h3><span class="spectrum-role">Business ↔ Technology bridge</span>
+            <div class="spectrum-list">
+              <span>Systems Analysis</span><span>Workflow Design</span><span>Business Rules</span><span>Data Modelling</span><span>Digital Process Improvement</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> Monash BIS · TanShift · Database</div>
+          </article>
+
+          <article class="spectrum-card spectrum-it reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><span class="spectrum-code">IT</span></div>
+            <h3>IT Support</h3><span class="spectrum-role">User & technology support</span>
+            <div class="spectrum-list">
+              <span>Device & Printer Support</span><span>Email & Connectivity</span><span>Business Software</span><span>Troubleshooting</span><span>User Support & Digital Records</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN IT Support Assistant</div>
+          </article>
+
+          <article class="spectrum-card spectrum-bd reveal">
+            <div class="spectrum-top"><div class="spectrum-icon"><svg viewBox="0 0 24 24"><path d="M4 18V9M10 18V5M16 18v-6M3 21h18"/><path d="M17 5h4v4M21 5l-6 6"/></svg></div><span class="spectrum-code">BD</span></div>
+            <h3>Business Development & Operations</h3><span class="spectrum-role">Commercial & operational delivery</span>
+            <div class="spectrum-list">
+              <span>B2B Customer Communication</span><span>Supplier & Product Sourcing</span><span>Quotations & Invoices</span><span>Pricing / Purchasing Support</span><span>E-commerce & Operations</span>
+            </div>
+            <div class="spectrum-evidence"><b>Evidence:</b> CS TAN · Lazada / Shopee</div>
+          </article>
+        </div>
+        <div class="software-skill-strip reveal">
+          <div class="software-skill-title"><small>HR keyword view</small><strong>Core professional skills</strong></div>
+          <div class="skill-chip-wrap">
+            <span class="hr-skill-chip">Business Analysis</span><span class="hr-skill-chip">Systems Analysis</span><span class="hr-skill-chip">Requirements</span><span class="hr-skill-chip">Process Mapping</span><span class="hr-skill-chip">Stakeholders</span><span class="hr-skill-chip">UAT</span><span class="hr-skill-chip">SQL</span><span class="hr-skill-chip">Excel</span><span class="hr-skill-chip">Data Modelling</span><span class="hr-skill-chip">Troubleshooting</span><span class="hr-skill-chip">IT Support</span><span class="hr-skill-chip">B2B Communication</span><span class="hr-skill-chip">Supplier Sourcing</span><span class="hr-skill-chip">Operations</span><span class="hr-skill-chip">Agile</span><span class="hr-skill-chip">Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="skills">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Capabilities <span class="blue-line"></span></h2>
-          <div class="section-kicker">Four connected strengths</div>
+          <h2>Technical & Analyst Skills <span class="blue-line"></span></h2>
+          <div class="section-kicker">Skills backed by projects and commercial work</div>
         </div>
         <div class="skill-visual-grid">
           <article class="skill-visual skill-blue reveal">
@@ -1158,8 +1255,8 @@
     <section class="section" id="tools">
       <div class="shell">
         <div class="section-head reveal">
-          <h2>Tool Ecosystem <span class="blue-line"></span></h2>
-          <div class="section-kicker">How the toolkit connects</div>
+          <h2>Software & Tool Ecosystem <span class="blue-line"></span></h2>
+          <div class="section-kicker">Software I use across analysis, data and delivery</div>
         </div>
         <div class="ecosystem-grid">
           <article class="ecosystem-card eco-analysis reveal">
@@ -1199,7 +1296,7 @@
             </div>
           </article>
         </div>
-        <div class="ecosystem-flow reveal"><span>Understand</span><b>→</b><span>Structure</span><b>→</b><span>Build</span><b>→</b><span>Validate</span></div>
+        <div class="ecosystem-flow reveal"><span>Figma</span><b>·</b><span>Miro</span><b>·</b><span>Trello</span><b>·</b><span>Excel</span><b>·</b><span>VS Code</span><b>·</b><span>GitHub</span><b>·</b><span>Next.js</span><b>·</b><span>Supabase</span><b>·</b><span>PostgreSQL</span><b>·</b><span>Oracle SQL</span><b>·</b><span>Canva</span></div>
       </div>
     </section><section class="section" id="experience">
       <div class="shell">
