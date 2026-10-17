@@ -21,7 +21,7 @@ The site is designed around verifiable work rather than skill lists alone.
 - [CS TAN Commercial Experience](https://williamtangq.github.io/case-cstan.html) — Excel analysis, B2B operations, IT support, sourcing, quotations/invoices and process improvement
 - [TanShift](https://williamtangq.github.io/case-tanshift.html) — scheduling workflows, business rules, Next.js, Supabase/PostgreSQL
 - [InnerLeaf](https://williamtangq.github.io/case-innerleaf.html) — AI-assisted product, Supabase auth/data, role routing, Playwright testing
-- [Monash Client Project](https://williamtangq.github.io/case-client-project.html) — requirements, acceptance criteria, onboarding quality and integrity testing
+- [Agencia Change Engine — Monash Industry Experience](https://williamtangq.github.io/case-client-project.html) — real client project with Agencia Change; requirements, guided onboarding, user experience, front-end work and acceptance testing. [Official Team 188 Expo showcase](https://ie.infotech.monash.edu/ugie/expo/2026-s2/team-188)
 - [Database & SQL](https://williamtangq.github.io/case-database.html) — Oracle SQL, ERD, normalisation and relational design
 
 ## Role-targeted resumes
