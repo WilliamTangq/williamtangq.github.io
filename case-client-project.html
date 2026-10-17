@@ -8,7 +8,8 @@ a{color:inherit;text-decoration:none}.shell{width:min(var(--max),calc(100% - 36p
 .section{padding:58px 0}.section h2{font-size:clamp(1.65rem,3vw,2.4rem);letter-spacing:-.04em;margin:0 0 18px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 12px 38px rgba(44,62,96,.035)}.card h3{font-size:1rem;margin:0 0 8px}.card p,.card li{font-size:.83rem;color:var(--muted)}.card ul{padding-left:18px;margin:8px 0 0}.tagrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tag{padding:6px 9px;border-radius:999px;background:#f1f4f8;color:#536075;font-size:.65rem;font-weight:650}.proof{display:grid;gap:10px}.proofrow{display:grid;grid-template-columns:145px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}.proofrow:first-child{border-top:0}.proofrow strong{font-size:.77rem}.proofrow span{font-size:.8rem;color:var(--muted)}.note{padding:16px 18px;border-radius:16px;background:#fff8e8;border:1px solid #f0dfb8;color:#71551e;font-size:.8rem}.ok{background:#edf9f2;border-color:#ccebd9;color:#256743}.cta{margin:20px 0 68px;padding:28px;border-radius:22px;background:linear-gradient(135deg,#edf5ff,#e3efff);border:1px solid #d7e7fb;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{font-size:1.7rem;letter-spacing:-.04em;margin:0}.actions{display:flex;flex-wrap:wrap;gap:9px}.btn{padding:10px 14px;border-radius:11px;background:#fff;border:1px solid #d6e0ec;font-size:.75rem;font-weight:700}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
 footer{border-top:1px solid var(--line);padding:20px 0 28px;color:#8791a4;font-size:.7rem}
 @media(max-width:760px){.navlinks{display:none}.grid2,.grid3{grid-template-columns:1fr}.proofrow{grid-template-columns:1fr;gap:5px}.cta{align-items:flex-start;flex-direction:column}.hero{padding-top:56px}}
-</style></head><body>
+</style><link rel="stylesheet" href="assets/visual-ui.css">
+</head><body>
 <nav class="nav"><div class="shell navin"><a class="brand" href="./">Guang Quan Tan (William)</a><div class="navlinks"><a href="./#projects">Projects</a><a href="resume.html">Resume</a><a class="pillbtn" href="mailto:tanstrifelife@gmail.com">Contact</a></div></div></nav>
 <header class="hero"><div class="shell">
   <div class="eyebrow">Industry client case study · Monash FIT3048 · Semester 2, 2026</div>
@@ -17,6 +18,13 @@ footer{border-top:1px solid var(--line);padding:20px 0 28px;color:#8791a4;font-s
   <span class="status">Team 188 · Developer / Business Analyst · Guided onboarding and UX</span>
 </div></header>
 <main>
+<section class="iv-case-gallery section" aria-labelledby="iv-gallery-heading">
+  <div class="iv-shell">
+    <div class="iv-section-heading"><div><div class="iv-overline">Interactive visual stories</div><h2 id="iv-gallery-heading">A visual look at the change journey</h2><p>Explore three conceptual views of the project: shared planning, guided onboarding and progress visibility. These are original illustrations based on the public project description, not Agencia Change screenshots.</p></div><div class="iv-concept-note">Concept visuals · no client screenshots</div></div>
+    <div class="iv-gallery" data-iv-gallery="agencia"><p>Illustrative project visuals are available with JavaScript enabled. The case study below remains fully accessible.</p></div>
+  </div>
+</section>
+
 <section class="section"><div class="shell grid2">
   <article class="card"><h3>The business context</h3><p>Organisational change involves different people, activities and deadlines. Agencia Change's existing platform brings those pieces into a shared workspace so teams can plan change activities and follow their progress. Our role was to improve an existing product, not build a new one from scratch.</p></article>
   <article class="card"><h3>My contribution</h3><p>I focused on the guided onboarding experience, combining business analysis with hands-on front-end work and testing. The goal was to help new users understand where to start and make sure the on-screen guidance behaved as intended.</p></article>
@@ -46,4 +54,5 @@ footer{border-top:1px solid var(--line);padding:20px 0 28px;color:#8791a4;font-s
   <div class="note ok"><strong>Official project showcase:</strong> The <a href="https://ie.infotech.monash.edu/ugie/expo/2026-s2/team-188" target="_blank" rel="noopener noreferrer" style="color:#0756b8;text-decoration:underline">Monash Industry Experience Expo — Team 188 page ↗</a> provides public project information. This personal case study describes my contribution and the team's published project scope; it does not disclose internal client data, source code or private project materials.</div>
 </div></section>
 <div class="shell"><div class="cta"><div><div class="eyebrow">Industry Experience · Team 188</div><h2>See the public showcase.</h2></div><div class="actions"><a class="btn primary" href="https://ie.infotech.monash.edu/ugie/expo/2026-s2/team-188" target="_blank" rel="noopener noreferrer">View Monash Expo ↗</a><a class="btn" href="./#projects">Back to portfolio</a><a class="btn" href="resume.html">View analyst resume</a></div></div></div>
-</main><footer><div class="shell">© 2026 Guang Quan Tan (William) · Melbourne, Australia</div></footer></body></html>
+</main><footer><div class="shell">© 2026 Guang Quan Tan (William) · Melbourne, Australia</div></footer><script src="assets/visual-ui.js" defer></script>
+</body></html>
