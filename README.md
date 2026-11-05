@@ -43,7 +43,6 @@ My work spans requirements, workflow analysis, systems, SQL/data modelling, user
 ## Contact
 
 **Guang Quan Tan (William)**  
-Melbourne, Australia  
 Monash University · Business Information Systems  
 LinkedIn: https://www.linkedin.com/in/williamtangq  
 GitHub: https://github.com/WilliamTangq
@@ -71,3 +70,4 @@ Five project covers and fifteen interface-study scenes share a renderer, respons
 - Additional checks: `node scripts/check-preview-visuals.mjs`
 
 Preview content is illustrative. Native dialog behaviour and actual viewport rendering still require browser QA.
+
