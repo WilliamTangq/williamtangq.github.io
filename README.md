@@ -59,3 +59,15 @@ The homepage uses an editorial layout with five selected projects, a client-proj
 - Run dependency-free checks: `node scripts/check-portfolio.mjs`
 
 No build step is required for GitHub Pages. The checks cover links, HTML structure and DOM-fixture interactions; actual browser rendering still requires browser QA.
+
+## Professional preview visuals
+
+Five project covers and fifteen interface-study scenes share a renderer, responsive styling and accessible gallery/modal controls.
+
+- [Preview visual design and scene map](docs/preview-visuals.md)
+- Renderer: `assets/preview-scenes.js`
+- Gallery interactions: `assets/visual-ui.js`
+- Styles: `assets/visual-ui.css`
+- Additional checks: `node scripts/check-preview-visuals.mjs`
+
+Preview content is illustrative. Native dialog behaviour and actual viewport rendering still require browser QA.
