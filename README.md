@@ -47,3 +47,15 @@ Melbourne, Australia
 Monash University · Business Information Systems  
 LinkedIn: https://www.linkedin.com/in/williamtangq  
 GitHub: https://github.com/WilliamTangq
+
+## Portfolio design refresh — November 2026
+
+The homepage uses an editorial layout with five selected projects, a client-project spotlight, accessible category filters and mobile navigation. Original project illustrations distinguish client work, prototypes, coursework and commercial experience.
+
+- Homepage styles: `assets/portfolio.css`
+- Homepage interactions: `assets/portfolio.js`
+- Shared case-study theme: `assets/case-theme.css`
+- [Design review and references](docs/portfolio-design-review.md)
+- Run dependency-free checks: `node scripts/check-portfolio.mjs`
+
+No build step is required for GitHub Pages. The checks cover links, HTML structure and DOM-fixture interactions; actual browser rendering still requires browser QA.
