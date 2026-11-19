@@ -44,6 +44,7 @@
         status.textContent = shown + (shown === 1 ? " project" : " projects") + (category === "all" ? "" : " · " + button.textContent.trim());
       });
     });
+    status.textContent = cards.length + (cards.length === 1 ? " project" : " projects");
     controls.hidden = false;
   }
 
