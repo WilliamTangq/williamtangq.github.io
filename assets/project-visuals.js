@@ -114,22 +114,22 @@ const galleries={
   ],
   "respira": [
     {
-      "src": "assets/work/health-booking-sim.svg",
-      "title": "One booking across three roles",
-      "kind": "Simulation",
-      "caption": "Fictional example that explains the documented appointment workflow."
+      "src": "assets/work/project-evidence/respira-patient-dashboard.webp",
+      "title": "Actual patient daily tracker",
+      "kind": "Original UserDoc screenshot · Team delivery",
+      "caption": "Historical patient dashboard showing daily logging and appointment context. Identifying text is redacted; values belong to the captured test state."
     },
     {
-      "src": "assets/work/health-access-sim.svg",
-      "title": "Role and data boundaries",
-      "kind": "Simulation",
-      "caption": "Intended access boundaries; this visual does not verify server-side controls."
+      "src": "assets/work/project-evidence/respira-patient-booking-form.webp",
+      "title": "Actual appointment request",
+      "kind": "Original UserDoc screenshot · Team delivery",
+      "caption": "The documented booking form captures clinician, duration, date and a time slot. This is a team-system screen, not a claim of sole feature authorship."
     },
     {
-      "src": "assets/work/respira-workflow.svg",
-      "title": "Connected care coordination",
-      "kind": "Workflow summary",
-      "caption": "Portfolio summary of the team\u2019s documented tasks."
+      "src": "assets/work/project-evidence/respira-admin-dashboard.webp",
+      "title": "Actual administrative overview",
+      "kind": "Original UserDoc screenshot · Team delivery",
+      "caption": "The administrative view connects operational messages and registered accounts. Historical counts are not current adoption or healthcare outcome measures."
     }
   ],
   "shift": [
@@ -182,16 +182,16 @@ const galleries={
   ],
   "governance": [
     {
-      "src": "assets/work/governance-workflow.svg",
-      "title": "Approval evidence workflow",
-      "kind": "Academic proposal",
-      "caption": "New summary of proposed controls; not an implemented business process."
+      "src": "assets/work/project-evidence/governance-gap.webp",
+      "title": "Original systems and governance assessment",
+      "kind": "Original coursework · William’s documented contribution",
+      "caption": "Team presentation slide 4: strengths, gaps and governance implications. The source contribution record attributes this systems-assessment work to William."
     },
     {
-      "src": "assets/work/control-sim.svg",
-      "title": "Risk-to-control register",
-      "kind": "Simulation",
-      "caption": "Illustrative register connecting risk, proposed control and review evidence."
+      "src": "assets/work/project-evidence/technology-profile.webp",
+      "title": "Original technology profile",
+      "kind": "Original coursework · William’s documented contribution",
+      "caption": "Team presentation slide 3: William’s researched and prepared technology profile. Original coursework wording is preserved; this is not a current technical audit."
     }
   ],
   "database": [
@@ -235,3 +235,4 @@ if(shipping){const rate=shipping.querySelector('#vs-rate');const render=()=>{con
 const booking=document.querySelector('[data-vs-demo="booking"]');
 if(booking){let role='patient',confirmed=false;const tabs=[...booking.querySelectorAll('[data-vs-role]')],accept=booking.querySelector('[data-vs-accept]');const views={patient:['My appointment request','Review the state of the request you submitted.'],clinician:['Review an appointment request','Accept the fictional request to show the patient-facing state update.'],admin:['Coordinate an appointment','See the shared booking state from an operational perspective.']};const render=()=>{for(const t of tabs){const active=t.dataset.vsRole===role;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;}booking.querySelector('#vs-role-panel').setAttribute('aria-labelledby','vs-role-'+role);booking.querySelector('#vs-role-title').textContent=views[role][0];booking.querySelector('#vs-role-description').textContent=views[role][1];const status=booking.querySelector('#vs-booking-status');status.textContent=confirmed?'Confirmed':'Pending';status.dataset.state=confirmed?'confirmed':'pending';accept.hidden=role!=='clinician'||confirmed;booking.querySelector('#vs-booking-feedback').textContent=confirmed?'The fictional request is confirmed. Switch to Patient or Administrator to see the same state.':'The fictional request is waiting for a clinician decision.';};for(const t of tabs){t.addEventListener('click',()=>{role=t.dataset.vsRole;render();});t.addEventListener('keydown',e=>{let n=tabs.indexOf(t);if(e.key==='ArrowRight')n=(n+1)%tabs.length;else if(e.key==='ArrowLeft')n=(n+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();role=tabs[n].dataset.vsRole;render();tabs[n].focus();});}accept.addEventListener('click',()=>{confirmed=true;render();booking.querySelector('[data-vs-reset-booking]').focus();});booking.querySelector('[data-vs-reset-booking]').addEventListener('click',()=>{confirmed=false;role='patient';render();});render();booking.hidden=false;}
 })();
+

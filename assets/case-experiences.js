@@ -58,7 +58,7 @@ function initTanShift(root){
   }else{
    var filtered=roster.filter(function(item){return item.staff===selected;});
    if(!filtered.length){var empty=document.createElement("p");empty.className="cx-muted";empty.textContent="No published shifts for "+selected+".";staffList.appendChild(empty);}
-   filtered.forEach(function(item){var card=document.createElement("div");card.className="cx-callout";card.style.margin="8px 0";var label=document.createElement("strong");label.textContent=item.day+" · "+item.shift;var date=document.createElement("div");date.className="cx-muted";date.style.fontSize="12px";date.textContent=shifts[item.shift];card.append(label,date);staffList.appendChild(card);});
+   filtered.forEach(function(item){var card=document.createElement("div");card.className="cx-callout";card.style.margin="8px 0";var label=document.createElement("strong");label.textContent=item.day+" · "+item.shift;var date=document.createElement("div");date.className="cx-muted";date.style.fontSize="14px";date.textContent=shifts[item.shift];card.append(label,date);staffList.appendChild(card);});
   }
  }
  find(root,"[data-cx-add]").addEventListener("click",function(){
@@ -192,7 +192,7 @@ function initDatabase(root){
    feedback(root,"Illustrative integrity check: a child row cannot reference a missing parent order. No database write occurred.");
   }
  }
- selector.addEventListener("change",function(){setText(root,"[data-cx-code]",sql[selector.value]);});
+ selector.addEventListener("change",function(){setText(root,"[data-cx-code]",sql[selector.value]);find(root,"[data-cx-sql-output]").replaceChildren();setText(root,"[data-cx-result-count]","Not run");feedback(root,"Query changed. Run the selected sample query to calculate its result.");});
  find(root,"[data-cx-run]").addEventListener("click",run);
  find(root,"[data-cx-reset-sql]").addEventListener("click",function(){selector.value="totals";run();});
  run();
