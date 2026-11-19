@@ -148,8 +148,8 @@ function initGovernance(root){
 function initDatabase(root){
  var customers=[{id:1,name:"Acme Studio"},{id:2,name:"Beacon Retail"},{id:3,name:"Cove Supply"}];
  var products=[{id:11,name:"Laptop stand",price:40},{id:12,name:"Desk mat",price:25},{id:13,name:"Cable organiser",price:15}];
- var orders=[{id:101,customer:1,status:"open",date:"2026-03-10"},{id:102,customer:2,status:"fulfilled",date:"2026-03-11"},{id:103,customer:1,status:"fulfilled",date:"2026-03-12"},{id:104,customer:3,status:"open",date:"2026-03-13"}];
- var items=[{order:101,product:11,quantity:2},{order:101,product:13,quantity:1},{order:102,product:12,quantity:4},{order:103,product:11,quantity:1},{order:103,product:12,quantity:2},{order:104,product:13,quantity:3}];
+ var orders=[{id:101,customer_id:1,status:"open",order_date:"2026-03-10"},{id:102,customer_id:2,status:"fulfilled",order_date:"2026-03-11"},{id:103,customer_id:1,status:"fulfilled",order_date:"2026-03-12"},{id:104,customer_id:3,status:"open",order_date:"2026-03-13"}];
+ var items=[{order_id:101,product_id:11,quantity:2},{order_id:101,product_id:13,quantity:1},{order_id:102,product_id:12,quantity:4},{order_id:103,product_id:11,quantity:1},{order_id:103,product_id:12,quantity:2},{order_id:104,product_id:13,quantity:3}];
  var sql={
   totals:"SELECT c.name, SUM(oi.quantity * p.price) AS spend\nFROM customers c\nJOIN orders o ON o.customer_id = c.id\nJOIN order_items oi ON oi.order_id = o.id\nJOIN products p ON p.id = oi.product_id\nGROUP BY c.id, c.name\nORDER BY spend DESC;",
   open:"SELECT o.id, c.name, o.order_date\nFROM orders o\nJOIN customers c ON c.id = o.customer_id\nWHERE o.status = 'open'\nORDER BY o.order_date;",
@@ -173,17 +173,17 @@ function initDatabase(root){
   setText(root,"[data-cx-code]",sql[key]);
   if(key==="totals"){
    var rows=customers.map(function(c){
-    var ids=orders.filter(function(o){return o.customer===c.id;}).map(function(o){return o.id;});
-    return [c.name,money(items.filter(function(i){return ids.includes(i.order);}).reduce(function(sum,i){return sum+i.quantity*product(i.product).price;},0))];
+    var ids=orders.filter(function(o){return o.customer_id===c.id;}).map(function(o){return o.id;});
+    return [c.name,money(items.filter(function(i){return ids.includes(i.order_id);}).reduce(function(sum,i){return sum+i.quantity*product(i.product_id).price;},0))];
    }).sort(function(a,b){return Number(b[1].slice(1))-Number(a[1].slice(1));});
    table(["customer","spend"],rows);setText(root,"[data-cx-result-count]",rows.length+" rows");
    feedback(root,"Customer totals aggregate order-item quantities against product prices. Sample records only.");
   }else if(key==="open"){
-   var rows=orders.filter(function(o){return o.status==="open";}).sort(function(a,b){return a.date.localeCompare(b.date);}).map(function(o){return [o.id,customer(o.customer),o.date];});
+   var rows=orders.filter(function(o){return o.status==="open";}).sort(function(a,b){return a.order_date.localeCompare(b.order_date);}).map(function(o){return [o.id,customer(o.customer_id),o.order_date];});
    table(["order_id","customer","order_date"],rows);setText(root,"[data-cx-result-count]",rows.length+" rows");
    feedback(root,"Filter example: only open sample orders are returned.");
   }else if(key==="lines"){
-   var rows=items.filter(function(i){return i.order===101;}).map(function(i){return [product(i.product).name,i.quantity,money(product(i.product).price),money(i.quantity*product(i.product).price)];});
+   var rows=items.filter(function(i){return i.order_id===101;}).map(function(i){return [product(i.product_id).name,i.quantity,money(product(i.product_id).price),money(i.quantity*product(i.product_id).price)];});
    table(["product","qty","unit_price","line_total"],rows);setText(root,"[data-cx-result-count]",rows.length+" rows");
    feedback(root,"The order-item join keeps line quantities separate from product attributes.");
   }else{
