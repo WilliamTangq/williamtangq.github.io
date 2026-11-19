@@ -4,22 +4,40 @@
 const galleries={
   "agencia": [
     {
-      "src": "assets/work/change-onboarding-sim.svg",
-      "title": "Guided onboarding",
-      "kind": "Simulation",
-      "caption": "New interface study with invented example steps; not the delivered client interface."
+      "src": "assets/work/agencia/getting-started.webp",
+      "title": "Getting Started: one clear next step",
+      "kind": "Actual system · My BA/UX focus",
+      "caption": "An eight-step journey makes the next action, prerequisites and saved client visible. This is the onboarding area I focused on; 13% is the captured account progress, not a measured improvement."
     },
     {
-      "src": "assets/work/change-actions-sim.svg",
-      "title": "Action-plan layout",
-      "kind": "Simulation",
-      "caption": "Fictional activities and owners illustrate the workflow."
+      "src": "assets/work/agencia/team-showcase.webp",
+      "title": "Team 188 project showcase",
+      "kind": "Original event photo · 29 October 2026",
+      "caption": "The team presented Agencia Change Engine at the showcase. The display lists William Tan as Business Analyst. This photo documents the team presentation."
     },
     {
-      "src": "assets/work/change-workflow.svg",
-      "title": "My contribution in context",
-      "kind": "Workflow summary",
-      "caption": "Portfolio explanation of requirements, guidance and acceptance checks."
+      "src": "assets/work/agencia/stakeholder-matrix.webp",
+      "title": "Stakeholder impact and influence",
+      "kind": "Actual system · Team context",
+      "caption": "The matrix explains how impact and influence inform engagement strategies. This empty workspace illustrates the wider change-planning context for onboarding."
+    },
+    {
+      "src": "assets/work/agencia/version-history.webp",
+      "title": "Risk and issue version history",
+      "kind": "Actual system · Team context",
+      "caption": "A captured history view exposes a saved edit and a restore action. This is a team-platform capability, shown as context rather than individual authorship."
+    },
+    {
+      "src": "assets/work/agencia/readiness-dashboard.webp",
+      "title": "Project readiness dashboard",
+      "kind": "Actual system · Team context",
+      "caption": "Readiness, actions and status filters bring planning information into one view. The screenshot contains no readiness records; its 0% is an empty-state value."
+    },
+    {
+      "src": "assets/work/agencia/transition-handover.webp",
+      "title": "Transition and handover planning",
+      "kind": "Actual system · Team context",
+      "caption": "The handover view connects readiness, deliverables and follow-through. Values and Not started labels belong to the captured test workspace."
     }
   ],
   "analytics": [
