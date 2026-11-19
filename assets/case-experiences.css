@@ -97,3 +97,19 @@
 @media(max-width:520px){.cx-experience{margin:26px 0 34px}.cx-experience .cx-shell{width:calc(100% - 24px)}.cx-experience .cx-head h2{font-size:24px!important}.cx-experience .cx-steps{grid-template-columns:1fr}.cx-experience .cx-steps button{min-height:58px}.cx-experience .cx-tiles{grid-template-columns:1fr 1fr}.cx-experience .cx-tile:last-child{grid-column:1/-1}.cx-experience .cx-branch{grid-template-columns:1fr}.cx-experience .cx-field-grid{grid-template-columns:1fr}.cx-experience .cx-toolbar{padding:12px}.cx-experience .cx-roster-controls .cx-btn{width:100%}.cx-experience .cx-workspace .cx-main,.cx-experience .cx-workspace .cx-side{padding:15px}.cx-experience .cx-actions .cx-btn{flex:1}}
 @media(prefers-reduced-motion:reduce){.cx-experience .cx-btn{transition:none}}
 @media print{.cx-experience .cx-btn,.cx-experience .cx-roster-controls{display:none}.cx-experience .cx-workspace{display:block}.cx-experience .cx-side{border-left:0;border-top:1px solid var(--cx-line)}}
+
+/* Intentional visual differentiation: each proof has its own visual language. */
+.cx-experience[data-cx="respira"] .cx-main{background:linear-gradient(155deg,#fff 0%,#f2fafb 100%)}
+.cx-experience[data-cx="respira"] .cx-miniwindow{box-shadow:0 13px 28px rgba(11,89,105,.08)}
+.cx-experience[data-cx="tanshift"] .cx-toolbar:first-child{background:#f0f0fb}
+.cx-experience[data-cx="tanshift"] .cx-roster-scroll{padding:12px;background:#f7f8ff;border-radius:12px}
+.cx-experience[data-cx="innerleaf"] .cx-board{background:linear-gradient(115deg,#fff,#f8fbf5)}
+.cx-experience[data-cx="innerleaf"] .cx-main{background:radial-gradient(circle at 80% 8%,#e8f3e8 0,transparent 40%)}
+.cx-experience[data-cx="innerleaf"] .cx-branch .cx-btn{border-radius:16px 16px 22px 10px}
+.cx-experience[data-cx="innerleaf"] .cx-field-grid div{border-radius:18px 10px 18px 10px}
+.cx-experience[data-cx="governance"] .cx-toolbar:first-child{background:#273340;color:#f9fafb}
+.cx-experience[data-cx="governance"] .cx-toolbar:first-child .cx-pill{color:#825d30}
+.cx-experience[data-cx="governance"] .cx-node[data-done="true"]{background:#eef7ec}
+.cx-experience[data-cx="database"] .cx-toolbar:first-child{background:#282139;color:white}
+.cx-experience[data-cx="database"] .cx-main{background:#fbfaff}
+.cx-experience[data-cx="database"] .cx-sql-code{box-shadow:inset 0 0 0 1px #3b3751}
