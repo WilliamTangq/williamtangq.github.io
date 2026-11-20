@@ -130,6 +130,12 @@ const galleries={
       "title": "Actual administrative overview",
       "kind": "Original UserDoc screenshot · Team delivery",
       "caption": "The administrative view connects operational messages and registered accounts. Historical counts are not current adoption or healthcare outcome measures."
+    },
+    {
+      "src": "assets/work/respira-journey-cover.svg",
+      "title": "Care workflow overview",
+      "kind": "Portfolio illustration",
+      "caption": "Fictional workflow overview; original team system captures are labelled separately."
     }
   ],
   "shift": [
@@ -137,13 +143,19 @@ const galleries={
       "src": "assets/work/roster-sim.svg",
       "title": "Weekly schedule",
       "kind": "Simulation",
-      "caption": "Fictional staff assignments illustrate the prototype\u2019s draft/published workflow."
+      "caption": "Fictional staff assignments illustrate the prototype’s draft/published workflow."
     },
     {
       "src": "assets/work/requests-sim.svg",
       "title": "Leave and shift requests",
       "kind": "Simulation",
       "caption": "An interface study using fictional request records."
+    },
+    {
+      "src": "assets/work/tanshift-calendar-cover.svg",
+      "title": "Scheduling workflow overview",
+      "kind": "Portfolio simulation",
+      "caption": "Fictional staff and sample availability illustrate the scheduling workflow."
     }
   ],
   "leaf": [
@@ -157,7 +169,13 @@ const galleries={
       "src": "assets/work/reflection-access-sim.svg",
       "title": "Role-routing review",
       "kind": "Simulation",
-      "caption": "Illustrative scenarios that explain the source repository\u2019s access tests."
+      "caption": "Illustrative scenarios that explain the source repository’s access tests."
+    },
+    {
+      "src": "assets/work/innerleaf-branch-cover.svg",
+      "title": "Reflection experience overview",
+      "kind": "Portfolio illustration",
+      "caption": "Fictional reflection content illustrates structured output and interpretation choices."
     }
   ],
   "analytics-r": [
@@ -192,6 +210,12 @@ const galleries={
       "title": "Original technology profile",
       "kind": "Original coursework · William’s documented contribution",
       "caption": "Team presentation slide 3: William’s researched and prepared technology profile. Original coursework wording is preserved; this is not a current technical audit."
+    },
+    {
+      "src": "assets/work/governance-gate-cover.svg",
+      "title": "Governance approval overview",
+      "kind": "Academic proposal",
+      "caption": "Illustration of proposed evidence and approval controls, not an implemented company system."
     }
   ],
   "database": [
@@ -206,6 +230,12 @@ const galleries={
       "title": "From relationships to a query",
       "kind": "Simulation",
       "caption": "A representative query pattern, not live data or an executed result."
+    },
+    {
+      "src": "assets/work/sql-query-lab-cover.svg",
+      "title": "Relational query lab overview",
+      "kind": "Representative example",
+      "caption": "Fictional relational data illustrates query and integrity concepts, not an assessed university schema."
     }
   ]
 };
